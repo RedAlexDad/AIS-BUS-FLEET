@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sample;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,7 +7,7 @@ using System.Windows.Forms;
 
 namespace bus_coursework
 {
-    internal static class Program
+    static class Program
     {
         /// <summary>
         /// Главная точка входа для приложения.
@@ -16,7 +17,7 @@ namespace bus_coursework
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Add_info_db());
+            Application.Run(new Form1());
         }
     }
 }
