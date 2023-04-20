@@ -7,32 +7,32 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-// Руководитель
+// Автобус
 namespace bus_coursework.Controller {
-    class Director {
+    class Bus {
         OleDbConnection connection;
         OleDbCommand command;
         OleDbDataAdapter dataAdapter;
         DataTable bufferTable;
 
-        public Director(string Conn) {
+        public Bus(string Conn) {
             connection = new OleDbConnection(Conn);
             bufferTable = new DataTable();
         }
 
-        public DataTable get_fio_director_by_id(int ID) {
+        // Обновление рейса по ID автобусного парка
+        public DataTable UpdateBusCheck(int ID) {
             connection.Open();
-            dataAdapter = new OleDbDataAdapter($"SELECT Индекс_руководителя FROM Руководитель WHERE Индекс_руководителя = {ID}", connection);
+            dataAdapter = new OleDbDataAdapter($"SELECT * FROM Автобус WHERE Индекс_рейса = {ID}", connection);
             bufferTable.Clear();
             dataAdapter.Fill(bufferTable);
             connection.Close();
             return bufferTable;
         }
 
-        // Обновление рейса по ID автобусного парка
-        public DataTable UpdateLineBusCheck(int ID) {
+        public DataTable get_fio_director_by_id(int ID) {
             connection.Open();
-            dataAdapter = new OleDbDataAdapter($"SELECT * FROM Рейс WHERE Индекс_автобусного_парка = {ID}", connection);
+            dataAdapter = new OleDbDataAdapter($"SELECT * FROM Руководитель WHERE Индекс_руководителя = {ID}", connection);
             bufferTable.Clear();
             dataAdapter.Fill(bufferTable);
             connection.Close();
@@ -42,7 +42,7 @@ namespace bus_coursework.Controller {
         // Руководитель
         public DataTable UpdateArmChair() {
             connection.Open();
-            dataAdapter = new OleDbDataAdapter("SELECT * FROM Руководитель", connection);
+            dataAdapter = new OleDbDataAdapter("SELECT * FROM Рейс", connection);
             bufferTable.Clear();
             dataAdapter.Fill(bufferTable);
             connection.Close();

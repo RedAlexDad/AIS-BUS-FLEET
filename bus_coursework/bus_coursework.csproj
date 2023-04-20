@@ -85,10 +85,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bus_dataset.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Controller\Passage.cs" />
     <Compile Include="Controller\ConnectionString.cs" />
     <Compile Include="Controller\ClassTemplate.cs" />
     <Compile Include="Controller\Director.cs" />
     <Compile Include="Controller\BusFleet.cs" />
+    <Compile Include="Controller\Bus.cs" />
     <Compile Include="Controller\LineBus.cs" />
     <Compile Include="Edit_DB.cs">
       <SubType>Form</SubType>

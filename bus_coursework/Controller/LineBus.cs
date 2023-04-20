@@ -30,6 +30,15 @@ namespace bus_coursework.Controller {
             return bufferTable;
         }
 
+        public DataTable get_fio_director_by_id(int ID) {
+            connection.Open();
+            dataAdapter = new OleDbDataAdapter($"SELECT * FROM Руководитель WHERE Индекс_руководителя = {ID}", connection);
+            bufferTable.Clear();
+            dataAdapter.Fill(bufferTable);
+            connection.Close();
+            return bufferTable;
+        }
+
         // Руководитель
         public DataTable UpdateArmChair() {
             connection.Open();
