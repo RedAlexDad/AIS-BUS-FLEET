@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="bus_dataset_connection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bus_dataset_connection (Settings)" PropertyReference="ApplicationSettings.bus_coursework.Properties.Settings.GlobalReference.Default.bus_dataset_connection" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnStr" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnStr (Settings)" PropertyReference="ApplicationSettings.bus_coursework.Properties.Settings.GlobalReference.Default.ConnStr1" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DB_UsersTableAdapter" GeneratorDataComponentClassName="DB_UsersTableAdapter" Name="DB_Users" UserDataComponentName="DB_UsersTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="bus_dataset_connection (Settings)" DbObjectName="DB_Users" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnStr (Settings)" DbObjectName="DB_Users" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `DB_Users` WHERE ((`ID` = ?) AND ((? = 1 AND `TypeGroupUser` IS NULL) OR (`TypeGroupUser` = ?)) AND ((? = 1 AND `Pass` IS NULL) OR (`Pass` = ?)))</CommandText>
@@ -62,7 +62,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Switchboard ItemsTableAdapter" GeneratorDataComponentClassName="Switchboard_ItemsTableAdapter" Name="Switchboard Items" UserDataComponentName="Switchboard ItemsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="bus_dataset_connection (Settings)" DbObjectName="Switchboard Items" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnStr (Settings)" DbObjectName="Switchboard Items" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Switchboard Items` WHERE ((`SwitchboardID` = ?) AND (`ItemNumber` = ?) AND ((? = 1 AND `ItemText` IS NULL) OR (`ItemText` = ?)) AND ((? = 1 AND `Command` IS NULL) OR (`Command` = ?)) AND ((? = 1 AND `Argument` IS NULL) OR (`Argument` = ?)))</CommandText>
@@ -129,7 +129,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="АвтобусTableAdapter" GeneratorDataComponentClassName="АвтобусTableAdapter" Name="Автобус" UserDataComponentName="АвтобусTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="bus_dataset_connection (Settings)" DbObjectName="Автобус" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnStr (Settings)" DbObjectName="Автобус" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Автобус` WHERE ((`Индекс_автобуса` = ?) AND ((? = 1 AND `Марка_автобуса` IS NULL) OR (`Марка_автобуса` = ?)) AND ((? = 1 AND `Модель_автобуса` IS NULL) OR (`Модель_автобуса` = ?)) AND ((? = 1 AND `Год выпуска_автобуса` IS NULL) OR (`Год выпуска_автобуса` = ?)) AND ((? = 1 AND `Индекс_рейса` IS NULL) OR (`Индекс_рейса` = ?)) AND ((? = 1 AND `Индекс_автобусного_парка` IS NULL) OR (`Индекс_автобусного_парка` = ?)) AND ((? = 1 AND `Индекс_водителя` IS NULL) OR (`Индекс_водителя` = ?)) AND ((? = 1 AND `Индекс_контролера` IS NULL) OR (`Индекс_контролера` = ?)) AND ((? = 1 AND `Статус_автобуса` IS NULL) OR (`Статус_автобуса` = ?)))</CommandText>
@@ -222,12 +222,12 @@
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Автобус ПереключательTableAdapter" GeneratorDataComponentClassName="Автобус_ПереключательTableAdapter" Name="Автобус Переключатель" UserDataComponentName="Автобус ПереключательTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Автобус_ПереключательTableAdapter" GeneratorDataComponentClassName="Автобус_ПереключательTableAdapter" Name="Автобус_Переключатель" UserDataComponentName="Автобус_ПереключательTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="bus_dataset_connection (Settings)" DbObjectName="Автобус Переключатель" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnStr (Settings)" DbObjectName="Автобус_Переключатель" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `Автобус Переключатель` WHERE ((`ID_статус` = ?) AND ((? = 1 AND `Статус` IS NULL) OR (`Статус` = ?)))</CommandText>
+                    <CommandText>DELETE FROM `Автобус_Переключатель` WHERE ((`ID_статус` = ?) AND ((? = 1 AND `Статус` IS NULL) OR (`Статус` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_ID_статус" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID_статус" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Статус" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Статус" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -237,7 +237,7 @@
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `Автобус Переключатель` (`Статус`) VALUES (?)</CommandText>
+                    <CommandText>INSERT INTO `Автобус_Переключатель` (`Статус`) VALUES (?)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Статус" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Статус" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
@@ -245,13 +245,13 @@
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID_статус, Статус FROM [Автобус Переключатель]</CommandText>
+                    <CommandText>SELECT ID_статус, Статус FROM Автобус_Переключатель</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `Автобус Переключатель` SET `Статус` = ? WHERE ((`ID_статус` = ?) AND ((? = 1 AND `Статус` IS NULL) OR (`Статус` = ?)))</CommandText>
+                    <CommandText>UPDATE `Автобус_Переключатель` SET `Статус` = ? WHERE ((`ID_статус` = ?) AND ((? = 1 AND `Статус` IS NULL) OR (`Статус` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Статус" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Статус" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_ID_статус" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID_статус" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -268,12 +268,12 @@
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Автобусный паркTableAdapter" GeneratorDataComponentClassName="Автобусный_паркTableAdapter" Name="Автобусный парк" UserDataComponentName="Автобусный паркTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Автобусный_паркTableAdapter" GeneratorDataComponentClassName="Автобусный_паркTableAdapter" Name="Автобусный_парк" UserDataComponentName="Автобусный_паркTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="bus_dataset_connection (Settings)" DbObjectName="Автобусный парк" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnStr (Settings)" DbObjectName="Автобусный_парк" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `Автобусный парк` WHERE ((`Индекс_автобусного_парка` = ?) AND ((? = 1 AND `Название_автобусного_парка` IS NULL) OR (`Название_автобусного_парка` = ?)) AND ((? = 1 AND `Индекс_руководителя` IS NULL) OR (`Индекс_руководителя` = ?)))</CommandText>
+                    <CommandText>DELETE FROM `Автобусный_парк` WHERE ((`Индекс_автобусного_парка` = ?) AND ((? = 1 AND `Название_автобусного_парка` IS NULL) OR (`Название_автобусного_парка` = ?)) AND ((? = 1 AND `Индекс_руководителя` IS NULL) OR (`Индекс_руководителя` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Индекс_автобусного_парка" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Индекс_автобусного_парка" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Название_автобусного_парка" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Название_автобусного_парка" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -285,7 +285,7 @@
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `Автобусный парк` (`Название_автобусного_парка`, `Адрес_автобусного парка`, `Индекс_руководителя`) VALUES (?, ?, ?)</CommandText>
+                    <CommandText>INSERT INTO `Автобусный_парк` (`Название_автобусного_парка`, `Адрес_автобусного парка`, `Индекс_руководителя`) VALUES (?, ?, ?)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Название_автобусного_парка" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Название_автобусного_парка" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Адрес_автобусного_парка" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="Адрес_автобусного парка" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -295,13 +295,13 @@
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Индекс_автобусного_парка, Название_автобусного_парка, [Адрес_автобусного парка], Индекс_руководителя FROM [Автобусный парк]</CommandText>
+                    <CommandText>SELECT Индекс_автобусного_парка, Название_автобусного_парка, [Адрес_автобусного парка], Индекс_руководителя FROM Автобусный_парк</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `Автобусный парк` SET `Название_автобусного_парка` = ?, `Адрес_автобусного парка` = ?, `Индекс_руководителя` = ? WHERE ((`Индекс_автобусного_парка` = ?) AND ((? = 1 AND `Название_автобусного_парка` IS NULL) OR (`Название_автобусного_парка` = ?)) AND ((? = 1 AND `Индекс_руководителя` IS NULL) OR (`Индекс_руководителя` = ?)))</CommandText>
+                    <CommandText>UPDATE `Автобусный_парк` SET `Название_автобусного_парка` = ?, `Адрес_автобусного парка` = ?, `Индекс_руководителя` = ? WHERE ((`Индекс_автобусного_парка` = ?) AND ((? = 1 AND `Название_автобусного_парка` IS NULL) OR (`Название_автобусного_парка` = ?)) AND ((? = 1 AND `Индекс_руководителя` IS NULL) OR (`Индекс_руководителя` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Название_автобусного_парка" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Название_автобусного_парка" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Адрес_автобусного_парка" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="Адрес_автобусного парка" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -326,7 +326,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ВодительTableAdapter" GeneratorDataComponentClassName="ВодительTableAdapter" Name="Водитель" UserDataComponentName="ВодительTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="bus_dataset_connection (Settings)" DbObjectName="Водитель" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnStr (Settings)" DbObjectName="Водитель" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Водитель` WHERE ((`Индекс_водителя` = ?) AND ((? = 1 AND `ФИО_водителя` IS NULL) OR (`ФИО_водителя` = ?)) AND ((? = 1 AND `Номер_телефона_водителя` IS NULL) OR (`Номер_телефона_водителя` = ?)) AND ((? = 1 AND `Стаж_водителя` IS NULL) OR (`Стаж_водителя` = ?)))</CommandText>
@@ -386,7 +386,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="КонтролерTableAdapter" GeneratorDataComponentClassName="КонтролерTableAdapter" Name="Контролер" UserDataComponentName="КонтролерTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="bus_dataset_connection (Settings)" DbObjectName="Контролер" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnStr (Settings)" DbObjectName="Контролер" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Контролер` WHERE ((`Индекс_контролера` = ?) AND ((? = 1 AND `ФИО_контролера` IS NULL) OR (`ФИО_контролера` = ?)) AND ((? = 1 AND `Номер_телефона_контролера` IS NULL) OR (`Номер_телефона_контролера` = ?)))</CommandText>
@@ -439,7 +439,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПассажирTableAdapter" GeneratorDataComponentClassName="ПассажирTableAdapter" Name="Пассажир" UserDataComponentName="ПассажирTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="bus_dataset_connection (Settings)" DbObjectName="Пассажир" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnStr (Settings)" DbObjectName="Пассажир" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Пассажир` WHERE ((`Индекс_пассажира` = ?) AND ((? = 1 AND `Индекс_автобуса` IS NULL) OR (`Индекс_автобуса` = ?)) AND ((? = 1 AND `ФИО_пассажира` IS NULL) OR (`ФИО_пассажира` = ?)) AND ((? = 1 AND `Категория_пассажира` IS NULL) OR (`Категория_пассажира` = ?)))</CommandText>
@@ -499,7 +499,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Резерв Switchboard ItemsTableAdapter" GeneratorDataComponentClassName="Резерв_Switchboard_ItemsTableAdapter" Name="Резерв Switchboard Items" UserDataComponentName="Резерв Switchboard ItemsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="bus_dataset_connection (Settings)" DbObjectName="Резерв Switchboard Items" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnStr (Settings)" DbObjectName="Резерв Switchboard Items" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Резерв Switchboard Items` WHERE ((`SwitchboardID` = ?) AND (`ItemNumber` = ?) AND ((? = 1 AND `ItemText` IS NULL) OR (`ItemText` = ?)) AND ((? = 1 AND `Command` IS NULL) OR (`Command` = ?)) AND ((? = 1 AND `Argument` IS NULL) OR (`Argument` = ?)))</CommandText>
@@ -566,14 +566,14 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="РейсTableAdapter" GeneratorDataComponentClassName="РейсTableAdapter" Name="Рейс" UserDataComponentName="РейсTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="bus_dataset_connection (Settings)" DbObjectName="Рейс" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnStr (Settings)" DbObjectName="Рейс" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `Рейс` WHERE ((`Индекс_рейса` = ?) AND ((? = 1 AND `Номер рейса` IS NULL) OR (`Номер рейса` = ?)) AND ((? = 1 AND `Отправление` IS NULL) OR (`Отправление` = ?)) AND ((? = 1 AND `Прибытие` IS NULL) OR (`Прибытие` = ?)) AND ((? = 1 AND `Стоимость_проезда` IS NULL) OR (`Стоимость_проезда` = ?)) AND ((? = 1 AND `Индекс_автобусного_парка` IS NULL) OR (`Индекс_автобусного_парка` = ?)))</CommandText>
+                    <CommandText>DELETE FROM `Рейс` WHERE ((`Индекс_рейса` = ?) AND ((? = 1 AND `Номер_рейса` IS NULL) OR (`Номер_рейса` = ?)) AND ((? = 1 AND `Отправление` IS NULL) OR (`Отправление` = ?)) AND ((? = 1 AND `Прибытие` IS NULL) OR (`Прибытие` = ?)) AND ((? = 1 AND `Стоимость_проезда` IS NULL) OR (`Стоимость_проезда` = ?)) AND ((? = 1 AND `Индекс_автобусного_парка` IS NULL) OR (`Индекс_автобусного_парка` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Индекс_рейса" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Индекс_рейса" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Номер_рейса" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Номер рейса" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Номер_рейса" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Номер рейса" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Номер_рейса" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Номер_рейса" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Номер_рейса" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Номер_рейса" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Отправление" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Отправление" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_Отправление" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Отправление" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Прибытие" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Прибытие" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -587,9 +587,9 @@
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `Рейс` (`Номер рейса`, `Откуда`, `Куда`, `Отправление`, `Прибытие`, `Стоимость_проезда`, `Индекс_автобусного_парка`) VALUES (?, ?, ?, ?, ?, ?, ?)</CommandText>
+                    <CommandText>INSERT INTO `Рейс` (`Номер_рейса`, `Откуда`, `Куда`, `Отправление`, `Прибытие`, `Стоимость_проезда`, `Индекс_автобусного_парка`) VALUES (?, ?, ?, ?, ?, ?, ?)</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Номер_рейса" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Номер рейса" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Номер_рейса" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Номер_рейса" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Откуда" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="Откуда" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Куда" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="Куда" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Отправление" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Отправление" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -601,15 +601,15 @@
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Индекс_рейса, [Номер рейса], Откуда, Куда, Отправление, Прибытие, Стоимость_проезда, Индекс_автобусного_парка FROM Рейс</CommandText>
+                    <CommandText>SELECT Индекс_рейса, Номер_рейса, Откуда, Куда, Отправление, Прибытие, Стоимость_проезда, Индекс_автобусного_парка FROM Рейс</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `Рейс` SET `Номер рейса` = ?, `Откуда` = ?, `Куда` = ?, `Отправление` = ?, `Прибытие` = ?, `Стоимость_проезда` = ?, `Индекс_автобусного_парка` = ? WHERE ((`Индекс_рейса` = ?) AND ((? = 1 AND `Номер рейса` IS NULL) OR (`Номер рейса` = ?)) AND ((? = 1 AND `Отправление` IS NULL) OR (`Отправление` = ?)) AND ((? = 1 AND `Прибытие` IS NULL) OR (`Прибытие` = ?)) AND ((? = 1 AND `Стоимость_проезда` IS NULL) OR (`Стоимость_проезда` = ?)) AND ((? = 1 AND `Индекс_автобусного_парка` IS NULL) OR (`Индекс_автобусного_парка` = ?)))</CommandText>
+                    <CommandText>UPDATE `Рейс` SET `Номер_рейса` = ?, `Откуда` = ?, `Куда` = ?, `Отправление` = ?, `Прибытие` = ?, `Стоимость_проезда` = ?, `Индекс_автобусного_парка` = ? WHERE ((`Индекс_рейса` = ?) AND ((? = 1 AND `Номер_рейса` IS NULL) OR (`Номер_рейса` = ?)) AND ((? = 1 AND `Отправление` IS NULL) OR (`Отправление` = ?)) AND ((? = 1 AND `Прибытие` IS NULL) OR (`Прибытие` = ?)) AND ((? = 1 AND `Стоимость_проезда` IS NULL) OR (`Стоимость_проезда` = ?)) AND ((? = 1 AND `Индекс_автобусного_парка` IS NULL) OR (`Индекс_автобусного_парка` = ?)))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Номер_рейса" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Номер рейса" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Номер_рейса" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Номер_рейса" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Откуда" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="Откуда" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Куда" Precision="0" ProviderType="LongVarWChar" Scale="0" Size="0" SourceColumn="Куда" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Отправление" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Отправление" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -617,8 +617,8 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Стоимость_проезда" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Стоимость_проезда" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Индекс_автобусного_парка" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Индекс_автобусного_парка" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Индекс_рейса" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Индекс_рейса" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Номер_рейса" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Номер рейса" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Номер_рейса" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Номер рейса" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Номер_рейса" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Номер_рейса" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Номер_рейса" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Номер_рейса" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Отправление" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Отправление" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_Отправление" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Отправление" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Прибытие" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Прибытие" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -634,7 +634,7 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="Индекс_рейса" DataSetColumn="Индекс_рейса" />
-              <Mapping SourceColumn="Номер рейса" DataSetColumn="Номер рейса" />
+              <Mapping SourceColumn="Номер_рейса" DataSetColumn="Номер_рейса" />
               <Mapping SourceColumn="Откуда" DataSetColumn="Откуда" />
               <Mapping SourceColumn="Куда" DataSetColumn="Куда" />
               <Mapping SourceColumn="Отправление" DataSetColumn="Отправление" />
@@ -646,7 +646,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="РуководительTableAdapter" GeneratorDataComponentClassName="РуководительTableAdapter" Name="Руководитель" UserDataComponentName="РуководительTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="bus_dataset_connection (Settings)" DbObjectName="Руководитель" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnStr (Settings)" DbObjectName="Руководитель" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Руководитель` WHERE ((`Индекс_руководителя` = ?) AND ((? = 1 AND `ФИО_руководителя` IS NULL) OR (`ФИО_руководителя` = ?)) AND ((? = 1 AND `Номер_телефона_руководителя` IS NULL) OR (`Номер_телефона_руководителя` = ?)))</CommandText>
@@ -694,6 +694,60 @@
               <Mapping SourceColumn="Индекс_руководителя" DataSetColumn="Индекс_руководителя" />
               <Mapping SourceColumn="ФИО_руководителя" DataSetColumn="ФИО_руководителя" />
               <Mapping SourceColumn="Номер_телефона_руководителя" DataSetColumn="Номер_телефона_руководителя" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Продолжительность поездкиTableAdapter" GeneratorDataComponentClassName="Продолжительность_поездкиTableAdapter" Name="Продолжительность поездки" UserDataComponentName="Продолжительность поездкиTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnStr (Settings)" DbObjectName="Продолжительность поездки" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Отправление, Прибытие, Продолжительность FROM [Продолжительность поездки]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Отправление" DataSetColumn="Отправление" />
+              <Mapping SourceColumn="Прибытие" DataSetColumn="Прибытие" />
+              <Mapping SourceColumn="Продолжительность" DataSetColumn="Продолжительность" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Сортировка по году выпуска между 2015 и 2016TableAdapter" GeneratorDataComponentClassName="Сортировка_по_году_выпуска_между_2015_и_2016TableAdapter" Name="Сортировка по году выпуска между 2015 и 2016" UserDataComponentName="Сортировка по году выпуска между 2015 и 2016TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnStr (Settings)" DbObjectName="Сортировка по году выпуска между 2015 и 2016" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Год выпуска_автобуса], Марка_автобуса, Модель_автобуса FROM [Сортировка по году выпуска между 2015 и 2016]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Год выпуска_автобуса" DataSetColumn="Год выпуска_автобуса" />
+              <Mapping SourceColumn="Марка_автобуса" DataSetColumn="Марка_автобуса" />
+              <Mapping SourceColumn="Модель_автобуса" DataSetColumn="Модель_автобуса" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Сортировка фамилии водителейTableAdapter" GeneratorDataComponentClassName="Сортировка_фамилии_водителейTableAdapter" Name="Сортировка фамилии водителей" UserDataComponentName="Сортировка фамилии водителейTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnStr (Settings)" DbObjectName="Сортировка фамилии водителей" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ФИО_водителя, Стаж_водителя, Номер_телефона_водителя FROM [Сортировка фамилии водителей]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ФИО_водителя" DataSetColumn="ФИО_водителя" />
+              <Mapping SourceColumn="Стаж_водителя" DataSetColumn="Стаж_водителя" />
+              <Mapping SourceColumn="Номер_телефона_водителя" DataSetColumn="Номер_телефона_водителя" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -776,7 +830,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Автобус_x0020_Переключатель" msprop:Generator_RowEvHandlerName="Автобус_ПереключательRowChangeEventHandler" msprop:Generator_RowDeletedName="Автобус_ПереключательRowDeleted" msprop:Generator_RowDeletingName="Автобус_ПереключательRowDeleting" msprop:Generator_RowEvArgName="Автобус_ПереключательRowChangeEvent" msprop:Generator_TablePropName="Автобус_Переключатель" msprop:Generator_RowChangedName="Автобус_ПереключательRowChanged" msprop:Generator_RowChangingName="Автобус_ПереключательRowChanging" msprop:Generator_TableClassName="Автобус_ПереключательDataTable" msprop:Generator_RowClassName="Автобус_ПереключательRow" msprop:Generator_TableVarName="tableАвтобус_Переключатель" msprop:Generator_UserTableName="Автобус Переключатель">
+        <xs:element name="Автобус_Переключатель" msprop:Generator_RowEvHandlerName="Автобус_ПереключательRowChangeEventHandler" msprop:Generator_RowDeletedName="Автобус_ПереключательRowDeleted" msprop:Generator_RowDeletingName="Автобус_ПереключательRowDeleting" msprop:Generator_RowEvArgName="Автобус_ПереключательRowChangeEvent" msprop:Generator_TablePropName="Автобус_Переключатель" msprop:Generator_RowChangedName="Автобус_ПереключательRowChanged" msprop:Generator_RowChangingName="Автобус_ПереключательRowChanging" msprop:Generator_TableClassName="Автобус_ПереключательDataTable" msprop:Generator_RowClassName="Автобус_ПереключательRow" msprop:Generator_TableVarName="tableАвтобус_Переключатель" msprop:Generator_UserTableName="Автобус_Переключатель">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_статус" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="ID_статус" msprop:Generator_ColumnPropNameInTable="ID_статусColumn" msprop:Generator_ColumnVarNameInTable="columnID_статус" msprop:Generator_UserColumnName="ID_статус" type="xs:int" />
@@ -790,7 +844,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Автобусный_x0020_парк" msprop:Generator_RowEvHandlerName="Автобусный_паркRowChangeEventHandler" msprop:Generator_RowDeletedName="Автобусный_паркRowDeleted" msprop:Generator_RowDeletingName="Автобусный_паркRowDeleting" msprop:Generator_RowEvArgName="Автобусный_паркRowChangeEvent" msprop:Generator_TablePropName="Автобусный_парк" msprop:Generator_RowChangedName="Автобусный_паркRowChanged" msprop:Generator_RowChangingName="Автобусный_паркRowChanging" msprop:Generator_TableClassName="Автобусный_паркDataTable" msprop:Generator_RowClassName="Автобусный_паркRow" msprop:Generator_TableVarName="tableАвтобусный_парк" msprop:Generator_UserTableName="Автобусный парк">
+        <xs:element name="Автобусный_парк" msprop:Generator_RowEvHandlerName="Автобусный_паркRowChangeEventHandler" msprop:Generator_RowDeletedName="Автобусный_паркRowDeleted" msprop:Generator_RowDeletingName="Автобусный_паркRowDeleting" msprop:Generator_RowEvArgName="Автобусный_паркRowChangeEvent" msprop:Generator_TablePropName="Автобусный_парк" msprop:Generator_RowChangedName="Автобусный_паркRowChanged" msprop:Generator_RowChangingName="Автобусный_паркRowChanging" msprop:Generator_TableClassName="Автобусный_паркDataTable" msprop:Generator_RowClassName="Автобусный_паркRow" msprop:Generator_TableVarName="tableАвтобусный_парк" msprop:Generator_UserTableName="Автобусный_парк">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Индекс_автобусного_парка" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="Индекс_автобусного_парка" msprop:Generator_ColumnPropNameInTable="Индекс_автобусного_паркаColumn" msprop:Generator_ColumnVarNameInTable="columnИндекс_автобусного_парка" msprop:Generator_UserColumnName="Индекс_автобусного_парка" type="xs:int" />
@@ -904,7 +958,7 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Индекс_рейса" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="Индекс_рейса" msprop:Generator_ColumnPropNameInTable="Индекс_рейсаColumn" msprop:Generator_ColumnVarNameInTable="columnИндекс_рейса" msprop:Generator_UserColumnName="Индекс_рейса" type="xs:int" />
-              <xs:element name="Номер_x0020_рейса" msprop:Generator_ColumnPropNameInRow="Номер_рейса" msprop:Generator_ColumnPropNameInTable="Номер_рейсаColumn" msprop:Generator_ColumnVarNameInTable="columnНомер_рейса" msprop:Generator_UserColumnName="Номер рейса" minOccurs="0">
+              <xs:element name="Номер_рейса" msprop:Generator_ColumnPropNameInRow="Номер_рейса" msprop:Generator_ColumnPropNameInTable="Номер_рейсаColumn" msprop:Generator_ColumnVarNameInTable="columnНомер_рейса" msprop:Generator_UserColumnName="Номер_рейса" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="4" />
@@ -953,6 +1007,57 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Продолжительность_x0020_поездки" msprop:Generator_RowEvHandlerName="Продолжительность_поездкиRowChangeEventHandler" msprop:Generator_RowDeletedName="Продолжительность_поездкиRowDeleted" msprop:Generator_RowDeletingName="Продолжительность_поездкиRowDeleting" msprop:Generator_RowEvArgName="Продолжительность_поездкиRowChangeEvent" msprop:Generator_TablePropName="Продолжительность_поездки" msprop:Generator_RowChangedName="Продолжительность_поездкиRowChanged" msprop:Generator_RowChangingName="Продолжительность_поездкиRowChanging" msprop:Generator_TableClassName="Продолжительность_поездкиDataTable" msprop:Generator_RowClassName="Продолжительность_поездкиRow" msprop:Generator_TableVarName="tableПродолжительность_поездки" msprop:Generator_UserTableName="Продолжительность поездки">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Отправление" msprop:Generator_ColumnPropNameInRow="Отправление" msprop:Generator_ColumnPropNameInTable="ОтправлениеColumn" msprop:Generator_ColumnVarNameInTable="columnОтправление" msprop:Generator_UserColumnName="Отправление" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Прибытие" msprop:Generator_ColumnPropNameInRow="Прибытие" msprop:Generator_ColumnPropNameInTable="ПрибытиеColumn" msprop:Generator_ColumnVarNameInTable="columnПрибытие" msprop:Generator_UserColumnName="Прибытие" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Продолжительность" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Продолжительность" msprop:Generator_ColumnPropNameInTable="ПродолжительностьColumn" msprop:Generator_ColumnVarNameInTable="columnПродолжительность" msprop:Generator_UserColumnName="Продолжительность" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Сортировка_x0020_по_x0020_году_x0020_выпуска_x0020_между_x0020_2015_x0020_и_x0020_2016" msprop:Generator_RowEvHandlerName="Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEventHandler" msprop:Generator_RowDeletedName="Сортировка_по_году_выпуска_между_2015_и_2016RowDeleted" msprop:Generator_RowDeletingName="Сортировка_по_году_выпуска_между_2015_и_2016RowDeleting" msprop:Generator_RowEvArgName="Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEvent" msprop:Generator_TablePropName="Сортировка_по_году_выпуска_между_2015_и_2016" msprop:Generator_RowChangedName="Сортировка_по_году_выпуска_между_2015_и_2016RowChanged" msprop:Generator_RowChangingName="Сортировка_по_году_выпуска_между_2015_и_2016RowChanging" msprop:Generator_TableClassName="Сортировка_по_году_выпуска_между_2015_и_2016DataTable" msprop:Generator_RowClassName="Сортировка_по_году_выпуска_между_2015_и_2016Row" msprop:Generator_TableVarName="tableСортировка_по_году_выпуска_между_2015_и_2016" msprop:Generator_UserTableName="Сортировка по году выпуска между 2015 и 2016">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Год_x0020_выпуска_автобуса" msprop:Generator_ColumnPropNameInRow="Год_выпуска_автобуса" msprop:Generator_ColumnPropNameInTable="Год_выпуска_автобусаColumn" msprop:Generator_ColumnVarNameInTable="columnГод_выпуска_автобуса" msprop:Generator_UserColumnName="Год выпуска_автобуса" type="xs:int" minOccurs="0" />
+              <xs:element name="Марка_автобуса" msprop:Generator_ColumnPropNameInRow="Марка_автобуса" msprop:Generator_ColumnPropNameInTable="Марка_автобусаColumn" msprop:Generator_ColumnVarNameInTable="columnМарка_автобуса" msprop:Generator_UserColumnName="Марка_автобуса" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Модель_автобуса" msprop:Generator_ColumnPropNameInRow="Модель_автобуса" msprop:Generator_ColumnPropNameInTable="Модель_автобусаColumn" msprop:Generator_ColumnVarNameInTable="columnМодель_автобуса" msprop:Generator_UserColumnName="Модель_автобуса" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Сортировка_x0020_фамилии_x0020_водителей" msprop:Generator_RowEvHandlerName="Сортировка_фамилии_водителейRowChangeEventHandler" msprop:Generator_RowDeletedName="Сортировка_фамилии_водителейRowDeleted" msprop:Generator_RowDeletingName="Сортировка_фамилии_водителейRowDeleting" msprop:Generator_RowEvArgName="Сортировка_фамилии_водителейRowChangeEvent" msprop:Generator_TablePropName="Сортировка_фамилии_водителей" msprop:Generator_RowChangedName="Сортировка_фамилии_водителейRowChanged" msprop:Generator_RowChangingName="Сортировка_фамилии_водителейRowChanging" msprop:Generator_TableClassName="Сортировка_фамилии_водителейDataTable" msprop:Generator_RowClassName="Сортировка_фамилии_водителейRow" msprop:Generator_TableVarName="tableСортировка_фамилии_водителей" msprop:Generator_UserTableName="Сортировка фамилии водителей">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ФИО_водителя" msprop:Generator_ColumnPropNameInRow="ФИО_водителя" msprop:Generator_ColumnPropNameInTable="ФИО_водителяColumn" msprop:Generator_ColumnVarNameInTable="columnФИО_водителя" msprop:Generator_UserColumnName="ФИО_водителя" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Стаж_водителя" msprop:Generator_ColumnPropNameInRow="Стаж_водителя" msprop:Generator_ColumnPropNameInTable="Стаж_водителяColumn" msprop:Generator_ColumnVarNameInTable="columnСтаж_водителя" msprop:Generator_UserColumnName="Стаж_водителя" type="xs:int" minOccurs="0" />
+              <xs:element name="Номер_телефона_водителя" msprop:Generator_ColumnPropNameInRow="Номер_телефона_водителя" msprop:Generator_ColumnPropNameInTable="Номер_телефона_водителяColumn" msprop:Generator_ColumnVarNameInTable="columnНомер_телефона_водителя" msprop:Generator_UserColumnName="Номер_телефона_водителя" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -968,12 +1073,12 @@
       <xs:selector xpath=".//mstns:Автобус" />
       <xs:field xpath="mstns:Индекс_автобуса" />
     </xs:unique>
-    <xs:unique name="Автобус_x0020_Переключатель_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Автобус_x0020_Переключатель" />
+    <xs:unique name="Автобус_Переключатель_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Автобус_Переключатель" />
       <xs:field xpath="mstns:ID_статус" />
     </xs:unique>
-    <xs:unique name="Автобусный_x0020_парк_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Автобусный_x0020_парк" />
+    <xs:unique name="Автобусный_парк_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Автобусный_парк" />
       <xs:field xpath="mstns:Индекс_автобусного_парка" />
     </xs:unique>
     <xs:unique name="Водитель_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
@@ -1004,14 +1109,14 @@
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="Автобус_x0020_ПереключательАвтобус" msdata:parent="Автобус_x0020_Переключатель" msdata:child="Автобус" msdata:parentkey="ID_статус" msdata:childkey="Статус_автобуса" msprop:Generator_UserParentTable="Автобус Переключатель" msprop:Generator_UserChildTable="Автобус" msprop:Generator_RelationVarName="relationАвтобус_ПереключательАвтобус" msprop:Generator_UserRelationName="Автобус ПереключательАвтобус" msprop:Generator_ChildPropName="GetАвтобусRows" msprop:Generator_ParentPropName="Автобус_ПереключательRow" />
-      <msdata:Relationship name="Автобусный_x0020_паркАвтобус" msdata:parent="Автобусный_x0020_парк" msdata:child="Автобус" msdata:parentkey="Индекс_автобусного_парка" msdata:childkey="Индекс_автобусного_парка" msprop:Generator_UserParentTable="Автобусный парк" msprop:Generator_UserChildTable="Автобус" msprop:Generator_RelationVarName="relationАвтобусный_паркАвтобус" msprop:Generator_UserRelationName="Автобусный паркАвтобус" msprop:Generator_ChildPropName="GetАвтобусRows" msprop:Generator_ParentPropName="Автобусный_паркRow" />
+      <msdata:Relationship name="Автобус_x0020_ПереключательАвтобус" msdata:parent="Автобус_Переключатель" msdata:child="Автобус" msdata:parentkey="ID_статус" msdata:childkey="Статус_автобуса" msprop:Generator_UserParentTable="Автобус_Переключатель" msprop:Generator_UserChildTable="Автобус" msprop:Generator_RelationVarName="relationАвтобус_ПереключательАвтобус" msprop:Generator_UserRelationName="Автобус ПереключательАвтобус" msprop:Generator_ChildPropName="GetАвтобусRows" msprop:Generator_ParentPropName="Автобус_ПереключательRow" />
+      <msdata:Relationship name="Автобусный_x0020_паркАвтобус" msdata:parent="Автобусный_парк" msdata:child="Автобус" msdata:parentkey="Индекс_автобусного_парка" msdata:childkey="Индекс_автобусного_парка" msprop:Generator_UserParentTable="Автобусный_парк" msprop:Generator_UserChildTable="Автобус" msprop:Generator_RelationVarName="relationАвтобусный_паркАвтобус" msprop:Generator_UserRelationName="Автобусный паркАвтобус" msprop:Generator_ChildPropName="GetАвтобусRows" msprop:Generator_ParentPropName="Автобусный_паркRow" />
       <msdata:Relationship name="ВодительАвтобус" msdata:parent="Водитель" msdata:child="Автобус" msdata:parentkey="Индекс_водителя" msdata:childkey="Индекс_водителя" msprop:Generator_UserParentTable="Водитель" msprop:Generator_UserChildTable="Автобус" msprop:Generator_RelationVarName="relationВодительАвтобус" msprop:Generator_UserRelationName="ВодительАвтобус" msprop:Generator_ChildPropName="GetАвтобусRows" msprop:Generator_ParentPropName="ВодительRow" />
       <msdata:Relationship name="КонтролерАвтобус" msdata:parent="Контролер" msdata:child="Автобус" msdata:parentkey="Индекс_контролера" msdata:childkey="Индекс_контролера" msprop:Generator_UserParentTable="Контролер" msprop:Generator_UserChildTable="Автобус" msprop:Generator_RelationVarName="relationКонтролерАвтобус" msprop:Generator_UserRelationName="КонтролерАвтобус" msprop:Generator_ChildPropName="GetАвтобусRows" msprop:Generator_ParentPropName="КонтролерRow" />
       <msdata:Relationship name="РейсАвтобус" msdata:parent="Рейс" msdata:child="Автобус" msdata:parentkey="Индекс_рейса" msdata:childkey="Индекс_рейса" msprop:Generator_UserParentTable="Рейс" msprop:Generator_UserChildTable="Автобус" msprop:Generator_RelationVarName="relationРейсАвтобус" msprop:Generator_UserRelationName="РейсАвтобус" msprop:Generator_ChildPropName="GetАвтобусRows" msprop:Generator_ParentPropName="РейсRow" />
-      <msdata:Relationship name="РуководительАвтобусный_x0020_парк" msdata:parent="Руководитель" msdata:child="Автобусный_x0020_парк" msdata:parentkey="Индекс_руководителя" msdata:childkey="Индекс_руководителя" msprop:Generator_UserParentTable="Руководитель" msprop:Generator_UserChildTable="Автобусный парк" msprop:Generator_RelationVarName="relationРуководительАвтобусный_парк" msprop:Generator_UserRelationName="РуководительАвтобусный парк" msprop:Generator_ChildPropName="GetАвтобусный_паркRows" msprop:Generator_ParentPropName="РуководительRow" />
+      <msdata:Relationship name="РуководительАвтобусный_x0020_парк" msdata:parent="Руководитель" msdata:child="Автобусный_парк" msdata:parentkey="Индекс_руководителя" msdata:childkey="Индекс_руководителя" msprop:Generator_UserParentTable="Руководитель" msprop:Generator_UserChildTable="Автобусный_парк" msprop:Generator_RelationVarName="relationРуководительАвтобусный_парк" msprop:Generator_UserRelationName="РуководительАвтобусный парк" msprop:Generator_ChildPropName="GetАвтобусный_паркRows" msprop:Generator_ParentPropName="РуководительRow" />
       <msdata:Relationship name="АвтобусПассажир" msdata:parent="Автобус" msdata:child="Пассажир" msdata:parentkey="Индекс_автобуса" msdata:childkey="Индекс_автобуса" msprop:Generator_UserParentTable="Автобус" msprop:Generator_UserChildTable="Пассажир" msprop:Generator_RelationVarName="relationАвтобусПассажир" msprop:Generator_ChildPropName="GetПассажирRows" msprop:Generator_ParentPropName="АвтобусRow" msprop:Generator_UserRelationName="АвтобусПассажир" />
-      <msdata:Relationship name="Автобусный_x0020_паркРейс" msdata:parent="Автобусный_x0020_парк" msdata:child="Рейс" msdata:parentkey="Индекс_автобусного_парка" msdata:childkey="Индекс_автобусного_парка" msprop:Generator_UserParentTable="Автобусный парк" msprop:Generator_UserChildTable="Рейс" msprop:Generator_RelationVarName="relationАвтобусный_паркРейс" msprop:Generator_ChildPropName="GetРейсRows" msprop:Generator_ParentPropName="Автобусный_паркRow" msprop:Generator_UserRelationName="Автобусный паркРейс" />
+      <msdata:Relationship name="Автобусный_x0020_паркРейс" msdata:parent="Автобусный_парк" msdata:child="Рейс" msdata:parentkey="Индекс_автобусного_парка" msdata:childkey="Индекс_автобусного_парка" msprop:Generator_UserParentTable="Автобусный_парк" msprop:Generator_UserChildTable="Рейс" msprop:Generator_RelationVarName="relationАвтобусный_паркРейс" msprop:Generator_ChildPropName="GetРейсRows" msprop:Generator_ParentPropName="Автобусный_паркRow" msprop:Generator_UserRelationName="Автобусный паркРейс" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

@@ -62,6 +62,12 @@ namespace bus_coursework {
         }
 
         private void Edit_DB_Load(object sender, EventArgs e) {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bus_dataset1.Пассажир". При необходимости она может быть перемещена или удалена.
+            this.пассажирTableAdapter.Fill(this.bus_dataset.Пассажир);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bus_dataset1.Автобус". При необходимости она может быть перемещена или удалена.
+            this.автобусTableAdapter.Fill(this.bus_dataset.Автобус);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bus_dataset1.Рейс". При необходимости она может быть перемещена или удалена.
+            this.рейсTableAdapter.Fill(this.bus_dataset.Рейс);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bus_dataset.Контролер". При необходимости она может быть перемещена или удалена.
             this.контролерTableAdapter.Fill(this.bus_dataset.Контролер);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bus_dataset.Водитель". При необходимости она может быть перемещена или удалена.
@@ -78,8 +84,8 @@ namespace bus_coursework {
             this.автобусный_паркTableAdapter.Fill(this.bus_dataset.Автобусный_парк);
 
 
-
-            // Название столбца и ширина столбца
+            // Рейс
+            //Название столбца и ширина столбца
             рейсDataGridView.Columns[0].HeaderText = "ID";
             рейсDataGridView.Columns[0].Width = 30;
             // Номер рейса
@@ -101,6 +107,7 @@ namespace bus_coursework {
             рейсDataGridView.Columns[7].Visible = false;
 
 
+            // Автобус
             // Название столбца и ширина столбца
             автобусDataGridView.Columns[0].HeaderText = "ID";
             автобусDataGridView.Columns[0].Width = 30;
@@ -126,13 +133,26 @@ namespace bus_coursework {
             автобусDataGridView.Columns[7].Width = 200;
             // Статус автобуса, true - отображать, false - скрыть
             автобусDataGridView.Columns[8].Visible = false;
+
+            // Пассажир
+            // Индекс пассажира
+            пассажирDataGridView.Columns[0].HeaderText = "ID";
+            пассажирDataGridView.Columns[0].Width = 30;
+            // Индекс Автобус
+            пассажирDataGridView.Columns[1].Visible = false;
+            пассажирDataGridView.Columns[1].HeaderText = "ID Автобус";
+            пассажирDataGridView.Columns[1].Width = 30;
+            // ФИО пассажира
+            пассажирDataGridView.Columns[2].HeaderText = "ФИО";
+            пассажирDataGridView.Columns[2].Width = 200;
+            // Категория пассажира (полный, неполный)
+            пассажирDataGridView.Columns[3].HeaderText = "Категория";
+            пассажирDataGridView.Columns[3].Width = 80;
         }
 
         // Кнопка Обновления
         private void button8_Click(object sender, EventArgs e) {
             рейсDataGridView.DataSource = linebus.UpdateLineBusCheck(int.Parse(индекс_автобусного_паркаTextBox.Text));
-
-
 
             // Не отображается, возвращает пустое значение
             //Console.WriteLine(int.Parse(индекс_руководителяTextBox.Text));
@@ -173,6 +193,14 @@ namespace bus_coursework {
         }
 
         private void label10_Click(object sender, EventArgs e) {
+
+        }
+
+        private void индекс_автобусного_паркаLabel_Click_1(object sender, EventArgs e) {
+
+        }
+
+        private void индекс_автобусного_паркаLabel1_Click(object sender, EventArgs e) {
 
         }
     }

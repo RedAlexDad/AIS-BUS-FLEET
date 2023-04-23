@@ -46,6 +46,12 @@ namespace bus_coursework {
         
         private РуководительDataTable tableРуководитель;
         
+        private Продолжительность_поездкиDataTable tableПродолжительность_поездки;
+        
+        private Сортировка_по_году_выпуска_между_2015_и_2016DataTable tableСортировка_по_году_выпуска_между_2015_и_2016;
+        
+        private Сортировка_фамилии_водителейDataTable tableСортировка_фамилии_водителей;
+        
         private global::System.Data.DataRelation relationАвтобус_ПереключательАвтобус;
         
         private global::System.Data.DataRelation relationАвтобусный_паркАвтобус;
@@ -99,11 +105,11 @@ namespace bus_coursework {
                 if ((ds.Tables["Автобус"] != null)) {
                     base.Tables.Add(new АвтобусDataTable(ds.Tables["Автобус"]));
                 }
-                if ((ds.Tables["Автобус Переключатель"] != null)) {
-                    base.Tables.Add(new Автобус_ПереключательDataTable(ds.Tables["Автобус Переключатель"]));
+                if ((ds.Tables["Автобус_Переключатель"] != null)) {
+                    base.Tables.Add(new Автобус_ПереключательDataTable(ds.Tables["Автобус_Переключатель"]));
                 }
-                if ((ds.Tables["Автобусный парк"] != null)) {
-                    base.Tables.Add(new Автобусный_паркDataTable(ds.Tables["Автобусный парк"]));
+                if ((ds.Tables["Автобусный_парк"] != null)) {
+                    base.Tables.Add(new Автобусный_паркDataTable(ds.Tables["Автобусный_парк"]));
                 }
                 if ((ds.Tables["Водитель"] != null)) {
                     base.Tables.Add(new ВодительDataTable(ds.Tables["Водитель"]));
@@ -122,6 +128,15 @@ namespace bus_coursework {
                 }
                 if ((ds.Tables["Руководитель"] != null)) {
                     base.Tables.Add(new РуководительDataTable(ds.Tables["Руководитель"]));
+                }
+                if ((ds.Tables["Продолжительность поездки"] != null)) {
+                    base.Tables.Add(new Продолжительность_поездкиDataTable(ds.Tables["Продолжительность поездки"]));
+                }
+                if ((ds.Tables["Сортировка по году выпуска между 2015 и 2016"] != null)) {
+                    base.Tables.Add(new Сортировка_по_году_выпуска_между_2015_и_2016DataTable(ds.Tables["Сортировка по году выпуска между 2015 и 2016"]));
+                }
+                if ((ds.Tables["Сортировка фамилии водителей"] != null)) {
+                    base.Tables.Add(new Сортировка_фамилии_водителейDataTable(ds.Tables["Сортировка фамилии водителей"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -253,6 +268,36 @@ namespace bus_coursework {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Продолжительность_поездкиDataTable Продолжительность_поездки {
+            get {
+                return this.tableПродолжительность_поездки;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Сортировка_по_году_выпуска_между_2015_и_2016DataTable Сортировка_по_году_выпуска_между_2015_и_2016 {
+            get {
+                return this.tableСортировка_по_году_выпуска_между_2015_и_2016;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Сортировка_фамилии_водителейDataTable Сортировка_фамилии_водителей {
+            get {
+                return this.tableСортировка_фамилии_водителей;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -327,11 +372,11 @@ namespace bus_coursework {
                 if ((ds.Tables["Автобус"] != null)) {
                     base.Tables.Add(new АвтобусDataTable(ds.Tables["Автобус"]));
                 }
-                if ((ds.Tables["Автобус Переключатель"] != null)) {
-                    base.Tables.Add(new Автобус_ПереключательDataTable(ds.Tables["Автобус Переключатель"]));
+                if ((ds.Tables["Автобус_Переключатель"] != null)) {
+                    base.Tables.Add(new Автобус_ПереключательDataTable(ds.Tables["Автобус_Переключатель"]));
                 }
-                if ((ds.Tables["Автобусный парк"] != null)) {
-                    base.Tables.Add(new Автобусный_паркDataTable(ds.Tables["Автобусный парк"]));
+                if ((ds.Tables["Автобусный_парк"] != null)) {
+                    base.Tables.Add(new Автобусный_паркDataTable(ds.Tables["Автобусный_парк"]));
                 }
                 if ((ds.Tables["Водитель"] != null)) {
                     base.Tables.Add(new ВодительDataTable(ds.Tables["Водитель"]));
@@ -350,6 +395,15 @@ namespace bus_coursework {
                 }
                 if ((ds.Tables["Руководитель"] != null)) {
                     base.Tables.Add(new РуководительDataTable(ds.Tables["Руководитель"]));
+                }
+                if ((ds.Tables["Продолжительность поездки"] != null)) {
+                    base.Tables.Add(new Продолжительность_поездкиDataTable(ds.Tables["Продолжительность поездки"]));
+                }
+                if ((ds.Tables["Сортировка по году выпуска между 2015 и 2016"] != null)) {
+                    base.Tables.Add(new Сортировка_по_году_выпуска_между_2015_и_2016DataTable(ds.Tables["Сортировка по году выпуска между 2015 и 2016"]));
+                }
+                if ((ds.Tables["Сортировка фамилии водителей"] != null)) {
+                    base.Tables.Add(new Сортировка_фамилии_водителейDataTable(ds.Tables["Сортировка фамилии водителей"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -402,13 +456,13 @@ namespace bus_coursework {
                     this.tableАвтобус.InitVars();
                 }
             }
-            this.tableАвтобус_Переключатель = ((Автобус_ПереключательDataTable)(base.Tables["Автобус Переключатель"]));
+            this.tableАвтобус_Переключатель = ((Автобус_ПереключательDataTable)(base.Tables["Автобус_Переключатель"]));
             if ((initTable == true)) {
                 if ((this.tableАвтобус_Переключатель != null)) {
                     this.tableАвтобус_Переключатель.InitVars();
                 }
             }
-            this.tableАвтобусный_парк = ((Автобусный_паркDataTable)(base.Tables["Автобусный парк"]));
+            this.tableАвтобусный_парк = ((Автобусный_паркDataTable)(base.Tables["Автобусный_парк"]));
             if ((initTable == true)) {
                 if ((this.tableАвтобусный_парк != null)) {
                     this.tableАвтобусный_парк.InitVars();
@@ -448,6 +502,24 @@ namespace bus_coursework {
             if ((initTable == true)) {
                 if ((this.tableРуководитель != null)) {
                     this.tableРуководитель.InitVars();
+                }
+            }
+            this.tableПродолжительность_поездки = ((Продолжительность_поездкиDataTable)(base.Tables["Продолжительность поездки"]));
+            if ((initTable == true)) {
+                if ((this.tableПродолжительность_поездки != null)) {
+                    this.tableПродолжительность_поездки.InitVars();
+                }
+            }
+            this.tableСортировка_по_году_выпуска_между_2015_и_2016 = ((Сортировка_по_году_выпуска_между_2015_и_2016DataTable)(base.Tables["Сортировка по году выпуска между 2015 и 2016"]));
+            if ((initTable == true)) {
+                if ((this.tableСортировка_по_году_выпуска_между_2015_и_2016 != null)) {
+                    this.tableСортировка_по_году_выпуска_между_2015_и_2016.InitVars();
+                }
+            }
+            this.tableСортировка_фамилии_водителей = ((Сортировка_фамилии_водителейDataTable)(base.Tables["Сортировка фамилии водителей"]));
+            if ((initTable == true)) {
+                if ((this.tableСортировка_фамилии_водителей != null)) {
+                    this.tableСортировка_фамилии_водителей.InitVars();
                 }
             }
             this.relationАвтобус_ПереключательАвтобус = this.Relations["Автобус ПереключательАвтобус"];
@@ -490,6 +562,12 @@ namespace bus_coursework {
             base.Tables.Add(this.tableРейс);
             this.tableРуководитель = new РуководительDataTable();
             base.Tables.Add(this.tableРуководитель);
+            this.tableПродолжительность_поездки = new Продолжительность_поездкиDataTable();
+            base.Tables.Add(this.tableПродолжительность_поездки);
+            this.tableСортировка_по_году_выпуска_между_2015_и_2016 = new Сортировка_по_году_выпуска_между_2015_и_2016DataTable();
+            base.Tables.Add(this.tableСортировка_по_году_выпуска_между_2015_и_2016);
+            this.tableСортировка_фамилии_водителей = new Сортировка_фамилии_водителейDataTable();
+            base.Tables.Add(this.tableСортировка_фамилии_водителей);
             this.relationАвтобус_ПереключательАвтобус = new global::System.Data.DataRelation("Автобус ПереключательАвтобус", new global::System.Data.DataColumn[] {
                         this.tableАвтобус_Переключатель.ID_статусColumn}, new global::System.Data.DataColumn[] {
                         this.tableАвтобус.Статус_автобусаColumn}, false);
@@ -592,6 +670,24 @@ namespace bus_coursework {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeПродолжительность_поездки() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeСортировка_по_году_выпуска_между_2015_и_2016() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeСортировка_фамилии_водителей() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -677,6 +773,15 @@ namespace bus_coursework {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void РуководительRowChangeEventHandler(object sender, РуководительRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void Продолжительность_поездкиRowChangeEventHandler(object sender, Продолжительность_поездкиRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEventHandler(object sender, Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void Сортировка_фамилии_водителейRowChangeEventHandler(object sender, Сортировка_фамилии_водителейRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1691,7 +1796,7 @@ namespace bus_coursework {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Автобус_ПереключательDataTable() {
-                this.TableName = "Автобус Переключатель";
+                this.TableName = "Автобус_Переключатель";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1971,7 +2076,7 @@ namespace bus_coursework {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Автобусный_паркDataTable() {
-                this.TableName = "Автобусный парк";
+                this.TableName = "Автобусный_парк";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -3684,7 +3789,7 @@ namespace bus_coursework {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnИндекс_рейса = base.Columns["Индекс_рейса"];
-                this.columnНомер_рейса = base.Columns["Номер рейса"];
+                this.columnНомер_рейса = base.Columns["Номер_рейса"];
                 this.columnОткуда = base.Columns["Откуда"];
                 this.columnКуда = base.Columns["Куда"];
                 this.columnОтправление = base.Columns["Отправление"];
@@ -3698,7 +3803,7 @@ namespace bus_coursework {
             private void InitClass() {
                 this.columnИндекс_рейса = new global::System.Data.DataColumn("Индекс_рейса", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnИндекс_рейса);
-                this.columnНомер_рейса = new global::System.Data.DataColumn("Номер рейса", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnНомер_рейса = new global::System.Data.DataColumn("Номер_рейса", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnНомер_рейса);
                 this.columnОткуда = new global::System.Data.DataColumn("Откуда", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnОткуда);
@@ -4099,6 +4204,836 @@ namespace bus_coursework {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "РуководительDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Продолжительность_поездкиDataTable : global::System.Data.TypedTableBase<Продолжительность_поездкиRow> {
+            
+            private global::System.Data.DataColumn columnОтправление;
+            
+            private global::System.Data.DataColumn columnПрибытие;
+            
+            private global::System.Data.DataColumn columnПродолжительность;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Продолжительность_поездкиDataTable() {
+                this.TableName = "Продолжительность поездки";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Продолжительность_поездкиDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected Продолжительность_поездкиDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ОтправлениеColumn {
+                get {
+                    return this.columnОтправление;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ПрибытиеColumn {
+                get {
+                    return this.columnПрибытие;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ПродолжительностьColumn {
+                get {
+                    return this.columnПродолжительность;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Продолжительность_поездкиRow this[int index] {
+                get {
+                    return ((Продолжительность_поездкиRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Продолжительность_поездкиRowChangeEventHandler Продолжительность_поездкиRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Продолжительность_поездкиRowChangeEventHandler Продолжительность_поездкиRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Продолжительность_поездкиRowChangeEventHandler Продолжительность_поездкиRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Продолжительность_поездкиRowChangeEventHandler Продолжительность_поездкиRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddПродолжительность_поездкиRow(Продолжительность_поездкиRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Продолжительность_поездкиRow AddПродолжительность_поездкиRow(System.DateTime Отправление, System.DateTime Прибытие, double Продолжительность) {
+                Продолжительность_поездкиRow rowПродолжительность_поездкиRow = ((Продолжительность_поездкиRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Отправление,
+                        Прибытие,
+                        Продолжительность};
+                rowПродолжительность_поездкиRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowПродолжительность_поездкиRow);
+                return rowПродолжительность_поездкиRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Продолжительность_поездкиDataTable cln = ((Продолжительность_поездкиDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Продолжительность_поездкиDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnОтправление = base.Columns["Отправление"];
+                this.columnПрибытие = base.Columns["Прибытие"];
+                this.columnПродолжительность = base.Columns["Продолжительность"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnОтправление = new global::System.Data.DataColumn("Отправление", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnОтправление);
+                this.columnПрибытие = new global::System.Data.DataColumn("Прибытие", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnПрибытие);
+                this.columnПродолжительность = new global::System.Data.DataColumn("Продолжительность", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnПродолжительность);
+                this.columnПродолжительность.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Продолжительность_поездкиRow NewПродолжительность_поездкиRow() {
+                return ((Продолжительность_поездкиRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Продолжительность_поездкиRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Продолжительность_поездкиRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Продолжительность_поездкиRowChanged != null)) {
+                    this.Продолжительность_поездкиRowChanged(this, new Продолжительность_поездкиRowChangeEvent(((Продолжительность_поездкиRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Продолжительность_поездкиRowChanging != null)) {
+                    this.Продолжительность_поездкиRowChanging(this, new Продолжительность_поездкиRowChangeEvent(((Продолжительность_поездкиRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Продолжительность_поездкиRowDeleted != null)) {
+                    this.Продолжительность_поездкиRowDeleted(this, new Продолжительность_поездкиRowChangeEvent(((Продолжительность_поездкиRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Продолжительность_поездкиRowDeleting != null)) {
+                    this.Продолжительность_поездкиRowDeleting(this, new Продолжительность_поездкиRowChangeEvent(((Продолжительность_поездкиRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveПродолжительность_поездкиRow(Продолжительность_поездкиRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                bus_dataset ds = new bus_dataset();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Продолжительность_поездкиDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Сортировка_по_году_выпуска_между_2015_и_2016DataTable : global::System.Data.TypedTableBase<Сортировка_по_году_выпуска_между_2015_и_2016Row> {
+            
+            private global::System.Data.DataColumn columnГод_выпуска_автобуса;
+            
+            private global::System.Data.DataColumn columnМарка_автобуса;
+            
+            private global::System.Data.DataColumn columnМодель_автобуса;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Сортировка_по_году_выпуска_между_2015_и_2016DataTable() {
+                this.TableName = "Сортировка по году выпуска между 2015 и 2016";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Сортировка_по_году_выпуска_между_2015_и_2016DataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected Сортировка_по_году_выпуска_между_2015_и_2016DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Год_выпуска_автобусаColumn {
+                get {
+                    return this.columnГод_выпуска_автобуса;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Марка_автобусаColumn {
+                get {
+                    return this.columnМарка_автобуса;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Модель_автобусаColumn {
+                get {
+                    return this.columnМодель_автобуса;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Сортировка_по_году_выпуска_между_2015_и_2016Row this[int index] {
+                get {
+                    return ((Сортировка_по_году_выпуска_между_2015_и_2016Row)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEventHandler Сортировка_по_году_выпуска_между_2015_и_2016RowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEventHandler Сортировка_по_году_выпуска_между_2015_и_2016RowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEventHandler Сортировка_по_году_выпуска_между_2015_и_2016RowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEventHandler Сортировка_по_году_выпуска_между_2015_и_2016RowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddСортировка_по_году_выпуска_между_2015_и_2016Row(Сортировка_по_году_выпуска_между_2015_и_2016Row row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Сортировка_по_году_выпуска_между_2015_и_2016Row AddСортировка_по_году_выпуска_между_2015_и_2016Row(int Год_выпуска_автобуса, string Марка_автобуса, string Модель_автобуса) {
+                Сортировка_по_году_выпуска_между_2015_и_2016Row rowСортировка_по_году_выпуска_между_2015_и_2016Row = ((Сортировка_по_году_выпуска_между_2015_и_2016Row)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Год_выпуска_автобуса,
+                        Марка_автобуса,
+                        Модель_автобуса};
+                rowСортировка_по_году_выпуска_между_2015_и_2016Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowСортировка_по_году_выпуска_между_2015_и_2016Row);
+                return rowСортировка_по_году_выпуска_между_2015_и_2016Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Сортировка_по_году_выпуска_между_2015_и_2016DataTable cln = ((Сортировка_по_году_выпуска_между_2015_и_2016DataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Сортировка_по_году_выпуска_между_2015_и_2016DataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnГод_выпуска_автобуса = base.Columns["Год выпуска_автобуса"];
+                this.columnМарка_автобуса = base.Columns["Марка_автобуса"];
+                this.columnМодель_автобуса = base.Columns["Модель_автобуса"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnГод_выпуска_автобуса = new global::System.Data.DataColumn("Год выпуска_автобуса", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnГод_выпуска_автобуса);
+                this.columnМарка_автобуса = new global::System.Data.DataColumn("Марка_автобуса", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnМарка_автобуса);
+                this.columnМодель_автобуса = new global::System.Data.DataColumn("Модель_автобуса", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnМодель_автобуса);
+                this.columnМарка_автобуса.MaxLength = 255;
+                this.columnМодель_автобуса.MaxLength = 255;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Сортировка_по_году_выпуска_между_2015_и_2016Row NewСортировка_по_году_выпуска_между_2015_и_2016Row() {
+                return ((Сортировка_по_году_выпуска_между_2015_и_2016Row)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Сортировка_по_году_выпуска_между_2015_и_2016Row(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Сортировка_по_году_выпуска_между_2015_и_2016Row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Сортировка_по_году_выпуска_между_2015_и_2016RowChanged != null)) {
+                    this.Сортировка_по_году_выпуска_между_2015_и_2016RowChanged(this, new Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEvent(((Сортировка_по_году_выпуска_между_2015_и_2016Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Сортировка_по_году_выпуска_между_2015_и_2016RowChanging != null)) {
+                    this.Сортировка_по_году_выпуска_между_2015_и_2016RowChanging(this, new Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEvent(((Сортировка_по_году_выпуска_между_2015_и_2016Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Сортировка_по_году_выпуска_между_2015_и_2016RowDeleted != null)) {
+                    this.Сортировка_по_году_выпуска_между_2015_и_2016RowDeleted(this, new Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEvent(((Сортировка_по_году_выпуска_между_2015_и_2016Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Сортировка_по_году_выпуска_между_2015_и_2016RowDeleting != null)) {
+                    this.Сортировка_по_году_выпуска_между_2015_и_2016RowDeleting(this, new Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEvent(((Сортировка_по_году_выпуска_между_2015_и_2016Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveСортировка_по_году_выпуска_между_2015_и_2016Row(Сортировка_по_году_выпуска_между_2015_и_2016Row row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                bus_dataset ds = new bus_dataset();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Сортировка_по_году_выпуска_между_2015_и_2016DataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Сортировка_фамилии_водителейDataTable : global::System.Data.TypedTableBase<Сортировка_фамилии_водителейRow> {
+            
+            private global::System.Data.DataColumn columnФИО_водителя;
+            
+            private global::System.Data.DataColumn columnСтаж_водителя;
+            
+            private global::System.Data.DataColumn columnНомер_телефона_водителя;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Сортировка_фамилии_водителейDataTable() {
+                this.TableName = "Сортировка фамилии водителей";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Сортировка_фамилии_водителейDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected Сортировка_фамилии_водителейDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ФИО_водителяColumn {
+                get {
+                    return this.columnФИО_водителя;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Стаж_водителяColumn {
+                get {
+                    return this.columnСтаж_водителя;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Номер_телефона_водителяColumn {
+                get {
+                    return this.columnНомер_телефона_водителя;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Сортировка_фамилии_водителейRow this[int index] {
+                get {
+                    return ((Сортировка_фамилии_водителейRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Сортировка_фамилии_водителейRowChangeEventHandler Сортировка_фамилии_водителейRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Сортировка_фамилии_водителейRowChangeEventHandler Сортировка_фамилии_водителейRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Сортировка_фамилии_водителейRowChangeEventHandler Сортировка_фамилии_водителейRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Сортировка_фамилии_водителейRowChangeEventHandler Сортировка_фамилии_водителейRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddСортировка_фамилии_водителейRow(Сортировка_фамилии_водителейRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Сортировка_фамилии_водителейRow AddСортировка_фамилии_водителейRow(string ФИО_водителя, int Стаж_водителя, string Номер_телефона_водителя) {
+                Сортировка_фамилии_водителейRow rowСортировка_фамилии_водителейRow = ((Сортировка_фамилии_водителейRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        ФИО_водителя,
+                        Стаж_водителя,
+                        Номер_телефона_водителя};
+                rowСортировка_фамилии_водителейRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowСортировка_фамилии_водителейRow);
+                return rowСортировка_фамилии_водителейRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Сортировка_фамилии_водителейDataTable cln = ((Сортировка_фамилии_водителейDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Сортировка_фамилии_водителейDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnФИО_водителя = base.Columns["ФИО_водителя"];
+                this.columnСтаж_водителя = base.Columns["Стаж_водителя"];
+                this.columnНомер_телефона_водителя = base.Columns["Номер_телефона_водителя"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnФИО_водителя = new global::System.Data.DataColumn("ФИО_водителя", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnФИО_водителя);
+                this.columnСтаж_водителя = new global::System.Data.DataColumn("Стаж_водителя", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnСтаж_водителя);
+                this.columnНомер_телефона_водителя = new global::System.Data.DataColumn("Номер_телефона_водителя", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnНомер_телефона_водителя);
+                this.columnФИО_водителя.MaxLength = 255;
+                this.columnНомер_телефона_водителя.MaxLength = 255;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Сортировка_фамилии_водителейRow NewСортировка_фамилии_водителейRow() {
+                return ((Сортировка_фамилии_водителейRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Сортировка_фамилии_водителейRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Сортировка_фамилии_водителейRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Сортировка_фамилии_водителейRowChanged != null)) {
+                    this.Сортировка_фамилии_водителейRowChanged(this, new Сортировка_фамилии_водителейRowChangeEvent(((Сортировка_фамилии_водителейRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Сортировка_фамилии_водителейRowChanging != null)) {
+                    this.Сортировка_фамилии_водителейRowChanging(this, new Сортировка_фамилии_водителейRowChangeEvent(((Сортировка_фамилии_водителейRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Сортировка_фамилии_водителейRowDeleted != null)) {
+                    this.Сортировка_фамилии_водителейRowDeleted(this, new Сортировка_фамилии_водителейRowChangeEvent(((Сортировка_фамилии_водителейRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Сортировка_фамилии_водителейRowDeleting != null)) {
+                    this.Сортировка_фамилии_водителейRowDeleting(this, new Сортировка_фамилии_водителейRowChangeEvent(((Сортировка_фамилии_водителейRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveСортировка_фамилии_водителейRow(Сортировка_фамилии_водителейRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                bus_dataset ds = new bus_dataset();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Сортировка_фамилии_водителейDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -4692,7 +5627,7 @@ namespace bus_coursework {
                         return ((string)(this[this.tableАвтобус_Переключатель.СтатусColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Статус\' в таблице \'Автобус Переключатель\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Статус\' в таблице \'Автобус_Переключатель\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -4757,7 +5692,7 @@ namespace bus_coursework {
                         return ((string)(this[this.tableАвтобусный_парк.Название_автобусного_паркаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Название_автобусного_парка\' в таблице \'Автобусный парк\' рав" +
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Название_автобусного_парка\' в таблице \'Автобусный_парк\' рав" +
                                 "но DBNull.", e);
                     }
                 }
@@ -4774,7 +5709,7 @@ namespace bus_coursework {
                         return ((string)(this[this.tableАвтобусный_парк.Адрес_автобусного_паркаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Адрес_автобусного парка\' в таблице \'Автобусный парк\' равно " +
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Адрес_автобусного парка\' в таблице \'Автобусный_парк\' равно " +
                                 "DBNull.", e);
                     }
                 }
@@ -4791,7 +5726,7 @@ namespace bus_coursework {
                         return ((int)(this[this.tableАвтобусный_парк.Индекс_руководителяColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Индекс_руководителя\' в таблице \'Автобусный парк\' равно DBNu" +
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Индекс_руководителя\' в таблице \'Автобусный_парк\' равно DBNu" +
                                 "ll.", e);
                     }
                 }
@@ -5364,7 +6299,7 @@ namespace bus_coursework {
                         return ((string)(this[this.tableРейс.Номер_рейсаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Номер рейса\' в таблице \'Рейс\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Номер_рейса\' в таблице \'Рейс\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -5666,6 +6601,312 @@ namespace bus_coursework {
                 else {
                     return ((Автобусный_паркRow[])(base.GetChildRows(this.Table.ChildRelations["РуководительАвтобусный парк"])));
                 }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Продолжительность_поездкиRow : global::System.Data.DataRow {
+            
+            private Продолжительность_поездкиDataTable tableПродолжительность_поездки;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Продолжительность_поездкиRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableПродолжительность_поездки = ((Продолжительность_поездкиDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime Отправление {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableПродолжительность_поездки.ОтправлениеColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Отправление\' в таблице \'Продолжительность поездки\' равно DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableПродолжительность_поездки.ОтправлениеColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime Прибытие {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableПродолжительность_поездки.ПрибытиеColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Прибытие\' в таблице \'Продолжительность поездки\' равно DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableПродолжительность_поездки.ПрибытиеColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double Продолжительность {
+                get {
+                    try {
+                        return ((double)(this[this.tableПродолжительность_поездки.ПродолжительностьColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Продолжительность\' в таблице \'Продолжительность поездки\' ра" +
+                                "вно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableПродолжительность_поездки.ПродолжительностьColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsОтправлениеNull() {
+                return this.IsNull(this.tableПродолжительность_поездки.ОтправлениеColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetОтправлениеNull() {
+                this[this.tableПродолжительность_поездки.ОтправлениеColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsПрибытиеNull() {
+                return this.IsNull(this.tableПродолжительность_поездки.ПрибытиеColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetПрибытиеNull() {
+                this[this.tableПродолжительность_поездки.ПрибытиеColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsПродолжительностьNull() {
+                return this.IsNull(this.tableПродолжительность_поездки.ПродолжительностьColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetПродолжительностьNull() {
+                this[this.tableПродолжительность_поездки.ПродолжительностьColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Сортировка_по_году_выпуска_между_2015_и_2016Row : global::System.Data.DataRow {
+            
+            private Сортировка_по_году_выпуска_между_2015_и_2016DataTable tableСортировка_по_году_выпуска_между_2015_и_2016;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Сортировка_по_году_выпуска_между_2015_и_2016Row(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableСортировка_по_году_выпуска_между_2015_и_2016 = ((Сортировка_по_году_выпуска_между_2015_и_2016DataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Год_выпуска_автобуса {
+                get {
+                    try {
+                        return ((int)(this[this.tableСортировка_по_году_выпуска_между_2015_и_2016.Год_выпуска_автобусаColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Год выпуска_автобуса\' в таблице \'Сортировка по году выпуска" +
+                                " между 2015 и 2016\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableСортировка_по_году_выпуска_между_2015_и_2016.Год_выпуска_автобусаColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Марка_автобуса {
+                get {
+                    try {
+                        return ((string)(this[this.tableСортировка_по_году_выпуска_между_2015_и_2016.Марка_автобусаColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Марка_автобуса\' в таблице \'Сортировка по году выпуска между" +
+                                " 2015 и 2016\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableСортировка_по_году_выпуска_между_2015_и_2016.Марка_автобусаColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Модель_автобуса {
+                get {
+                    try {
+                        return ((string)(this[this.tableСортировка_по_году_выпуска_между_2015_и_2016.Модель_автобусаColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Модель_автобуса\' в таблице \'Сортировка по году выпуска межд" +
+                                "у 2015 и 2016\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableСортировка_по_году_выпуска_между_2015_и_2016.Модель_автобусаColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsГод_выпуска_автобусаNull() {
+                return this.IsNull(this.tableСортировка_по_году_выпуска_между_2015_и_2016.Год_выпуска_автобусаColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetГод_выпуска_автобусаNull() {
+                this[this.tableСортировка_по_году_выпуска_между_2015_и_2016.Год_выпуска_автобусаColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsМарка_автобусаNull() {
+                return this.IsNull(this.tableСортировка_по_году_выпуска_между_2015_и_2016.Марка_автобусаColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetМарка_автобусаNull() {
+                this[this.tableСортировка_по_году_выпуска_между_2015_и_2016.Марка_автобусаColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsМодель_автобусаNull() {
+                return this.IsNull(this.tableСортировка_по_году_выпуска_между_2015_и_2016.Модель_автобусаColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetМодель_автобусаNull() {
+                this[this.tableСортировка_по_году_выпуска_между_2015_и_2016.Модель_автобусаColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Сортировка_фамилии_водителейRow : global::System.Data.DataRow {
+            
+            private Сортировка_фамилии_водителейDataTable tableСортировка_фамилии_водителей;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Сортировка_фамилии_водителейRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableСортировка_фамилии_водителей = ((Сортировка_фамилии_водителейDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ФИО_водителя {
+                get {
+                    try {
+                        return ((string)(this[this.tableСортировка_фамилии_водителей.ФИО_водителяColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'ФИО_водителя\' в таблице \'Сортировка фамилии водителей\' равн" +
+                                "о DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableСортировка_фамилии_водителей.ФИО_водителяColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Стаж_водителя {
+                get {
+                    try {
+                        return ((int)(this[this.tableСортировка_фамилии_водителей.Стаж_водителяColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Стаж_водителя\' в таблице \'Сортировка фамилии водителей\' рав" +
+                                "но DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableСортировка_фамилии_водителей.Стаж_водителяColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Номер_телефона_водителя {
+                get {
+                    try {
+                        return ((string)(this[this.tableСортировка_фамилии_водителей.Номер_телефона_водителяColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Номер_телефона_водителя\' в таблице \'Сортировка фамилии води" +
+                                "телей\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableСортировка_фамилии_водителей.Номер_телефона_водителяColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsФИО_водителяNull() {
+                return this.IsNull(this.tableСортировка_фамилии_водителей.ФИО_водителяColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetФИО_водителяNull() {
+                this[this.tableСортировка_фамилии_водителей.ФИО_водителяColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsСтаж_водителяNull() {
+                return this.IsNull(this.tableСортировка_фамилии_водителей.Стаж_водителяColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetСтаж_водителяNull() {
+                this[this.tableСортировка_фамилии_водителей.Стаж_водителяColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsНомер_телефона_водителяNull() {
+                return this.IsNull(this.tableСортировка_фамилии_водителей.Номер_телефона_водителяColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetНомер_телефона_водителяNull() {
+                this[this.tableСортировка_фамилии_водителей.Номер_телефона_водителяColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6029,6 +7270,108 @@ namespace bus_coursework {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public РуководительRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class Продолжительность_поездкиRowChangeEvent : global::System.EventArgs {
+            
+            private Продолжительность_поездкиRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Продолжительность_поездкиRowChangeEvent(Продолжительность_поездкиRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Продолжительность_поездкиRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEvent : global::System.EventArgs {
+            
+            private Сортировка_по_году_выпуска_между_2015_и_2016Row eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEvent(Сортировка_по_году_выпуска_между_2015_и_2016Row row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Сортировка_по_году_выпуска_между_2015_и_2016Row Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class Сортировка_фамилии_водителейRowChangeEvent : global::System.EventArgs {
+            
+            private Сортировка_фамилии_водителейRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Сортировка_фамилии_водителейRowChangeEvent(Сортировка_фамилии_водителейRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Сортировка_фамилии_водителейRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -7537,13 +8880,13 @@ namespace bus_coursework.bus_datasetTableAdapters {
             this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Автобус Переключатель";
+            tableMapping.DataSetTable = "Автобус_Переключатель";
             tableMapping.ColumnMappings.Add("ID_статус", "ID_статус");
             tableMapping.ColumnMappings.Add("Статус", "Статус");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Автобус Переключатель` WHERE ((`ID_статус` = ?) AND ((? = 1 AND `Ста" +
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Автобус_Переключатель` WHERE ((`ID_статус` = ?) AND ((? = 1 AND `Ста" +
                 "тус` IS NULL) OR (`Статус` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID_статус", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID_статус", global::System.Data.DataRowVersion.Original, false, null));
@@ -7551,12 +8894,12 @@ namespace bus_coursework.bus_datasetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Статус", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Статус", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Автобус Переключатель` (`Статус`) VALUES (?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Автобус_Переключатель` (`Статус`) VALUES (?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Статус", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Статус", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `Автобус Переключатель` SET `Статус` = ? WHERE ((`ID_статус` = ?) AND ((? " +
+            this._adapter.UpdateCommand.CommandText = "UPDATE `Автобус_Переключатель` SET `Статус` = ? WHERE ((`ID_статус` = ?) AND ((? " +
                 "= 1 AND `Статус` IS NULL) OR (`Статус` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Статус", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Статус", global::System.Data.DataRowVersion.Current, false, null));
@@ -7578,7 +8921,7 @@ namespace bus_coursework.bus_datasetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID_статус, Статус FROM [Автобус Переключатель]";
+            this._commandCollection[0].CommandText = "SELECT ID_статус, Статус FROM Автобус_Переключатель";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7617,7 +8960,7 @@ namespace bus_coursework.bus_datasetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(bus_dataset dataSet) {
-            return this.Adapter.Update(dataSet, "Автобус Переключатель");
+            return this.Adapter.Update(dataSet, "Автобус_Переключатель");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7849,7 +9192,7 @@ namespace bus_coursework.bus_datasetTableAdapters {
             this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Автобусный парк";
+            tableMapping.DataSetTable = "Автобусный_парк";
             tableMapping.ColumnMappings.Add("Индекс_автобусного_парка", "Индекс_автобусного_парка");
             tableMapping.ColumnMappings.Add("Название_автобусного_парка", "Название_автобусного_парка");
             tableMapping.ColumnMappings.Add("Адрес_автобусного парка", "Адрес_автобусного парка");
@@ -7857,7 +9200,7 @@ namespace bus_coursework.bus_datasetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Автобусный парк` WHERE ((`Индекс_автобусного_парка` = ?) AND ((? = 1" +
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Автобусный_парк` WHERE ((`Индекс_автобусного_парка` = ?) AND ((? = 1" +
                 " AND `Название_автобусного_парка` IS NULL) OR (`Название_автобусного_парка` = ?)" +
                 ") AND ((? = 1 AND `Индекс_руководителя` IS NULL) OR (`Индекс_руководителя` = ?))" +
                 ")";
@@ -7869,7 +9212,7 @@ namespace bus_coursework.bus_datasetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Индекс_руководителя", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_руководителя", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Автобусный парк` (`Название_автобусного_парка`, `Адрес_автобусного п" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Автобусный_парк` (`Название_автобусного_парка`, `Адрес_автобусного п" +
                 "арка`, `Индекс_руководителя`) VALUES (?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Название_автобусного_парка", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Название_автобусного_парка", global::System.Data.DataRowVersion.Current, false, null));
@@ -7877,7 +9220,7 @@ namespace bus_coursework.bus_datasetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Индекс_руководителя", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_руководителя", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Автобусный парк` SET `Название_автобусного_парка` = ?, `Адрес_автобусного парка` = ?, `Индекс_руководителя` = ? WHERE ((`Индекс_автобусного_парка` = ?) AND ((? = 1 AND `Название_автобусного_парка` IS NULL) OR (`Название_автобусного_парка` = ?)) AND ((? = 1 AND `Индекс_руководителя` IS NULL) OR (`Индекс_руководителя` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Автобусный_парк` SET `Название_автобусного_парка` = ?, `Адрес_автобусного парка` = ?, `Индекс_руководителя` = ? WHERE ((`Индекс_автобусного_парка` = ?) AND ((? = 1 AND `Название_автобусного_парка` IS NULL) OR (`Название_автобусного_парка` = ?)) AND ((? = 1 AND `Индекс_руководителя` IS NULL) OR (`Индекс_руководителя` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Название_автобусного_парка", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Название_автобусного_парка", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Адрес_автобусного_парка", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Адрес_автобусного парка", global::System.Data.DataRowVersion.Current, false, null));
@@ -7903,7 +9246,7 @@ namespace bus_coursework.bus_datasetTableAdapters {
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Индекс_автобусного_парка, Название_автобусного_парка, [Адрес_автобусного п" +
-                "арка], Индекс_руководителя FROM [Автобусный парк]";
+                "арка], Индекс_руководителя FROM Автобусный_парк";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7942,7 +9285,7 @@ namespace bus_coursework.bus_datasetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(bus_dataset dataSet) {
-            return this.Adapter.Update(dataSet, "Автобусный парк");
+            return this.Adapter.Update(dataSet, "Автобусный_парк");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9732,7 +11075,7 @@ namespace bus_coursework.bus_datasetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Рейс";
             tableMapping.ColumnMappings.Add("Индекс_рейса", "Индекс_рейса");
-            tableMapping.ColumnMappings.Add("Номер рейса", "Номер рейса");
+            tableMapping.ColumnMappings.Add("Номер_рейса", "Номер_рейса");
             tableMapping.ColumnMappings.Add("Откуда", "Откуда");
             tableMapping.ColumnMappings.Add("Куда", "Куда");
             tableMapping.ColumnMappings.Add("Отправление", "Отправление");
@@ -9742,11 +11085,11 @@ namespace bus_coursework.bus_datasetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Рейс` WHERE ((`Индекс_рейса` = ?) AND ((? = 1 AND `Номер рейса` IS NULL) OR (`Номер рейса` = ?)) AND ((? = 1 AND `Отправление` IS NULL) OR (`Отправление` = ?)) AND ((? = 1 AND `Прибытие` IS NULL) OR (`Прибытие` = ?)) AND ((? = 1 AND `Стоимость_проезда` IS NULL) OR (`Стоимость_проезда` = ?)) AND ((? = 1 AND `Индекс_автобусного_парка` IS NULL) OR (`Индекс_автобусного_парка` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Рейс` WHERE ((`Индекс_рейса` = ?) AND ((? = 1 AND `Номер_рейса` IS NULL) OR (`Номер_рейса` = ?)) AND ((? = 1 AND `Отправление` IS NULL) OR (`Отправление` = ?)) AND ((? = 1 AND `Прибытие` IS NULL) OR (`Прибытие` = ?)) AND ((? = 1 AND `Стоимость_проезда` IS NULL) OR (`Стоимость_проезда` = ?)) AND ((? = 1 AND `Индекс_автобусного_парка` IS NULL) OR (`Индекс_автобусного_парка` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Индекс_рейса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_рейса", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Номер_рейса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер рейса", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Номер_рейса", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер рейса", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Номер_рейса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер_рейса", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Номер_рейса", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер_рейса", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Отправление", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Отправление", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Отправление", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Отправление", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Прибытие", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Прибытие", global::System.Data.DataRowVersion.Original, true, null));
@@ -9757,10 +11100,10 @@ namespace bus_coursework.bus_datasetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Индекс_автобусного_парка", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_автобусного_парка", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Рейс` (`Номер рейса`, `Откуда`, `Куда`, `Отправление`, `Прибытие`, `" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Рейс` (`Номер_рейса`, `Откуда`, `Куда`, `Отправление`, `Прибытие`, `" +
                 "Стоимость_проезда`, `Индекс_автобусного_парка`) VALUES (?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Номер_рейса", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер рейса", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Номер_рейса", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер_рейса", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Откуда", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Откуда", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Куда", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Куда", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Отправление", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Отправление", global::System.Data.DataRowVersion.Current, false, null));
@@ -9769,9 +11112,9 @@ namespace bus_coursework.bus_datasetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Индекс_автобусного_парка", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_автобусного_парка", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Рейс` SET `Номер рейса` = ?, `Откуда` = ?, `Куда` = ?, `Отправление` = ?, `Прибытие` = ?, `Стоимость_проезда` = ?, `Индекс_автобусного_парка` = ? WHERE ((`Индекс_рейса` = ?) AND ((? = 1 AND `Номер рейса` IS NULL) OR (`Номер рейса` = ?)) AND ((? = 1 AND `Отправление` IS NULL) OR (`Отправление` = ?)) AND ((? = 1 AND `Прибытие` IS NULL) OR (`Прибытие` = ?)) AND ((? = 1 AND `Стоимость_проезда` IS NULL) OR (`Стоимость_проезда` = ?)) AND ((? = 1 AND `Индекс_автобусного_парка` IS NULL) OR (`Индекс_автобусного_парка` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Рейс` SET `Номер_рейса` = ?, `Откуда` = ?, `Куда` = ?, `Отправление` = ?, `Прибытие` = ?, `Стоимость_проезда` = ?, `Индекс_автобусного_парка` = ? WHERE ((`Индекс_рейса` = ?) AND ((? = 1 AND `Номер_рейса` IS NULL) OR (`Номер_рейса` = ?)) AND ((? = 1 AND `Отправление` IS NULL) OR (`Отправление` = ?)) AND ((? = 1 AND `Прибытие` IS NULL) OR (`Прибытие` = ?)) AND ((? = 1 AND `Стоимость_проезда` IS NULL) OR (`Стоимость_проезда` = ?)) AND ((? = 1 AND `Индекс_автобусного_парка` IS NULL) OR (`Индекс_автобусного_парка` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Номер_рейса", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер рейса", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Номер_рейса", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер_рейса", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Откуда", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Откуда", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Куда", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Куда", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Отправление", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Отправление", global::System.Data.DataRowVersion.Current, false, null));
@@ -9779,8 +11122,8 @@ namespace bus_coursework.bus_datasetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Стоимость_проезда", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Стоимость_проезда", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Индекс_автобусного_парка", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_автобусного_парка", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Индекс_рейса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_рейса", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Номер_рейса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер рейса", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Номер_рейса", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер рейса", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Номер_рейса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер_рейса", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Номер_рейса", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер_рейса", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Отправление", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Отправление", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Отправление", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Отправление", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Прибытие", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Прибытие", global::System.Data.DataRowVersion.Original, true, null));
@@ -9804,8 +11147,8 @@ namespace bus_coursework.bus_datasetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Индекс_рейса, [Номер рейса], Откуда, Куда, Отправление, Прибытие, Стоимост" +
-                "ь_проезда, Индекс_автобусного_парка FROM Рейс";
+            this._commandCollection[0].CommandText = "SELECT Индекс_рейса, Номер_рейса, Откуда, Куда, Отправление, Прибытие, Стоимость_" +
+                "проезда, Индекс_автобусного_парка FROM Рейс";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -10438,6 +11781,515 @@ namespace bus_coursework.bus_datasetTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Продолжительность_поездкиTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
+        
+        private global::System.Data.OleDb.OleDbConnection _connection;
+        
+        private global::System.Data.OleDb.OleDbTransaction _transaction;
+        
+        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public Продолжительность_поездкиTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.OleDb.OleDbConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.OleDb.OleDbTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Продолжительность поездки";
+            tableMapping.ColumnMappings.Add("Отправление", "Отправление");
+            tableMapping.ColumnMappings.Add("Прибытие", "Прибытие");
+            tableMapping.ColumnMappings.Add("Продолжительность", "Продолжительность");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.OleDb.OleDbConnection();
+            this._connection.ConnectionString = global::bus_coursework.Properties.Settings.Default.ConnStr;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT Отправление, Прибытие, Продолжительность FROM [Продолжительность поездки]";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(bus_dataset.Продолжительность_поездкиDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual bus_dataset.Продолжительность_поездкиDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            bus_dataset.Продолжительность_поездкиDataTable dataTable = new bus_dataset.Продолжительность_поездкиDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Сортировка_по_году_выпуска_между_2015_и_2016TableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
+        
+        private global::System.Data.OleDb.OleDbConnection _connection;
+        
+        private global::System.Data.OleDb.OleDbTransaction _transaction;
+        
+        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public Сортировка_по_году_выпуска_между_2015_и_2016TableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.OleDb.OleDbConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.OleDb.OleDbTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Сортировка по году выпуска между 2015 и 2016";
+            tableMapping.ColumnMappings.Add("Год выпуска_автобуса", "Год выпуска_автобуса");
+            tableMapping.ColumnMappings.Add("Марка_автобуса", "Марка_автобуса");
+            tableMapping.ColumnMappings.Add("Модель_автобуса", "Модель_автобуса");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.OleDb.OleDbConnection();
+            this._connection.ConnectionString = global::bus_coursework.Properties.Settings.Default.ConnStr;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT [Год выпуска_автобуса], Марка_автобуса, Модель_автобуса FROM [Сортировка п" +
+                "о году выпуска между 2015 и 2016]";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(bus_dataset.Сортировка_по_году_выпуска_между_2015_и_2016DataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual bus_dataset.Сортировка_по_году_выпуска_между_2015_и_2016DataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            bus_dataset.Сортировка_по_году_выпуска_между_2015_и_2016DataTable dataTable = new bus_dataset.Сортировка_по_году_выпуска_между_2015_и_2016DataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Сортировка_фамилии_водителейTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
+        
+        private global::System.Data.OleDb.OleDbConnection _connection;
+        
+        private global::System.Data.OleDb.OleDbTransaction _transaction;
+        
+        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public Сортировка_фамилии_водителейTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.OleDb.OleDbConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.OleDb.OleDbTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Сортировка фамилии водителей";
+            tableMapping.ColumnMappings.Add("ФИО_водителя", "ФИО_водителя");
+            tableMapping.ColumnMappings.Add("Стаж_водителя", "Стаж_водителя");
+            tableMapping.ColumnMappings.Add("Номер_телефона_водителя", "Номер_телефона_водителя");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.OleDb.OleDbConnection();
+            this._connection.ConnectionString = global::bus_coursework.Properties.Settings.Default.ConnStr;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT ФИО_водителя, Стаж_водителя, Номер_телефона_водителя FROM [Сортировка фами" +
+                "лии водителей]";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(bus_dataset.Сортировка_фамилии_водителейDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual bus_dataset.Сортировка_фамилии_водителейDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            bus_dataset.Сортировка_фамилии_водителейDataTable dataTable = new bus_dataset.Сортировка_фамилии_водителейDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
         }
     }
     
