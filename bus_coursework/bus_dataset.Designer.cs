@@ -48,8 +48,6 @@ namespace bus_coursework {
         
         private Продолжительность_поездкиDataTable tableПродолжительность_поездки;
         
-        private Сортировка_по_году_выпуска_между_2015_и_2016DataTable tableСортировка_по_году_выпуска_между_2015_и_2016;
-        
         private Сортировка_фамилии_водителейDataTable tableСортировка_фамилии_водителей;
         
         private global::System.Data.DataRelation relationАвтобус_ПереключательАвтобус;
@@ -131,9 +129,6 @@ namespace bus_coursework {
                 }
                 if ((ds.Tables["Продолжительность поездки"] != null)) {
                     base.Tables.Add(new Продолжительность_поездкиDataTable(ds.Tables["Продолжительность поездки"]));
-                }
-                if ((ds.Tables["Сортировка по году выпуска между 2015 и 2016"] != null)) {
-                    base.Tables.Add(new Сортировка_по_году_выпуска_между_2015_и_2016DataTable(ds.Tables["Сортировка по году выпуска между 2015 и 2016"]));
                 }
                 if ((ds.Tables["Сортировка фамилии водителей"] != null)) {
                     base.Tables.Add(new Сортировка_фамилии_водителейDataTable(ds.Tables["Сортировка фамилии водителей"]));
@@ -280,16 +275,6 @@ namespace bus_coursework {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Сортировка_по_году_выпуска_между_2015_и_2016DataTable Сортировка_по_году_выпуска_между_2015_и_2016 {
-            get {
-                return this.tableСортировка_по_году_выпуска_между_2015_и_2016;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public Сортировка_фамилии_водителейDataTable Сортировка_фамилии_водителей {
             get {
                 return this.tableСортировка_фамилии_водителей;
@@ -399,9 +384,6 @@ namespace bus_coursework {
                 if ((ds.Tables["Продолжительность поездки"] != null)) {
                     base.Tables.Add(new Продолжительность_поездкиDataTable(ds.Tables["Продолжительность поездки"]));
                 }
-                if ((ds.Tables["Сортировка по году выпуска между 2015 и 2016"] != null)) {
-                    base.Tables.Add(new Сортировка_по_году_выпуска_между_2015_и_2016DataTable(ds.Tables["Сортировка по году выпуска между 2015 и 2016"]));
-                }
                 if ((ds.Tables["Сортировка фамилии водителей"] != null)) {
                     base.Tables.Add(new Сортировка_фамилии_водителейDataTable(ds.Tables["Сортировка фамилии водителей"]));
                 }
@@ -510,12 +492,6 @@ namespace bus_coursework {
                     this.tableПродолжительность_поездки.InitVars();
                 }
             }
-            this.tableСортировка_по_году_выпуска_между_2015_и_2016 = ((Сортировка_по_году_выпуска_между_2015_и_2016DataTable)(base.Tables["Сортировка по году выпуска между 2015 и 2016"]));
-            if ((initTable == true)) {
-                if ((this.tableСортировка_по_году_выпуска_между_2015_и_2016 != null)) {
-                    this.tableСортировка_по_году_выпуска_между_2015_и_2016.InitVars();
-                }
-            }
             this.tableСортировка_фамилии_водителей = ((Сортировка_фамилии_водителейDataTable)(base.Tables["Сортировка фамилии водителей"]));
             if ((initTable == true)) {
                 if ((this.tableСортировка_фамилии_водителей != null)) {
@@ -564,8 +540,6 @@ namespace bus_coursework {
             base.Tables.Add(this.tableРуководитель);
             this.tableПродолжительность_поездки = new Продолжительность_поездкиDataTable();
             base.Tables.Add(this.tableПродолжительность_поездки);
-            this.tableСортировка_по_году_выпуска_между_2015_и_2016 = new Сортировка_по_году_выпуска_между_2015_и_2016DataTable();
-            base.Tables.Add(this.tableСортировка_по_году_выпуска_между_2015_и_2016);
             this.tableСортировка_фамилии_водителей = new Сортировка_фамилии_водителейDataTable();
             base.Tables.Add(this.tableСортировка_фамилии_водителей);
             this.relationАвтобус_ПереключательАвтобус = new global::System.Data.DataRelation("Автобус ПереключательАвтобус", new global::System.Data.DataColumn[] {
@@ -676,12 +650,6 @@ namespace bus_coursework {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeСортировка_по_году_выпуска_между_2015_и_2016() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeСортировка_фамилии_водителей() {
             return false;
         }
@@ -776,9 +744,6 @@ namespace bus_coursework {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void Продолжительность_поездкиRowChangeEventHandler(object sender, Продолжительность_поездкиRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEventHandler(object sender, Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void Сортировка_фамилии_водителейRowChangeEventHandler(object sender, Сортировка_фамилии_водителейRowChangeEvent e);
@@ -1618,7 +1583,7 @@ namespace bus_coursework {
                 this.columnИндекс_автобуса = base.Columns["Индекс_автобуса"];
                 this.columnМарка_автобуса = base.Columns["Марка_автобуса"];
                 this.columnМодель_автобуса = base.Columns["Модель_автобуса"];
-                this.columnГод_выпуска_автобуса = base.Columns["Год выпуска_автобуса"];
+                this.columnГод_выпуска_автобуса = base.Columns["Год_выпуска_автобуса"];
                 this.columnИндекс_рейса = base.Columns["Индекс_рейса"];
                 this.columnИндекс_автобусного_парка = base.Columns["Индекс_автобусного_парка"];
                 this.columnИндекс_водителя = base.Columns["Индекс_водителя"];
@@ -1635,7 +1600,7 @@ namespace bus_coursework {
                 base.Columns.Add(this.columnМарка_автобуса);
                 this.columnМодель_автобуса = new global::System.Data.DataColumn("Модель_автобуса", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnМодель_автобуса);
-                this.columnГод_выпуска_автобуса = new global::System.Data.DataColumn("Год выпуска_автобуса", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnГод_выпуска_автобуса = new global::System.Data.DataColumn("Год_выпуска_автобуса", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnГод_выпуска_автобуса);
                 this.columnИндекс_рейса = new global::System.Data.DataColumn("Индекс_рейса", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnИндекс_рейса);
@@ -2216,7 +2181,7 @@ namespace bus_coursework {
             internal void InitVars() {
                 this.columnИндекс_автобусного_парка = base.Columns["Индекс_автобусного_парка"];
                 this.columnНазвание_автобусного_парка = base.Columns["Название_автобусного_парка"];
-                this.columnАдрес_автобусного_парка = base.Columns["Адрес_автобусного парка"];
+                this.columnАдрес_автобусного_парка = base.Columns["Адрес_автобусного_парка"];
                 this.columnИндекс_руководителя = base.Columns["Индекс_руководителя"];
             }
             
@@ -2227,7 +2192,7 @@ namespace bus_coursework {
                 base.Columns.Add(this.columnИндекс_автобусного_парка);
                 this.columnНазвание_автобусного_парка = new global::System.Data.DataColumn("Название_автобусного_парка", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnНазвание_автобусного_парка);
-                this.columnАдрес_автобусного_парка = new global::System.Data.DataColumn("Адрес_автобусного парка", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnАдрес_автобусного_парка = new global::System.Data.DataColumn("Адрес_автобусного_парка", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnАдрес_автобусного_парка);
                 this.columnИндекс_руководителя = new global::System.Data.DataColumn("Индекс_руководителя", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnИндекс_руководителя);
@@ -4525,283 +4490,6 @@ namespace bus_coursework {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Сортировка_по_году_выпуска_между_2015_и_2016DataTable : global::System.Data.TypedTableBase<Сортировка_по_году_выпуска_между_2015_и_2016Row> {
-            
-            private global::System.Data.DataColumn columnГод_выпуска_автобуса;
-            
-            private global::System.Data.DataColumn columnМарка_автобуса;
-            
-            private global::System.Data.DataColumn columnМодель_автобуса;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Сортировка_по_году_выпуска_между_2015_и_2016DataTable() {
-                this.TableName = "Сортировка по году выпуска между 2015 и 2016";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal Сортировка_по_году_выпуска_между_2015_и_2016DataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected Сортировка_по_году_выпуска_между_2015_и_2016DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Год_выпуска_автобусаColumn {
-                get {
-                    return this.columnГод_выпуска_автобуса;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Марка_автобусаColumn {
-                get {
-                    return this.columnМарка_автобуса;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Модель_автобусаColumn {
-                get {
-                    return this.columnМодель_автобуса;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Сортировка_по_году_выпуска_между_2015_и_2016Row this[int index] {
-                get {
-                    return ((Сортировка_по_году_выпуска_между_2015_и_2016Row)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEventHandler Сортировка_по_году_выпуска_между_2015_и_2016RowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEventHandler Сортировка_по_году_выпуска_между_2015_и_2016RowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEventHandler Сортировка_по_году_выпуска_между_2015_и_2016RowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEventHandler Сортировка_по_году_выпуска_между_2015_и_2016RowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddСортировка_по_году_выпуска_между_2015_и_2016Row(Сортировка_по_году_выпуска_между_2015_и_2016Row row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Сортировка_по_году_выпуска_между_2015_и_2016Row AddСортировка_по_году_выпуска_между_2015_и_2016Row(int Год_выпуска_автобуса, string Марка_автобуса, string Модель_автобуса) {
-                Сортировка_по_году_выпуска_между_2015_и_2016Row rowСортировка_по_году_выпуска_между_2015_и_2016Row = ((Сортировка_по_году_выпуска_между_2015_и_2016Row)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        Год_выпуска_автобуса,
-                        Марка_автобуса,
-                        Модель_автобуса};
-                rowСортировка_по_году_выпуска_между_2015_и_2016Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowСортировка_по_году_выпуска_между_2015_и_2016Row);
-                return rowСортировка_по_году_выпуска_между_2015_и_2016Row;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                Сортировка_по_году_выпуска_между_2015_и_2016DataTable cln = ((Сортировка_по_году_выпуска_между_2015_и_2016DataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new Сортировка_по_году_выпуска_между_2015_и_2016DataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal void InitVars() {
-                this.columnГод_выпуска_автобуса = base.Columns["Год выпуска_автобуса"];
-                this.columnМарка_автобуса = base.Columns["Марка_автобуса"];
-                this.columnМодель_автобуса = base.Columns["Модель_автобуса"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            private void InitClass() {
-                this.columnГод_выпуска_автобуса = new global::System.Data.DataColumn("Год выпуска_автобуса", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnГод_выпуска_автобуса);
-                this.columnМарка_автобуса = new global::System.Data.DataColumn("Марка_автобуса", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnМарка_автобуса);
-                this.columnМодель_автобуса = new global::System.Data.DataColumn("Модель_автобуса", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnМодель_автобуса);
-                this.columnМарка_автобуса.MaxLength = 255;
-                this.columnМодель_автобуса.MaxLength = 255;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Сортировка_по_году_выпуска_между_2015_и_2016Row NewСортировка_по_году_выпуска_между_2015_и_2016Row() {
-                return ((Сортировка_по_году_выпуска_между_2015_и_2016Row)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Сортировка_по_году_выпуска_между_2015_и_2016Row(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(Сортировка_по_году_выпуска_между_2015_и_2016Row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.Сортировка_по_году_выпуска_между_2015_и_2016RowChanged != null)) {
-                    this.Сортировка_по_году_выпуска_между_2015_и_2016RowChanged(this, new Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEvent(((Сортировка_по_году_выпуска_между_2015_и_2016Row)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.Сортировка_по_году_выпуска_между_2015_и_2016RowChanging != null)) {
-                    this.Сортировка_по_году_выпуска_между_2015_и_2016RowChanging(this, new Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEvent(((Сортировка_по_году_выпуска_между_2015_и_2016Row)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.Сортировка_по_году_выпуска_между_2015_и_2016RowDeleted != null)) {
-                    this.Сортировка_по_году_выпуска_между_2015_и_2016RowDeleted(this, new Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEvent(((Сортировка_по_году_выпуска_между_2015_и_2016Row)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.Сортировка_по_году_выпуска_между_2015_и_2016RowDeleting != null)) {
-                    this.Сортировка_по_году_выпуска_между_2015_и_2016RowDeleting(this, new Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEvent(((Сортировка_по_году_выпуска_между_2015_и_2016Row)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveСортировка_по_году_выпуска_между_2015_и_2016Row(Сортировка_по_году_выпуска_между_2015_и_2016Row row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                bus_dataset ds = new bus_dataset();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Сортировка_по_году_выпуска_между_2015_и_2016DataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class Сортировка_фамилии_водителейDataTable : global::System.Data.TypedTableBase<Сортировка_фамилии_водителейRow> {
             
             private global::System.Data.DataColumn columnФИО_водителя;
@@ -5342,7 +5030,7 @@ namespace bus_coursework {
                         return ((int)(this[this.tableАвтобус.Год_выпуска_автобусаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Год выпуска_автобуса\' в таблице \'Автобус\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Год_выпуска_автобуса\' в таблице \'Автобус\' равно DBNull.", e);
                     }
                 }
                 set {
@@ -5709,7 +5397,7 @@ namespace bus_coursework {
                         return ((string)(this[this.tableАвтобусный_парк.Адрес_автобусного_паркаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Адрес_автобусного парка\' в таблице \'Автобусный_парк\' равно " +
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Адрес_автобусного_парка\' в таблице \'Автобусный_парк\' равно " +
                                 "DBNull.", e);
                     }
                 }
@@ -6709,108 +6397,6 @@ namespace bus_coursework {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Сортировка_по_году_выпуска_между_2015_и_2016Row : global::System.Data.DataRow {
-            
-            private Сортировка_по_году_выпуска_между_2015_и_2016DataTable tableСортировка_по_году_выпуска_между_2015_и_2016;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal Сортировка_по_году_выпуска_между_2015_и_2016Row(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableСортировка_по_году_выпуска_между_2015_и_2016 = ((Сортировка_по_году_выпуска_между_2015_и_2016DataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Год_выпуска_автобуса {
-                get {
-                    try {
-                        return ((int)(this[this.tableСортировка_по_году_выпуска_между_2015_и_2016.Год_выпуска_автобусаColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Год выпуска_автобуса\' в таблице \'Сортировка по году выпуска" +
-                                " между 2015 и 2016\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableСортировка_по_году_выпуска_между_2015_и_2016.Год_выпуска_автобусаColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Марка_автобуса {
-                get {
-                    try {
-                        return ((string)(this[this.tableСортировка_по_году_выпуска_между_2015_и_2016.Марка_автобусаColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Марка_автобуса\' в таблице \'Сортировка по году выпуска между" +
-                                " 2015 и 2016\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableСортировка_по_году_выпуска_между_2015_и_2016.Марка_автобусаColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Модель_автобуса {
-                get {
-                    try {
-                        return ((string)(this[this.tableСортировка_по_году_выпуска_между_2015_и_2016.Модель_автобусаColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Модель_автобуса\' в таблице \'Сортировка по году выпуска межд" +
-                                "у 2015 и 2016\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableСортировка_по_году_выпуска_между_2015_и_2016.Модель_автобусаColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsГод_выпуска_автобусаNull() {
-                return this.IsNull(this.tableСортировка_по_году_выпуска_между_2015_и_2016.Год_выпуска_автобусаColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetГод_выпуска_автобусаNull() {
-                this[this.tableСортировка_по_году_выпуска_между_2015_и_2016.Год_выпуска_автобусаColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsМарка_автобусаNull() {
-                return this.IsNull(this.tableСортировка_по_году_выпуска_между_2015_и_2016.Марка_автобусаColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetМарка_автобусаNull() {
-                this[this.tableСортировка_по_году_выпуска_между_2015_и_2016.Марка_автобусаColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsМодель_автобусаNull() {
-                return this.IsNull(this.tableСортировка_по_году_выпуска_между_2015_и_2016.Модель_автобусаColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetМодель_автобусаNull() {
-                this[this.tableСортировка_по_году_выпуска_между_2015_и_2016.Модель_автобусаColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class Сортировка_фамилии_водителейRow : global::System.Data.DataRow {
             
             private Сортировка_фамилии_водителейDataTable tableСортировка_фамилии_водителей;
@@ -7304,40 +6890,6 @@ namespace bus_coursework {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Продолжительность_поездкиRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEvent : global::System.EventArgs {
-            
-            private Сортировка_по_году_выпуска_между_2015_и_2016Row eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Сортировка_по_году_выпуска_между_2015_и_2016RowChangeEvent(Сортировка_по_году_выпуска_между_2015_и_2016Row row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Сортировка_по_году_выпуска_между_2015_и_2016Row Row {
                 get {
                     return this.eventRow;
                 }
@@ -8308,7 +7860,7 @@ namespace bus_coursework.bus_datasetTableAdapters {
             tableMapping.ColumnMappings.Add("Индекс_автобуса", "Индекс_автобуса");
             tableMapping.ColumnMappings.Add("Марка_автобуса", "Марка_автобуса");
             tableMapping.ColumnMappings.Add("Модель_автобуса", "Модель_автобуса");
-            tableMapping.ColumnMappings.Add("Год выпуска_автобуса", "Год выпуска_автобуса");
+            tableMapping.ColumnMappings.Add("Год_выпуска_автобуса", "Год_выпуска_автобуса");
             tableMapping.ColumnMappings.Add("Индекс_рейса", "Индекс_рейса");
             tableMapping.ColumnMappings.Add("Индекс_автобусного_парка", "Индекс_автобусного_парка");
             tableMapping.ColumnMappings.Add("Индекс_водителя", "Индекс_водителя");
@@ -8317,15 +7869,15 @@ namespace bus_coursework.bus_datasetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Автобус` WHERE ((`Индекс_автобуса` = ?) AND ((? = 1 AND `Марка_автобуса` IS NULL) OR (`Марка_автобуса` = ?)) AND ((? = 1 AND `Модель_автобуса` IS NULL) OR (`Модель_автобуса` = ?)) AND ((? = 1 AND `Год выпуска_автобуса` IS NULL) OR (`Год выпуска_автобуса` = ?)) AND ((? = 1 AND `Индекс_рейса` IS NULL) OR (`Индекс_рейса` = ?)) AND ((? = 1 AND `Индекс_автобусного_парка` IS NULL) OR (`Индекс_автобусного_парка` = ?)) AND ((? = 1 AND `Индекс_водителя` IS NULL) OR (`Индекс_водителя` = ?)) AND ((? = 1 AND `Индекс_контролера` IS NULL) OR (`Индекс_контролера` = ?)) AND ((? = 1 AND `Статус_автобуса` IS NULL) OR (`Статус_автобуса` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Автобус` WHERE ((`Индекс_автобуса` = ?) AND ((? = 1 AND `Марка_автобуса` IS NULL) OR (`Марка_автобуса` = ?)) AND ((? = 1 AND `Модель_автобуса` IS NULL) OR (`Модель_автобуса` = ?)) AND ((? = 1 AND `Год_выпуска_автобуса` IS NULL) OR (`Год_выпуска_автобуса` = ?)) AND ((? = 1 AND `Индекс_рейса` IS NULL) OR (`Индекс_рейса` = ?)) AND ((? = 1 AND `Индекс_автобусного_парка` IS NULL) OR (`Индекс_автобусного_парка` = ?)) AND ((? = 1 AND `Индекс_водителя` IS NULL) OR (`Индекс_водителя` = ?)) AND ((? = 1 AND `Индекс_контролера` IS NULL) OR (`Индекс_контролера` = ?)) AND ((? = 1 AND `Статус_автобуса` IS NULL) OR (`Статус_автобуса` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Индекс_автобуса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_автобуса", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Марка_автобуса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Марка_автобуса", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Марка_автобуса", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Марка_автобуса", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Модель_автобуса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Модель_автобуса", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Модель_автобуса", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Модель_автобуса", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Год_выпуска_автобуса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Год выпуска_автобуса", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Год_выпуска_автобуса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Год выпуска_автобуса", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Год_выпуска_автобуса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Год_выпуска_автобуса", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Год_выпуска_автобуса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Год_выпуска_автобуса", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Индекс_рейса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_рейса", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Индекс_рейса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_рейса", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Индекс_автобусного_парка", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_автобусного_парка", global::System.Data.DataRowVersion.Original, true, null));
@@ -8338,13 +7890,13 @@ namespace bus_coursework.bus_datasetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Статус_автобуса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Статус_автобуса", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Автобус` (`Марка_автобуса`, `Модель_автобуса`, `Год выпуска_автобуса" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Автобус` (`Марка_автобуса`, `Модель_автобуса`, `Год_выпуска_автобуса" +
                 "`, `Индекс_рейса`, `Индекс_автобусного_парка`, `Индекс_водителя`, `Индекс_контро" +
                 "лера`, `Статус_автобуса`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Марка_автобуса", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Марка_автобуса", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Модель_автобуса", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Модель_автобуса", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Год_выпуска_автобуса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Год выпуска_автобуса", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Год_выпуска_автобуса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Год_выпуска_автобуса", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Индекс_рейса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_рейса", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Индекс_автобусного_парка", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_автобусного_парка", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Индекс_водителя", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_водителя", global::System.Data.DataRowVersion.Current, false, null));
@@ -8352,11 +7904,11 @@ namespace bus_coursework.bus_datasetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Статус_автобуса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Статус_автобуса", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Автобус` SET `Марка_автобуса` = ?, `Модель_автобуса` = ?, `Год выпуска_автобуса` = ?, `Индекс_рейса` = ?, `Индекс_автобусного_парка` = ?, `Индекс_водителя` = ?, `Индекс_контролера` = ?, `Статус_автобуса` = ? WHERE ((`Индекс_автобуса` = ?) AND ((? = 1 AND `Марка_автобуса` IS NULL) OR (`Марка_автобуса` = ?)) AND ((? = 1 AND `Модель_автобуса` IS NULL) OR (`Модель_автобуса` = ?)) AND ((? = 1 AND `Год выпуска_автобуса` IS NULL) OR (`Год выпуска_автобуса` = ?)) AND ((? = 1 AND `Индекс_рейса` IS NULL) OR (`Индекс_рейса` = ?)) AND ((? = 1 AND `Индекс_автобусного_парка` IS NULL) OR (`Индекс_автобусного_парка` = ?)) AND ((? = 1 AND `Индекс_водителя` IS NULL) OR (`Индекс_водителя` = ?)) AND ((? = 1 AND `Индекс_контролера` IS NULL) OR (`Индекс_контролера` = ?)) AND ((? = 1 AND `Статус_автобуса` IS NULL) OR (`Статус_автобуса` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Автобус` SET `Марка_автобуса` = ?, `Модель_автобуса` = ?, `Год_выпуска_автобуса` = ?, `Индекс_рейса` = ?, `Индекс_автобусного_парка` = ?, `Индекс_водителя` = ?, `Индекс_контролера` = ?, `Статус_автобуса` = ? WHERE ((`Индекс_автобуса` = ?) AND ((? = 1 AND `Марка_автобуса` IS NULL) OR (`Марка_автобуса` = ?)) AND ((? = 1 AND `Модель_автобуса` IS NULL) OR (`Модель_автобуса` = ?)) AND ((? = 1 AND `Год_выпуска_автобуса` IS NULL) OR (`Год_выпуска_автобуса` = ?)) AND ((? = 1 AND `Индекс_рейса` IS NULL) OR (`Индекс_рейса` = ?)) AND ((? = 1 AND `Индекс_автобусного_парка` IS NULL) OR (`Индекс_автобусного_парка` = ?)) AND ((? = 1 AND `Индекс_водителя` IS NULL) OR (`Индекс_водителя` = ?)) AND ((? = 1 AND `Индекс_контролера` IS NULL) OR (`Индекс_контролера` = ?)) AND ((? = 1 AND `Статус_автобуса` IS NULL) OR (`Статус_автобуса` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Марка_автобуса", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Марка_автобуса", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Модель_автобуса", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Модель_автобуса", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Год_выпуска_автобуса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Год выпуска_автобуса", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Год_выпуска_автобуса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Год_выпуска_автобуса", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Индекс_рейса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_рейса", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Индекс_автобусного_парка", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_автобусного_парка", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Индекс_водителя", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_водителя", global::System.Data.DataRowVersion.Current, false, null));
@@ -8367,8 +7919,8 @@ namespace bus_coursework.bus_datasetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Марка_автобуса", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Марка_автобуса", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Модель_автобуса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Модель_автобуса", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Модель_автобуса", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Модель_автобуса", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Год_выпуска_автобуса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Год выпуска_автобуса", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Год_выпуска_автобуса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Год выпуска_автобуса", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Год_выпуска_автобуса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Год_выпуска_автобуса", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Год_выпуска_автобуса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Год_выпуска_автобуса", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Индекс_рейса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_рейса", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Индекс_рейса", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_рейса", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Индекс_автобусного_парка", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_автобусного_парка", global::System.Data.DataRowVersion.Original, true, null));
@@ -8394,9 +7946,9 @@ namespace bus_coursework.bus_datasetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Индекс_автобуса, Марка_автобуса, Модель_автобуса, [Год выпуска_автобуса], " +
-                "Индекс_рейса, Индекс_автобусного_парка, Индекс_водителя, Индекс_контролера, Стат" +
-                "ус_автобуса FROM Автобус";
+            this._commandCollection[0].CommandText = "SELECT Индекс_автобуса, Марка_автобуса, Модель_автобуса, Год_выпуска_автобуса, Ин" +
+                "декс_рейса, Индекс_автобусного_парка, Индекс_водителя, Индекс_контролера, Статус" +
+                "_автобуса FROM Автобус";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -9195,7 +8747,7 @@ namespace bus_coursework.bus_datasetTableAdapters {
             tableMapping.DataSetTable = "Автобусный_парк";
             tableMapping.ColumnMappings.Add("Индекс_автобусного_парка", "Индекс_автобусного_парка");
             tableMapping.ColumnMappings.Add("Название_автобусного_парка", "Название_автобусного_парка");
-            tableMapping.ColumnMappings.Add("Адрес_автобусного парка", "Адрес_автобусного парка");
+            tableMapping.ColumnMappings.Add("Адрес_автобусного_парка", "Адрес_автобусного_парка");
             tableMapping.ColumnMappings.Add("Индекс_руководителя", "Индекс_руководителя");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
@@ -9212,18 +8764,18 @@ namespace bus_coursework.bus_datasetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Индекс_руководителя", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_руководителя", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Автобусный_парк` (`Название_автобусного_парка`, `Адрес_автобусного п" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Автобусный_парк` (`Название_автобусного_парка`, `Адрес_автобусного_п" +
                 "арка`, `Индекс_руководителя`) VALUES (?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Название_автобусного_парка", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Название_автобусного_парка", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Адрес_автобусного_парка", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Адрес_автобусного парка", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Адрес_автобусного_парка", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Адрес_автобусного_парка", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Индекс_руководителя", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_руководителя", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Автобусный_парк` SET `Название_автобусного_парка` = ?, `Адрес_автобусного парка` = ?, `Индекс_руководителя` = ? WHERE ((`Индекс_автобусного_парка` = ?) AND ((? = 1 AND `Название_автобусного_парка` IS NULL) OR (`Название_автобусного_парка` = ?)) AND ((? = 1 AND `Индекс_руководителя` IS NULL) OR (`Индекс_руководителя` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Автобусный_парк` SET `Название_автобусного_парка` = ?, `Адрес_автобусного_парка` = ?, `Индекс_руководителя` = ? WHERE ((`Индекс_автобусного_парка` = ?) AND ((? = 1 AND `Название_автобусного_парка` IS NULL) OR (`Название_автобусного_парка` = ?)) AND ((? = 1 AND `Индекс_руководителя` IS NULL) OR (`Индекс_руководителя` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Название_автобусного_парка", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Название_автобусного_парка", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Адрес_автобусного_парка", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Адрес_автобусного парка", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Адрес_автобусного_парка", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Адрес_автобусного_парка", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Индекс_руководителя", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_руководителя", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Индекс_автобусного_парка", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Индекс_автобусного_парка", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Название_автобусного_парка", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Название_автобусного_парка", global::System.Data.DataRowVersion.Original, true, null));
@@ -9245,8 +8797,8 @@ namespace bus_coursework.bus_datasetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Индекс_автобусного_парка, Название_автобусного_парка, [Адрес_автобусного п" +
-                "арка], Индекс_руководителя FROM Автобусный_парк";
+            this._commandCollection[0].CommandText = "SELECT Индекс_автобусного_парка, Название_автобусного_парка, Адрес_автобусного_па" +
+                "рка, Индекс_руководителя FROM Автобусный_парк";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -11948,176 +11500,6 @@ namespace bus_coursework.bus_datasetTableAdapters {
         public virtual bus_dataset.Продолжительность_поездкиDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             bus_dataset.Продолжительность_поездкиDataTable dataTable = new bus_dataset.Продолжительность_поездкиDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Сортировка_по_году_выпуска_между_2015_и_2016TableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
-        
-        private global::System.Data.OleDb.OleDbConnection _connection;
-        
-        private global::System.Data.OleDb.OleDbTransaction _transaction;
-        
-        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public Сортировка_по_году_выпуска_между_2015_и_2016TableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.OleDb.OleDbConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.OleDb.OleDbTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Сортировка по году выпуска между 2015 и 2016";
-            tableMapping.ColumnMappings.Add("Год выпуска_автобуса", "Год выпуска_автобуса");
-            tableMapping.ColumnMappings.Add("Марка_автобуса", "Марка_автобуса");
-            tableMapping.ColumnMappings.Add("Модель_автобуса", "Модель_автобуса");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::bus_coursework.Properties.Settings.Default.ConnStr;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
-            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [Год выпуска_автобуса], Марка_автобуса, Модель_автобуса FROM [Сортировка п" +
-                "о году выпуска между 2015 и 2016]";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(bus_dataset.Сортировка_по_году_выпуска_между_2015_и_2016DataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual bus_dataset.Сортировка_по_году_выпуска_между_2015_и_2016DataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            bus_dataset.Сортировка_по_году_выпуска_между_2015_и_2016DataTable dataTable = new bus_dataset.Сортировка_по_году_выпуска_между_2015_и_2016DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

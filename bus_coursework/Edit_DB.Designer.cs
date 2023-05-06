@@ -52,11 +52,8 @@
             System.Windows.Forms.Label индекс_автобусаLabel1;
             System.Windows.Forms.Label фИО_пассажираLabel;
             System.Windows.Forms.Label категория_пассажираLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edit_DB));
             System.Windows.Forms.Label индекс_автобусного_паркаLabel;
             System.Windows.Forms.Label название_автобусного_паркаLabel;
-            System.Windows.Forms.Label адрес_автобусного_паркаLabel;
-            System.Windows.Forms.Label индекс_руководителяLabel;
             System.Windows.Forms.Label индекс_рейсаLabel;
             System.Windows.Forms.Label номер_рейсаLabel;
             System.Windows.Forms.Label откудаLabel;
@@ -65,13 +62,30 @@
             System.Windows.Forms.Label прибытиеLabel;
             System.Windows.Forms.Label стоимость_проездаLabel;
             System.Windows.Forms.Label индекс_автобусного_паркаLabel1;
+            System.Windows.Forms.Label адрес_автобусного_паркаLabel;
+            System.Windows.Forms.Label индекс_руководителяLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edit_DB));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.индекс_руководителяTextBox = new System.Windows.Forms.TextBox();
             this.автобусный_паркBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bus_dataset = new bus_coursework.bus_dataset();
+            this.адрес_автобусного_паркаTextBox = new System.Windows.Forms.TextBox();
+            this.название_автобусного_паркаTextBox = new System.Windows.Forms.TextBox();
+            this.индекс_автобусного_паркаTextBox = new System.Windows.Forms.TextBox();
+            this.рейсDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.рейсBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -83,14 +97,22 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.сохранитьToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.button8 = new System.Windows.Forms.Button();
+            this.toolStripButton31 = new System.Windows.Forms.ToolStripButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.автобусDataGridView = new System.Windows.Forms.DataGridView();
+            this.индекс_автобусного_паркаTextBox1 = new System.Windows.Forms.TextBox();
+            this.стоимость_проездаTextBox = new System.Windows.Forms.TextBox();
+            this.прибытиеDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.отправлениеDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.кудаTextBox = new System.Windows.Forms.TextBox();
+            this.откудаTextBox = new System.Windows.Forms.TextBox();
+            this.номер_рейсаTextBox = new System.Windows.Forms.TextBox();
+            this.индекс_рейсаTextBox = new System.Windows.Forms.TextBox();
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
-            this.рейсBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
@@ -102,12 +124,17 @@
             this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.toolStripButton30 = new System.Windows.Forms.ToolStripButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
+            this.пассажирDataGridView = new System.Windows.Forms.DataGridView();
+            this.индекспассажираDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.индексавтобусаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.фИОпассажираDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.категорияпассажираDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.пассажирBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.статус_автобусаTextBox = new System.Windows.Forms.TextBox();
             this.автобусBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.индекс_контролераTextBox = new System.Windows.Forms.TextBox();
@@ -133,10 +160,11 @@
             this.bindingNavigatorMoveLastItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton29 = new System.Windows.Forms.ToolStripButton();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.номер_телефона_руководителяTextBox = new System.Windows.Forms.TextBox();
             this.руководительBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.фИО_руководителяTextBox = new System.Windows.Forms.TextBox();
+            this.ФИО_руководителяTextBox = new System.Windows.Forms.TextBox();
             this.индекс_руководителяTextBox1 = new System.Windows.Forms.TextBox();
             this.bindingNavigator4 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem3 = new System.Windows.Forms.ToolStripButton();
@@ -150,13 +178,15 @@
             this.bindingNavigatorMoveNextItem3 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem3 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton21 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton28 = new System.Windows.Forms.ToolStripButton();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.стаж_водителяTextBox = new System.Windows.Forms.TextBox();
             this.водительBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.номер_телефона_водителяTextBox = new System.Windows.Forms.TextBox();
-            this.фИО_водителяTextBox = new System.Windows.Forms.TextBox();
+            this.ФИО_водителяTextBox = new System.Windows.Forms.TextBox();
             this.индекс_водителяTextBox1 = new System.Windows.Forms.TextBox();
             this.bindingNavigator5 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
@@ -170,12 +200,14 @@
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton22 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton27 = new System.Windows.Forms.ToolStripButton();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.номер_телефона_контролераTextBox = new System.Windows.Forms.TextBox();
             this.контролерBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.фИО_контролераTextBox = new System.Windows.Forms.TextBox();
+            this.ФИО_контролераTextBox = new System.Windows.Forms.TextBox();
             this.индекс_контролераTextBox1 = new System.Windows.Forms.TextBox();
             this.bindingNavigator6 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
@@ -189,13 +221,14 @@
             this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton23 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton25 = new System.Windows.Forms.ToolStripButton();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.label10 = new System.Windows.Forms.Label();
             this.категория_пассажираTextBox = new System.Windows.Forms.TextBox();
-            this.пассажирBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.фИО_пассажираTextBox = new System.Windows.Forms.TextBox();
+            this.ФИО_пассажираTextBox = new System.Windows.Forms.TextBox();
             this.индекс_автобусаTextBox1 = new System.Windows.Forms.TextBox();
             this.индекс_пассажираTextBox = new System.Windows.Forms.TextBox();
             this.bindingNavigator7 = new System.Windows.Forms.BindingNavigator(this.components);
@@ -210,17 +243,10 @@
             this.toolStripButton19 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton20 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton24 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton26 = new System.Windows.Forms.ToolStripButton();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.автобусный_паркTableAdapter = new bus_coursework.bus_datasetTableAdapters.Автобусный_паркTableAdapter();
-            this.tableAdapterManager = new bus_coursework.bus_datasetTableAdapters.TableAdapterManager();
-            this.рейсTableAdapter = new bus_coursework.bus_datasetTableAdapters.РейсTableAdapter();
-            this.автобусTableAdapter = new bus_coursework.bus_datasetTableAdapters.АвтобусTableAdapter();
-            this.пассажирTableAdapter = new bus_coursework.bus_datasetTableAdapters.ПассажирTableAdapter();
-            this.руководительTableAdapter = new bus_coursework.bus_datasetTableAdapters.РуководительTableAdapter();
-            this.водительTableAdapter = new bus_coursework.bus_datasetTableAdapters.ВодительTableAdapter();
-            this.контролерTableAdapter = new bus_coursework.bus_datasetTableAdapters.КонтролерTableAdapter();
-            this.рейсDataGridView = new System.Windows.Forms.DataGridView();
             this.индексрейсаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.номеррейсаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.откудаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -229,41 +255,14 @@
             this.прибытиеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.стоимостьпроездаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.индексавтобусногопаркаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.индекс_автобусного_паркаTextBox = new System.Windows.Forms.TextBox();
-            this.название_автобусного_паркаTextBox = new System.Windows.Forms.TextBox();
-            this.адрес_автобусного_паркаTextBox = new System.Windows.Forms.TextBox();
-            this.индекс_руководителяTextBox = new System.Windows.Forms.TextBox();
-            this.автобусDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.индекс_рейсаTextBox = new System.Windows.Forms.TextBox();
-            this.номер_рейсаTextBox = new System.Windows.Forms.TextBox();
-            this.откудаTextBox = new System.Windows.Forms.TextBox();
-            this.кудаTextBox = new System.Windows.Forms.TextBox();
-            this.отправлениеDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.прибытиеDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.стоимость_проездаTextBox = new System.Windows.Forms.TextBox();
-            this.индекс_автобусного_паркаTextBox1 = new System.Windows.Forms.TextBox();
-            this.пассажирDataGridView = new System.Windows.Forms.DataGridView();
-            this.индекспассажираDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.индексавтобусаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.фИОпассажираDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.категорияпассажираDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.автобусный_паркTableAdapter = new bus_coursework.bus_datasetTableAdapters.Автобусный_паркTableAdapter();
+            this.tableAdapterManager = new bus_coursework.bus_datasetTableAdapters.TableAdapterManager();
+            this.рейсTableAdapter = new bus_coursework.bus_datasetTableAdapters.РейсTableAdapter();
+            this.автобусTableAdapter = new bus_coursework.bus_datasetTableAdapters.АвтобусTableAdapter();
+            this.пассажирTableAdapter = new bus_coursework.bus_datasetTableAdapters.ПассажирTableAdapter();
+            this.руководительTableAdapter = new bus_coursework.bus_datasetTableAdapters.РуководительTableAdapter();
+            this.водительTableAdapter = new bus_coursework.bus_datasetTableAdapters.ВодительTableAdapter();
+            this.контролерTableAdapter = new bus_coursework.bus_datasetTableAdapters.КонтролерTableAdapter();
             индекс_автобусаLabel = new System.Windows.Forms.Label();
             марка_автобусаLabel = new System.Windows.Forms.Label();
             модель_автобусаLabel = new System.Windows.Forms.Label();
@@ -289,8 +288,6 @@
             категория_пассажираLabel = new System.Windows.Forms.Label();
             индекс_автобусного_паркаLabel = new System.Windows.Forms.Label();
             название_автобусного_паркаLabel = new System.Windows.Forms.Label();
-            адрес_автобусного_паркаLabel = new System.Windows.Forms.Label();
-            индекс_руководителяLabel = new System.Windows.Forms.Label();
             индекс_рейсаLabel = new System.Windows.Forms.Label();
             номер_рейсаLabel = new System.Windows.Forms.Label();
             откудаLabel = new System.Windows.Forms.Label();
@@ -299,19 +296,25 @@
             прибытиеLabel = new System.Windows.Forms.Label();
             стоимость_проездаLabel = new System.Windows.Forms.Label();
             индекс_автобусного_паркаLabel1 = new System.Windows.Forms.Label();
+            адрес_автобусного_паркаLabel = new System.Windows.Forms.Label();
+            индекс_руководителяLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.автобусный_паркBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bus_dataset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.рейсDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.рейсBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
+            this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.автобусDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
             this.bindingNavigator2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.рейсBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.пассажирDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.пассажирBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.автобусBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).BeginInit();
@@ -332,13 +335,9 @@
             this.bindingNavigator6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.tabPage7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.пассажирBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator7)).BeginInit();
             this.bindingNavigator7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.рейсDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.автобусDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.пассажирDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // индекс_автобусаLabel
@@ -571,6 +570,116 @@
             категория_пассажираLabel.TabIndex = 21;
             категория_пассажираLabel.Text = "Категория пассажира:";
             // 
+            // индекс_автобусного_паркаLabel
+            // 
+            индекс_автобусного_паркаLabel.AutoSize = true;
+            индекс_автобусного_паркаLabel.Location = new System.Drawing.Point(47, 160);
+            индекс_автобусного_паркаLabel.Name = "индекс_автобусного_паркаLabel";
+            индекс_автобусного_паркаLabel.Size = new System.Drawing.Size(139, 16);
+            индекс_автобусного_паркаLabel.TabIndex = 20;
+            индекс_автобусного_паркаLabel.Text = "ID автобусный парк:";
+            индекс_автобусного_паркаLabel.Click += new System.EventHandler(this.индекс_автобусного_паркаLabel_Click_1);
+            // 
+            // название_автобусного_паркаLabel
+            // 
+            название_автобусного_паркаLabel.AutoSize = true;
+            название_автобусного_паркаLabel.Location = new System.Drawing.Point(110, 191);
+            название_автобусного_паркаLabel.Name = "название_автобусного_паркаLabel";
+            название_автобусного_паркаLabel.Size = new System.Drawing.Size(76, 16);
+            название_автобусного_паркаLabel.TabIndex = 21;
+            название_автобусного_паркаLabel.Text = "Название:";
+            // 
+            // индекс_рейсаLabel
+            // 
+            индекс_рейсаLabel.AutoSize = true;
+            индекс_рейсаLabel.Location = new System.Drawing.Point(129, 147);
+            индекс_рейсаLabel.Name = "индекс_рейсаLabel";
+            индекс_рейсаLabel.Size = new System.Drawing.Size(57, 16);
+            индекс_рейсаLabel.TabIndex = 21;
+            индекс_рейсаLabel.Text = "ID рейс:";
+            // 
+            // номер_рейсаLabel
+            // 
+            номер_рейсаLabel.AutoSize = true;
+            номер_рейсаLabel.Location = new System.Drawing.Point(91, 175);
+            номер_рейсаLabel.Name = "номер_рейсаLabel";
+            номер_рейсаLabel.Size = new System.Drawing.Size(95, 16);
+            номер_рейсаLabel.TabIndex = 22;
+            номер_рейсаLabel.Text = "Номер рейса:";
+            // 
+            // откудаLabel
+            // 
+            откудаLabel.AutoSize = true;
+            откудаLabel.Location = new System.Drawing.Point(128, 203);
+            откудаLabel.Name = "откудаLabel";
+            откудаLabel.Size = new System.Drawing.Size(58, 16);
+            откудаLabel.TabIndex = 23;
+            откудаLabel.Text = "Откуда:";
+            // 
+            // кудаLabel
+            // 
+            кудаLabel.AutoSize = true;
+            кудаLabel.Location = new System.Drawing.Point(144, 231);
+            кудаLabel.Name = "кудаLabel";
+            кудаLabel.Size = new System.Drawing.Size(42, 16);
+            кудаLabel.TabIndex = 24;
+            кудаLabel.Text = "Куда:";
+            // 
+            // отправлениеLabel
+            // 
+            отправлениеLabel.AutoSize = true;
+            отправлениеLabel.Location = new System.Drawing.Point(87, 260);
+            отправлениеLabel.Name = "отправлениеLabel";
+            отправлениеLabel.Size = new System.Drawing.Size(99, 16);
+            отправлениеLabel.TabIndex = 25;
+            отправлениеLabel.Text = "Отправление:";
+            // 
+            // прибытиеLabel
+            // 
+            прибытиеLabel.AutoSize = true;
+            прибытиеLabel.Location = new System.Drawing.Point(110, 288);
+            прибытиеLabel.Name = "прибытиеLabel";
+            прибытиеLabel.Size = new System.Drawing.Size(76, 16);
+            прибытиеLabel.TabIndex = 26;
+            прибытиеLabel.Text = "Прибытие:";
+            // 
+            // стоимость_проездаLabel
+            // 
+            стоимость_проездаLabel.AutoSize = true;
+            стоимость_проездаLabel.Location = new System.Drawing.Point(47, 315);
+            стоимость_проездаLabel.Name = "стоимость_проездаLabel";
+            стоимость_проездаLabel.Size = new System.Drawing.Size(139, 16);
+            стоимость_проездаLabel.TabIndex = 27;
+            стоимость_проездаLabel.Text = "Стоимость проезда:";
+            // 
+            // индекс_автобусного_паркаLabel1
+            // 
+            индекс_автобусного_паркаLabel1.AutoSize = true;
+            индекс_автобусного_паркаLabel1.Location = new System.Drawing.Point(47, 343);
+            индекс_автобусного_паркаLabel1.Name = "индекс_автобусного_паркаLabel1";
+            индекс_автобусного_паркаLabel1.Size = new System.Drawing.Size(139, 16);
+            индекс_автобусного_паркаLabel1.TabIndex = 28;
+            индекс_автобусного_паркаLabel1.Text = "ID автобусный парк:";
+            индекс_автобусного_паркаLabel1.Click += new System.EventHandler(this.индекс_автобусного_паркаLabel1_Click);
+            // 
+            // адрес_автобусного_паркаLabel
+            // 
+            адрес_автобусного_паркаLabel.AutoSize = true;
+            адрес_автобусного_паркаLabel.Location = new System.Drawing.Point(136, 219);
+            адрес_автобусного_паркаLabel.Name = "адрес_автобусного_паркаLabel";
+            адрес_автобусного_паркаLabel.Size = new System.Drawing.Size(50, 16);
+            адрес_автобусного_паркаLabel.TabIndex = 24;
+            адрес_автобусного_паркаLabel.Text = "Адрес:";
+            // 
+            // индекс_руководителяLabel
+            // 
+            индекс_руководителяLabel.AutoSize = true;
+            индекс_руководителяLabel.Location = new System.Drawing.Point(32, 247);
+            индекс_руководителяLabel.Name = "индекс_руководителяLabel";
+            индекс_руководителяLabel.Size = new System.Drawing.Size(154, 16);
+            индекс_руководителяLabel.TabIndex = 25;
+            индекс_руководителяLabel.Text = "Индекс руководителя:";
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -606,7 +715,6 @@
             this.tabPage1.Controls.Add(this.индекс_автобусного_паркаTextBox);
             this.tabPage1.Controls.Add(this.рейсDataGridView);
             this.tabPage1.Controls.Add(this.bindingNavigator1);
-            this.tabPage1.Controls.Add(this.button8);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.pictureBox1);
@@ -619,6 +727,138 @@
             this.tabPage1.Text = "Автобусный_парк";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // индекс_руководителяTextBox
+            // 
+            this.индекс_руководителяTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусный_паркBindingSource, "Индекс_руководителя", true));
+            this.индекс_руководителяTextBox.Location = new System.Drawing.Point(192, 244);
+            this.индекс_руководителяTextBox.Name = "индекс_руководителяTextBox";
+            this.индекс_руководителяTextBox.Size = new System.Drawing.Size(433, 22);
+            this.индекс_руководителяTextBox.TabIndex = 26;
+            // 
+            // автобусный_паркBindingSource
+            // 
+            this.автобусный_паркBindingSource.DataMember = "Автобусный_парк";
+            this.автобусный_паркBindingSource.DataSource = this.bus_dataset;
+            // 
+            // bus_dataset
+            // 
+            this.bus_dataset.DataSetName = "bus_dataset";
+            this.bus_dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // адрес_автобусного_паркаTextBox
+            // 
+            this.адрес_автобусного_паркаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусный_паркBindingSource, "Адрес_автобусного_парка", true));
+            this.адрес_автобусного_паркаTextBox.Location = new System.Drawing.Point(192, 216);
+            this.адрес_автобусного_паркаTextBox.Name = "адрес_автобусного_паркаTextBox";
+            this.адрес_автобусного_паркаTextBox.Size = new System.Drawing.Size(433, 22);
+            this.адрес_автобусного_паркаTextBox.TabIndex = 25;
+            // 
+            // название_автобусного_паркаTextBox
+            // 
+            this.название_автобусного_паркаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусный_паркBindingSource, "Название_автобусного_парка", true));
+            this.название_автобусного_паркаTextBox.Location = new System.Drawing.Point(192, 188);
+            this.название_автобусного_паркаTextBox.Name = "название_автобусного_паркаTextBox";
+            this.название_автобусного_паркаTextBox.Size = new System.Drawing.Size(433, 22);
+            this.название_автобусного_паркаTextBox.TabIndex = 22;
+            // 
+            // индекс_автобусного_паркаTextBox
+            // 
+            this.индекс_автобусного_паркаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусный_паркBindingSource, "Индекс_автобусного_парка", true));
+            this.индекс_автобусного_паркаTextBox.Location = new System.Drawing.Point(192, 157);
+            this.индекс_автобусного_паркаTextBox.Name = "индекс_автобусного_паркаTextBox";
+            this.индекс_автобусного_паркаTextBox.Size = new System.Drawing.Size(433, 22);
+            this.индекс_автобусного_паркаTextBox.TabIndex = 21;
+            // 
+            // рейсDataGridView
+            // 
+            this.рейсDataGridView.AutoGenerateColumns = false;
+            this.рейсDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.рейсDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.рейсDataGridView.DataSource = this.рейсBindingSource;
+            this.рейсDataGridView.Location = new System.Drawing.Point(24, 344);
+            this.рейсDataGridView.Name = "рейсDataGridView";
+            this.рейсDataGridView.RowHeadersWidth = 51;
+            this.рейсDataGridView.RowTemplate.Height = 24;
+            this.рейсDataGridView.Size = new System.Drawing.Size(1191, 357);
+            this.рейсDataGridView.TabIndex = 20;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Индекс_рейса";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Индекс_рейса";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Номер_рейса";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Номер_рейса";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Откуда";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Откуда";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Куда";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Куда";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Отправление";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Отправление";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Прибытие";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Прибытие";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Стоимость_проезда";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Стоимость_проезда";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Индекс_автобусного_парка";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Индекс_автобусного_парка";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 125;
+            // 
+            // рейсBindingSource
+            // 
+            this.рейсBindingSource.DataMember = "Рейс";
+            this.рейсBindingSource.DataSource = this.bus_dataset;
             // 
             // bindingNavigator1
             // 
@@ -639,7 +879,8 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.сохранитьToolStripButton});
+            this.сохранитьToolStripButton,
+            this.toolStripButton31});
             this.bindingNavigator1.Location = new System.Drawing.Point(3, 2);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -659,16 +900,7 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // автобусный_паркBindingSource
-            // 
-            this.автобусный_паркBindingSource.DataMember = "Автобусный_парк";
-            this.автобусный_паркBindingSource.DataSource = this.bus_dataset;
-            // 
-            // bus_dataset
-            // 
-            this.bus_dataset.DataSetName = "bus_dataset";
-            this.bus_dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
@@ -685,6 +917,7 @@
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -694,6 +927,7 @@
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
+            this.bindingNavigatorMoveFirstItem.Click += new System.EventHandler(this.bindingNavigatorMoveFirstItem_Click);
             // 
             // bindingNavigatorMovePreviousItem
             // 
@@ -703,6 +937,7 @@
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
+            this.bindingNavigatorMovePreviousItem.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem_Click);
             // 
             // bindingNavigatorSeparator
             // 
@@ -732,6 +967,7 @@
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
+            this.bindingNavigatorMoveNextItem.Click += new System.EventHandler(this.bindingNavigatorMoveNextItem_Click);
             // 
             // bindingNavigatorMoveLastItem
             // 
@@ -741,6 +977,7 @@
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
+            this.bindingNavigatorMoveLastItem.Click += new System.EventHandler(this.bindingNavigatorMoveLastItem_Click);
             // 
             // bindingNavigatorSeparator2
             // 
@@ -755,17 +992,17 @@
             this.сохранитьToolStripButton.Name = "сохранитьToolStripButton";
             this.сохранитьToolStripButton.Size = new System.Drawing.Size(29, 24);
             this.сохранитьToolStripButton.Text = "&Сохранить";
+            this.сохранитьToolStripButton.Click += new System.EventHandler(this.сохранитьToolStripButton_Click);
             // 
-            // button8
+            // toolStripButton31
             // 
-            this.button8.Location = new System.Drawing.Point(192, 273);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(433, 25);
-            this.button8.TabIndex = 19;
-            this.button8.Text = "Обновить";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.toolStripButton31.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton31.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton31.Image")));
+            this.toolStripButton31.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton31.Name = "toolStripButton31";
+            this.toolStripButton31.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton31.Text = "toolStripButton27";
+            this.toolStripButton31.Click += new System.EventHandler(this.toolStripButton31_Click);
             // 
             // label2
             // 
@@ -786,9 +1023,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(11, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(331, 42);
+            this.label1.Size = new System.Drawing.Size(321, 42);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Автобусный_парк";
+            this.label1.Text = "Автобусный парк";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
@@ -804,6 +1041,7 @@
             // tabPage2
             // 
             this.tabPage2.AutoScroll = true;
+            this.tabPage2.Controls.Add(this.автобусDataGridView);
             this.tabPage2.Controls.Add(индекс_автобусного_паркаLabel1);
             this.tabPage2.Controls.Add(this.индекс_автобусного_паркаTextBox1);
             this.tabPage2.Controls.Add(стоимость_проездаLabel);
@@ -820,9 +1058,7 @@
             this.tabPage2.Controls.Add(this.номер_рейсаTextBox);
             this.tabPage2.Controls.Add(индекс_рейсаLabel);
             this.tabPage2.Controls.Add(this.индекс_рейсаTextBox);
-            this.tabPage2.Controls.Add(this.автобусDataGridView);
             this.tabPage2.Controls.Add(this.bindingNavigator2);
-            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.pictureBox2);
@@ -835,6 +1071,87 @@
             this.tabPage2.Text = "Рейс";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // автобусDataGridView
+            // 
+            this.автобусDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.автобусDataGridView.Location = new System.Drawing.Point(27, 447);
+            this.автобусDataGridView.Name = "автобусDataGridView";
+            this.автобусDataGridView.RowHeadersWidth = 51;
+            this.автобусDataGridView.RowTemplate.Height = 24;
+            this.автобусDataGridView.Size = new System.Drawing.Size(1185, 245);
+            this.автобусDataGridView.TabIndex = 29;
+            // 
+            // индекс_автобусного_паркаTextBox1
+            // 
+            this.индекс_автобусного_паркаTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.рейсBindingSource, "Индекс_автобусного_парка", true));
+            this.индекс_автобусного_паркаTextBox1.Location = new System.Drawing.Point(192, 340);
+            this.индекс_автобусного_паркаTextBox1.Name = "индекс_автобусного_паркаTextBox1";
+            this.индекс_автобусного_паркаTextBox1.Size = new System.Drawing.Size(433, 22);
+            this.индекс_автобусного_паркаTextBox1.TabIndex = 29;
+            // 
+            // стоимость_проездаTextBox
+            // 
+            this.стоимость_проездаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.рейсBindingSource, "Стоимость_проезда", true));
+            this.стоимость_проездаTextBox.Location = new System.Drawing.Point(192, 312);
+            this.стоимость_проездаTextBox.Name = "стоимость_проездаTextBox";
+            this.стоимость_проездаTextBox.Size = new System.Drawing.Size(433, 22);
+            this.стоимость_проездаTextBox.TabIndex = 28;
+            // 
+            // прибытиеDateTimePicker
+            // 
+            this.прибытиеDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.рейсBindingSource, "Прибытие", true));
+            this.прибытиеDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.прибытиеDateTimePicker.Location = new System.Drawing.Point(192, 284);
+            this.прибытиеDateTimePicker.MaxDate = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
+            this.прибытиеDateTimePicker.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.прибытиеDateTimePicker.Name = "прибытиеDateTimePicker";
+            this.прибытиеDateTimePicker.Size = new System.Drawing.Size(433, 22);
+            this.прибытиеDateTimePicker.TabIndex = 27;
+            // 
+            // отправлениеDateTimePicker
+            // 
+            this.отправлениеDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.рейсBindingSource, "Отправление", true));
+            this.отправлениеDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.отправлениеDateTimePicker.Location = new System.Drawing.Point(192, 256);
+            this.отправлениеDateTimePicker.MaxDate = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
+            this.отправлениеDateTimePicker.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.отправлениеDateTimePicker.Name = "отправлениеDateTimePicker";
+            this.отправлениеDateTimePicker.Size = new System.Drawing.Size(433, 22);
+            this.отправлениеDateTimePicker.TabIndex = 26;
+            this.отправлениеDateTimePicker.Value = new System.DateTime(2023, 5, 6, 22, 34, 3, 0);
+            // 
+            // кудаTextBox
+            // 
+            this.кудаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.рейсBindingSource, "Куда", true));
+            this.кудаTextBox.Location = new System.Drawing.Point(192, 228);
+            this.кудаTextBox.Name = "кудаTextBox";
+            this.кудаTextBox.Size = new System.Drawing.Size(433, 22);
+            this.кудаTextBox.TabIndex = 25;
+            // 
+            // откудаTextBox
+            // 
+            this.откудаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.рейсBindingSource, "Откуда", true));
+            this.откудаTextBox.Location = new System.Drawing.Point(192, 200);
+            this.откудаTextBox.Name = "откудаTextBox";
+            this.откудаTextBox.Size = new System.Drawing.Size(433, 22);
+            this.откудаTextBox.TabIndex = 24;
+            // 
+            // номер_рейсаTextBox
+            // 
+            this.номер_рейсаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.рейсBindingSource, "Номер_рейса", true));
+            this.номер_рейсаTextBox.Location = new System.Drawing.Point(192, 172);
+            this.номер_рейсаTextBox.Name = "номер_рейсаTextBox";
+            this.номер_рейсаTextBox.Size = new System.Drawing.Size(433, 22);
+            this.номер_рейсаTextBox.TabIndex = 23;
+            // 
+            // индекс_рейсаTextBox
+            // 
+            this.индекс_рейсаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.рейсBindingSource, "Индекс_рейса", true));
+            this.индекс_рейсаTextBox.Location = new System.Drawing.Point(192, 144);
+            this.индекс_рейсаTextBox.Name = "индекс_рейсаTextBox";
+            this.индекс_рейсаTextBox.Size = new System.Drawing.Size(433, 22);
+            this.индекс_рейсаTextBox.TabIndex = 22;
             // 
             // bindingNavigator2
             // 
@@ -855,7 +1172,8 @@
             this.bindingNavigatorSeparator5,
             this.bindingNavigatorAddNewItem1,
             this.bindingNavigatorDeleteItem1,
-            this.toolStripButton1});
+            this.toolStripButton1,
+            this.toolStripButton30});
             this.bindingNavigator2.Location = new System.Drawing.Point(3, 2);
             this.bindingNavigator2.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
             this.bindingNavigator2.MoveLastItem = this.bindingNavigatorMoveLastItem1;
@@ -875,11 +1193,7 @@
             this.bindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem1.Text = "Добавить";
-            // 
-            // рейсBindingSource
-            // 
-            this.рейсBindingSource.DataMember = "Рейс";
-            this.рейсBindingSource.DataSource = this.bus_dataset;
+            this.bindingNavigatorAddNewItem1.Click += new System.EventHandler(this.bindingNavigatorAddNewItem1_Click);
             // 
             // bindingNavigatorCountItem1
             // 
@@ -896,6 +1210,7 @@
             this.bindingNavigatorDeleteItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem1.Text = "Удалить";
+            this.bindingNavigatorDeleteItem1.Click += new System.EventHandler(this.bindingNavigatorDeleteItem1_Click);
             // 
             // bindingNavigatorMoveFirstItem1
             // 
@@ -905,6 +1220,7 @@
             this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem1.Text = "Переместить в начало";
+            this.bindingNavigatorMoveFirstItem1.Click += new System.EventHandler(this.bindingNavigatorMoveFirstItem1_Click);
             // 
             // bindingNavigatorMovePreviousItem1
             // 
@@ -914,6 +1230,7 @@
             this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem1.Text = "Переместить назад";
+            this.bindingNavigatorMovePreviousItem1.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem1_Click);
             // 
             // bindingNavigatorSeparator3
             // 
@@ -943,6 +1260,7 @@
             this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem1.Text = "Переместить вперед";
+            this.bindingNavigatorMoveNextItem1.Click += new System.EventHandler(this.bindingNavigatorMoveNextItem1_Click);
             // 
             // bindingNavigatorMoveLastItem1
             // 
@@ -952,6 +1270,7 @@
             this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem1.Text = "Переместить в конец";
+            this.bindingNavigatorMoveLastItem1.Click += new System.EventHandler(this.bindingNavigatorMoveLastItem1_Click);
             // 
             // bindingNavigatorSeparator5
             // 
@@ -966,17 +1285,17 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton1.Text = "&Сохранить";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // button1
+            // toolStripButton30
             // 
-            this.button1.Location = new System.Drawing.Point(192, 369);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(433, 25);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Обновить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.toolStripButton30.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton30.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton30.Image")));
+            this.toolStripButton30.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton30.Name = "toolStripButton30";
+            this.toolStripButton30.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton30.Text = "toolStripButton27";
+            this.toolStripButton30.Click += new System.EventHandler(this.toolStripButton30_Click);
             // 
             // label4
             // 
@@ -1014,7 +1333,6 @@
             // 
             this.tabPage3.AutoScroll = true;
             this.tabPage3.Controls.Add(this.пассажирDataGridView);
-            this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(статус_автобусаLabel);
             this.tabPage3.Controls.Add(this.статус_автобусаTextBox);
             this.tabPage3.Controls.Add(индекс_контролераLabel);
@@ -1044,16 +1362,59 @@
             this.tabPage3.Text = "Автобус";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // пассажирDataGridView
             // 
-            this.button2.Location = new System.Drawing.Point(192, 433);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(433, 25);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Обновить";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.пассажирDataGridView.AutoGenerateColumns = false;
+            this.пассажирDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.пассажирDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.индекспассажираDataGridViewTextBoxColumn,
+            this.индексавтобусаDataGridViewTextBoxColumn,
+            this.фИОпассажираDataGridViewTextBoxColumn,
+            this.категорияпассажираDataGridViewTextBoxColumn});
+            this.пассажирDataGridView.DataSource = this.пассажирBindingSource;
+            this.пассажирDataGridView.Location = new System.Drawing.Point(649, 145);
+            this.пассажирDataGridView.Name = "пассажирDataGridView";
+            this.пассажирDataGridView.RowHeadersWidth = 51;
+            this.пассажирDataGridView.RowTemplate.Height = 24;
+            this.пассажирDataGridView.Size = new System.Drawing.Size(563, 313);
+            this.пассажирDataGridView.TabIndex = 22;
+            // 
+            // индекспассажираDataGridViewTextBoxColumn
+            // 
+            this.индекспассажираDataGridViewTextBoxColumn.DataPropertyName = "Индекс_пассажира";
+            this.индекспассажираDataGridViewTextBoxColumn.HeaderText = "Индекс_пассажира";
+            this.индекспассажираDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.индекспассажираDataGridViewTextBoxColumn.Name = "индекспассажираDataGridViewTextBoxColumn";
+            this.индекспассажираDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // индексавтобусаDataGridViewTextBoxColumn
+            // 
+            this.индексавтобусаDataGridViewTextBoxColumn.DataPropertyName = "Индекс_автобуса";
+            this.индексавтобусаDataGridViewTextBoxColumn.HeaderText = "Индекс_автобуса";
+            this.индексавтобусаDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.индексавтобусаDataGridViewTextBoxColumn.Name = "индексавтобусаDataGridViewTextBoxColumn";
+            this.индексавтобусаDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // фИОпассажираDataGridViewTextBoxColumn
+            // 
+            this.фИОпассажираDataGridViewTextBoxColumn.DataPropertyName = "ФИО_пассажира";
+            this.фИОпассажираDataGridViewTextBoxColumn.HeaderText = "ФИО_пассажира";
+            this.фИОпассажираDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.фИОпассажираDataGridViewTextBoxColumn.Name = "фИОпассажираDataGridViewTextBoxColumn";
+            this.фИОпассажираDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // категорияпассажираDataGridViewTextBoxColumn
+            // 
+            this.категорияпассажираDataGridViewTextBoxColumn.DataPropertyName = "Категория_пассажира";
+            this.категорияпассажираDataGridViewTextBoxColumn.HeaderText = "Категория_пассажира";
+            this.категорияпассажираDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.категорияпассажираDataGridViewTextBoxColumn.Name = "категорияпассажираDataGridViewTextBoxColumn";
+            this.категорияпассажираDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // пассажирBindingSource
+            // 
+            this.пассажирBindingSource.DataMember = "Пассажир";
+            this.пассажирBindingSource.DataSource = this.bus_dataset;
             // 
             // статус_автобусаTextBox
             // 
@@ -1107,7 +1468,7 @@
             // 
             // год_выпуска_автобусаTextBox
             // 
-            this.год_выпуска_автобусаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусBindingSource, "Год выпуска_автобуса", true));
+            this.год_выпуска_автобусаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусBindingSource, "Год_выпуска_автобуса", true));
             this.год_выпуска_автобусаTextBox.Location = new System.Drawing.Point(192, 241);
             this.год_выпуска_автобусаTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.год_выпуска_автобусаTextBox.Name = "год_выпуска_автобусаTextBox";
@@ -1182,7 +1543,8 @@
             this.bindingNavigatorSeparator8,
             this.bindingNavigatorAddNewItem2,
             this.bindingNavigatorDeleteItem2,
-            this.toolStripButton2});
+            this.toolStripButton2,
+            this.toolStripButton29});
             this.bindingNavigator3.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator3.MoveFirstItem = this.bindingNavigatorMoveFirstItem2;
             this.bindingNavigator3.MoveLastItem = this.bindingNavigatorMoveLastItem2;
@@ -1202,6 +1564,7 @@
             this.bindingNavigatorAddNewItem2.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem2.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem2.Text = "Добавить";
+            this.bindingNavigatorAddNewItem2.Click += new System.EventHandler(this.bindingNavigatorAddNewItem2_Click);
             // 
             // bindingNavigatorCountItem2
             // 
@@ -1218,6 +1581,7 @@
             this.bindingNavigatorDeleteItem2.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem2.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem2.Text = "Удалить";
+            this.bindingNavigatorDeleteItem2.Click += new System.EventHandler(this.bindingNavigatorDeleteItem2_Click);
             // 
             // bindingNavigatorMoveFirstItem2
             // 
@@ -1227,6 +1591,7 @@
             this.bindingNavigatorMoveFirstItem2.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveFirstItem2.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem2.Text = "Переместить в начало";
+            this.bindingNavigatorMoveFirstItem2.Click += new System.EventHandler(this.bindingNavigatorMoveFirstItem2_Click);
             // 
             // bindingNavigatorMovePreviousItem2
             // 
@@ -1236,6 +1601,7 @@
             this.bindingNavigatorMovePreviousItem2.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem2.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem2.Text = "Переместить назад";
+            this.bindingNavigatorMovePreviousItem2.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem2_Click);
             // 
             // bindingNavigatorSeparator6
             // 
@@ -1265,6 +1631,7 @@
             this.bindingNavigatorMoveNextItem2.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem2.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem2.Text = "Переместить вперед";
+            this.bindingNavigatorMoveNextItem2.Click += new System.EventHandler(this.bindingNavigatorMoveNextItem2_Click);
             // 
             // bindingNavigatorMoveLastItem2
             // 
@@ -1274,6 +1641,7 @@
             this.bindingNavigatorMoveLastItem2.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem2.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem2.Text = "Переместить в конец";
+            this.bindingNavigatorMoveLastItem2.Click += new System.EventHandler(this.bindingNavigatorMoveLastItem2_Click);
             // 
             // bindingNavigatorSeparator8
             // 
@@ -1288,6 +1656,17 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton2.Text = "&Сохранить";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButton29
+            // 
+            this.toolStripButton29.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton29.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton29.Image")));
+            this.toolStripButton29.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton29.Name = "toolStripButton29";
+            this.toolStripButton29.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton29.Text = "toolStripButton27";
+            this.toolStripButton29.Click += new System.EventHandler(this.toolStripButton29_Click);
             // 
             // tabPage4
             // 
@@ -1295,7 +1674,7 @@
             this.tabPage4.Controls.Add(номер_телефона_руководителяLabel);
             this.tabPage4.Controls.Add(this.номер_телефона_руководителяTextBox);
             this.tabPage4.Controls.Add(фИО_руководителяLabel);
-            this.tabPage4.Controls.Add(this.фИО_руководителяTextBox);
+            this.tabPage4.Controls.Add(this.ФИО_руководителяTextBox);
             this.tabPage4.Controls.Add(индекс_руководителяLabel1);
             this.tabPage4.Controls.Add(this.индекс_руководителяTextBox1);
             this.tabPage4.Controls.Add(this.bindingNavigator4);
@@ -1323,14 +1702,14 @@
             this.руководительBindingSource.DataMember = "Руководитель";
             this.руководительBindingSource.DataSource = this.bus_dataset;
             // 
-            // фИО_руководителяTextBox
+            // ФИО_руководителяTextBox
             // 
-            this.фИО_руководителяTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.руководительBindingSource, "ФИО_руководителя", true));
-            this.фИО_руководителяTextBox.Location = new System.Drawing.Point(251, 158);
-            this.фИО_руководителяTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.фИО_руководителяTextBox.Name = "фИО_руководителяTextBox";
-            this.фИО_руководителяTextBox.Size = new System.Drawing.Size(465, 22);
-            this.фИО_руководителяTextBox.TabIndex = 17;
+            this.ФИО_руководителяTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.руководительBindingSource, "ФИО_руководителя", true));
+            this.ФИО_руководителяTextBox.Location = new System.Drawing.Point(251, 158);
+            this.ФИО_руководителяTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.ФИО_руководителяTextBox.Name = "ФИО_руководителяTextBox";
+            this.ФИО_руководителяTextBox.Size = new System.Drawing.Size(465, 22);
+            this.ФИО_руководителяTextBox.TabIndex = 17;
             // 
             // индекс_руководителяTextBox1
             // 
@@ -1359,7 +1738,9 @@
             this.bindingNavigatorMoveLastItem3,
             this.bindingNavigatorSeparator11,
             this.bindingNavigatorAddNewItem3,
-            this.bindingNavigatorDeleteItem3});
+            this.bindingNavigatorDeleteItem3,
+            this.toolStripButton21,
+            this.toolStripButton28});
             this.bindingNavigator4.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator4.MoveFirstItem = this.bindingNavigatorMoveFirstItem3;
             this.bindingNavigator4.MoveLastItem = this.bindingNavigatorMoveLastItem3;
@@ -1379,6 +1760,7 @@
             this.bindingNavigatorAddNewItem3.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem3.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem3.Text = "Добавить";
+            this.bindingNavigatorAddNewItem3.Click += new System.EventHandler(this.bindingNavigatorAddNewItem3_Click);
             // 
             // bindingNavigatorCountItem3
             // 
@@ -1395,6 +1777,7 @@
             this.bindingNavigatorDeleteItem3.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem3.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem3.Text = "Удалить";
+            this.bindingNavigatorDeleteItem3.Click += new System.EventHandler(this.bindingNavigatorDeleteItem3_Click);
             // 
             // bindingNavigatorMoveFirstItem3
             // 
@@ -1404,6 +1787,7 @@
             this.bindingNavigatorMoveFirstItem3.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveFirstItem3.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem3.Text = "Переместить в начало";
+            this.bindingNavigatorMoveFirstItem3.Click += new System.EventHandler(this.bindingNavigatorMoveFirstItem3_Click);
             // 
             // bindingNavigatorMovePreviousItem3
             // 
@@ -1413,6 +1797,7 @@
             this.bindingNavigatorMovePreviousItem3.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem3.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem3.Text = "Переместить назад";
+            this.bindingNavigatorMovePreviousItem3.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem3_Click);
             // 
             // bindingNavigatorSeparator9
             // 
@@ -1442,6 +1827,7 @@
             this.bindingNavigatorMoveNextItem3.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem3.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem3.Text = "Переместить вперед";
+            this.bindingNavigatorMoveNextItem3.Click += new System.EventHandler(this.bindingNavigatorMoveNextItem3_Click);
             // 
             // bindingNavigatorMoveLastItem3
             // 
@@ -1451,11 +1837,32 @@
             this.bindingNavigatorMoveLastItem3.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem3.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem3.Text = "Переместить в конец";
+            this.bindingNavigatorMoveLastItem3.Click += new System.EventHandler(this.bindingNavigatorMoveLastItem3_Click);
             // 
             // bindingNavigatorSeparator11
             // 
             this.bindingNavigatorSeparator11.Name = "bindingNavigatorSeparator11";
             this.bindingNavigatorSeparator11.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton21
+            // 
+            this.toolStripButton21.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton21.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton21.Image")));
+            this.toolStripButton21.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton21.Name = "toolStripButton21";
+            this.toolStripButton21.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton21.Text = "&Сохранить";
+            this.toolStripButton21.Click += new System.EventHandler(this.toolStripButton21_Click);
+            // 
+            // toolStripButton28
+            // 
+            this.toolStripButton28.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton28.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton28.Image")));
+            this.toolStripButton28.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton28.Name = "toolStripButton28";
+            this.toolStripButton28.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton28.Text = "toolStripButton27";
+            this.toolStripButton28.Click += new System.EventHandler(this.toolStripButton28_Click);
             // 
             // label6
             // 
@@ -1486,7 +1893,7 @@
             this.tabPage5.Controls.Add(номер_телефона_водителяLabel);
             this.tabPage5.Controls.Add(this.номер_телефона_водителяTextBox);
             this.tabPage5.Controls.Add(фИО_водителяLabel);
-            this.tabPage5.Controls.Add(this.фИО_водителяTextBox);
+            this.tabPage5.Controls.Add(this.ФИО_водителяTextBox);
             this.tabPage5.Controls.Add(индекс_водителяLabel1);
             this.tabPage5.Controls.Add(this.индекс_водителяTextBox1);
             this.tabPage5.Controls.Add(this.bindingNavigator5);
@@ -1523,14 +1930,14 @@
             this.номер_телефона_водителяTextBox.Size = new System.Drawing.Size(465, 22);
             this.номер_телефона_водителяTextBox.TabIndex = 21;
             // 
-            // фИО_водителяTextBox
+            // ФИО_водителяTextBox
             // 
-            this.фИО_водителяTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.водительBindingSource, "ФИО_водителя", true));
-            this.фИО_водителяTextBox.Location = new System.Drawing.Point(251, 158);
-            this.фИО_водителяTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.фИО_водителяTextBox.Name = "фИО_водителяTextBox";
-            this.фИО_водителяTextBox.Size = new System.Drawing.Size(465, 22);
-            this.фИО_водителяTextBox.TabIndex = 20;
+            this.ФИО_водителяTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.водительBindingSource, "ФИО_водителя", true));
+            this.ФИО_водителяTextBox.Location = new System.Drawing.Point(251, 158);
+            this.ФИО_водителяTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.ФИО_водителяTextBox.Name = "ФИО_водителяTextBox";
+            this.ФИО_водителяTextBox.Size = new System.Drawing.Size(465, 22);
+            this.ФИО_водителяTextBox.TabIndex = 20;
             // 
             // индекс_водителяTextBox1
             // 
@@ -1559,7 +1966,9 @@
             this.toolStripButton8,
             this.toolStripSeparator3,
             this.toolStripButton3,
-            this.toolStripButton4});
+            this.toolStripButton4,
+            this.toolStripButton22,
+            this.toolStripButton27});
             this.bindingNavigator5.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator5.MoveFirstItem = this.toolStripButton5;
             this.bindingNavigator5.MoveLastItem = this.toolStripButton8;
@@ -1579,6 +1988,7 @@
             this.toolStripButton3.RightToLeftAutoMirrorImage = true;
             this.toolStripButton3.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton3.Text = "Добавить";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripLabel1
             // 
@@ -1595,6 +2005,7 @@
             this.toolStripButton4.RightToLeftAutoMirrorImage = true;
             this.toolStripButton4.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton4.Text = "Удалить";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripButton5
             // 
@@ -1604,6 +2015,7 @@
             this.toolStripButton5.RightToLeftAutoMirrorImage = true;
             this.toolStripButton5.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton5.Text = "Переместить в начало";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // toolStripButton6
             // 
@@ -1613,6 +2025,7 @@
             this.toolStripButton6.RightToLeftAutoMirrorImage = true;
             this.toolStripButton6.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton6.Text = "Переместить назад";
+            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
             // toolStripSeparator1
             // 
@@ -1642,6 +2055,7 @@
             this.toolStripButton7.RightToLeftAutoMirrorImage = true;
             this.toolStripButton7.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton7.Text = "Переместить вперед";
+            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
             // 
             // toolStripButton8
             // 
@@ -1651,11 +2065,32 @@
             this.toolStripButton8.RightToLeftAutoMirrorImage = true;
             this.toolStripButton8.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton8.Text = "Переместить в конец";
+            this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton22
+            // 
+            this.toolStripButton22.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton22.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton22.Image")));
+            this.toolStripButton22.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton22.Name = "toolStripButton22";
+            this.toolStripButton22.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton22.Text = "&Сохранить";
+            this.toolStripButton22.Click += new System.EventHandler(this.toolStripButton22_Click);
+            // 
+            // toolStripButton27
+            // 
+            this.toolStripButton27.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton27.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton27.Image")));
+            this.toolStripButton27.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton27.Name = "toolStripButton27";
+            this.toolStripButton27.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton27.Text = "toolStripButton27";
+            this.toolStripButton27.Click += new System.EventHandler(this.toolStripButton27_Click);
             // 
             // label7
             // 
@@ -1684,7 +2119,7 @@
             this.tabPage6.Controls.Add(номер_телефона_контролераLabel);
             this.tabPage6.Controls.Add(this.номер_телефона_контролераTextBox);
             this.tabPage6.Controls.Add(фИО_контролераLabel);
-            this.tabPage6.Controls.Add(this.фИО_контролераTextBox);
+            this.tabPage6.Controls.Add(this.ФИО_контролераTextBox);
             this.tabPage6.Controls.Add(индекс_контролераLabel1);
             this.tabPage6.Controls.Add(this.индекс_контролераTextBox1);
             this.tabPage6.Controls.Add(this.bindingNavigator6);
@@ -1712,14 +2147,14 @@
             this.контролерBindingSource.DataMember = "Контролер";
             this.контролерBindingSource.DataSource = this.bus_dataset;
             // 
-            // фИО_контролераTextBox
+            // ФИО_контролераTextBox
             // 
-            this.фИО_контролераTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.контролерBindingSource, "ФИО_контролера", true));
-            this.фИО_контролераTextBox.Location = new System.Drawing.Point(251, 158);
-            this.фИО_контролераTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.фИО_контролераTextBox.Name = "фИО_контролераTextBox";
-            this.фИО_контролераTextBox.Size = new System.Drawing.Size(465, 22);
-            this.фИО_контролераTextBox.TabIndex = 20;
+            this.ФИО_контролераTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.контролерBindingSource, "ФИО_контролера", true));
+            this.ФИО_контролераTextBox.Location = new System.Drawing.Point(251, 158);
+            this.ФИО_контролераTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.ФИО_контролераTextBox.Name = "ФИО_контролераTextBox";
+            this.ФИО_контролераTextBox.Size = new System.Drawing.Size(465, 22);
+            this.ФИО_контролераTextBox.TabIndex = 20;
             // 
             // индекс_контролераTextBox1
             // 
@@ -1748,7 +2183,9 @@
             this.toolStripButton14,
             this.toolStripSeparator6,
             this.toolStripButton9,
-            this.toolStripButton10});
+            this.toolStripButton10,
+            this.toolStripButton23,
+            this.toolStripButton25});
             this.bindingNavigator6.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator6.MoveFirstItem = this.toolStripButton11;
             this.bindingNavigator6.MoveLastItem = this.toolStripButton14;
@@ -1768,6 +2205,7 @@
             this.toolStripButton9.RightToLeftAutoMirrorImage = true;
             this.toolStripButton9.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton9.Text = "Добавить";
+            this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
             // 
             // toolStripLabel2
             // 
@@ -1784,6 +2222,7 @@
             this.toolStripButton10.RightToLeftAutoMirrorImage = true;
             this.toolStripButton10.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton10.Text = "Удалить";
+            this.toolStripButton10.Click += new System.EventHandler(this.toolStripButton10_Click);
             // 
             // toolStripButton11
             // 
@@ -1793,6 +2232,7 @@
             this.toolStripButton11.RightToLeftAutoMirrorImage = true;
             this.toolStripButton11.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton11.Text = "Переместить в начало";
+            this.toolStripButton11.Click += new System.EventHandler(this.toolStripButton11_Click);
             // 
             // toolStripButton12
             // 
@@ -1802,6 +2242,7 @@
             this.toolStripButton12.RightToLeftAutoMirrorImage = true;
             this.toolStripButton12.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton12.Text = "Переместить назад";
+            this.toolStripButton12.Click += new System.EventHandler(this.toolStripButton12_Click);
             // 
             // toolStripSeparator4
             // 
@@ -1831,6 +2272,7 @@
             this.toolStripButton13.RightToLeftAutoMirrorImage = true;
             this.toolStripButton13.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton13.Text = "Переместить вперед";
+            this.toolStripButton13.Click += new System.EventHandler(this.toolStripButton13_Click);
             // 
             // toolStripButton14
             // 
@@ -1840,11 +2282,32 @@
             this.toolStripButton14.RightToLeftAutoMirrorImage = true;
             this.toolStripButton14.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton14.Text = "Переместить в конец";
+            this.toolStripButton14.Click += new System.EventHandler(this.toolStripButton14_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton23
+            // 
+            this.toolStripButton23.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton23.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton23.Image")));
+            this.toolStripButton23.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton23.Name = "toolStripButton23";
+            this.toolStripButton23.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton23.Text = "&Сохранить";
+            this.toolStripButton23.Click += new System.EventHandler(this.toolStripButton23_Click);
+            // 
+            // toolStripButton25
+            // 
+            this.toolStripButton25.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton25.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton25.Image")));
+            this.toolStripButton25.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton25.Name = "toolStripButton25";
+            this.toolStripButton25.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton25.Text = "toolStripButton25";
+            this.toolStripButton25.Click += new System.EventHandler(this.toolStripButton25_Click);
             // 
             // label8
             // 
@@ -1874,7 +2337,7 @@
             this.tabPage7.Controls.Add(категория_пассажираLabel);
             this.tabPage7.Controls.Add(this.категория_пассажираTextBox);
             this.tabPage7.Controls.Add(фИО_пассажираLabel);
-            this.tabPage7.Controls.Add(this.фИО_пассажираTextBox);
+            this.tabPage7.Controls.Add(this.ФИО_пассажираTextBox);
             this.tabPage7.Controls.Add(индекс_автобусаLabel1);
             this.tabPage7.Controls.Add(this.индекс_автобусаTextBox1);
             this.tabPage7.Controls.Add(индекс_пассажираLabel);
@@ -1910,19 +2373,15 @@
             this.категория_пассажираTextBox.Size = new System.Drawing.Size(465, 22);
             this.категория_пассажираTextBox.TabIndex = 22;
             // 
-            // пассажирBindingSource
+            // ФИО_пассажираTextBox
             // 
-            this.пассажирBindingSource.DataMember = "Пассажир";
-            this.пассажирBindingSource.DataSource = this.bus_dataset;
-            // 
-            // фИО_пассажираTextBox
-            // 
-            this.фИО_пассажираTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пассажирBindingSource, "ФИО_пассажира", true));
-            this.фИО_пассажираTextBox.Location = new System.Drawing.Point(251, 190);
-            this.фИО_пассажираTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.фИО_пассажираTextBox.Name = "фИО_пассажираTextBox";
-            this.фИО_пассажираTextBox.Size = new System.Drawing.Size(465, 22);
-            this.фИО_пассажираTextBox.TabIndex = 21;
+            this.ФИО_пассажираTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пассажирBindingSource, "ФИО_пассажира", true));
+            this.ФИО_пассажираTextBox.Location = new System.Drawing.Point(251, 190);
+            this.ФИО_пассажираTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.ФИО_пассажираTextBox.Name = "ФИО_пассажираTextBox";
+            this.ФИО_пассажираTextBox.Size = new System.Drawing.Size(465, 22);
+            this.ФИО_пассажираTextBox.TabIndex = 21;
+            this.ФИО_пассажираTextBox.TextChanged += new System.EventHandler(this.фИО_пассажираTextBox_TextChanged);
             // 
             // индекс_автобусаTextBox1
             // 
@@ -1960,7 +2419,9 @@
             this.toolStripButton20,
             this.toolStripSeparator9,
             this.toolStripButton15,
-            this.toolStripButton16});
+            this.toolStripButton16,
+            this.toolStripButton24,
+            this.toolStripButton26});
             this.bindingNavigator7.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator7.MoveFirstItem = this.toolStripButton17;
             this.bindingNavigator7.MoveLastItem = this.toolStripButton20;
@@ -1980,6 +2441,7 @@
             this.toolStripButton15.RightToLeftAutoMirrorImage = true;
             this.toolStripButton15.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton15.Text = "Добавить";
+            this.toolStripButton15.Click += new System.EventHandler(this.toolStripButton15_Click);
             // 
             // toolStripLabel3
             // 
@@ -1996,6 +2458,7 @@
             this.toolStripButton16.RightToLeftAutoMirrorImage = true;
             this.toolStripButton16.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton16.Text = "Удалить";
+            this.toolStripButton16.Click += new System.EventHandler(this.toolStripButton16_Click);
             // 
             // toolStripButton17
             // 
@@ -2005,6 +2468,7 @@
             this.toolStripButton17.RightToLeftAutoMirrorImage = true;
             this.toolStripButton17.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton17.Text = "Переместить в начало";
+            this.toolStripButton17.Click += new System.EventHandler(this.toolStripButton17_Click);
             // 
             // toolStripButton18
             // 
@@ -2014,6 +2478,7 @@
             this.toolStripButton18.RightToLeftAutoMirrorImage = true;
             this.toolStripButton18.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton18.Text = "Переместить назад";
+            this.toolStripButton18.Click += new System.EventHandler(this.toolStripButton18_Click);
             // 
             // toolStripSeparator7
             // 
@@ -2043,6 +2508,7 @@
             this.toolStripButton19.RightToLeftAutoMirrorImage = true;
             this.toolStripButton19.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton19.Text = "Переместить вперед";
+            this.toolStripButton19.Click += new System.EventHandler(this.toolStripButton19_Click);
             // 
             // toolStripButton20
             // 
@@ -2052,11 +2518,32 @@
             this.toolStripButton20.RightToLeftAutoMirrorImage = true;
             this.toolStripButton20.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton20.Text = "Переместить в конец";
+            this.toolStripButton20.Click += new System.EventHandler(this.toolStripButton20_Click);
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
             this.toolStripSeparator9.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton24
+            // 
+            this.toolStripButton24.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton24.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton24.Image")));
+            this.toolStripButton24.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton24.Name = "toolStripButton24";
+            this.toolStripButton24.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton24.Text = "&Сохранить";
+            this.toolStripButton24.Click += new System.EventHandler(this.toolStripButton24_Click);
+            // 
+            // toolStripButton26
+            // 
+            this.toolStripButton26.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton26.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton26.Image")));
+            this.toolStripButton26.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton26.Name = "toolStripButton26";
+            this.toolStripButton26.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton26.Text = "toolStripButton26";
+            this.toolStripButton26.Click += new System.EventHandler(this.toolStripButton26_Click);
             // 
             // label9
             // 
@@ -2078,71 +2565,6 @@
             this.pictureBox7.Size = new System.Drawing.Size(1208, 68);
             this.pictureBox7.TabIndex = 17;
             this.pictureBox7.TabStop = false;
-            // 
-            // автобусный_паркTableAdapter
-            // 
-            this.автобусный_паркTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.DB_UsersTableAdapter = null;
-            this.tableAdapterManager.Switchboard_ItemsTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = bus_coursework.bus_datasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.Автобус_ПереключательTableAdapter = null;
-            this.tableAdapterManager.АвтобусTableAdapter = null;
-            this.tableAdapterManager.Автобусный_паркTableAdapter = this.автобусный_паркTableAdapter;
-            this.tableAdapterManager.ВодительTableAdapter = null;
-            this.tableAdapterManager.КонтролерTableAdapter = null;
-            this.tableAdapterManager.ПассажирTableAdapter = null;
-            this.tableAdapterManager.Резерв_Switchboard_ItemsTableAdapter = null;
-            this.tableAdapterManager.РейсTableAdapter = this.рейсTableAdapter;
-            this.tableAdapterManager.РуководительTableAdapter = null;
-            // 
-            // рейсTableAdapter
-            // 
-            this.рейсTableAdapter.ClearBeforeFill = true;
-            // 
-            // автобусTableAdapter
-            // 
-            this.автобусTableAdapter.ClearBeforeFill = true;
-            // 
-            // пассажирTableAdapter
-            // 
-            this.пассажирTableAdapter.ClearBeforeFill = true;
-            // 
-            // руководительTableAdapter
-            // 
-            this.руководительTableAdapter.ClearBeforeFill = true;
-            // 
-            // водительTableAdapter
-            // 
-            this.водительTableAdapter.ClearBeforeFill = true;
-            // 
-            // контролерTableAdapter
-            // 
-            this.контролерTableAdapter.ClearBeforeFill = true;
-            // 
-            // рейсDataGridView
-            // 
-            this.рейсDataGridView.AutoGenerateColumns = false;
-            this.рейсDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.рейсDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
-            this.рейсDataGridView.DataSource = this.рейсBindingSource;
-            this.рейсDataGridView.Location = new System.Drawing.Point(24, 344);
-            this.рейсDataGridView.Name = "рейсDataGridView";
-            this.рейсDataGridView.RowHeadersWidth = 51;
-            this.рейсDataGridView.RowTemplate.Height = 24;
-            this.рейсDataGridView.Size = new System.Drawing.Size(1191, 357);
-            this.рейсDataGridView.TabIndex = 20;
             // 
             // индексрейсаDataGridViewTextBoxColumn
             // 
@@ -2208,418 +2630,49 @@
             this.индексавтобусногопаркаDataGridViewTextBoxColumn.Name = "индексавтобусногопаркаDataGridViewTextBoxColumn";
             this.индексавтобусногопаркаDataGridViewTextBoxColumn.Width = 125;
             // 
-            // dataGridViewTextBoxColumn1
+            // автобусный_паркTableAdapter
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Индекс_рейса";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Индекс_рейса";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
+            this.автобусный_паркTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // tableAdapterManager
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Номер_рейса";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Номер_рейса";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.DB_UsersTableAdapter = null;
+            this.tableAdapterManager.Switchboard_ItemsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = bus_coursework.bus_datasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.Автобус_ПереключательTableAdapter = null;
+            this.tableAdapterManager.АвтобусTableAdapter = null;
+            this.tableAdapterManager.Автобусный_паркTableAdapter = this.автобусный_паркTableAdapter;
+            this.tableAdapterManager.ВодительTableAdapter = null;
+            this.tableAdapterManager.КонтролерTableAdapter = null;
+            this.tableAdapterManager.ПассажирTableAdapter = null;
+            this.tableAdapterManager.Резерв_Switchboard_ItemsTableAdapter = null;
+            this.tableAdapterManager.РейсTableAdapter = this.рейсTableAdapter;
+            this.tableAdapterManager.РуководительTableAdapter = null;
             // 
-            // dataGridViewTextBoxColumn3
+            // рейсTableAdapter
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Откуда";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Откуда";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 125;
+            this.рейсTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn4
+            // автобусTableAdapter
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Куда";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Куда";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 125;
+            this.автобусTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn5
+            // пассажирTableAdapter
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Отправление";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Отправление";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 125;
+            this.пассажирTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn6
+            // руководительTableAdapter
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Прибытие";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Прибытие";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 125;
+            this.руководительTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn7
+            // водительTableAdapter
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Стоимость_проезда";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Стоимость_проезда";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 125;
+            this.водительTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn8
+            // контролерTableAdapter
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Индекс_автобусного_парка";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Индекс_автобусного_парка";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 125;
-            // 
-            // индекс_автобусного_паркаLabel
-            // 
-            индекс_автобусного_паркаLabel.AutoSize = true;
-            индекс_автобусного_паркаLabel.Location = new System.Drawing.Point(47, 160);
-            индекс_автобусного_паркаLabel.Name = "индекс_автобусного_паркаLabel";
-            индекс_автобусного_паркаLabel.Size = new System.Drawing.Size(139, 16);
-            индекс_автобусного_паркаLabel.TabIndex = 20;
-            индекс_автобусного_паркаLabel.Text = "ID автобусный парк:";
-            индекс_автобусного_паркаLabel.Click += new System.EventHandler(this.индекс_автобусного_паркаLabel_Click_1);
-            // 
-            // индекс_автобусного_паркаTextBox
-            // 
-            this.индекс_автобусного_паркаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусный_паркBindingSource, "Индекс_автобусного_парка", true));
-            this.индекс_автобусного_паркаTextBox.Location = new System.Drawing.Point(192, 157);
-            this.индекс_автобусного_паркаTextBox.Name = "индекс_автобусного_паркаTextBox";
-            this.индекс_автобусного_паркаTextBox.Size = new System.Drawing.Size(433, 22);
-            this.индекс_автобусного_паркаTextBox.TabIndex = 21;
-            // 
-            // название_автобусного_паркаLabel
-            // 
-            название_автобусного_паркаLabel.AutoSize = true;
-            название_автобусного_паркаLabel.Location = new System.Drawing.Point(110, 191);
-            название_автобусного_паркаLabel.Name = "название_автобусного_паркаLabel";
-            название_автобусного_паркаLabel.Size = new System.Drawing.Size(76, 16);
-            название_автобусного_паркаLabel.TabIndex = 21;
-            название_автобусного_паркаLabel.Text = "Название:";
-            // 
-            // название_автобусного_паркаTextBox
-            // 
-            this.название_автобусного_паркаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусный_паркBindingSource, "Название_автобусного_парка", true));
-            this.название_автобусного_паркаTextBox.Location = new System.Drawing.Point(192, 188);
-            this.название_автобусного_паркаTextBox.Name = "название_автобусного_паркаTextBox";
-            this.название_автобусного_паркаTextBox.Size = new System.Drawing.Size(433, 22);
-            this.название_автобусного_паркаTextBox.TabIndex = 22;
-            // 
-            // адрес_автобусного_паркаLabel
-            // 
-            адрес_автобусного_паркаLabel.AutoSize = true;
-            адрес_автобусного_паркаLabel.Location = new System.Drawing.Point(136, 219);
-            адрес_автобусного_паркаLabel.Name = "адрес_автобусного_паркаLabel";
-            адрес_автобусного_паркаLabel.Size = new System.Drawing.Size(50, 16);
-            адрес_автобусного_паркаLabel.TabIndex = 22;
-            адрес_автобусного_паркаLabel.Text = "Адрес:";
-            // 
-            // адрес_автобусного_паркаTextBox
-            // 
-            this.адрес_автобусного_паркаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусный_паркBindingSource, "Адрес_автобусного парка", true));
-            this.адрес_автобусного_паркаTextBox.Location = new System.Drawing.Point(192, 216);
-            this.адрес_автобусного_паркаTextBox.Name = "адрес_автобусного_паркаTextBox";
-            this.адрес_автобусного_паркаTextBox.Size = new System.Drawing.Size(433, 22);
-            this.адрес_автобусного_паркаTextBox.TabIndex = 23;
-            // 
-            // индекс_руководителяLabel
-            // 
-            индекс_руководителяLabel.AutoSize = true;
-            индекс_руководителяLabel.Location = new System.Drawing.Point(67, 247);
-            индекс_руководителяLabel.Name = "индекс_руководителяLabel";
-            индекс_руководителяLabel.Size = new System.Drawing.Size(119, 16);
-            индекс_руководителяLabel.TabIndex = 23;
-            индекс_руководителяLabel.Text = "ID руководитель:";
-            // 
-            // индекс_руководителяTextBox
-            // 
-            this.индекс_руководителяTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусный_паркBindingSource, "Индекс_руководителя", true));
-            this.индекс_руководителяTextBox.Location = new System.Drawing.Point(192, 244);
-            this.индекс_руководителяTextBox.Name = "индекс_руководителяTextBox";
-            this.индекс_руководителяTextBox.Size = new System.Drawing.Size(433, 22);
-            this.индекс_руководителяTextBox.TabIndex = 24;
-            // 
-            // автобусDataGridView
-            // 
-            this.автобусDataGridView.AutoGenerateColumns = false;
-            this.автобусDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.автобусDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17});
-            this.автобусDataGridView.DataSource = this.автобусBindingSource;
-            this.автобусDataGridView.Location = new System.Drawing.Point(26, 447);
-            this.автобусDataGridView.Name = "автобусDataGridView";
-            this.автобусDataGridView.RowHeadersWidth = 51;
-            this.автобусDataGridView.RowTemplate.Height = 24;
-            this.автобусDataGridView.Size = new System.Drawing.Size(1186, 249);
-            this.автобусDataGridView.TabIndex = 21;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Индекс_автобуса";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Индекс_автобуса";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Марка_автобуса";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Марка_автобуса";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Модель_автобуса";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Модель_автобуса";
-            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Год выпуска_автобуса";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Год выпуска_автобуса";
-            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Индекс_рейса";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Индекс_рейса";
-            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "Индекс_автобусного_парка";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Индекс_автобусного_парка";
-            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "Индекс_водителя";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Индекс_водителя";
-            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "Индекс_контролера";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Индекс_контролера";
-            this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "Статус_автобуса";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Статус_автобуса";
-            this.dataGridViewTextBoxColumn17.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.Width = 125;
-            // 
-            // индекс_рейсаLabel
-            // 
-            индекс_рейсаLabel.AutoSize = true;
-            индекс_рейсаLabel.Location = new System.Drawing.Point(129, 147);
-            индекс_рейсаLabel.Name = "индекс_рейсаLabel";
-            индекс_рейсаLabel.Size = new System.Drawing.Size(57, 16);
-            индекс_рейсаLabel.TabIndex = 21;
-            индекс_рейсаLabel.Text = "ID рейс:";
-            // 
-            // индекс_рейсаTextBox
-            // 
-            this.индекс_рейсаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.рейсBindingSource, "Индекс_рейса", true));
-            this.индекс_рейсаTextBox.Location = new System.Drawing.Point(192, 144);
-            this.индекс_рейсаTextBox.Name = "индекс_рейсаTextBox";
-            this.индекс_рейсаTextBox.Size = new System.Drawing.Size(433, 22);
-            this.индекс_рейсаTextBox.TabIndex = 22;
-            // 
-            // номер_рейсаLabel
-            // 
-            номер_рейсаLabel.AutoSize = true;
-            номер_рейсаLabel.Location = new System.Drawing.Point(91, 175);
-            номер_рейсаLabel.Name = "номер_рейсаLabel";
-            номер_рейсаLabel.Size = new System.Drawing.Size(95, 16);
-            номер_рейсаLabel.TabIndex = 22;
-            номер_рейсаLabel.Text = "Номер рейса:";
-            // 
-            // номер_рейсаTextBox
-            // 
-            this.номер_рейсаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.рейсBindingSource, "Номер_рейса", true));
-            this.номер_рейсаTextBox.Location = new System.Drawing.Point(192, 172);
-            this.номер_рейсаTextBox.Name = "номер_рейсаTextBox";
-            this.номер_рейсаTextBox.Size = new System.Drawing.Size(433, 22);
-            this.номер_рейсаTextBox.TabIndex = 23;
-            // 
-            // откудаLabel
-            // 
-            откудаLabel.AutoSize = true;
-            откудаLabel.Location = new System.Drawing.Point(128, 203);
-            откудаLabel.Name = "откудаLabel";
-            откудаLabel.Size = new System.Drawing.Size(58, 16);
-            откудаLabel.TabIndex = 23;
-            откудаLabel.Text = "Откуда:";
-            // 
-            // откудаTextBox
-            // 
-            this.откудаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.рейсBindingSource, "Откуда", true));
-            this.откудаTextBox.Location = new System.Drawing.Point(192, 200);
-            this.откудаTextBox.Name = "откудаTextBox";
-            this.откудаTextBox.Size = new System.Drawing.Size(433, 22);
-            this.откудаTextBox.TabIndex = 24;
-            // 
-            // кудаLabel
-            // 
-            кудаLabel.AutoSize = true;
-            кудаLabel.Location = new System.Drawing.Point(144, 231);
-            кудаLabel.Name = "кудаLabel";
-            кудаLabel.Size = new System.Drawing.Size(42, 16);
-            кудаLabel.TabIndex = 24;
-            кудаLabel.Text = "Куда:";
-            // 
-            // кудаTextBox
-            // 
-            this.кудаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.рейсBindingSource, "Куда", true));
-            this.кудаTextBox.Location = new System.Drawing.Point(192, 228);
-            this.кудаTextBox.Name = "кудаTextBox";
-            this.кудаTextBox.Size = new System.Drawing.Size(433, 22);
-            this.кудаTextBox.TabIndex = 25;
-            // 
-            // отправлениеLabel
-            // 
-            отправлениеLabel.AutoSize = true;
-            отправлениеLabel.Location = new System.Drawing.Point(87, 260);
-            отправлениеLabel.Name = "отправлениеLabel";
-            отправлениеLabel.Size = new System.Drawing.Size(99, 16);
-            отправлениеLabel.TabIndex = 25;
-            отправлениеLabel.Text = "Отправление:";
-            // 
-            // отправлениеDateTimePicker
-            // 
-            this.отправлениеDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.рейсBindingSource, "Отправление", true));
-            this.отправлениеDateTimePicker.Location = new System.Drawing.Point(192, 256);
-            this.отправлениеDateTimePicker.Name = "отправлениеDateTimePicker";
-            this.отправлениеDateTimePicker.Size = new System.Drawing.Size(433, 22);
-            this.отправлениеDateTimePicker.TabIndex = 26;
-            // 
-            // прибытиеLabel
-            // 
-            прибытиеLabel.AutoSize = true;
-            прибытиеLabel.Location = new System.Drawing.Point(110, 288);
-            прибытиеLabel.Name = "прибытиеLabel";
-            прибытиеLabel.Size = new System.Drawing.Size(76, 16);
-            прибытиеLabel.TabIndex = 26;
-            прибытиеLabel.Text = "Прибытие:";
-            // 
-            // прибытиеDateTimePicker
-            // 
-            this.прибытиеDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.рейсBindingSource, "Прибытие", true));
-            this.прибытиеDateTimePicker.Location = new System.Drawing.Point(192, 284);
-            this.прибытиеDateTimePicker.Name = "прибытиеDateTimePicker";
-            this.прибытиеDateTimePicker.Size = new System.Drawing.Size(433, 22);
-            this.прибытиеDateTimePicker.TabIndex = 27;
-            // 
-            // стоимость_проездаLabel
-            // 
-            стоимость_проездаLabel.AutoSize = true;
-            стоимость_проездаLabel.Location = new System.Drawing.Point(47, 315);
-            стоимость_проездаLabel.Name = "стоимость_проездаLabel";
-            стоимость_проездаLabel.Size = new System.Drawing.Size(139, 16);
-            стоимость_проездаLabel.TabIndex = 27;
-            стоимость_проездаLabel.Text = "Стоимость проезда:";
-            // 
-            // стоимость_проездаTextBox
-            // 
-            this.стоимость_проездаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.рейсBindingSource, "Стоимость_проезда", true));
-            this.стоимость_проездаTextBox.Location = new System.Drawing.Point(192, 312);
-            this.стоимость_проездаTextBox.Name = "стоимость_проездаTextBox";
-            this.стоимость_проездаTextBox.Size = new System.Drawing.Size(433, 22);
-            this.стоимость_проездаTextBox.TabIndex = 28;
-            // 
-            // индекс_автобусного_паркаLabel1
-            // 
-            индекс_автобусного_паркаLabel1.AutoSize = true;
-            индекс_автобусного_паркаLabel1.Location = new System.Drawing.Point(47, 343);
-            индекс_автобусного_паркаLabel1.Name = "индекс_автобусного_паркаLabel1";
-            индекс_автобусного_паркаLabel1.Size = new System.Drawing.Size(139, 16);
-            индекс_автобусного_паркаLabel1.TabIndex = 28;
-            индекс_автобусного_паркаLabel1.Text = "ID автобусный парк:";
-            индекс_автобусного_паркаLabel1.Click += new System.EventHandler(this.индекс_автобусного_паркаLabel1_Click);
-            // 
-            // индекс_автобусного_паркаTextBox1
-            // 
-            this.индекс_автобусного_паркаTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.рейсBindingSource, "Индекс_автобусного_парка", true));
-            this.индекс_автобусного_паркаTextBox1.Location = new System.Drawing.Point(192, 340);
-            this.индекс_автобусного_паркаTextBox1.Name = "индекс_автобусного_паркаTextBox1";
-            this.индекс_автобусного_паркаTextBox1.Size = new System.Drawing.Size(433, 22);
-            this.индекс_автобусного_паркаTextBox1.TabIndex = 29;
-            // 
-            // пассажирDataGridView
-            // 
-            this.пассажирDataGridView.AutoGenerateColumns = false;
-            this.пассажирDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.пассажирDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.индекспассажираDataGridViewTextBoxColumn,
-            this.индексавтобусаDataGridViewTextBoxColumn,
-            this.фИОпассажираDataGridViewTextBoxColumn,
-            this.категорияпассажираDataGridViewTextBoxColumn});
-            this.пассажирDataGridView.DataSource = this.пассажирBindingSource;
-            this.пассажирDataGridView.Location = new System.Drawing.Point(649, 145);
-            this.пассажирDataGridView.Name = "пассажирDataGridView";
-            this.пассажирDataGridView.RowHeadersWidth = 51;
-            this.пассажирDataGridView.RowTemplate.Height = 24;
-            this.пассажирDataGridView.Size = new System.Drawing.Size(563, 313);
-            this.пассажирDataGridView.TabIndex = 22;
-            // 
-            // индекспассажираDataGridViewTextBoxColumn
-            // 
-            this.индекспассажираDataGridViewTextBoxColumn.DataPropertyName = "Индекс_пассажира";
-            this.индекспассажираDataGridViewTextBoxColumn.HeaderText = "Индекс_пассажира";
-            this.индекспассажираDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.индекспассажираDataGridViewTextBoxColumn.Name = "индекспассажираDataGridViewTextBoxColumn";
-            this.индекспассажираDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // индексавтобусаDataGridViewTextBoxColumn
-            // 
-            this.индексавтобусаDataGridViewTextBoxColumn.DataPropertyName = "Индекс_автобуса";
-            this.индексавтобусаDataGridViewTextBoxColumn.HeaderText = "Индекс_автобуса";
-            this.индексавтобусаDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.индексавтобусаDataGridViewTextBoxColumn.Name = "индексавтобусаDataGridViewTextBoxColumn";
-            this.индексавтобусаDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // фИОпассажираDataGridViewTextBoxColumn
-            // 
-            this.фИОпассажираDataGridViewTextBoxColumn.DataPropertyName = "ФИО_пассажира";
-            this.фИОпассажираDataGridViewTextBoxColumn.HeaderText = "ФИО_пассажира";
-            this.фИОпассажираDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.фИОпассажираDataGridViewTextBoxColumn.Name = "фИОпассажираDataGridViewTextBoxColumn";
-            this.фИОпассажираDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // категорияпассажираDataGridViewTextBoxColumn
-            // 
-            this.категорияпассажираDataGridViewTextBoxColumn.DataPropertyName = "Категория_пассажира";
-            this.категорияпассажираDataGridViewTextBoxColumn.HeaderText = "Категория_пассажира";
-            this.категорияпассажираDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.категорияпассажираDataGridViewTextBoxColumn.Name = "категорияпассажираDataGridViewTextBoxColumn";
-            this.категорияпассажираDataGridViewTextBoxColumn.Width = 125;
+            this.контролерTableAdapter.ClearBeforeFill = true;
             // 
             // Edit_DB
             // 
@@ -2634,21 +2687,25 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.автобусный_паркBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bus_dataset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.рейсDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.рейсBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.автобусный_паркBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bus_dataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.автобусDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
             this.bindingNavigator2.ResumeLayout(false);
             this.bindingNavigator2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.рейсBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.пассажирDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.пассажирBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.автобусBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).EndInit();
@@ -2677,14 +2734,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.пассажирBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator7)).EndInit();
             this.bindingNavigator7.ResumeLayout(false);
             this.bindingNavigator7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.рейсDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.автобусDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.пассажирDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2704,7 +2757,6 @@
         private bus_datasetTableAdapters.РейсTableAdapter рейсTableAdapter;
         private System.Windows.Forms.BindingSource рейсBindingSource;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -2758,7 +2810,6 @@
         private System.Windows.Forms.TextBox марка_автобусаTextBox;
         private System.Windows.Forms.TextBox индекс_автобусаTextBox;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox статус_автобусаTextBox;
         private System.Windows.Forms.TextBox индекс_контролераTextBox;
         private System.Windows.Forms.TextBox индекс_водителяTextBox;
@@ -2785,7 +2836,7 @@
         private System.Windows.Forms.BindingSource руководительBindingSource;
         private bus_datasetTableAdapters.РуководительTableAdapter руководительTableAdapter;
         private System.Windows.Forms.TextBox номер_телефона_руководителяTextBox;
-        private System.Windows.Forms.TextBox фИО_руководителяTextBox;
+        private System.Windows.Forms.TextBox ФИО_руководителяTextBox;
         private System.Windows.Forms.TextBox индекс_руководителяTextBox1;
         private System.Windows.Forms.BindingNavigator bindingNavigator5;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
@@ -2833,28 +2884,19 @@
         private bus_datasetTableAdapters.ВодительTableAdapter водительTableAdapter;
         private System.Windows.Forms.TextBox стаж_водителяTextBox;
         private System.Windows.Forms.TextBox номер_телефона_водителяTextBox;
-        private System.Windows.Forms.TextBox фИО_водителяTextBox;
+        private System.Windows.Forms.TextBox ФИО_водителяTextBox;
         private System.Windows.Forms.TextBox индекс_водителяTextBox1;
         private System.Windows.Forms.BindingSource контролерBindingSource;
         private bus_datasetTableAdapters.КонтролерTableAdapter контролерTableAdapter;
         private System.Windows.Forms.TextBox номер_телефона_контролераTextBox;
-        private System.Windows.Forms.TextBox фИО_контролераTextBox;
+        private System.Windows.Forms.TextBox ФИО_контролераTextBox;
         private System.Windows.Forms.TextBox индекс_контролераTextBox1;
         private System.Windows.Forms.TextBox категория_пассажираTextBox;
-        private System.Windows.Forms.TextBox фИО_пассажираTextBox;
+        private System.Windows.Forms.TextBox ФИО_пассажираTextBox;
         private System.Windows.Forms.TextBox индекс_автобусаTextBox1;
         private System.Windows.Forms.TextBox индекс_пассажираTextBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView рейсDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn индексрейсаDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn номеррейсаDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn откудаDataGridViewTextBoxColumn;
@@ -2863,20 +2905,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn прибытиеDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn стоимостьпроездаDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn индексавтобусногопаркаDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox индекс_руководителяTextBox;
-        private System.Windows.Forms.TextBox адрес_автобусного_паркаTextBox;
         private System.Windows.Forms.TextBox название_автобусного_паркаTextBox;
         private System.Windows.Forms.TextBox индекс_автобусного_паркаTextBox;
-        private System.Windows.Forms.DataGridView автобусDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.TextBox индекс_автобусного_паркаTextBox1;
         private System.Windows.Forms.TextBox стоимость_проездаTextBox;
         private System.Windows.Forms.DateTimePicker прибытиеDateTimePicker;
@@ -2890,5 +2920,27 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn индексавтобусаDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn фИОпассажираDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn категорияпассажираDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridView автобусDataGridView;
+        private System.Windows.Forms.TextBox адрес_автобусного_паркаTextBox;
+        private System.Windows.Forms.TextBox индекс_руководителяTextBox;
+        private System.Windows.Forms.ToolStripButton toolStripButton21;
+        private System.Windows.Forms.ToolStripButton toolStripButton22;
+        private System.Windows.Forms.ToolStripButton toolStripButton23;
+        private System.Windows.Forms.ToolStripButton toolStripButton24;
+        private System.Windows.Forms.ToolStripButton toolStripButton25;
+        private System.Windows.Forms.ToolStripButton toolStripButton26;
+        private System.Windows.Forms.ToolStripButton toolStripButton27;
+        private System.Windows.Forms.ToolStripButton toolStripButton28;
+        private System.Windows.Forms.ToolStripButton toolStripButton31;
+        private System.Windows.Forms.ToolStripButton toolStripButton30;
+        private System.Windows.Forms.ToolStripButton toolStripButton29;
     }
 }

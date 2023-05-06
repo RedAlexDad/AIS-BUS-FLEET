@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using bus_coursework.Controller;
+using bus_coursework.MyClass;
 
 namespace Sample {
     public partial class Form1 : Form {
@@ -23,7 +23,7 @@ namespace Sample {
         }
 
         private void button2_Click(object sender, EventArgs e) {
-            controller.Add(textBox1.Text, textBox2.Text);
+            //controller.Add(textBox1.Text, textBox2.Text);
         }
 
         private void button3_Click(object sender, EventArgs e) {
