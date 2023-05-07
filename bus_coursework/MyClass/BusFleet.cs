@@ -77,5 +77,34 @@ namespace bus_coursework.MyClass {
             // Закрываем соединение с БД
             connection.Close();
         }
+
+        // БД для отчета
+        public DataTable UpdateBusFleet() {
+            connection.Open();
+            try {
+                //dataAdapter = new OleDbDataAdapter($"SELECT * FROM Автобус WHERE Индекс_рейса = {ID}", connection);
+                dataAdapter = new OleDbDataAdapter(
+                    $"SELECT " +
+                        $"Индекс_автобусного_парка, " +
+                        $"Название_автобусного_парка, " +
+                        $"Адрес_автобусного_парка, " +
+                        $"Руководитель.ФИО_руководителя " +
+                    $"FROM " +
+                        $"Автобусный_парк, " +
+                        $"Руководитель " +
+                    $"WHERE Автобусный_парк.Индекс_руководителя = Руководитель.Индекс_руководителя",
+                    connection);
+
+                bufferTable.Clear();
+                dataAdapter.Fill(bufferTable);
+            } catch(Exception error) {
+                MessageBox.Show("Ошибка выполнения запроса!\nТип ошибки: " + error, "Ошибка!");
+            };
+            // Закрываем соединение с БД
+            connection.Close();
+            return bufferTable;
+        }
+
+
     }
 }

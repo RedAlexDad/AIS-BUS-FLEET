@@ -17,7 +17,8 @@ namespace bus_coursework
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Edit_DB());
+            //Application.Run(new Edit_DB());
+            Application.Run(new Report_admin());
         }
     }
 }

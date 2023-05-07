@@ -58,7 +58,6 @@ namespace bus_coursework {
             passenger = new Passenger(ConnectionString.ConnStr);
             controller = new Controller(ConnectionString.ConnStr);
             driver = new Driver(ConnectionString.ConnStr);
-
         }
 
         // Отображение всех БД - DataGridView
@@ -90,6 +89,8 @@ namespace bus_coursework {
             // ID контролер
             автобусDataGridView.Columns[7].HeaderText = "ID контролер";
             автобусDataGridView.Columns[7].Width = 200;
+            // Cтатус автобуса
+            автобусDataGridView.Columns[8].Visible = false;
         }
 
         // Отображение БД рейса
@@ -260,7 +261,7 @@ namespace bus_coursework {
         private void bindingNavigatorMoveLastItem1_Click(object sender, EventArgs e) {
             id_class.id_busline = int.Parse(индекс_рейсаTextBox.Text);
 
-            автобусDataGridView.DataSource = bus.UpdateBusCheck(int.Parse(индекс_рейсаTextBox.Text));
+            автобусDataGridView.DataSource = bus.UpdateBusCheckByIDBusline(int.Parse(индекс_рейсаTextBox.Text));
 
             // Вызов функции для отображения БД автобуса
             data_base_bus_gird_view();
@@ -269,7 +270,7 @@ namespace bus_coursework {
         private void bindingNavigatorMoveNextItem1_Click(object sender, EventArgs e) {
             id_class.id_busline = int.Parse(индекс_рейсаTextBox.Text);
 
-            автобусDataGridView.DataSource = bus.UpdateBusCheck(int.Parse(индекс_рейсаTextBox.Text));
+            автобусDataGridView.DataSource = bus.UpdateBusCheckByIDBusline(int.Parse(индекс_рейсаTextBox.Text));
             
             // Вызов функции для отображения БД автобуса
             data_base_bus_gird_view();
@@ -278,7 +279,7 @@ namespace bus_coursework {
         private void bindingNavigatorMovePreviousItem1_Click(object sender, EventArgs e) {
             id_class.id_busline = int.Parse(индекс_рейсаTextBox.Text);
 
-            автобусDataGridView.DataSource = bus.UpdateBusCheck(int.Parse(индекс_рейсаTextBox.Text));
+            автобусDataGridView.DataSource = bus.UpdateBusCheckByIDBusline(int.Parse(индекс_рейсаTextBox.Text));
 
             // Вызов функции для отображения БД автобуса
             data_base_bus_gird_view();
@@ -287,7 +288,7 @@ namespace bus_coursework {
         private void bindingNavigatorMoveFirstItem1_Click(object sender, EventArgs e) {
             id_class.id_busline = int.Parse(индекс_рейсаTextBox.Text);
 
-            автобусDataGridView.DataSource = bus.UpdateBusCheck(int.Parse(индекс_рейсаTextBox.Text));
+            автобусDataGridView.DataSource = bus.UpdateBusCheckByIDBusline(int.Parse(индекс_рейсаTextBox.Text));
 
             // Вызов функции для отображения БД автобуса
             data_base_bus_gird_view();

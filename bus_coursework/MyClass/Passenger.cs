@@ -31,15 +31,6 @@ namespace bus_coursework.MyClass {
             return bufferTable;
         }
 
-        public DataTable get_fio_director_by_id(int ID) {
-            connection.Open();
-            dataAdapter = new OleDbDataAdapter($"SELECT * FROM Руководитель WHERE Индекс_руководителя = {ID}", connection);
-            bufferTable.Clear();
-            dataAdapter.Fill(bufferTable);
-            connection.Close();
-            return bufferTable;
-        }
-
         public void Add(int ID_passanger, int ID_bus, string FIO, string category) {
             connection.Open();
             try {
@@ -97,5 +88,33 @@ namespace bus_coursework.MyClass {
         connection.Close();
         }
 
+        // БД для отчета
+        public DataTable UpdatePassenger() {
+            connection.Open();
+            try {
+                //dataAdapter = new OleDbDataAdapter($"SELECT * FROM Автобус WHERE Индекс_рейса = {ID}", connection);
+                dataAdapter = new OleDbDataAdapter(
+                    $"SELECT " +
+                        $"Индекс_пассажира, " +
+                        $"Рейс.Номер_рейса, " +
+                        $"ФИО_пассажира, " +
+                        $"Категория_пассажира " +
+                    $"FROM " +
+                        $"Пассажир, " +
+                        $"Автобус, " +
+                        $"Рейс " +
+                    $"WHERE Пассажир.Индекс_автобуса = Автобус.Индекс_автобуса " +
+                    $"AND Автобус.Индекс_рейса = Рейс.Индекс_рейса",
+                    connection);
+
+                bufferTable.Clear();
+                dataAdapter.Fill(bufferTable);
+            } catch(Exception error) {
+                MessageBox.Show("Ошибка выполнения запроса!\nТип ошибки: " + error, "Ошибка!");
+            };
+            // Закрываем соединение с БД
+            connection.Close();
+            return bufferTable;
+        }
     }
 }

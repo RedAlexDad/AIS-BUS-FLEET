@@ -22,7 +22,7 @@ namespace bus_coursework.MyClass {
         }
 
         // Обновление рейса по ID автобусного парка
-        public DataTable UpdateBusCheck(int ID) {
+        public DataTable UpdateBusCheckByIDBusline(int ID) {
             connection.Open();
             try {
                 //dataAdapter = new OleDbDataAdapter($"SELECT * FROM Автобус WHERE Индекс_рейса = {ID}", connection);
@@ -59,24 +59,43 @@ namespace bus_coursework.MyClass {
             return bufferTable;
         }
 
-        public DataTable get_fio_director_by_id(int ID) {
+        // БД для отчета
+        public DataTable UpdateBus() {
             connection.Open();
-            dataAdapter = new OleDbDataAdapter($"SELECT * FROM Руководитель WHERE Индекс_руководителя = {ID}", connection);
-            bufferTable.Clear();
-            dataAdapter.Fill(bufferTable);
+            try {
+                //dataAdapter = new OleDbDataAdapter($"SELECT * FROM Автобус WHERE Индекс_рейса = {ID}", connection);
+                dataAdapter = new OleDbDataAdapter(
+                    $"SELECT " +
+                        $"Автобус.Индекс_автобуса, " +
+                        $"Автобус.Марка_автобуса, " +
+                        $"Автобус.Модель_автобуса, " +
+                        $"Автобус.Год_выпуска_автобуса, " +
+                        $"Рейс.Номер_рейса, " +
+                        $"Автобусный_парк.Название_автобусного_парка, " +
+                        $"Водитель.ФИО_водителя, " +
+                        $"Контролер.ФИО_контролера " +
+                    $"FROM " +
+                        $"Автобус, " +
+                        $"Рейс, " +
+                        $"Автобусный_парк, " +
+                        $"Водитель, " +
+                        $"Контролер " +
+                    $"WHERE Автобус.Индекс_рейса = Рейс.Индекс_рейса " +
+                    $"AND Автобус.Индекс_автобусного_парка = Автобусный_парк.Индекс_автобусного_парка " +
+                    $"AND Автобус.Индекс_водителя = Водитель.Индекс_водителя " +
+                    $"AND Автобус.Индекс_контролера = Контролер.Индекс_контролера",
+                    connection);
+
+                bufferTable.Clear();
+                dataAdapter.Fill(bufferTable);
+            } catch(Exception error) {
+                MessageBox.Show("Ошибка выполнения запроса!\nТип ошибки: " + error, "Ошибка!");
+            };
+            // Закрываем соединение с БД
             connection.Close();
             return bufferTable;
         }
 
-        // Руководитель
-        public DataTable UpdateArmChair() {
-            connection.Open();
-            dataAdapter = new OleDbDataAdapter("SELECT * FROM Рейс", connection);
-            bufferTable.Clear();
-            dataAdapter.Fill(bufferTable);
-            connection.Close();
-            return bufferTable;
-        }
 
         public void Add(int ID_bus, string Marka, string Model, string Year_relis, int ID_busline, int ID_busfleet, int ID_driver, int ID_controller, string status) {
             connection.Open();

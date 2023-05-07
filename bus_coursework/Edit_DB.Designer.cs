@@ -724,7 +724,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Size = new System.Drawing.Size(1227, 706);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Автобусный_парк";
+            this.tabPage1.Text = "Автобусный парк";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
@@ -1191,14 +1191,14 @@
             this.bindingNavigatorAddNewItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem1.Image")));
             this.bindingNavigatorAddNewItem1.Name = "bindingNavigatorAddNewItem1";
             this.bindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(29, 36);
             this.bindingNavigatorAddNewItem1.Text = "Добавить";
             this.bindingNavigatorAddNewItem1.Click += new System.EventHandler(this.bindingNavigatorAddNewItem1_Click);
             // 
             // bindingNavigatorCountItem1
             // 
             this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
-            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(55, 24);
+            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(55, 36);
             this.bindingNavigatorCountItem1.Text = "для {0}";
             this.bindingNavigatorCountItem1.ToolTipText = "Общее число элементов";
             // 
@@ -1208,7 +1208,7 @@
             this.bindingNavigatorDeleteItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem1.Image")));
             this.bindingNavigatorDeleteItem1.Name = "bindingNavigatorDeleteItem1";
             this.bindingNavigatorDeleteItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(29, 36);
             this.bindingNavigatorDeleteItem1.Text = "Удалить";
             this.bindingNavigatorDeleteItem1.Click += new System.EventHandler(this.bindingNavigatorDeleteItem1_Click);
             // 
@@ -1218,7 +1218,7 @@
             this.bindingNavigatorMoveFirstItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem1.Image")));
             this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem1";
             this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(29, 36);
             this.bindingNavigatorMoveFirstItem1.Text = "Переместить в начало";
             this.bindingNavigatorMoveFirstItem1.Click += new System.EventHandler(this.bindingNavigatorMoveFirstItem1_Click);
             // 
@@ -1228,14 +1228,14 @@
             this.bindingNavigatorMovePreviousItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem1.Image")));
             this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem1";
             this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(29, 36);
             this.bindingNavigatorMovePreviousItem1.Text = "Переместить назад";
             this.bindingNavigatorMovePreviousItem1.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem1_Click);
             // 
             // bindingNavigatorSeparator3
             // 
             this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator3";
-            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 39);
             // 
             // bindingNavigatorPositionItem1
             // 
@@ -1250,7 +1250,7 @@
             // bindingNavigatorSeparator4
             // 
             this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator4";
-            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 39);
             // 
             // bindingNavigatorMoveNextItem1
             // 
@@ -1258,7 +1258,7 @@
             this.bindingNavigatorMoveNextItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem1.Image")));
             this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem1";
             this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(29, 36);
             this.bindingNavigatorMoveNextItem1.Text = "Переместить вперед";
             this.bindingNavigatorMoveNextItem1.Click += new System.EventHandler(this.bindingNavigatorMoveNextItem1_Click);
             // 
@@ -1268,14 +1268,14 @@
             this.bindingNavigatorMoveLastItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem1.Image")));
             this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem1";
             this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(29, 36);
             this.bindingNavigatorMoveLastItem1.Text = "Переместить в конец";
             this.bindingNavigatorMoveLastItem1.Click += new System.EventHandler(this.bindingNavigatorMoveLastItem1_Click);
             // 
             // bindingNavigatorSeparator5
             // 
             this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
-            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 39);
             // 
             // toolStripButton1
             // 
@@ -1283,7 +1283,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 36);
             this.toolStripButton1.Text = "&Сохранить";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -1293,7 +1293,7 @@
             this.toolStripButton30.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton30.Image")));
             this.toolStripButton30.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton30.Name = "toolStripButton30";
-            this.toolStripButton30.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton30.Size = new System.Drawing.Size(29, 36);
             this.toolStripButton30.Text = "toolStripButton27";
             this.toolStripButton30.Click += new System.EventHandler(this.toolStripButton30_Click);
             // 
@@ -1562,14 +1562,14 @@
             this.bindingNavigatorAddNewItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem2.Image")));
             this.bindingNavigatorAddNewItem2.Name = "bindingNavigatorAddNewItem2";
             this.bindingNavigatorAddNewItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem2.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem2.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorAddNewItem2.Text = "Добавить";
             this.bindingNavigatorAddNewItem2.Click += new System.EventHandler(this.bindingNavigatorAddNewItem2_Click);
             // 
             // bindingNavigatorCountItem2
             // 
             this.bindingNavigatorCountItem2.Name = "bindingNavigatorCountItem2";
-            this.bindingNavigatorCountItem2.Size = new System.Drawing.Size(55, 24);
+            this.bindingNavigatorCountItem2.Size = new System.Drawing.Size(55, 28);
             this.bindingNavigatorCountItem2.Text = "для {0}";
             this.bindingNavigatorCountItem2.ToolTipText = "Общее число элементов";
             // 
@@ -1579,7 +1579,7 @@
             this.bindingNavigatorDeleteItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem2.Image")));
             this.bindingNavigatorDeleteItem2.Name = "bindingNavigatorDeleteItem2";
             this.bindingNavigatorDeleteItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem2.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem2.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorDeleteItem2.Text = "Удалить";
             this.bindingNavigatorDeleteItem2.Click += new System.EventHandler(this.bindingNavigatorDeleteItem2_Click);
             // 
@@ -1589,7 +1589,7 @@
             this.bindingNavigatorMoveFirstItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem2.Image")));
             this.bindingNavigatorMoveFirstItem2.Name = "bindingNavigatorMoveFirstItem2";
             this.bindingNavigatorMoveFirstItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem2.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem2.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem2.Text = "Переместить в начало";
             this.bindingNavigatorMoveFirstItem2.Click += new System.EventHandler(this.bindingNavigatorMoveFirstItem2_Click);
             // 
@@ -1599,14 +1599,14 @@
             this.bindingNavigatorMovePreviousItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem2.Image")));
             this.bindingNavigatorMovePreviousItem2.Name = "bindingNavigatorMovePreviousItem2";
             this.bindingNavigatorMovePreviousItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem2.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem2.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMovePreviousItem2.Text = "Переместить назад";
             this.bindingNavigatorMovePreviousItem2.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem2_Click);
             // 
             // bindingNavigatorSeparator6
             // 
             this.bindingNavigatorSeparator6.Name = "bindingNavigatorSeparator6";
-            this.bindingNavigatorSeparator6.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator6.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem2
             // 
@@ -1621,7 +1621,7 @@
             // bindingNavigatorSeparator7
             // 
             this.bindingNavigatorSeparator7.Name = "bindingNavigatorSeparator7";
-            this.bindingNavigatorSeparator7.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator7.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem2
             // 
@@ -1629,7 +1629,7 @@
             this.bindingNavigatorMoveNextItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem2.Image")));
             this.bindingNavigatorMoveNextItem2.Name = "bindingNavigatorMoveNextItem2";
             this.bindingNavigatorMoveNextItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem2.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem2.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveNextItem2.Text = "Переместить вперед";
             this.bindingNavigatorMoveNextItem2.Click += new System.EventHandler(this.bindingNavigatorMoveNextItem2_Click);
             // 
@@ -1639,14 +1639,14 @@
             this.bindingNavigatorMoveLastItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem2.Image")));
             this.bindingNavigatorMoveLastItem2.Name = "bindingNavigatorMoveLastItem2";
             this.bindingNavigatorMoveLastItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem2.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem2.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveLastItem2.Text = "Переместить в конец";
             this.bindingNavigatorMoveLastItem2.Click += new System.EventHandler(this.bindingNavigatorMoveLastItem2_Click);
             // 
             // bindingNavigatorSeparator8
             // 
             this.bindingNavigatorSeparator8.Name = "bindingNavigatorSeparator8";
-            this.bindingNavigatorSeparator8.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator8.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripButton2
             // 
@@ -1654,7 +1654,7 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton2.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton2.Text = "&Сохранить";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -1664,7 +1664,7 @@
             this.toolStripButton29.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton29.Image")));
             this.toolStripButton29.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton29.Name = "toolStripButton29";
-            this.toolStripButton29.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton29.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton29.Text = "toolStripButton27";
             this.toolStripButton29.Click += new System.EventHandler(this.toolStripButton29_Click);
             // 
@@ -1758,14 +1758,14 @@
             this.bindingNavigatorAddNewItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem3.Image")));
             this.bindingNavigatorAddNewItem3.Name = "bindingNavigatorAddNewItem3";
             this.bindingNavigatorAddNewItem3.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem3.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem3.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorAddNewItem3.Text = "Добавить";
             this.bindingNavigatorAddNewItem3.Click += new System.EventHandler(this.bindingNavigatorAddNewItem3_Click);
             // 
             // bindingNavigatorCountItem3
             // 
             this.bindingNavigatorCountItem3.Name = "bindingNavigatorCountItem3";
-            this.bindingNavigatorCountItem3.Size = new System.Drawing.Size(55, 24);
+            this.bindingNavigatorCountItem3.Size = new System.Drawing.Size(55, 28);
             this.bindingNavigatorCountItem3.Text = "для {0}";
             this.bindingNavigatorCountItem3.ToolTipText = "Общее число элементов";
             // 
@@ -1775,7 +1775,7 @@
             this.bindingNavigatorDeleteItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem3.Image")));
             this.bindingNavigatorDeleteItem3.Name = "bindingNavigatorDeleteItem3";
             this.bindingNavigatorDeleteItem3.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem3.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem3.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorDeleteItem3.Text = "Удалить";
             this.bindingNavigatorDeleteItem3.Click += new System.EventHandler(this.bindingNavigatorDeleteItem3_Click);
             // 
@@ -1785,7 +1785,7 @@
             this.bindingNavigatorMoveFirstItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem3.Image")));
             this.bindingNavigatorMoveFirstItem3.Name = "bindingNavigatorMoveFirstItem3";
             this.bindingNavigatorMoveFirstItem3.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem3.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem3.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem3.Text = "Переместить в начало";
             this.bindingNavigatorMoveFirstItem3.Click += new System.EventHandler(this.bindingNavigatorMoveFirstItem3_Click);
             // 
@@ -1795,14 +1795,14 @@
             this.bindingNavigatorMovePreviousItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem3.Image")));
             this.bindingNavigatorMovePreviousItem3.Name = "bindingNavigatorMovePreviousItem3";
             this.bindingNavigatorMovePreviousItem3.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem3.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem3.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMovePreviousItem3.Text = "Переместить назад";
             this.bindingNavigatorMovePreviousItem3.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem3_Click);
             // 
             // bindingNavigatorSeparator9
             // 
             this.bindingNavigatorSeparator9.Name = "bindingNavigatorSeparator9";
-            this.bindingNavigatorSeparator9.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator9.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem3
             // 
@@ -1817,7 +1817,7 @@
             // bindingNavigatorSeparator10
             // 
             this.bindingNavigatorSeparator10.Name = "bindingNavigatorSeparator10";
-            this.bindingNavigatorSeparator10.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator10.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem3
             // 
@@ -1825,7 +1825,7 @@
             this.bindingNavigatorMoveNextItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem3.Image")));
             this.bindingNavigatorMoveNextItem3.Name = "bindingNavigatorMoveNextItem3";
             this.bindingNavigatorMoveNextItem3.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem3.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem3.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveNextItem3.Text = "Переместить вперед";
             this.bindingNavigatorMoveNextItem3.Click += new System.EventHandler(this.bindingNavigatorMoveNextItem3_Click);
             // 
@@ -1835,14 +1835,14 @@
             this.bindingNavigatorMoveLastItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem3.Image")));
             this.bindingNavigatorMoveLastItem3.Name = "bindingNavigatorMoveLastItem3";
             this.bindingNavigatorMoveLastItem3.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem3.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem3.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveLastItem3.Text = "Переместить в конец";
             this.bindingNavigatorMoveLastItem3.Click += new System.EventHandler(this.bindingNavigatorMoveLastItem3_Click);
             // 
             // bindingNavigatorSeparator11
             // 
             this.bindingNavigatorSeparator11.Name = "bindingNavigatorSeparator11";
-            this.bindingNavigatorSeparator11.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator11.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripButton21
             // 
@@ -1850,7 +1850,7 @@
             this.toolStripButton21.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton21.Image")));
             this.toolStripButton21.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton21.Name = "toolStripButton21";
-            this.toolStripButton21.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton21.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton21.Text = "&Сохранить";
             this.toolStripButton21.Click += new System.EventHandler(this.toolStripButton21_Click);
             // 
@@ -1860,7 +1860,7 @@
             this.toolStripButton28.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton28.Image")));
             this.toolStripButton28.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton28.Name = "toolStripButton28";
-            this.toolStripButton28.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton28.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton28.Text = "toolStripButton27";
             this.toolStripButton28.Click += new System.EventHandler(this.toolStripButton28_Click);
             // 
@@ -1986,14 +1986,14 @@
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton3.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton3.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton3.Text = "Добавить";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(55, 24);
+            this.toolStripLabel1.Size = new System.Drawing.Size(55, 28);
             this.toolStripLabel1.Text = "для {0}";
             this.toolStripLabel1.ToolTipText = "Общее число элементов";
             // 
@@ -2003,7 +2003,7 @@
             this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton4.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton4.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton4.Text = "Удалить";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
@@ -2013,7 +2013,7 @@
             this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton5.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton5.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton5.Text = "Переместить в начало";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
@@ -2023,14 +2023,14 @@
             this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
             this.toolStripButton6.Name = "toolStripButton6";
             this.toolStripButton6.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton6.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton6.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton6.Text = "Переместить назад";
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripTextBox1
             // 
@@ -2045,7 +2045,7 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripButton7
             // 
@@ -2053,7 +2053,7 @@
             this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
             this.toolStripButton7.Name = "toolStripButton7";
             this.toolStripButton7.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton7.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton7.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton7.Text = "Переместить вперед";
             this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
             // 
@@ -2063,14 +2063,14 @@
             this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
             this.toolStripButton8.Name = "toolStripButton8";
             this.toolStripButton8.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton8.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton8.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton8.Text = "Переместить в конец";
             this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripButton22
             // 
@@ -2078,7 +2078,7 @@
             this.toolStripButton22.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton22.Image")));
             this.toolStripButton22.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton22.Name = "toolStripButton22";
-            this.toolStripButton22.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton22.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton22.Text = "&Сохранить";
             this.toolStripButton22.Click += new System.EventHandler(this.toolStripButton22_Click);
             // 
@@ -2088,7 +2088,7 @@
             this.toolStripButton27.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton27.Image")));
             this.toolStripButton27.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton27.Name = "toolStripButton27";
-            this.toolStripButton27.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton27.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton27.Text = "toolStripButton27";
             this.toolStripButton27.Click += new System.EventHandler(this.toolStripButton27_Click);
             // 
@@ -2203,14 +2203,14 @@
             this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
             this.toolStripButton9.Name = "toolStripButton9";
             this.toolStripButton9.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton9.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton9.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton9.Text = "Добавить";
             this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(55, 24);
+            this.toolStripLabel2.Size = new System.Drawing.Size(55, 28);
             this.toolStripLabel2.Text = "для {0}";
             this.toolStripLabel2.ToolTipText = "Общее число элементов";
             // 
@@ -2220,7 +2220,7 @@
             this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
             this.toolStripButton10.Name = "toolStripButton10";
             this.toolStripButton10.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton10.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton10.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton10.Text = "Удалить";
             this.toolStripButton10.Click += new System.EventHandler(this.toolStripButton10_Click);
             // 
@@ -2230,7 +2230,7 @@
             this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
             this.toolStripButton11.Name = "toolStripButton11";
             this.toolStripButton11.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton11.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton11.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton11.Text = "Переместить в начало";
             this.toolStripButton11.Click += new System.EventHandler(this.toolStripButton11_Click);
             // 
@@ -2240,14 +2240,14 @@
             this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
             this.toolStripButton12.Name = "toolStripButton12";
             this.toolStripButton12.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton12.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton12.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton12.Text = "Переместить назад";
             this.toolStripButton12.Click += new System.EventHandler(this.toolStripButton12_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripTextBox2
             // 
@@ -2262,7 +2262,7 @@
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripButton13
             // 
@@ -2270,7 +2270,7 @@
             this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
             this.toolStripButton13.Name = "toolStripButton13";
             this.toolStripButton13.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton13.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton13.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton13.Text = "Переместить вперед";
             this.toolStripButton13.Click += new System.EventHandler(this.toolStripButton13_Click);
             // 
@@ -2280,14 +2280,14 @@
             this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
             this.toolStripButton14.Name = "toolStripButton14";
             this.toolStripButton14.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton14.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton14.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton14.Text = "Переместить в конец";
             this.toolStripButton14.Click += new System.EventHandler(this.toolStripButton14_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripButton23
             // 
@@ -2295,7 +2295,7 @@
             this.toolStripButton23.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton23.Image")));
             this.toolStripButton23.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton23.Name = "toolStripButton23";
-            this.toolStripButton23.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton23.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton23.Text = "&Сохранить";
             this.toolStripButton23.Click += new System.EventHandler(this.toolStripButton23_Click);
             // 
@@ -2305,7 +2305,7 @@
             this.toolStripButton25.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton25.Image")));
             this.toolStripButton25.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton25.Name = "toolStripButton25";
-            this.toolStripButton25.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton25.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton25.Text = "toolStripButton25";
             this.toolStripButton25.Click += new System.EventHandler(this.toolStripButton25_Click);
             // 
@@ -2439,14 +2439,14 @@
             this.toolStripButton15.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton15.Image")));
             this.toolStripButton15.Name = "toolStripButton15";
             this.toolStripButton15.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton15.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton15.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton15.Text = "Добавить";
             this.toolStripButton15.Click += new System.EventHandler(this.toolStripButton15_Click);
             // 
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(55, 24);
+            this.toolStripLabel3.Size = new System.Drawing.Size(55, 28);
             this.toolStripLabel3.Text = "для {0}";
             this.toolStripLabel3.ToolTipText = "Общее число элементов";
             // 
@@ -2456,7 +2456,7 @@
             this.toolStripButton16.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton16.Image")));
             this.toolStripButton16.Name = "toolStripButton16";
             this.toolStripButton16.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton16.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton16.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton16.Text = "Удалить";
             this.toolStripButton16.Click += new System.EventHandler(this.toolStripButton16_Click);
             // 
@@ -2466,7 +2466,7 @@
             this.toolStripButton17.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton17.Image")));
             this.toolStripButton17.Name = "toolStripButton17";
             this.toolStripButton17.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton17.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton17.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton17.Text = "Переместить в начало";
             this.toolStripButton17.Click += new System.EventHandler(this.toolStripButton17_Click);
             // 
@@ -2476,14 +2476,14 @@
             this.toolStripButton18.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton18.Image")));
             this.toolStripButton18.Name = "toolStripButton18";
             this.toolStripButton18.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton18.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton18.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton18.Text = "Переместить назад";
             this.toolStripButton18.Click += new System.EventHandler(this.toolStripButton18_Click);
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripTextBox3
             // 
@@ -2498,7 +2498,7 @@
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripButton19
             // 
@@ -2506,7 +2506,7 @@
             this.toolStripButton19.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton19.Image")));
             this.toolStripButton19.Name = "toolStripButton19";
             this.toolStripButton19.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton19.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton19.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton19.Text = "Переместить вперед";
             this.toolStripButton19.Click += new System.EventHandler(this.toolStripButton19_Click);
             // 
@@ -2516,14 +2516,14 @@
             this.toolStripButton20.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton20.Image")));
             this.toolStripButton20.Name = "toolStripButton20";
             this.toolStripButton20.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton20.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton20.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton20.Text = "Переместить в конец";
             this.toolStripButton20.Click += new System.EventHandler(this.toolStripButton20_Click);
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripButton24
             // 
@@ -2531,7 +2531,7 @@
             this.toolStripButton24.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton24.Image")));
             this.toolStripButton24.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton24.Name = "toolStripButton24";
-            this.toolStripButton24.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton24.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton24.Text = "&Сохранить";
             this.toolStripButton24.Click += new System.EventHandler(this.toolStripButton24_Click);
             // 
@@ -2541,7 +2541,7 @@
             this.toolStripButton26.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton26.Image")));
             this.toolStripButton26.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton26.Name = "toolStripButton26";
-            this.toolStripButton26.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton26.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton26.Text = "toolStripButton26";
             this.toolStripButton26.Click += new System.EventHandler(this.toolStripButton26_Click);
             // 

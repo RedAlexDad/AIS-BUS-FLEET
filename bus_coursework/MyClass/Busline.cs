@@ -110,5 +110,36 @@ namespace bus_coursework.MyClass {
             // Закрываем соединение с БД
             connection.Close();
         }
+
+        // БД для отчета
+        public DataTable UpdateBusline() {
+            connection.Open();
+            try {
+                //dataAdapter = new OleDbDataAdapter($"SELECT * FROM Автобус WHERE Индекс_рейса = {ID}", connection);
+                dataAdapter = new OleDbDataAdapter(
+                    $"SELECT " +
+                        $"Индекс_рейса, " +
+                        $"Номер_рейса, " +
+                        $"Откуда, " +
+                        $"Куда, " +
+                        $"Отправление, " +
+                        $"Прибытие, " +
+                        $"Стоимость_проезда, " +
+                        $"Автобусный_парк.Название_автобусного_парка " +
+                    $"FROM " +
+                        $"Рейс, " +
+                        $"Автобусный_парк " +
+                    $"WHERE Автобусный_парк.Индекс_автобусного_парка = Рейс.Индекс_автобусного_парка",
+                    connection);
+
+                bufferTable.Clear();
+                dataAdapter.Fill(bufferTable);
+            } catch(Exception error) {
+                MessageBox.Show("Ошибка выполнения запроса!\nТип ошибки: " + error, "Ошибка!");
+            };
+            // Закрываем соединение с БД
+            connection.Close();
+            return bufferTable;
+        }
     }
 }
