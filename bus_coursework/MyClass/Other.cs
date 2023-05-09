@@ -15,11 +15,12 @@ namespace bus_coursework.MyClass {
         OleDbConnection connection;
         OleDbCommand command;
         OleDbDataAdapter dataAdapter;
-        DataTable bufferTable;
+        DataTable bufferTable0, bufferTable1;
 
         public Other(string Conn) {
             connection = new OleDbConnection(Conn);
-            bufferTable = new DataTable();
+            bufferTable0 = new DataTable();
+            bufferTable1 = new DataTable();
         }
 
         // БД для отчета - подсчет сумма проданных билетов
@@ -30,22 +31,99 @@ namespace bus_coursework.MyClass {
                 dataAdapter = new OleDbDataAdapter(
                     $"SELECT " +
                         $"Рейс.Номер_рейса, " +
-                        $"Count(Пассажир.Индекс_пассажира), " +
-                        $"Sum(Рейс.Стоимость_проезда) " +
+                        $"COUNT(Пассажир.Индекс_пассажира), " +
+                        $"SUM(Рейс.Стоимость_проезда) " +
                     $"FROM Рейс " +
                         $"INNER JOIN (Автобус INNER JOIN Пассажир ON Автобус.[Индекс_автобуса] = Пассажир.Индекс_автобуса) " +
                         $"ON Рейс.Индекс_рейса = Автобус.Индекс_рейса " +
                     $"GROUP BY Рейс.Номер_рейса",
                     connection);
 
-                bufferTable.Clear();
-                dataAdapter.Fill(bufferTable);
+                bufferTable0.Clear();
+                dataAdapter.Fill(bufferTable0);
             } catch(Exception error) {
                 MessageBox.Show("Ошибка выполнения запроса!\nТип ошибки: " + error, "Ошибка!");
             };
             // Закрываем соединение с БД
             connection.Close();
-            return bufferTable;
+            return bufferTable0;
+        }
+
+        // БД для отчета - прибыль каждой модели автобуса
+        // UPD: 18:00, 09.05.2023г.
+        // Отменено в связи отсутствия поддержки оконной функции в ACCESS
+        #region
+        //public DataTable ProfitOfEachBusModel() {
+        //    connection.Open();
+        //    try {
+        //        //dataAdapter = new OleDbDataAdapter($"SELECT * FROM Автобус WHERE Индекс_рейса = {ID}", connection);
+        //        dataAdapter = new OleDbDataAdapter(
+        //            $"SELECT " +
+        //                $"Автобус.Марка_автобуса, " +
+        //                $"Автобус.Модель_автобуса, " +
+        //                $"Автобус.Год_выпуска_автобуса, " +
+        //                $"Автобусный_парк.Название_автобусного_парка, " +
+        //                $"Рейс.Номер_рейса, " +
+        //                $"SUM(Рейс.Стоимость_проезда) OVER (PARTITION BY Рейс.Стоимость_проезда) AS SUM_BUSLINE, " +
+        //                $"Водитель.ФИО_водителя, " +
+        //                $"Контролер.ФИО_контролера " +
+        //                //$"COUNT(Автобус.Индекс_пассажира) OVER (PARTITION BY Автобус.Индекс_пассажира) AS COUNT_PASSENGER " +
+        //            $"FROM Автобус, Рейс, Водитель, Контролер, Автобусный_парк " +
+        //                $"WHERE Автобус.Индекс_рейса = Рейс.Индекс_рейса " +
+        //                $"AND Автобус.Индекс_водителя = Водитель.Индекс_водителя " +
+        //                $"AND Автобус.Индекс_контролера = Контролер.Индекс_контролера " +
+        //                $"AND Автобус.Индекс_автобусного_парка = Автобусный_парк.Индекс_автобусного_парка " +
+        //                $"AND Рейс.Индекс_автобусного_парка = Автобусный_парк.Индекс_автобусного_парка ",
+        //            //$"GROUP BY Автобус.Марка_автобуса, Автобус.Модель_автобуса",
+        //            connection);
+
+        //        bufferTable.Clear();
+        //        dataAdapter.Fill(bufferTable);
+        //    } catch(Exception error) {
+        //        MessageBox.Show("Ошибка выполнения запроса!\nТип ошибки: " + error, "Ошибка!");
+        //    };
+        //    // Закрываем соединение с БД
+        //    connection.Close();
+        //    return bufferTable;
+        //}
+        #endregion
+
+        // Обновление рейса по ID автобусного парка
+        public DataTable TransportStatus() {
+            connection.Open();
+            try {
+                //dataAdapter = new OleDbDataAdapter($"SELECT * FROM Автобус WHERE Индекс_рейса = {ID}", connection);
+                dataAdapter = new OleDbDataAdapter(
+                    $"SELECT " +
+                        $"Марка_автобуса, " +
+                        $"ФИО_водителя, " +
+                        $"ФИО_контролера, " +
+                        $"Модель_автобуса, " +
+                        $"Год_выпуска_автобуса, " +
+                        $"Номер_рейса, " +
+                        $"Название_автобусного_парка, " +
+                        $"IIf(Год_выпуска_автобуса<=(Format(Date(), 'yyyy') - 5)," +
+                        $"'Из срока эксплутации (нестабильное) ','В сроке эксплутации (стабильное)') " +
+                    $"FROM " +
+                        $"Автобус, " +
+                        $"Рейс, " +
+                        $"Автобусный_парк, " +
+                        $"Водитель, " +
+                        $"Контролер " +
+                    $"WHERE Автобус.Индекс_рейса = Рейс.Индекс_рейса " +
+                    $"AND Автобус.Индекс_автобусного_парка = Автобусный_парк.Индекс_автобусного_парка " +
+                    $"AND Автобус.Индекс_водителя = Водитель.Индекс_водителя " +
+                    $"AND Автобус.Индекс_контролера = Контролер.Индекс_контролера",
+                    connection);
+
+                bufferTable1.Clear();
+                dataAdapter.Fill(bufferTable1);
+            } catch(Exception error) {
+                MessageBox.Show("Ошибка выполнения запроса!\nТип ошибки: " + error, "Ошибка!");
+            };
+            // Закрываем соединение с БД
+            connection.Close();
+            return bufferTable1;
         }
     }
 }

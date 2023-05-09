@@ -137,18 +137,6 @@
             this.toolStripButton41 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton42 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator21 = new System.Windows.Forms.ToolStripSeparator();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.bindingNavigator9 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.toolStripLabel8 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton45 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton46 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator22 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox8 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator23 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton47 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton48 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator24 = new System.Windows.Forms.ToolStripSeparator();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.bindingNavigator10 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripLabel9 = new System.Windows.Forms.ToolStripLabel();
@@ -160,7 +148,6 @@
             this.toolStripButton53 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton54 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator27 = new System.Windows.Forms.ToolStripSeparator();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.автобусTableAdapter = new bus_coursework.bus_datasetTableAdapters.АвтобусTableAdapter();
             this.tableAdapterManager = new bus_coursework.bus_datasetTableAdapters.TableAdapterManager();
             this.автобусный_паркTableAdapter = new bus_coursework.bus_datasetTableAdapters.Автобусный_паркTableAdapter();
@@ -172,6 +159,7 @@
             this.индексконтролераDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.фИОконтролераDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.номертелефонаконтролераDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -213,10 +201,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator8)).BeginInit();
             this.bindingNavigator8.SuspendLayout();
-            this.tabPage9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator9)).BeginInit();
-            this.bindingNavigator9.SuspendLayout();
             this.tabPage10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator10)).BeginInit();
             this.bindingNavigator10.SuspendLayout();
@@ -233,7 +217,6 @@
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage8);
-            this.tabControl1.Controls.Add(this.tabPage9);
             this.tabControl1.Controls.Add(this.tabPage10);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
@@ -277,7 +260,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1214, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1214, 31);
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -304,7 +287,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem
@@ -1300,127 +1283,10 @@
             this.toolStripSeparator21.Name = "toolStripSeparator21";
             this.toolStripSeparator21.Size = new System.Drawing.Size(6, 27);
             // 
-            // tabPage9
-            // 
-            this.tabPage9.Controls.Add(this.dataGridView2);
-            this.tabPage9.Controls.Add(this.bindingNavigator9);
-            this.tabPage9.Location = new System.Drawing.Point(4, 25);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(1220, 704);
-            this.tabPage9.TabIndex = 8;
-            this.tabPage9.Text = "Прибыль";
-            this.tabPage9.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 33);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1208, 665);
-            this.dataGridView2.TabIndex = 3;
-            // 
-            // bindingNavigator9
-            // 
-            this.bindingNavigator9.AddNewItem = null;
-            this.bindingNavigator9.CountItem = this.toolStripLabel8;
-            this.bindingNavigator9.DeleteItem = null;
-            this.bindingNavigator9.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.bindingNavigator9.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton45,
-            this.toolStripButton46,
-            this.toolStripSeparator22,
-            this.toolStripTextBox8,
-            this.toolStripLabel8,
-            this.toolStripSeparator23,
-            this.toolStripButton47,
-            this.toolStripButton48,
-            this.toolStripSeparator24});
-            this.bindingNavigator9.Location = new System.Drawing.Point(3, 3);
-            this.bindingNavigator9.MoveFirstItem = this.toolStripButton45;
-            this.bindingNavigator9.MoveLastItem = this.toolStripButton48;
-            this.bindingNavigator9.MoveNextItem = this.toolStripButton47;
-            this.bindingNavigator9.MovePreviousItem = this.toolStripButton46;
-            this.bindingNavigator9.Name = "bindingNavigator9";
-            this.bindingNavigator9.PositionItem = this.toolStripTextBox8;
-            this.bindingNavigator9.Size = new System.Drawing.Size(1214, 27);
-            this.bindingNavigator9.TabIndex = 2;
-            this.bindingNavigator9.Text = "bindingNavigator9";
-            // 
-            // toolStripLabel8
-            // 
-            this.toolStripLabel8.Name = "toolStripLabel8";
-            this.toolStripLabel8.Size = new System.Drawing.Size(55, 24);
-            this.toolStripLabel8.Text = "для {0}";
-            this.toolStripLabel8.ToolTipText = "Общее число элементов";
-            // 
-            // toolStripButton45
-            // 
-            this.toolStripButton45.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton45.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton45.Image")));
-            this.toolStripButton45.Name = "toolStripButton45";
-            this.toolStripButton45.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton45.Size = new System.Drawing.Size(29, 24);
-            this.toolStripButton45.Text = "Переместить в начало";
-            // 
-            // toolStripButton46
-            // 
-            this.toolStripButton46.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton46.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton46.Image")));
-            this.toolStripButton46.Name = "toolStripButton46";
-            this.toolStripButton46.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton46.Size = new System.Drawing.Size(29, 24);
-            this.toolStripButton46.Text = "Переместить назад";
-            // 
-            // toolStripSeparator22
-            // 
-            this.toolStripSeparator22.Name = "toolStripSeparator22";
-            this.toolStripSeparator22.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripTextBox8
-            // 
-            this.toolStripTextBox8.AccessibleName = "Положение";
-            this.toolStripTextBox8.AutoSize = false;
-            this.toolStripTextBox8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripTextBox8.Name = "toolStripTextBox8";
-            this.toolStripTextBox8.Size = new System.Drawing.Size(50, 27);
-            this.toolStripTextBox8.Text = "0";
-            this.toolStripTextBox8.ToolTipText = "Текущее положение";
-            // 
-            // toolStripSeparator23
-            // 
-            this.toolStripSeparator23.Name = "toolStripSeparator23";
-            this.toolStripSeparator23.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripButton47
-            // 
-            this.toolStripButton47.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton47.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton47.Image")));
-            this.toolStripButton47.Name = "toolStripButton47";
-            this.toolStripButton47.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton47.Size = new System.Drawing.Size(29, 24);
-            this.toolStripButton47.Text = "Переместить вперед";
-            // 
-            // toolStripButton48
-            // 
-            this.toolStripButton48.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton48.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton48.Image")));
-            this.toolStripButton48.Name = "toolStripButton48";
-            this.toolStripButton48.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton48.Size = new System.Drawing.Size(29, 24);
-            this.toolStripButton48.Text = "Переместить в конец";
-            // 
-            // toolStripSeparator24
-            // 
-            this.toolStripSeparator24.Name = "toolStripSeparator24";
-            this.toolStripSeparator24.Size = new System.Drawing.Size(6, 27);
-            // 
             // tabPage10
             // 
-            this.tabPage10.Controls.Add(this.bindingNavigator10);
             this.tabPage10.Controls.Add(this.dataGridView3);
+            this.tabPage10.Controls.Add(this.bindingNavigator10);
             this.tabPage10.Location = new System.Drawing.Point(4, 25);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
@@ -1524,16 +1390,6 @@
             this.toolStripSeparator27.Name = "toolStripSeparator27";
             this.toolStripSeparator27.Size = new System.Drawing.Size(6, 27);
             // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(6, 33);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(1208, 665);
-            this.dataGridView3.TabIndex = 0;
-            // 
             // автобусTableAdapter
             // 
             this.автобусTableAdapter.ClearBeforeFill = true;
@@ -1602,6 +1458,16 @@
             this.номертелефонаконтролераDataGridViewTextBoxColumn.Name = "номертелефонаконтролераDataGridViewTextBoxColumn";
             this.номертелефонаконтролераDataGridViewTextBoxColumn.Width = 125;
             // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(6, 33);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(1208, 665);
+            this.dataGridView3.TabIndex = 4;
+            // 
             // Report_admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1668,12 +1534,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator8)).EndInit();
             this.bindingNavigator8.ResumeLayout(false);
             this.bindingNavigator8.PerformLayout();
-            this.tabPage9.ResumeLayout(false);
-            this.tabPage9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator9)).EndInit();
-            this.bindingNavigator9.ResumeLayout(false);
-            this.bindingNavigator9.PerformLayout();
             this.tabPage10.ResumeLayout(false);
             this.tabPage10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator10)).EndInit();
@@ -1695,7 +1555,6 @@
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
-        private System.Windows.Forms.TabPage tabPage9;
         private bus_dataset bus_dataset;
         private System.Windows.Forms.BindingSource автобусBindingSource;
         private bus_datasetTableAdapters.АвтобусTableAdapter автобусTableAdapter;
@@ -1774,16 +1633,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton35;
         private System.Windows.Forms.ToolStripButton toolStripButton36;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator18;
-        private System.Windows.Forms.BindingNavigator bindingNavigator9;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel8;
-        private System.Windows.Forms.ToolStripButton toolStripButton45;
-        private System.Windows.Forms.ToolStripButton toolStripButton46;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator22;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox8;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator23;
-        private System.Windows.Forms.ToolStripButton toolStripButton47;
-        private System.Windows.Forms.ToolStripButton toolStripButton48;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator24;
         private bus_datasetTableAdapters.РейсTableAdapter рейсTableAdapter;
         private System.Windows.Forms.BindingSource рейсBindingSource;
         private System.Windows.Forms.DataGridView рейсDataGridView;
@@ -1807,9 +1656,7 @@
         private System.Windows.Forms.BindingSource пассажирBindingSource;
         private System.Windows.Forms.DataGridView пассажирDataGridView;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.TabPage tabPage10;
-        private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.BindingNavigator bindingNavigator10;
         private System.Windows.Forms.ToolStripLabel toolStripLabel9;
         private System.Windows.Forms.ToolStripButton toolStripButton51;
@@ -1833,5 +1680,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn индексконтролераDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn фИОконтролераDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn номертелефонаконтролераDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridView3;
     }
 }

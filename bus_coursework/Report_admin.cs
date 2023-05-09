@@ -234,7 +234,51 @@ namespace bus_coursework {
                 dataGridView1.Columns[2].Width = 100;
 
             } catch(Exception error) {
-                MessageBox.Show("Ошибка обновления БД РЕЙС!\nТип ошибки:\n\n" + error, "Ошибка!");
+                MessageBox.Show("Ошибка обновления БД Подсчет сумма проданных билетов!\nТип ошибки:\n\n" + error, "Ошибка!");
+            }
+
+            // БД для отчета - прибыль каждой модели автобуса
+            // UPD: 18:00, 09.05.2023г.
+            // Отменено в связи отсутствия поддержки оконной функции в ACCESS
+            #region
+            // Подсчет прибылей каждой модели автобуса
+            //try {
+            //    dataGridView2.DataSource = other.ProfitOfEachBusModel();
+
+            //    //dataGridView1.Columns[0].HeaderText = "Номер рейса";
+            //    //dataGridView1.Columns[0].Width = 80;
+            //    //dataGridView1.Columns[1].HeaderText = "Кол-во пассажиров";
+            //    //dataGridView1.Columns[1].Width = 80;
+            //    //dataGridView1.Columns[2].HeaderText = "Общая прибыль за рейс";
+            //    //dataGridView1.Columns[2].Width = 100;
+
+            //} catch(Exception error) {
+            //    MessageBox.Show("Ошибка обновления БД РЕЙС!\nТип ошибки:\n\n" + error, "Ошибка!");
+            //}
+            #endregion
+            
+            // Состояние транспорта
+            try {
+                dataGridView3.DataSource = other.TransportStatus();
+
+                dataGridView3.Columns[0].HeaderText = "Марка";
+                dataGridView3.Columns[0].Width = 80;
+                dataGridView3.Columns[1].HeaderText = "ФИО водителя";
+                dataGridView3.Columns[1].Width = 230;
+                dataGridView3.Columns[2].HeaderText = "ФИО контролера";
+                dataGridView3.Columns[2].Width = 230;
+                dataGridView3.Columns[3].HeaderText = "Модель";
+                dataGridView3.Columns[3].Width = 100;
+                dataGridView3.Columns[4].HeaderText = "Год выпуска";
+                dataGridView3.Columns[4].Width = 80;
+                dataGridView3.Columns[5].HeaderText = "Номер рейса";
+                dataGridView3.Columns[5].Width = 50;
+                dataGridView3.Columns[6].HeaderText = "Название автобусного парка";
+                dataGridView3.Columns[6].Width = 250;
+                dataGridView3.Columns[7].HeaderText = "Состояние транспорта";
+                dataGridView3.Columns[7].Width = 250;
+            } catch(Exception error) {
+                MessageBox.Show("Ошибка обновления БД Состояние транспорта!\nТип ошибки:\n\n" + error, "Ошибка!");
             }
         }
     }
