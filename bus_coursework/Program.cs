@@ -1,4 +1,5 @@
-﻿using Sample;
+﻿using bus_coursework.MyClass;
+using Sample;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace bus_coursework
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Edit_DB());
-            Application.Run(new Report_admin());
+            Application.Run(new Edit_status_bus());
         }
     }
 }

@@ -96,6 +96,46 @@ namespace bus_coursework.MyClass {
             return bufferTable;
         }
 
+        // БД для отчета
+        public DataTable UpdateBusWithStatus() {
+            connection.Open();
+            try {
+                //dataAdapter = new OleDbDataAdapter($"SELECT * FROM Автобус WHERE Индекс_рейса = {ID}", connection);
+                dataAdapter = new OleDbDataAdapter(
+                    $"SELECT " +
+                        $"Автобус.Индекс_автобуса, " +
+                        $"Автобус.Марка_автобуса, " +
+                        $"Автобус.Модель_автобуса, " +
+                        $"Автобус.Год_выпуска_автобуса, " +
+                        $"Рейс.Номер_рейса, " +
+                        $"Автобусный_парк.Название_автобусного_парка, " +
+                        $"Водитель.ФИО_водителя, " +
+                        $"Контролер.ФИО_контролера, " +
+                        $"Автобус_Переключатель.Статус " +
+                    $"FROM " +
+                        $"Автобус, " +
+                        $"Рейс, " +
+                        $"Автобусный_парк, " +
+                        $"Водитель, " +
+                        $"Контролер, " +
+                        $"Автобус_Переключатель " +
+                    $"WHERE Автобус.Индекс_рейса = Рейс.Индекс_рейса " +
+                    $"AND Автобус.Индекс_автобусного_парка = Автобусный_парк.Индекс_автобусного_парка " +
+                    $"AND Автобус.Индекс_водителя = Водитель.Индекс_водителя " +
+                    $"AND Автобус.Индекс_контролера = Контролер.Индекс_контролера " +
+                    $"AND Автобус.Статус_автобуса = Автобус_Переключатель.ID_статус ",
+                    connection);
+
+                bufferTable.Clear();
+                dataAdapter.Fill(bufferTable);
+            } catch(Exception error) {
+                MessageBox.Show("Ошибка выполнения запроса!\nТип ошибки: " + error, "Ошибка!");
+            };
+            // Закрываем соединение с БД
+            connection.Close();
+            return bufferTable;
+        }
+
 
         public void Add(int ID_bus, string Marka, string Model, string Year_relis, int ID_busline, int ID_busfleet, int ID_driver, int ID_controller, string status) {
             connection.Open();

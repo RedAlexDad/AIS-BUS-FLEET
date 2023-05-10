@@ -35,14 +35,14 @@ namespace bus_coursework {
             public static int id_busfleet { get; set; } = 1;
 
             // Регулярные выражение, преобразующие любые символы в числовом виде в строковом типе
-            public static string regular_expression_text(string str) {
+            public static string RegularExpressionText(string str) {
                 try {
                     return Regex.Replace(str, "[^0-9]", String.Empty);
                 } catch { return null; }
             }
 
             // Регулярные выражение, преобразующие любые символы в числовом виде в численном типе
-            public static int regular_expression_text_into_value(string str) {
+            public static int RegularExpressionTextIntoValue(string str) {
                 try {
                     return int.Parse(Regex.Replace(str, "[^0-9]", String.Empty));
                 } catch { return 0; }
@@ -63,7 +63,7 @@ namespace bus_coursework {
         // Отображение всех БД - DataGridView
         #region
         // Отображение БД автобуса
-        private void data_base_bus_gird_view() {
+        private void DatdBaseBusGirdView() {
             // Автобус
             // Название столбца и ширина столбца
             автобусDataGridView.Columns[0].HeaderText = "ID";
@@ -94,7 +94,7 @@ namespace bus_coursework {
         }
 
         // Отображение БД рейса
-        private void data_base_bus_line_gird_view() {
+        private void DatdBaseBusLineGirdView() {
             // Рейс
             //Название столбца и ширина столбца
             рейсDataGridView.Columns[0].HeaderText = "ID";
@@ -119,7 +119,7 @@ namespace bus_coursework {
         }
 
         // Отображение БД пассажира
-        private void data_base_passenger_gird_view() {
+        private void DataBasePassengerGirdView() {
             // Пассажир
             // Индекс пассажира
             пассажирDataGridView.Columns[0].HeaderText = "ID";
@@ -167,7 +167,7 @@ namespace bus_coursework {
         #region
         // Кнопка добавление
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e) {
-            индекс_автобусного_паркаTextBox.Text = (id_class.regular_expression_text_into_value(bindingNavigatorCountItem.Text)).ToString();
+            индекс_автобусного_паркаTextBox.Text = (id_class.RegularExpressionTextIntoValue(bindingNavigatorCountItem.Text)).ToString();
         }
         // Кнопка удаление
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e) {
@@ -197,7 +197,7 @@ namespace bus_coursework {
             рейсDataGridView.DataSource = busline.UpdateLineBusCheck(int.Parse(индекс_автобусного_паркаTextBox.Text));
 
             // Вызов функции для отображения БД рейса
-            data_base_bus_line_gird_view();
+            DatdBaseBusLineGirdView();
         }
 
         private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e) {
@@ -206,7 +206,7 @@ namespace bus_coursework {
             рейсDataGridView.DataSource = busline.UpdateLineBusCheck(int.Parse(индекс_автобусного_паркаTextBox.Text));
 
             // Вызов функции для отображения БД рейса
-            data_base_bus_line_gird_view();
+            DatdBaseBusLineGirdView();
         }
 
         private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e) {
@@ -215,7 +215,7 @@ namespace bus_coursework {
             рейсDataGridView.DataSource = busline.UpdateLineBusCheck(int.Parse(индекс_автобусного_паркаTextBox.Text));
 
             // Вызов функции для отображения БД рейса
-            data_base_bus_line_gird_view();
+            DatdBaseBusLineGirdView();
         }
 
         private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e) {
@@ -224,7 +224,7 @@ namespace bus_coursework {
             рейсDataGridView.DataSource = busline.UpdateLineBusCheck(int.Parse(индекс_автобусного_паркаTextBox.Text));
 
             // Вызов функции для отображения БД рейса
-            data_base_bus_line_gird_view();
+            DatdBaseBusLineGirdView();
         }
         #endregion
 
@@ -233,7 +233,7 @@ namespace bus_coursework {
 
         // Кнопка добавление
         private void bindingNavigatorAddNewItem1_Click(object sender, EventArgs e) {
-            индекс_рейсаTextBox.Text = (id_class.regular_expression_text_into_value(bindingNavigatorCountItem1.Text)).ToString();
+            индекс_рейсаTextBox.Text = (id_class.RegularExpressionTextIntoValue(bindingNavigatorCountItem1.Text)).ToString();
         }
 
         // Кнопка удаление
@@ -264,7 +264,7 @@ namespace bus_coursework {
             автобусDataGridView.DataSource = bus.UpdateBusCheckByIDBusline(int.Parse(индекс_рейсаTextBox.Text));
 
             // Вызов функции для отображения БД автобуса
-            data_base_bus_gird_view();
+            DatdBaseBusGirdView();
         }
 
         private void bindingNavigatorMoveNextItem1_Click(object sender, EventArgs e) {
@@ -273,7 +273,7 @@ namespace bus_coursework {
             автобусDataGridView.DataSource = bus.UpdateBusCheckByIDBusline(int.Parse(индекс_рейсаTextBox.Text));
             
             // Вызов функции для отображения БД автобуса
-            data_base_bus_gird_view();
+            DatdBaseBusGirdView();
         }
 
         private void bindingNavigatorMovePreviousItem1_Click(object sender, EventArgs e) {
@@ -282,7 +282,7 @@ namespace bus_coursework {
             автобусDataGridView.DataSource = bus.UpdateBusCheckByIDBusline(int.Parse(индекс_рейсаTextBox.Text));
 
             // Вызов функции для отображения БД автобуса
-            data_base_bus_gird_view();
+            DatdBaseBusGirdView();
         }
 
         private void bindingNavigatorMoveFirstItem1_Click(object sender, EventArgs e) {
@@ -291,7 +291,7 @@ namespace bus_coursework {
             автобусDataGridView.DataSource = bus.UpdateBusCheckByIDBusline(int.Parse(индекс_рейсаTextBox.Text));
 
             // Вызов функции для отображения БД автобуса
-            data_base_bus_gird_view();
+            DatdBaseBusGirdView();
         }
         #endregion
 
@@ -301,7 +301,7 @@ namespace bus_coursework {
         #region
         // Кнопка добавление
         private void bindingNavigatorAddNewItem2_Click(object sender, EventArgs e) {
-            индекс_автобусаTextBox.Text = (id_class.regular_expression_text_into_value(bindingNavigatorCountItem2.Text)).ToString();
+            индекс_автобусаTextBox.Text = (id_class.RegularExpressionTextIntoValue(bindingNavigatorCountItem2.Text)).ToString();
         }
         // Кнопка удаление
         private void bindingNavigatorDeleteItem2_Click(object sender, EventArgs e) {
@@ -329,7 +329,7 @@ namespace bus_coursework {
             пассажирDataGridView.DataSource = passenger.UpdatePassageCheck(int.Parse(индекс_автобусаTextBox.Text));
 
             // Вызов функции для отображения БД пассажира
-            data_base_passenger_gird_view();
+            DataBasePassengerGirdView();
         }
 
         private void bindingNavigatorMovePreviousItem2_Click(object sender, EventArgs e) {
@@ -338,7 +338,7 @@ namespace bus_coursework {
             пассажирDataGridView.DataSource = passenger.UpdatePassageCheck(int.Parse(индекс_автобусаTextBox.Text));
 
             // Вызов функции для отображения БД пассажира
-            data_base_passenger_gird_view();
+            DataBasePassengerGirdView();
         }
 
         private void bindingNavigatorMoveNextItem2_Click(object sender, EventArgs e) {
@@ -347,7 +347,7 @@ namespace bus_coursework {
             пассажирDataGridView.DataSource = passenger.UpdatePassageCheck(int.Parse(индекс_автобусаTextBox.Text));
 
             // Вызов функции для отображения БД пассажира
-            data_base_passenger_gird_view();
+            DataBasePassengerGirdView();
         }
 
         private void bindingNavigatorMoveLastItem2_Click(object sender, EventArgs e) {
@@ -356,7 +356,7 @@ namespace bus_coursework {
             пассажирDataGridView.DataSource = passenger.UpdatePassageCheck(int.Parse(индекс_автобусаTextBox.Text));
 
             // Вызов функции для отображения БД пассажира
-            data_base_passenger_gird_view();
+            DataBasePassengerGirdView();
         }
         #endregion
 
@@ -379,7 +379,7 @@ namespace bus_coursework {
 
         // Кнопка добавления
         private void toolStripButton15_Click(object sender, EventArgs e) {
-            индекс_пассажираTextBox.Text = (id_class.regular_expression_text_into_value(toolStripLabel3.Text)).ToString();
+            индекс_пассажираTextBox.Text = (id_class.RegularExpressionTextIntoValue(toolStripLabel3.Text)).ToString();
         }
         // Кнопка обновления данных
         private void toolStripButton26_Click(object sender, EventArgs e) {
@@ -426,7 +426,7 @@ namespace bus_coursework {
         
         // Кнопка добавление
         private void toolStripButton9_Click(object sender, EventArgs e) {
-            индекс_контролераTextBox1.Text = (id_class.regular_expression_text_into_value(toolStripLabel2.Text)).ToString();
+            индекс_контролераTextBox1.Text = (id_class.RegularExpressionTextIntoValue(toolStripLabel2.Text)).ToString();
         }
 
         // Кнопка обновление
@@ -460,7 +460,7 @@ namespace bus_coursework {
         #region
         // Кнопка добавление
         private void toolStripButton3_Click(object sender, EventArgs e) {
-            индекс_водителяTextBox1.Text = (id_class.regular_expression_text_into_value(toolStripLabel1.Text)).ToString();
+            индекс_водителяTextBox1.Text = (id_class.RegularExpressionTextIntoValue(toolStripLabel1.Text)).ToString();
         }
         // Кнопка удаление
         private void toolStripButton4_Click(object sender, EventArgs e) {
@@ -528,7 +528,7 @@ namespace bus_coursework {
 
         // Кнопка добавление
         private void bindingNavigatorAddNewItem3_Click(object sender, EventArgs e) {
-            индекс_руководителяTextBox1.Text = (id_class.regular_expression_text_into_value(bindingNavigatorCountItem3.Text)).ToString();
+            индекс_руководителяTextBox1.Text = (id_class.RegularExpressionTextIntoValue(bindingNavigatorCountItem3.Text)).ToString();
         }
 
         // Переключение вперед и назад 

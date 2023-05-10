@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Net.NetworkInformation;
 
 
 // Рейс
@@ -124,6 +125,38 @@ namespace bus_coursework.MyClass {
             // Закрываем соединение с БД
             connection.Close();
             return bufferTable1;
+        }
+
+        public void UpdateStatusBus(int ID_bus, int ID_status) {
+            connection.Open();
+            try {
+                command = new OleDbCommand($"UPDATE Автобус " +
+                    // Обновляет статус весь автобус
+                    //$"INNER JOIN Автобус_Переключатель ON Автобус.Статус_автобуса = Автобус_Переключатель.ID_Статус " +
+                    //$"SET Автобус.Статус_автобуса = {ID_status} " + 
+                    //$"WHERE Автобус.Статус_автобуса = Автобус_Переключатель.ID_Статус ",
+
+                    // Обновляет статус весь автобус
+                    //$"SET Автобус.Статус_автобуса = {ID_status} " +
+                    //$"WHERE Автобус.Статус_автобуса = Автобус_Переключатель.ID_Статус ",
+
+                    // Обновляет статус весь автобус
+                    //$"SET Статус_автобуса = {ID_status} ",
+
+                    $"SET Статус_автобуса = {ID_status} " +
+                    $"WHERE Индекс_автобуса = {ID_bus}",
+                    connection);
+
+                // Проверка на правильность запрсоа
+                command.ExecuteNonQuery();
+
+                MessageBox.Show("Данные обновлены", "Успешно");
+            } catch(Exception error) {
+                MessageBox.Show("Ошибка выполнения запроса!\nТип ошибки: \n" + error, "Ошибка!");
+            };
+
+            // Закрываем соединение с БД
+            connection.Close();
         }
     }
 }
