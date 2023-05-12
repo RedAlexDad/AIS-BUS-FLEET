@@ -89,8 +89,6 @@ namespace bus_coursework {
             // ID контролер
             автобусDataGridView.Columns[7].HeaderText = "ID контролер";
             автобусDataGridView.Columns[7].Width = 200;
-            // Cтатус автобуса
-            автобусDataGridView.Columns[8].Visible = false;
         }
 
         // Отображение БД рейса

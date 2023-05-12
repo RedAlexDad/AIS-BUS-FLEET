@@ -51,7 +51,7 @@ namespace bus_coursework.MyClass {
             // ID рейс
             автобусDataGridView.Columns[4].HeaderText = "Номер рейса";
             автобусDataGridView.Columns[4].Width = 50;
-            // Индекс автобусного парка, true - отображать, false - скрыть
+            // Индекс автобусного парка
             автобусDataGridView.Columns[5].HeaderText = "Название автобусного парка";
             автобусDataGridView.Columns[5].Width = 150;
             // ID водитель
@@ -114,7 +114,7 @@ namespace bus_coursework.MyClass {
             indexGlobal = 0;
 
             bindingNavigatorPositionItem.Text = indexGlobal.ToString();
-            Console.WriteLine($"Position 0: {indexGlobal}");
+            //Console.WriteLine($"Position 0: {indexGlobal}");
 
             автобусDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             автобусDataGridView.Rows[indexRow].Selected = true;
@@ -128,7 +128,7 @@ namespace bus_coursework.MyClass {
                 indexGlobal = indexGlobal - 1;
 
                 bindingNavigatorPositionItem.Text = indexGlobal.ToString();
-                Console.WriteLine($"Position -1: {indexGlobal}");
+                //Console.WriteLine($"Position -1: {indexGlobal}");
 
                 автобусDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 автобусDataGridView.Rows[indexRow].Selected = true;
@@ -143,7 +143,7 @@ namespace bus_coursework.MyClass {
                 indexGlobal = indexGlobal + 1;
 
                 bindingNavigatorPositionItem.Text = indexGlobal.ToString();
-                Console.WriteLine($"Position -1: {indexGlobal}");
+                //Console.WriteLine($"Position -1: {indexGlobal}");
 
                 автобусDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 автобусDataGridView.Rows[indexRow].Selected = true;
@@ -157,7 +157,7 @@ namespace bus_coursework.MyClass {
             indexGlobal = RegularExpressionTextIntoValue(bindingNavigatorCountItem.Text) - 1;
 
             bindingNavigatorPositionItem.Text = indexGlobal.ToString();
-            Console.WriteLine($"Position max: {indexGlobal}");
+            //Console.WriteLine($"Position max: {indexGlobal}");
 
             автобусDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             автобусDataGridView.Rows[indexRow].Selected = true;
