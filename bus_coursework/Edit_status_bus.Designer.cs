@@ -61,6 +61,7 @@
             this.автобусDataGridView = new System.Windows.Forms.DataGridView();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             индекс_контролераLabel = new System.Windows.Forms.Label();
             индекс_водителяLabel = new System.Windows.Forms.Label();
             индекс_автобусного_паркаLabel2 = new System.Windows.Forms.Label();
@@ -301,7 +302,8 @@
             this.bindingNavigatorSeparator1,
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2});
+            this.bindingNavigatorSeparator2,
+            this.toolStripButton1});
             this.автобусBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.автобусBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.автобусBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -309,7 +311,7 @@
             this.автобусBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.автобусBindingNavigator.Name = "автобусBindingNavigator";
             this.автобусBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.автобусBindingNavigator.Size = new System.Drawing.Size(1565, 39);
+            this.автобусBindingNavigator.Size = new System.Drawing.Size(1252, 27);
             this.автобусBindingNavigator.TabIndex = 42;
             this.автобусBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -326,7 +328,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 36);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             this.bindingNavigatorMoveFirstItem.Click += new System.EventHandler(this.bindingNavigatorMoveFirstItem_Click);
             // 
@@ -422,6 +424,16 @@
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             this.radioButton2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.radioButton2_MouseClick);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(130, 24);
+            this.toolStripButton1.Text = "Назад к меню";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // Edit_status_bus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -450,8 +462,9 @@
             this.Controls.Add(this.марка_автобусаTextBox);
             this.Controls.Add(индекс_автобусаLabel);
             this.Controls.Add(this.индекс_автобусаTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Edit_status_bus";
-            this.Text = "Edit_status_bus";
+            this.Text = "Редактирование статуса автобуса";
             this.Load += new System.EventHandler(this.Edit_status_bus_Load);
             ((System.ComponentModel.ISupportInitialize)(this.автобусBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bus_dataset)).EndInit();
@@ -493,5 +506,6 @@
         private System.Windows.Forms.DataGridView автобусDataGridView;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

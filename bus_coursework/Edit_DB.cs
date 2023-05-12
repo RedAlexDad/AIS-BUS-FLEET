@@ -226,6 +226,14 @@ namespace bus_coursework {
         }
         #endregion
 
+        // Возврат к меню
+        private void toolStripButton32_Click(object sender, EventArgs e) {
+            this.Hide();
+            var form2 = new Administrator();
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
+        }
+
         // Обновление БД при нажатии назад и вперед во вкладке РЕЙС
         #region
 
@@ -609,6 +617,7 @@ namespace bus_coursework {
 
         }
         #endregion
+
 
     }
 }

@@ -1,4 +1,5 @@
 ﻿using bus_coursework.MyClass;
+using Sample;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -103,6 +104,13 @@ namespace bus_coursework {
             try {
                 UpdateInfoTextBox(e.RowIndex);
             } catch { MessageBox.Show("Ошибка заполнения таблицы и поиска автобуса", "Ошибка!"); }
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e) {
+            this.Hide();
+            var form2 = new Administrator();
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
         }
     }
 }

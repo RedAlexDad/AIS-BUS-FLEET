@@ -101,6 +101,9 @@
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.контролерDataGridView = new System.Windows.Forms.DataGridView();
+            this.индексконтролераDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.фИОконтролераDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.номертелефонаконтролераDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.контролерBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator6 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
@@ -114,8 +117,8 @@
             this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.пассажирDataGridView = new System.Windows.Forms.DataGridView();
-            this.пассажирBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator7 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.пассажирBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton33 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton34 = new System.Windows.Forms.ToolStripButton();
@@ -138,6 +141,7 @@
             this.toolStripButton42 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator21 = new System.Windows.Forms.ToolStripSeparator();
             this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.bindingNavigator10 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripLabel9 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton51 = new System.Windows.Forms.ToolStripButton();
@@ -156,10 +160,8 @@
             this.пассажирTableAdapter = new bus_coursework.bus_datasetTableAdapters.ПассажирTableAdapter();
             this.рейсTableAdapter = new bus_coursework.bus_datasetTableAdapters.РейсTableAdapter();
             this.руководительTableAdapter = new bus_coursework.bus_datasetTableAdapters.РуководительTableAdapter();
-            this.индексконтролераDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.фИОконтролераDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.номертелефонаконтролераDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.bindingNavigator9 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton32 = new System.Windows.Forms.ToolStripButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -194,17 +196,19 @@
             this.bindingNavigator6.SuspendLayout();
             this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.пассажирDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.пассажирBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator7)).BeginInit();
             this.bindingNavigator7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.пассажирBindingSource)).BeginInit();
             this.tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator8)).BeginInit();
             this.bindingNavigator8.SuspendLayout();
             this.tabPage10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator10)).BeginInit();
             this.bindingNavigator10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator9)).BeginInit();
+            this.bindingNavigator9.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -218,10 +222,10 @@
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage8);
             this.tabControl1.Controls.Add(this.tabPage10);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Location = new System.Drawing.Point(12, 30);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1228, 733);
+            this.tabControl1.Size = new System.Drawing.Size(1228, 715);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -231,7 +235,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1220, 704);
+            this.tabPage1.Size = new System.Drawing.Size(1220, 686);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Автобус";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -260,7 +264,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1214, 31);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1214, 27);
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -287,7 +291,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem
@@ -941,6 +945,30 @@
             this.контролерDataGridView.Size = new System.Drawing.Size(1208, 665);
             this.контролерDataGridView.TabIndex = 2;
             // 
+            // индексконтролераDataGridViewTextBoxColumn
+            // 
+            this.индексконтролераDataGridViewTextBoxColumn.DataPropertyName = "Индекс_контролера";
+            this.индексконтролераDataGridViewTextBoxColumn.HeaderText = "Индекс_контролера";
+            this.индексконтролераDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.индексконтролераDataGridViewTextBoxColumn.Name = "индексконтролераDataGridViewTextBoxColumn";
+            this.индексконтролераDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // фИОконтролераDataGridViewTextBoxColumn
+            // 
+            this.фИОконтролераDataGridViewTextBoxColumn.DataPropertyName = "ФИО_контролера";
+            this.фИОконтролераDataGridViewTextBoxColumn.HeaderText = "ФИО_контролера";
+            this.фИОконтролераDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.фИОконтролераDataGridViewTextBoxColumn.Name = "фИОконтролераDataGridViewTextBoxColumn";
+            this.фИОконтролераDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // номертелефонаконтролераDataGridViewTextBoxColumn
+            // 
+            this.номертелефонаконтролераDataGridViewTextBoxColumn.DataPropertyName = "Номер_телефона_контролера";
+            this.номертелефонаконтролераDataGridViewTextBoxColumn.HeaderText = "Номер_телефона_контролера";
+            this.номертелефонаконтролераDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.номертелефонаконтролераDataGridViewTextBoxColumn.Name = "номертелефонаконтролераDataGridViewTextBoxColumn";
+            this.номертелефонаконтролераDataGridViewTextBoxColumn.Width = 125;
+            // 
             // контролерBindingSource
             // 
             this.контролерBindingSource.DataMember = "Контролер";
@@ -1064,11 +1092,6 @@
             this.пассажирDataGridView.Size = new System.Drawing.Size(1208, 665);
             this.пассажирDataGridView.TabIndex = 2;
             // 
-            // пассажирBindingSource
-            // 
-            this.пассажирBindingSource.DataMember = "Пассажир";
-            this.пассажирBindingSource.DataSource = this.bus_dataset;
-            // 
             // bindingNavigator7
             // 
             this.bindingNavigator7.AddNewItem = null;
@@ -1096,6 +1119,11 @@
             this.bindingNavigator7.Size = new System.Drawing.Size(1214, 27);
             this.bindingNavigator7.TabIndex = 2;
             this.bindingNavigator7.Text = "bindingNavigator7";
+            // 
+            // пассажирBindingSource
+            // 
+            this.пассажирBindingSource.DataMember = "Пассажир";
+            this.пассажирBindingSource.DataSource = this.bus_dataset;
             // 
             // toolStripLabel6
             // 
@@ -1295,6 +1323,16 @@
             this.tabPage10.Text = "Состояние транспорта";
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(6, 33);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(1208, 665);
+            this.dataGridView3.TabIndex = 4;
+            // 
             // bindingNavigator10
             // 
             this.bindingNavigator10.AddNewItem = null;
@@ -1434,45 +1472,41 @@
             // 
             this.руководительTableAdapter.ClearBeforeFill = true;
             // 
-            // индексконтролераDataGridViewTextBoxColumn
+            // bindingNavigator9
             // 
-            this.индексконтролераDataGridViewTextBoxColumn.DataPropertyName = "Индекс_контролера";
-            this.индексконтролераDataGridViewTextBoxColumn.HeaderText = "Индекс_контролера";
-            this.индексконтролераDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.индексконтролераDataGridViewTextBoxColumn.Name = "индексконтролераDataGridViewTextBoxColumn";
-            this.индексконтролераDataGridViewTextBoxColumn.Width = 125;
+            this.bindingNavigator9.AddNewItem = null;
+            this.bindingNavigator9.CountItem = null;
+            this.bindingNavigator9.DeleteItem = null;
+            this.bindingNavigator9.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.bindingNavigator9.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton32});
+            this.bindingNavigator9.Location = new System.Drawing.Point(0, 0);
+            this.bindingNavigator9.MoveFirstItem = null;
+            this.bindingNavigator9.MoveLastItem = null;
+            this.bindingNavigator9.MoveNextItem = null;
+            this.bindingNavigator9.MovePreviousItem = null;
+            this.bindingNavigator9.Name = "bindingNavigator9";
+            this.bindingNavigator9.PositionItem = null;
+            this.bindingNavigator9.Size = new System.Drawing.Size(1252, 27);
+            this.bindingNavigator9.TabIndex = 1;
+            this.bindingNavigator9.Text = "bindingNavigator9";
             // 
-            // фИОконтролераDataGridViewTextBoxColumn
+            // toolStripButton32
             // 
-            this.фИОконтролераDataGridViewTextBoxColumn.DataPropertyName = "ФИО_контролера";
-            this.фИОконтролераDataGridViewTextBoxColumn.HeaderText = "ФИО_контролера";
-            this.фИОконтролераDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.фИОконтролераDataGridViewTextBoxColumn.Name = "фИОконтролераDataGridViewTextBoxColumn";
-            this.фИОконтролераDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // номертелефонаконтролераDataGridViewTextBoxColumn
-            // 
-            this.номертелефонаконтролераDataGridViewTextBoxColumn.DataPropertyName = "Номер_телефона_контролера";
-            this.номертелефонаконтролераDataGridViewTextBoxColumn.HeaderText = "Номер_телефона_контролера";
-            this.номертелефонаконтролераDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.номертелефонаконтролераDataGridViewTextBoxColumn.Name = "номертелефонаконтролераDataGridViewTextBoxColumn";
-            this.номертелефонаконтролераDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(6, 33);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(1208, 665);
-            this.dataGridView3.TabIndex = 4;
+            this.toolStripButton32.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton32.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton32.Image")));
+            this.toolStripButton32.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton32.Name = "toolStripButton32";
+            this.toolStripButton32.Size = new System.Drawing.Size(130, 24);
+            this.toolStripButton32.Text = "Назад к меню";
+            this.toolStripButton32.Click += new System.EventHandler(this.toolStripButton32_Click);
             // 
             // Report_admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1252, 757);
+            this.Controls.Add(this.bindingNavigator9);
             this.Controls.Add(this.tabControl1);
             this.Name = "Report_admin";
             this.Text = "Отчеты";
@@ -1524,10 +1558,10 @@
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.пассажирDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.пассажирBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator7)).EndInit();
             this.bindingNavigator7.ResumeLayout(false);
             this.bindingNavigator7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.пассажирBindingSource)).EndInit();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -1536,11 +1570,15 @@
             this.bindingNavigator8.PerformLayout();
             this.tabPage10.ResumeLayout(false);
             this.tabPage10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator10)).EndInit();
             this.bindingNavigator10.ResumeLayout(false);
             this.bindingNavigator10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator9)).EndInit();
+            this.bindingNavigator9.ResumeLayout(false);
+            this.bindingNavigator9.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1681,5 +1719,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn фИОконтролераDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn номертелефонаконтролераDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.BindingNavigator bindingNavigator9;
+        private System.Windows.Forms.ToolStripButton toolStripButton32;
     }
 }

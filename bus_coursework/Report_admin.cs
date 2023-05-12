@@ -281,5 +281,13 @@ namespace bus_coursework {
                 MessageBox.Show("Ошибка обновления БД Состояние транспорта!\nТип ошибки:\n\n" + error, "Ошибка!");
             }
         }
+
+        // Кнопка возрата к меню
+        private void toolStripButton32_Click(object sender, EventArgs e) {
+            this.Hide();
+            var form2 = new Administrator();
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
+        }
     }
 }

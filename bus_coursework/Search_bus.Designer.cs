@@ -33,6 +33,7 @@
             System.Windows.Forms.Label индекс_автобусного_паркаLabel;
             System.Windows.Forms.Label индекс_водителяLabel;
             System.Windows.Forms.Label индекс_контролераLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Search_bus));
             this.bus_dataset = new bus_coursework.bus_dataset();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.автобусTableAdapter = new bus_coursework.bus_datasetTableAdapters.АвтобусTableAdapter();
@@ -50,6 +51,8 @@
             this.индекс_автобусного_паркаTextBox = new System.Windows.Forms.TextBox();
             this.индекс_водителяTextBox = new System.Windows.Forms.TextBox();
             this.индекс_контролераTextBox = new System.Windows.Forms.TextBox();
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             label1 = new System.Windows.Forms.Label();
             индекс_автобусаLabel = new System.Windows.Forms.Label();
             статус_автобусаLabel = new System.Windows.Forms.Label();
@@ -63,6 +66,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.автобусBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
+            this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -171,9 +176,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(29, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(625, 42);
+            this.label2.Size = new System.Drawing.Size(646, 42);
             this.label2.TabIndex = 69;
-            this.label2.Text = "Поиск автобус по названию марки";
+            this.label2.Text = "Поиск автобуса по названию марки";
             // 
             // dataGridView
             // 
@@ -296,11 +301,41 @@
             this.индекс_контролераTextBox.Size = new System.Drawing.Size(276, 22);
             this.индекс_контролераTextBox.TabIndex = 78;
             // 
+            // bindingNavigator1
+            // 
+            this.bindingNavigator1.AddNewItem = null;
+            this.bindingNavigator1.CountItem = null;
+            this.bindingNavigator1.DeleteItem = null;
+            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1});
+            this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
+            this.bindingNavigator1.MoveFirstItem = null;
+            this.bindingNavigator1.MoveLastItem = null;
+            this.bindingNavigator1.MoveNextItem = null;
+            this.bindingNavigator1.MovePreviousItem = null;
+            this.bindingNavigator1.Name = "bindingNavigator1";
+            this.bindingNavigator1.PositionItem = null;
+            this.bindingNavigator1.Size = new System.Drawing.Size(1260, 27);
+            this.bindingNavigator1.TabIndex = 79;
+            this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(130, 24);
+            this.toolStripButton1.Text = "Назад к меню";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // Search_bus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1260, 765);
+            this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(индекс_контролераLabel);
             this.Controls.Add(this.индекс_контролераTextBox);
             this.Controls.Add(индекс_водителяLabel);
@@ -323,13 +358,17 @@
             this.Controls.Add(this.марка_автобусаTextBox);
             this.Controls.Add(индекс_автобусаLabel);
             this.Controls.Add(this.индекс_автобусаTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Search_bus";
-            this.Text = "Search_bus";
+            this.Text = "Поиск автобуса по названию марки";
             this.Load += new System.EventHandler(this.Search_bus_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bus_dataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.автобусBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
+            this.bindingNavigator1.ResumeLayout(false);
+            this.bindingNavigator1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,5 +393,7 @@
         private System.Windows.Forms.TextBox индекс_автобусного_паркаTextBox;
         private System.Windows.Forms.TextBox индекс_водителяTextBox;
         private System.Windows.Forms.TextBox индекс_контролераTextBox;
+        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

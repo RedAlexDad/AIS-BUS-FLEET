@@ -236,5 +236,12 @@ namespace bus_coursework.MyClass {
                 MessageBox.Show("Ошибка обновления БД автобуса!\nТип ошибки:\n\n" + error, "Ошибка!");
             }
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e) {
+            this.Hide();
+            var form2 = new Administrator();
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
+        }
     }
 }
