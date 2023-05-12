@@ -70,6 +70,11 @@ namespace bus_coursework.MyClass {
             this.автобусTableAdapter.Fill(this.bus_dataset.Автобус);
             bindingNavigatorPositionItem.Enabled = false;
 
+            // Развернуть на полный экран
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
 
             // АВТОБУС
             try {

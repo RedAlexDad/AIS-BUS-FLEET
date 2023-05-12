@@ -225,7 +225,7 @@
             this.tabControl1.Location = new System.Drawing.Point(24, 30);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1228, 715);
+            this.tabControl1.Size = new System.Drawing.Size(1810, 815);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -235,7 +235,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1220, 686);
+            this.tabPage1.Size = new System.Drawing.Size(1802, 786);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Автобус";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -264,7 +264,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1214, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1796, 27);
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -353,7 +353,7 @@
             this.автобусDataGridView.Name = "автобусDataGridView";
             this.автобусDataGridView.RowHeadersWidth = 51;
             this.автобусDataGridView.RowTemplate.Height = 24;
-            this.автобусDataGridView.Size = new System.Drawing.Size(1208, 647);
+            this.автобусDataGridView.Size = new System.Drawing.Size(1786, 747);
             this.автобусDataGridView.TabIndex = 0;
             // 
             // tabPage2
@@ -363,7 +363,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1220, 686);
+            this.tabPage2.Size = new System.Drawing.Size(1802, 786);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Автобусный парк";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -392,7 +392,7 @@
             this.bindingNavigator2.MovePreviousItem = this.toolStripButton4;
             this.bindingNavigator2.Name = "bindingNavigator2";
             this.bindingNavigator2.PositionItem = this.toolStripTextBox1;
-            this.bindingNavigator2.Size = new System.Drawing.Size(1214, 27);
+            this.bindingNavigator2.Size = new System.Drawing.Size(1796, 27);
             this.bindingNavigator2.TabIndex = 2;
             this.bindingNavigator2.Text = "bindingNavigator2";
             // 
@@ -476,7 +476,7 @@
             this.автобусный_паркDataGridView.Name = "автобусный_паркDataGridView";
             this.автобусный_паркDataGridView.RowHeadersWidth = 51;
             this.автобусный_паркDataGridView.RowTemplate.Height = 24;
-            this.автобусный_паркDataGridView.Size = new System.Drawing.Size(1208, 647);
+            this.автобусный_паркDataGridView.Size = new System.Drawing.Size(1786, 747);
             this.автобусный_паркDataGridView.TabIndex = 0;
             // 
             // tabPage3
@@ -486,7 +486,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1220, 686);
+            this.tabPage3.Size = new System.Drawing.Size(1802, 786);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Рейс";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -498,7 +498,7 @@
             this.рейсDataGridView.Name = "рейсDataGridView";
             this.рейсDataGridView.RowHeadersWidth = 51;
             this.рейсDataGridView.RowTemplate.Height = 24;
-            this.рейсDataGridView.Size = new System.Drawing.Size(1208, 647);
+            this.рейсDataGridView.Size = new System.Drawing.Size(1786, 747);
             this.рейсDataGridView.TabIndex = 2;
             // 
             // bindingNavigator3
@@ -525,7 +525,7 @@
             this.bindingNavigator3.MovePreviousItem = this.toolStripButton10;
             this.bindingNavigator3.Name = "bindingNavigator3";
             this.bindingNavigator3.PositionItem = this.toolStripTextBox2;
-            this.bindingNavigator3.Size = new System.Drawing.Size(1214, 27);
+            this.bindingNavigator3.Size = new System.Drawing.Size(1796, 27);
             this.bindingNavigator3.TabIndex = 2;
             this.bindingNavigator3.Text = "bindingNavigator3";
             // 
@@ -609,7 +609,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1220, 686);
+            this.tabPage4.Size = new System.Drawing.Size(1802, 786);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Руководитель";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -627,7 +627,7 @@
             this.руководительDataGridView.Name = "руководительDataGridView";
             this.руководительDataGridView.RowHeadersWidth = 51;
             this.руководительDataGridView.RowTemplate.Height = 24;
-            this.руководительDataGridView.Size = new System.Drawing.Size(1208, 647);
+            this.руководительDataGridView.Size = new System.Drawing.Size(1786, 747);
             this.руководительDataGridView.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn22
@@ -683,7 +683,7 @@
             this.bindingNavigator4.MovePreviousItem = this.toolStripButton16;
             this.bindingNavigator4.Name = "bindingNavigator4";
             this.bindingNavigator4.PositionItem = this.toolStripTextBox3;
-            this.bindingNavigator4.Size = new System.Drawing.Size(1214, 27);
+            this.bindingNavigator4.Size = new System.Drawing.Size(1796, 27);
             this.bindingNavigator4.TabIndex = 2;
             this.bindingNavigator4.Text = "bindingNavigator4";
             // 
@@ -762,7 +762,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1220, 686);
+            this.tabPage5.Size = new System.Drawing.Size(1802, 786);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Водитель";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -781,7 +781,7 @@
             this.водительDataGridView.Name = "водительDataGridView";
             this.водительDataGridView.RowHeadersWidth = 51;
             this.водительDataGridView.RowTemplate.Height = 24;
-            this.водительDataGridView.Size = new System.Drawing.Size(1208, 647);
+            this.водительDataGridView.Size = new System.Drawing.Size(1786, 747);
             this.водительDataGridView.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn25
@@ -845,7 +845,7 @@
             this.bindingNavigator5.MovePreviousItem = this.toolStripButton22;
             this.bindingNavigator5.Name = "bindingNavigator5";
             this.bindingNavigator5.PositionItem = this.toolStripTextBox4;
-            this.bindingNavigator5.Size = new System.Drawing.Size(1214, 27);
+            this.bindingNavigator5.Size = new System.Drawing.Size(1796, 27);
             this.bindingNavigator5.TabIndex = 2;
             this.bindingNavigator5.Text = "bindingNavigator5";
             // 
@@ -924,7 +924,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1220, 686);
+            this.tabPage6.Size = new System.Drawing.Size(1802, 786);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Контролер";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -942,7 +942,7 @@
             this.контролерDataGridView.Name = "контролерDataGridView";
             this.контролерDataGridView.RowHeadersWidth = 51;
             this.контролерDataGridView.RowTemplate.Height = 24;
-            this.контролерDataGridView.Size = new System.Drawing.Size(1208, 647);
+            this.контролерDataGridView.Size = new System.Drawing.Size(1786, 747);
             this.контролерDataGridView.TabIndex = 2;
             // 
             // индексконтролераDataGridViewTextBoxColumn
@@ -998,7 +998,7 @@
             this.bindingNavigator6.MovePreviousItem = this.toolStripButton28;
             this.bindingNavigator6.Name = "bindingNavigator6";
             this.bindingNavigator6.PositionItem = this.toolStripTextBox5;
-            this.bindingNavigator6.Size = new System.Drawing.Size(1214, 27);
+            this.bindingNavigator6.Size = new System.Drawing.Size(1796, 27);
             this.bindingNavigator6.TabIndex = 2;
             this.bindingNavigator6.Text = "bindingNavigator6";
             // 
@@ -1077,7 +1077,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 25);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1220, 686);
+            this.tabPage7.Size = new System.Drawing.Size(1802, 786);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Пассажир";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1089,7 +1089,7 @@
             this.пассажирDataGridView.Name = "пассажирDataGridView";
             this.пассажирDataGridView.RowHeadersWidth = 51;
             this.пассажирDataGridView.RowTemplate.Height = 24;
-            this.пассажирDataGridView.Size = new System.Drawing.Size(1208, 647);
+            this.пассажирDataGridView.Size = new System.Drawing.Size(1786, 747);
             this.пассажирDataGridView.TabIndex = 2;
             // 
             // bindingNavigator7
@@ -1116,7 +1116,7 @@
             this.bindingNavigator7.MovePreviousItem = this.toolStripButton34;
             this.bindingNavigator7.Name = "bindingNavigator7";
             this.bindingNavigator7.PositionItem = this.toolStripTextBox6;
-            this.bindingNavigator7.Size = new System.Drawing.Size(1214, 27);
+            this.bindingNavigator7.Size = new System.Drawing.Size(1796, 27);
             this.bindingNavigator7.TabIndex = 2;
             this.bindingNavigator7.Text = "bindingNavigator7";
             // 
@@ -1200,7 +1200,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 25);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(1220, 686);
+            this.tabPage8.Size = new System.Drawing.Size(1802, 786);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Подсчет сумма проданных билетов";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1213,7 +1213,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1208, 647);
+            this.dataGridView1.Size = new System.Drawing.Size(1786, 747);
             this.dataGridView1.TabIndex = 3;
             // 
             // bindingNavigator8
@@ -1239,7 +1239,7 @@
             this.bindingNavigator8.MovePreviousItem = this.toolStripButton40;
             this.bindingNavigator8.Name = "bindingNavigator8";
             this.bindingNavigator8.PositionItem = this.toolStripTextBox7;
-            this.bindingNavigator8.Size = new System.Drawing.Size(1214, 27);
+            this.bindingNavigator8.Size = new System.Drawing.Size(1796, 31);
             this.bindingNavigator8.TabIndex = 2;
             this.bindingNavigator8.Text = "bindingNavigator8";
             // 
@@ -1318,7 +1318,7 @@
             this.tabPage10.Location = new System.Drawing.Point(4, 25);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(1220, 686);
+            this.tabPage10.Size = new System.Drawing.Size(1802, 786);
             this.tabPage10.TabIndex = 9;
             this.tabPage10.Text = "Состояние транспорта";
             this.tabPage10.UseVisualStyleBackColor = true;
@@ -1330,7 +1330,7 @@
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(1208, 647);
+            this.dataGridView3.Size = new System.Drawing.Size(1786, 747);
             this.dataGridView3.TabIndex = 4;
             // 
             // bindingNavigator10
@@ -1356,7 +1356,7 @@
             this.bindingNavigator10.MovePreviousItem = this.toolStripButton52;
             this.bindingNavigator10.Name = "bindingNavigator10";
             this.bindingNavigator10.PositionItem = this.toolStripTextBox9;
-            this.bindingNavigator10.Size = new System.Drawing.Size(1214, 27);
+            this.bindingNavigator10.Size = new System.Drawing.Size(1796, 27);
             this.bindingNavigator10.TabIndex = 3;
             this.bindingNavigator10.Text = "bindingNavigator10";
             // 
@@ -1487,7 +1487,7 @@
             this.bindingNavigator9.MovePreviousItem = null;
             this.bindingNavigator9.Name = "bindingNavigator9";
             this.bindingNavigator9.PositionItem = null;
-            this.bindingNavigator9.Size = new System.Drawing.Size(1252, 27);
+            this.bindingNavigator9.Size = new System.Drawing.Size(1832, 27);
             this.bindingNavigator9.TabIndex = 1;
             this.bindingNavigator9.Text = "bindingNavigator9";
             // 
@@ -1505,7 +1505,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1252, 757);
+            this.ClientSize = new System.Drawing.Size(1832, 853);
             this.Controls.Add(this.bindingNavigator9);
             this.Controls.Add(this.tabControl1);
             this.Name = "Report_admin";

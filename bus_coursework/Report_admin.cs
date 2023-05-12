@@ -181,6 +181,11 @@ namespace bus_coursework {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bus_dataset.Автобус". При необходимости она может быть перемещена или удалена.
             this.автобусTableAdapter.Fill(this.bus_dataset.Автобус);
 
+            // Развернуть на полный экран
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
             // АВТОБУС
             try {
                 автобусDataGridView.DataSource = bus.UpdateBus();

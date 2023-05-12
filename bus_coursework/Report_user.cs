@@ -186,14 +186,10 @@ namespace bus_coursework {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bus_dataset.Автобус". При необходимости она может быть перемещена или удалена.
             this.автобусTableAdapter.Fill(this.bus_dataset.Автобус);
 
-            // no smaller than design time size
-            this.MinimumSize = new System.Drawing.Size(this.Width, this.Height);
-
-            // no larger than screen size
-            //this.MaximumSize = new System.Drawing.Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height, (int)System.Windows.SystemParameters.PrimaryScreenHeight);
-
-            this.AutoSize = true;
-            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            // Развернуть на полный экран
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
 
 
             // АВТОБУС

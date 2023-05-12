@@ -703,7 +703,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1809, 814);
+            this.tabControl1.Size = new System.Drawing.Size(1810, 815);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -1070,7 +1070,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1801, 785);
+            this.tabPage2.Size = new System.Drawing.Size(1802, 786);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Рейс";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1187,7 +1187,7 @@
             this.bindingNavigator2.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
             this.bindingNavigator2.Name = "bindingNavigator2";
             this.bindingNavigator2.PositionItem = this.bindingNavigatorPositionItem1;
-            this.bindingNavigator2.Size = new System.Drawing.Size(1795, 27);
+            this.bindingNavigator2.Size = new System.Drawing.Size(1796, 27);
             this.bindingNavigator2.TabIndex = 21;
             this.bindingNavigator2.Text = "bindingNavigator2";
             // 
@@ -2695,7 +2695,7 @@
             this.bindingNavigator8.MovePreviousItem = null;
             this.bindingNavigator8.Name = "bindingNavigator8";
             this.bindingNavigator8.PositionItem = null;
-            this.bindingNavigator8.Size = new System.Drawing.Size(1833, 27);
+            this.bindingNavigator8.Size = new System.Drawing.Size(1832, 31);
             this.bindingNavigator8.TabIndex = 2;
             this.bindingNavigator8.Text = "bindingNavigator8";
             // 
@@ -2713,7 +2713,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1833, 854);
+            this.ClientSize = new System.Drawing.Size(1832, 853);
             this.Controls.Add(this.bindingNavigator8);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

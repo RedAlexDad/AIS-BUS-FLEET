@@ -259,10 +259,10 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBox3.Location = new System.Drawing.Point(13, 31);
+            this.pictureBox3.Location = new System.Drawing.Point(32, 31);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1208, 68);
+            this.pictureBox3.Size = new System.Drawing.Size(1787, 68);
             this.pictureBox3.TabIndex = 41;
             this.pictureBox3.TabStop = false;
             // 
@@ -311,7 +311,7 @@
             this.автобусBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.автобусBindingNavigator.Name = "автобусBindingNavigator";
             this.автобусBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.автобусBindingNavigator.Size = new System.Drawing.Size(1252, 27);
+            this.автобусBindingNavigator.Size = new System.Drawing.Size(1832, 27);
             this.автобусBindingNavigator.TabIndex = 42;
             this.автобусBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -395,7 +395,7 @@
             this.автобусDataGridView.Name = "автобусDataGridView";
             this.автобусDataGridView.RowHeadersWidth = 51;
             this.автобусDataGridView.RowTemplate.Height = 24;
-            this.автобусDataGridView.Size = new System.Drawing.Size(1227, 463);
+            this.автобусDataGridView.Size = new System.Drawing.Size(1806, 463);
             this.автобусDataGridView.TabIndex = 42;
             // 
             // radioButton1
@@ -438,7 +438,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1252, 757);
+            this.ClientSize = new System.Drawing.Size(1832, 853);
             this.Controls.Add(label1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);

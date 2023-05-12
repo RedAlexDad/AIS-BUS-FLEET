@@ -110,7 +110,7 @@
             this.pictureBox3.Location = new System.Drawing.Point(13, 37);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1208, 68);
+            this.pictureBox3.Size = new System.Drawing.Size(1806, 68);
             this.pictureBox3.TabIndex = 63;
             this.pictureBox3.TabStop = false;
             // 
@@ -187,7 +187,7 @@
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(1227, 489);
+            this.dataGridView.Size = new System.Drawing.Size(1806, 489);
             this.dataGridView.TabIndex = 70;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             // 
@@ -316,7 +316,7 @@
             this.bindingNavigator1.MovePreviousItem = null;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1260, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1832, 27);
             this.bindingNavigator1.TabIndex = 79;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -334,7 +334,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 765);
+            this.ClientSize = new System.Drawing.Size(1832, 853);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(индекс_контролераLabel);
             this.Controls.Add(this.индекс_контролераTextBox);

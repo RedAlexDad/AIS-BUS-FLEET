@@ -62,10 +62,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add_info_db.cs">
+    <Compile Include="Reserv\Add_info_db.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add_info_db.Designer.cs">
+    <Compile Include="Reserv\Add_info_db.Designer.cs">
       <DependentUpon>Add_info_db.cs</DependentUpon>
     </Compile>
     <Compile Include="Administrator.cs">
@@ -91,10 +91,10 @@
     <Compile Include="Edit_DB.Designer.cs">
       <DependentUpon>Edit_DB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Reserv\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Reserv\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="MyClass\Bus.cs" />
@@ -138,7 +138,7 @@
     <Compile Include="User.Designer.cs">
       <DependentUpon>User.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Add_info_db.resx">
+    <EmbeddedResource Include="Reserv\Add_info_db.resx">
       <DependentUpon>Add_info_db.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrator.resx">
@@ -150,7 +150,7 @@
     <EmbeddedResource Include="Edit_DB.resx">
       <DependentUpon>Edit_DB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Reserv\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edit_status_bus.resx">
