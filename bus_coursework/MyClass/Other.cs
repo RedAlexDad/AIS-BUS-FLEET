@@ -16,7 +16,7 @@ namespace bus_coursework.MyClass {
         OleDbConnection connection;
         OleDbCommand command;
         OleDbDataAdapter dataAdapter;
-        DataTable bufferTable0, bufferTable1, bufferTableSearchBusByMarka;
+        DataTable bufferTable0, bufferTable1, bufferTableSearchBusByMarka, bufferCheckLoginAndPassword;
 
         public Other(string Conn) {
             connection = new OleDbConnection(Conn);
@@ -189,6 +189,40 @@ namespace bus_coursework.MyClass {
             // Закрываем соединение с БД
             connection.Close();
             return bufferTableSearchBusByMarka;
+        }
+
+        // Проверка логина и пароля
+        public bool CheckLoginAndPassword(string login, string password) {
+            connection.Open();
+            try {
+                command = new OleDbCommand(
+                    $"SELECT " +
+                        $"* " +
+                    $"FROM " +
+                        $"DB_Users " +
+                    $"WHERE TypeGroupUser LIKE ('{login}') " +
+                    $"AND Pass LIKE ('{password}') ",
+                    connection);
+            } catch(Exception error) {
+                MessageBox.Show("Ошибка выполнения запроса!\nТип ошибки: \n" + error, "Ошибка!");
+            };
+
+            OleDbDataReader reader = command.ExecuteReader();
+
+            int count = 0;
+
+            while(reader.Read()) { count++; }
+
+            // Закрываем соединение с БД
+            connection.Close();
+
+            //Console.WriteLine($"count: {count}");
+
+            if(count > 1) { MessageBox.Show("Дублирующие логин и пароль", "Примечание!"); return false; }
+            if(count == 1) { MessageBox.Show("Логин и пароль верные", "Успешно!"); return true; }
+            if(count < 1) { MessageBox.Show("Логин и пароль неверные", "Ошибка!"); return false; }
+
+            return false;
         }
     }
 }

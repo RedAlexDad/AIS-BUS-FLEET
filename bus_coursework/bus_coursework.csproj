@@ -139,6 +139,9 @@
     <EmbeddedResource Include="Administrator.resx">
       <DependentUpon>Administrator.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Autorization.resx">
+      <DependentUpon>Autorization.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Edit_DB.resx">
       <DependentUpon>Edit_DB.cs</DependentUpon>
     </EmbeddedResource>

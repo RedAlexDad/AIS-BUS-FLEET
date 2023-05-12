@@ -22,7 +22,9 @@ namespace bus_coursework
             //Application.Run(new Report_admin());
             //Application.Run(new Edit_status_bus());
             //Application.Run(new Search_bus());
-            Application.Run(new Administrator());
+            //Application.Run(new Administrator());
+            //Application.Run(new Administrator());
+            Application.Run(new Autorization());
         }
     }
 }
