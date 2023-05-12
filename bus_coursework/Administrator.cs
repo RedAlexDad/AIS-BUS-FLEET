@@ -50,12 +50,19 @@ namespace bus_coursework
             form2.Show();
         }
 
-        // Выйти с учетной 
+        // Выйти с учетной записи
         private void button5_Click(object sender, EventArgs e) {
             this.Hide();
             var form2 = new Autorization();
             form2.Closed += (s, args) => this.Close();
             form2.Show();
+        }
+
+        private void Administrator_Load(object sender, EventArgs e) {
+            // Развернуть на полный экран
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }

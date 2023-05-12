@@ -158,6 +158,13 @@ namespace bus_coursework {
             this.руководительTableAdapter.Fill(this.bus_dataset.Руководитель);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bus_dataset.Автобусный_парк". При необходимости она может быть перемещена или удалена.
             this.автобусный_паркTableAdapter.Fill(this.bus_dataset.Автобусный_парк);
+
+            // Развернуть на полный экран
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
+
         }
 
 

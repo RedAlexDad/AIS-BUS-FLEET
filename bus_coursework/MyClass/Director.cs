@@ -53,7 +53,7 @@ namespace bus_coursework.MyClass {
         public void Add(int ID_director, string FIO, string phone) {
             connection.Open();
             try {
-                command = new OleDbCommand($"INSERT INTO Руководитель (Индекс_руководителя, ФИО_руководителя, Номер_телефона_руководителя) VALUES({ID_director}, {FIO}, {phone})", connection);
+                command = new OleDbCommand($"INSERT INTO Руководитель (Индекс_руководителя, ФИО_руководителя, Номер_телефона_руководителя) VALUES({ID_director}, '{FIO}', '{phone}')", connection);
 
                 // Проверка на правильность запрсоа
                 command.ExecuteNonQuery();

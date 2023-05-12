@@ -25,7 +25,7 @@ namespace bus_coursework.MyClass {
             connection.Open();
             try {
                 //Console.WriteLine(ID_passanger + " " + ID_bus + " " + FIO + " " + category);
-                command = new OleDbCommand($"INSERT INTO Водитель (Индекс_водителя, ФИО_водителя, Номер_телефона_водителя, Стаж_водителя) VALUES({ID_driver}, {FIO}, {phone}, {experience})", connection);
+                command = new OleDbCommand($"INSERT INTO Водитель (Индекс_водителя, ФИО_водителя, Номер_телефона_водителя, Стаж_водителя) VALUES({ID_driver}, '{FIO}', '{phone}', {experience})", connection);
 
                 // Проверка на правильность запрсоа
                 command.ExecuteNonQuery();

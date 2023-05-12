@@ -26,8 +26,9 @@ namespace bus_coursework.MyClass {
             try {
                 Console.WriteLine(ID_controller + " " + FIO + " " + phone);
 
-                command = new OleDbCommand($"INSERT INTO Контролер (Индекс_контролера, ФИО_контролера, Номер_телефона_контролера) " +
-                    $"VALUES({ID_controller}, {FIO}, {phone})", connection);
+                command = new OleDbCommand($"INSERT INTO " +
+                    $"Контролер (Индекс_контролера, ФИО_контролера, Номер_телефона_контролера) " +
+                    $"VALUES({ID_controller}, '{FIO}', '{phone}')", connection);
 
                 // Проверка на правильность запрсоа
                 command.ExecuteNonQuery();
@@ -46,7 +47,7 @@ namespace bus_coursework.MyClass {
             try {
                 command = new OleDbCommand($"UPDATE Контролер " +
                     $"SET ФИО_контролера = '{FIO}', " +
-                    $"Номер_телефона_контролера = {phone} " +
+                    $"Номер_телефона_контролера = '{phone}' " +
                     $"WHERE Индекс_контролера = {ID_controller}", connection);
 
                 // Проверка на правильность запрсоа

@@ -43,5 +43,13 @@ namespace bus_coursework {
         private void button2_Click(object sender, EventArgs e) {
             Close();
         }
+
+        private void Autorization_Load(object sender, EventArgs e) {
+            // Развернуть на полный экран
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+        }
+
     }
 }

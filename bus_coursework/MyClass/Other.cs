@@ -219,7 +219,7 @@ namespace bus_coursework.MyClass {
             //Console.WriteLine($"count: {count}");
 
             if(count > 1) { MessageBox.Show("Дублирующие логин и пароль", "Примечание!"); return false; }
-            if(count == 1) { MessageBox.Show("Логин и пароль верные", "Успешно!"); return true; }
+            if(count == 1) { /*MessageBox.Show("Логин и пароль верные", "Успешно!"); */return true; }
             if(count < 1) { MessageBox.Show("Логин и пароль неверные", "Ошибка!"); return false; }
 
             return false;

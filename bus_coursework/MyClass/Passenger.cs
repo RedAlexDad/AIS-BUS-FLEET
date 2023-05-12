@@ -35,7 +35,9 @@ namespace bus_coursework.MyClass {
             connection.Open();
             try {
                 //Console.WriteLine(ID_passanger + " " + ID_bus + " " + FIO + " " + category);
-                command = new OleDbCommand($"INSERT INTO Пассажир (Индекс_пассажира, Индекс_автобуса, ФИО_пассажира, Категория_пассажира) VALUES({ID_passanger}, {ID_bus}, {FIO}, {category})", connection);
+                command = new OleDbCommand($"INSERT INTO " +
+                    $"Пассажир (Индекс_пассажира, Индекс_автобуса, ФИО_пассажира, Категория_пассажира) " +
+                    $"VALUES({ID_passanger}, {ID_bus}, '{FIO}', '{category}')", connection);
 
                 // Проверка на правильность запрсоа
                 command.ExecuteNonQuery();
