@@ -309,7 +309,7 @@
             this.автобусBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.автобусBindingNavigator.Name = "автобусBindingNavigator";
             this.автобусBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.автобусBindingNavigator.Size = new System.Drawing.Size(1252, 27);
+            this.автобусBindingNavigator.Size = new System.Drawing.Size(1565, 39);
             this.автобусBindingNavigator.TabIndex = 42;
             this.автобусBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -326,7 +326,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 36);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             this.bindingNavigatorMoveFirstItem.Click += new System.EventHandler(this.bindingNavigatorMoveFirstItem_Click);
             // 

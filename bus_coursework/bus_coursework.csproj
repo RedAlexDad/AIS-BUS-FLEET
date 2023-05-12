@@ -121,6 +121,12 @@
     <Compile Include="Report_admin.Designer.cs">
       <DependentUpon>Report_admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Search_bus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search_bus.Designer.cs">
+      <DependentUpon>Search_bus.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </Compile>
     <EmbeddedResource Include="Report_admin.resx">
       <DependentUpon>Report_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search_bus.resx">
+      <DependentUpon>Search_bus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User.resx">
       <DependentUpon>User.cs</DependentUpon>

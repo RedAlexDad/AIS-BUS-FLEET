@@ -25,7 +25,6 @@ namespace bus_coursework.MyClass {
         public DataTable UpdateBusCheckByIDBusline(int ID) {
             connection.Open();
             try {
-                //dataAdapter = new OleDbDataAdapter($"SELECT * FROM Автобус WHERE Индекс_рейса = {ID}", connection);
                 dataAdapter = new OleDbDataAdapter(
                     $"SELECT " +
                         $"Индекс_автобуса, " +
@@ -63,7 +62,6 @@ namespace bus_coursework.MyClass {
         public DataTable UpdateBus() {
             connection.Open();
             try {
-                //dataAdapter = new OleDbDataAdapter($"SELECT * FROM Автобус WHERE Индекс_рейса = {ID}", connection);
                 dataAdapter = new OleDbDataAdapter(
                     $"SELECT " +
                         $"Автобус.Индекс_автобуса, " +
@@ -100,7 +98,6 @@ namespace bus_coursework.MyClass {
         public DataTable UpdateBusWithStatus() {
             connection.Open();
             try {
-                //dataAdapter = new OleDbDataAdapter($"SELECT * FROM Автобус WHERE Индекс_рейса = {ID}", connection);
                 dataAdapter = new OleDbDataAdapter(
                     $"SELECT " +
                         $"Автобус.Индекс_автобуса, " +

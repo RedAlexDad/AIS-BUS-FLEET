@@ -16,12 +16,13 @@ namespace bus_coursework.MyClass {
         OleDbConnection connection;
         OleDbCommand command;
         OleDbDataAdapter dataAdapter;
-        DataTable bufferTable0, bufferTable1;
+        DataTable bufferTable0, bufferTable1, bufferTableSearchBusByMarka;
 
         public Other(string Conn) {
             connection = new OleDbConnection(Conn);
             bufferTable0 = new DataTable();
             bufferTable1 = new DataTable();
+            bufferTableSearchBusByMarka = new DataTable();
         }
 
         // БД для отчета - подсчет сумма проданных билетов
@@ -127,22 +128,11 @@ namespace bus_coursework.MyClass {
             return bufferTable1;
         }
 
+        // Таблица автобус со статусом
         public void UpdateStatusBus(int ID_bus, int ID_status) {
             connection.Open();
             try {
                 command = new OleDbCommand($"UPDATE Автобус " +
-                    // Обновляет статус весь автобус
-                    //$"INNER JOIN Автобус_Переключатель ON Автобус.Статус_автобуса = Автобус_Переключатель.ID_Статус " +
-                    //$"SET Автобус.Статус_автобуса = {ID_status} " + 
-                    //$"WHERE Автобус.Статус_автобуса = Автобус_Переключатель.ID_Статус ",
-
-                    // Обновляет статус весь автобус
-                    //$"SET Автобус.Статус_автобуса = {ID_status} " +
-                    //$"WHERE Автобус.Статус_автобуса = Автобус_Переключатель.ID_Статус ",
-
-                    // Обновляет статус весь автобус
-                    //$"SET Статус_автобуса = {ID_status} ",
-
                     $"SET Статус_автобуса = {ID_status} " +
                     $"WHERE Индекс_автобуса = {ID_bus}",
                     connection);
@@ -157,6 +147,48 @@ namespace bus_coursework.MyClass {
 
             // Закрываем соединение с БД
             connection.Close();
+        }
+
+        // Поиск автобус по названию марок
+        public DataTable SearchBusByNameMarka(string NameMarka) {
+            connection.Open();
+            try {
+                dataAdapter = new OleDbDataAdapter(
+                    $"SELECT " +
+                        $"Индекс_автобуса, " +
+                        $"Марка_автобуса, " +
+                        $"Модель_автобуса, " +
+                        $"Год_выпуска_автобуса, " +
+                        $"Номер_рейса, " +
+                        $"Название_автобусного_парка, " +
+                        $"ФИО_водителя, " +
+                        $"ФИО_контролера, " +
+                        $"Автобус_Переключатель.Статус " +
+                    $"FROM " +
+                        $"Автобус, " +
+                        $"Рейс, " +
+                        $"Автобусный_парк, " +
+                        $"Водитель, " +
+                        $"Контролер, " +
+                        $"Автобус_Переключатель " +
+                    $"WHERE Автобус.Индекс_рейса = Рейс.Индекс_рейса " +
+                    $"AND Автобус.Индекс_автобусного_парка = Автобусный_парк.Индекс_автобусного_парка " +
+                    $"AND Автобус.Индекс_водителя = Водитель.Индекс_водителя " +
+                    $"AND Автобус.Индекс_контролера = Контролер.Индекс_контролера " +
+                    $"AND Автобус.Статус_автобуса = Автобус_Переключатель.ID_статус " +
+                    $"AND Автобус.Марка_автобуса LIKE ('%{NameMarka}%') ",
+                    connection);
+
+                bufferTableSearchBusByMarka.Clear();
+                dataAdapter.Fill(bufferTableSearchBusByMarka);
+
+            } catch(Exception error) {
+                MessageBox.Show("Ошибка выполнения запроса!\nТип ошибки: \n" + error, "Ошибка!");
+            };
+
+            // Закрываем соединение с БД
+            connection.Close();
+            return bufferTableSearchBusByMarka;
         }
     }
 }

@@ -21,6 +21,7 @@ namespace bus_coursework
             //Application.Run(new Edit_DB());
             //Application.Run(new Report_admin());
             //Application.Run(new Edit_status_bus());
+            Application.Run(new Search_bus());
         }
     }
 }
