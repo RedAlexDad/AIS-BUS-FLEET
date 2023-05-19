@@ -21,6 +21,35 @@ namespace bus_coursework.MyClass {
             bufferTable = new DataTable();
         }
 
+        // Выводит все ФИО контролера
+        public DataTable GetIDAndFIOController() {
+            connection.Open();
+            dataAdapter = new OleDbDataAdapter($"SELECT Индекс_контролера, ФИО_контролера FROM Контролер", connection);
+            bufferTable.Clear();
+            dataAdapter.Fill(bufferTable);
+            connection.Close();
+            return bufferTable;
+        }
+
+        // Выводит ФИО контролера по ID
+        public string GetFIOControllerByID(int ID) {
+            connection.Open();
+            command = new OleDbCommand($"SELECT ФИО_контролера FROM Контролер WHERE Индекс_контролера = {ID}", connection);
+
+            OleDbDataReader reader = command.ExecuteReader();
+
+            if(reader.Read()) {
+                string name = reader.GetString(0);
+                //Console.WriteLine("Name: " + name);
+                connection.Close();
+                return name;
+            } else {
+                //Console.WriteLine($"Запись с ID = {ID} не найдена.");
+                connection.Close();
+                return null;
+            }
+        }
+
         public void Add(int ID_controller, string FIO, string phone) {
             connection.Open();
             try {

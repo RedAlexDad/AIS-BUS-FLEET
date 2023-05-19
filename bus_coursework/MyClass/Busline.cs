@@ -37,6 +37,35 @@ namespace bus_coursework.MyClass {
             return int.Parse(Regex.Replace(arrival, "[^0-9]", String.Empty)) > int.Parse(Regex.Replace(departure, "[^0-9]", String.Empty));
         }
 
+        // Выводит все номеры рейса и ID
+        public DataTable GetIDAndNumberBusLine() {
+            connection.Open();
+            dataAdapter = new OleDbDataAdapter($"SELECT Индекс_рейса, Номер_рейса FROM Рейс", connection);
+            bufferTable.Clear();
+            dataAdapter.Fill(bufferTable);
+            connection.Close();
+            return bufferTable;
+        }
+
+        // Выводит номер рейса по ID 
+        public string GetNumberBusLineByID(int ID) {
+            connection.Open();
+            command = new OleDbCommand($"SELECT Номер_рейса FROM Рейс WHERE Индекс_рейса = {ID}", connection);
+
+            OleDbDataReader reader = command.ExecuteReader();
+
+            if(reader.Read()) {
+                string name = reader.GetString(0);
+                //Console.WriteLine("Name: " + name);
+                connection.Close();
+                return name;
+            } else {
+                //Console.WriteLine($"Запись с ID = {ID} не найдена.");
+                connection.Close();
+                return null;
+            }
+        }
+
         // ID, номер рейса, откуда, куда, отправление (время), прибытие (время), стоимость проезда (вещественное число)
         public void Add(int ID_busline, string number, string from_where, string to_where, string departure, string arrival, double fare, int ID_busfeet) {
             if(!check_time(departure, arrival)) { MessageBox.Show("Ошибка заполнения время отправления или прибытия.\nПроверьте их", "Ошибка"); return; }

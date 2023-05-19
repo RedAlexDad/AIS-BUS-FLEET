@@ -267,6 +267,11 @@
             this.bindingNavigator8 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton32 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
             индекс_автобусаLabel = new System.Windows.Forms.Label();
             марка_автобусаLabel = new System.Windows.Forms.Label();
             модель_автобусаLabel = new System.Windows.Forms.Label();
@@ -1084,6 +1089,7 @@
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.pictureBox2);
+            this.tabPage2.Controls.Add(this.comboBox2);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
@@ -1107,9 +1113,10 @@
             // индекс_автобусного_паркаTextBox1
             // 
             this.индекс_автобусного_паркаTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.рейсBindingSource, "Индекс_автобусного_парка", true));
+            this.индекс_автобусного_паркаTextBox1.Enabled = false;
             this.индекс_автобусного_паркаTextBox1.Location = new System.Drawing.Point(192, 340);
             this.индекс_автобусного_паркаTextBox1.Name = "индекс_автобусного_паркаTextBox1";
-            this.индекс_автобусного_паркаTextBox1.Size = new System.Drawing.Size(433, 22);
+            this.индекс_автобусного_паркаTextBox1.Size = new System.Drawing.Size(410, 22);
             this.индекс_автобусного_паркаTextBox1.TabIndex = 29;
             // 
             // стоимость_проездаTextBox
@@ -1172,6 +1179,7 @@
             // индекс_рейсаTextBox
             // 
             this.индекс_рейсаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.рейсBindingSource, "Индекс_рейса", true));
+            this.индекс_рейсаTextBox.Enabled = false;
             this.индекс_рейсаTextBox.Location = new System.Drawing.Point(192, 144);
             this.индекс_рейсаTextBox.Name = "индекс_рейсаTextBox";
             this.индекс_рейсаTextBox.Size = new System.Drawing.Size(433, 22);
@@ -1378,6 +1386,10 @@
             this.tabPage3.Controls.Add(индекс_автобусаLabel);
             this.tabPage3.Controls.Add(this.индекс_автобусаTextBox);
             this.tabPage3.Controls.Add(this.bindingNavigator3);
+            this.tabPage3.Controls.Add(this.comboBox6);
+            this.tabPage3.Controls.Add(this.comboBox5);
+            this.tabPage3.Controls.Add(this.comboBox4);
+            this.tabPage3.Controls.Add(this.comboBox3);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
@@ -1479,37 +1491,41 @@
             // индекс_контролераTextBox
             // 
             this.индекс_контролераTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусBindingSource, "Индекс_контролера", true));
+            this.индекс_контролераTextBox.Enabled = false;
             this.индекс_контролераTextBox.Location = new System.Drawing.Point(191, 333);
             this.индекс_контролераTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.индекс_контролераTextBox.Name = "индекс_контролераTextBox";
-            this.индекс_контролераTextBox.Size = new System.Drawing.Size(355, 22);
+            this.индекс_контролераTextBox.Size = new System.Drawing.Size(335, 22);
             this.индекс_контролераTextBox.TabIndex = 20;
             // 
             // индекс_водителяTextBox
             // 
             this.индекс_водителяTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусBindingSource, "Индекс_водителя", true));
+            this.индекс_водителяTextBox.Enabled = false;
             this.индекс_водителяTextBox.Location = new System.Drawing.Point(191, 303);
             this.индекс_водителяTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.индекс_водителяTextBox.Name = "индекс_водителяTextBox";
-            this.индекс_водителяTextBox.Size = new System.Drawing.Size(355, 22);
+            this.индекс_водителяTextBox.Size = new System.Drawing.Size(335, 22);
             this.индекс_водителяTextBox.TabIndex = 19;
             // 
             // индекс_автобусного_паркаTextBox2
             // 
             this.индекс_автобусного_паркаTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусBindingSource, "Индекс_автобусного_парка", true));
+            this.индекс_автобусного_паркаTextBox2.Enabled = false;
             this.индекс_автобусного_паркаTextBox2.Location = new System.Drawing.Point(191, 273);
             this.индекс_автобусного_паркаTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.индекс_автобусного_паркаTextBox2.Name = "индекс_автобусного_паркаTextBox2";
-            this.индекс_автобусного_паркаTextBox2.Size = new System.Drawing.Size(355, 22);
+            this.индекс_автобусного_паркаTextBox2.Size = new System.Drawing.Size(335, 22);
             this.индекс_автобусного_паркаTextBox2.TabIndex = 18;
             // 
             // индекс_рейсаTextBox1
             // 
             this.индекс_рейсаTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусBindingSource, "Индекс_рейса", true));
+            this.индекс_рейсаTextBox1.Enabled = false;
             this.индекс_рейсаTextBox1.Location = new System.Drawing.Point(191, 243);
             this.индекс_рейсаTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.индекс_рейсаTextBox1.Name = "индекс_рейсаTextBox1";
-            this.индекс_рейсаTextBox1.Size = new System.Drawing.Size(355, 22);
+            this.индекс_рейсаTextBox1.Size = new System.Drawing.Size(335, 22);
             this.индекс_рейсаTextBox1.TabIndex = 17;
             // 
             // год_выпуска_автобусаTextBox
@@ -2734,6 +2750,51 @@
             this.toolStripLabel4.Size = new System.Drawing.Size(218, 24);
             this.toolStripLabel4.Text = "Редактирование базы данных";
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(192, 340);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(433, 24);
+            this.comboBox2.TabIndex = 30;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(191, 241);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(355, 24);
+            this.comboBox3.TabIndex = 24;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(191, 273);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(355, 24);
+            this.comboBox4.TabIndex = 25;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(191, 303);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(355, 24);
+            this.comboBox5.TabIndex = 26;
+            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(191, 333);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(355, 24);
+            this.comboBox6.TabIndex = 27;
+            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
+            // 
             // Edit_DB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3012,5 +3073,10 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }

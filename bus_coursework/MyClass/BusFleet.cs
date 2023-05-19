@@ -20,6 +20,34 @@ namespace bus_coursework.MyClass {
             bufferTable = new DataTable();
         }
 
+        // Выводит все ИД и Название автобусного парка
+        public DataTable GetIDAndNameBusFleet() {
+            connection.Open();
+            dataAdapter = new OleDbDataAdapter($"SELECT Индекс_автобусного_парка, Название_автобусного_парка FROM Автобусный_парк", connection);
+            bufferTable.Clear();
+            dataAdapter.Fill(bufferTable);
+            connection.Close();
+            return bufferTable;
+        }
+
+        public string GetNameBusFleetByID(int ID) {
+            connection.Open();
+            command = new OleDbCommand($"SELECT Название_автобусного_парка FROM Автобусный_парк WHERE Индекс_автобусного_парка = {ID}", connection);
+
+            OleDbDataReader reader = command.ExecuteReader();
+
+            if(reader.Read()) {
+                string name = reader.GetString(0);
+                //Console.WriteLine("Name: " + name);
+                connection.Close();
+                return name;
+            } else {
+                //Console.WriteLine($"Запись с ID = {ID} не найдена.");
+                connection.Close();
+                return null;
+            }
+        }
+
         // ID, название, адрес, ID руководителя
         public void Add(int ID_busfleet, string name, string address, int ID_director) {
             connection.Open();

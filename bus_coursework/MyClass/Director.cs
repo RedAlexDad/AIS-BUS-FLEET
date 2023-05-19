@@ -40,11 +40,6 @@ namespace bus_coursework.MyClass {
             }
         }
 
-        public void CreateNewTable(DataRow itemrow) {
-            bufferTableDirector.Clear();
-            bufferTableDirector.Rows.InsertAt(itemrow, 0);
-        }
-
         public DataTable GetFIODirector() {
             connection.Open();
             dataAdapter = new OleDbDataAdapter($"SELECT Индекс_руководителя, ФИО_руководителя FROM Руководитель", connection);

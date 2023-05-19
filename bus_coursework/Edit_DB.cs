@@ -165,12 +165,7 @@ namespace bus_coursework {
             //this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
 
-            // Отображение ФИО Директора при запуски
-            comboBox1.DisplayMember = "ФИО_руководителя";
-            comboBox1.ValueMember = "Индекс_руководителя";
-            comboBox1.DataSource = director.GetFIODirector();
-
-            индекс_руководителяTextBox.Text = director.GetFIODirectorByID(int.Parse(comboBox1.SelectedValue.ToString()));
+            LoadInfoInRunFormForComboBox();
         }
 
         // Возврат к меню
@@ -181,6 +176,47 @@ namespace bus_coursework {
             form2.Show();
         }
 
+        // Для формы ComboBox, чтобы отображался при запуска
+        private void LoadInfoInRunFormForComboBox() {
+            // Вкладка Автобусный парк
+                // Отображение ФИО Директора
+                comboBox1.DisplayMember = "ФИО_руководителя";
+                comboBox1.ValueMember = "Индекс_руководителя";
+                comboBox1.DataSource = director.GetFIODirector();
+                индекс_руководителяTextBox.Text = director.GetFIODirectorByID(int.Parse(comboBox1.SelectedValue.ToString()));
+
+            // Вкладка Рейс
+                // Отображение название автобусного парка
+                comboBox2.DisplayMember = "Название_автобусного_парка";
+                comboBox2.ValueMember = "Индекс_автобусного_парка";
+                comboBox2.DataSource = busfleet.GetIDAndNameBusFleet();
+                индекс_автобусного_паркаTextBox1.Text = busfleet.GetNameBusFleetByID(int.Parse(comboBox2.SelectedValue.ToString()));
+
+            // Вкладка Автобус
+                // Отображение название рейса
+                comboBox3.DisplayMember = "Номер_рейса";
+                comboBox3.ValueMember = "Индекс_рейса";
+                comboBox3.DataSource = busline.GetIDAndNumberBusLine();
+                индекс_рейсаTextBox1.Text = busfleet.GetNameBusFleetByID(int.Parse(comboBox3.SelectedValue.ToString()));
+
+                // Отображение название автобусного парка при запуска
+                comboBox4.DisplayMember = "Название_автобусного_парка";
+                comboBox4.ValueMember = "Индекс_автобусного_парка";
+                comboBox4.DataSource = comboBox2.DataSource;
+                индекс_автобусного_паркаTextBox2.Text = busfleet.GetNameBusFleetByID(int.Parse(comboBox4.SelectedValue.ToString()));
+                
+                // Отображение название ФИО водителя
+                comboBox5.DisplayMember = "ФИО_водителя";
+                comboBox5.ValueMember = "Индекс_водителя";
+                comboBox5.DataSource = driver.GetIDAndFIODriver();
+                индекс_водителяTextBox.Text = busfleet.GetNameBusFleetByID(int.Parse(comboBox5.SelectedValue.ToString()));
+
+                // Отображение название ФИО контролера
+                comboBox6.DisplayMember = "ФИО_контролера";
+                comboBox6.ValueMember = "Индекс_контролера";
+                comboBox6.DataSource = controller.GetIDAndFIOController();
+                индекс_контролераTextBox.Text = busfleet.GetNameBusFleetByID(int.Parse(comboBox6.SelectedValue.ToString()));
+        }
 
         // Обновление БД при нажатии назад и вперед во вкладке АВТОБУСНЫЙ ПАРК
         #region
@@ -188,7 +224,6 @@ namespace bus_coursework {
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) {
             //Console.WriteLine($"SELECTED TEXT: {comboBox1.SelectedText}");
             //Console.WriteLine($"Selected Value: {comboBox1.SelectedValue}");
-
             индекс_руководителяTextBox.Text = director.GetFIODirectorByID(int.Parse(comboBox1.SelectedValue.ToString()));
         }
 
@@ -266,11 +301,14 @@ namespace bus_coursework {
         // Обновление БД при нажатии назад и вперед во вкладке РЕЙС
         #region
 
+        // При переключении происходит изменение и обновлении переключателя название автобусного парка
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e) {
+            индекс_автобусного_паркаTextBox1.Text = busfleet.GetNameBusFleetByID(int.Parse(comboBox2.SelectedValue.ToString()));
+        }
         // Кнопка добавление
         private void bindingNavigatorAddNewItem1_Click(object sender, EventArgs e) {
             индекс_рейсаTextBox.Text = (id_class.RegularExpressionTextIntoValue(bindingNavigatorCountItem1.Text)).ToString();
         }
-
         // Кнопка удаление
         private void bindingNavigatorDeleteItem1_Click(object sender, EventArgs e) {
             passenger.Delete(id_class.id_busline);
@@ -278,8 +316,9 @@ namespace bus_coursework {
         // Кнопка сохранение
         private void toolStripButton1_Click(object sender, EventArgs e) {
             try {
-                busline.Add(int.Parse(индекс_рейсаTextBox.Text), номер_рейсаTextBox.Text, откудаTextBox.Text, кудаTextBox.Text, отправлениеDateTimePicker.Text, прибытиеDateTimePicker.Text, double.Parse(стоимость_проездаTextBox.Text), int.Parse(индекс_автобусного_паркаTextBox1.Text));
-                
+                int id_busline = int.Parse(comboBox2.SelectedValue.ToString());
+                busline.Add(int.Parse(индекс_рейсаTextBox.Text), номер_рейсаTextBox.Text, откудаTextBox.Text, кудаTextBox.Text, отправлениеDateTimePicker.Text, прибытиеDateTimePicker.Text, double.Parse(стоимость_проездаTextBox.Text), id_busline);
+                индекс_автобусного_паркаTextBox1.Text = busfleet.GetNameBusFleetByID(id_busline);
             } catch(Exception error) {
                 MessageBox.Show("Ошибка заполнения для сохранения!\nТип ошибки:\n\n" + error, "Ошибка!");
             }
@@ -287,54 +326,67 @@ namespace bus_coursework {
         // Кнопка обновление
         private void toolStripButton30_Click(object sender, EventArgs e) {
             try {
-                busline.Update(int.Parse(индекс_рейсаTextBox.Text), номер_рейсаTextBox.Text, откудаTextBox.Text, кудаTextBox.Text, отправлениеDateTimePicker.Text, прибытиеDateTimePicker.Text, double.Parse(стоимость_проездаTextBox.Text), int.Parse(индекс_автобусного_паркаTextBox1.Text));
+                int id_busline = int.Parse(comboBox2.SelectedValue.ToString());
+                busline.Update(int.Parse(индекс_рейсаTextBox.Text), номер_рейсаTextBox.Text, откудаTextBox.Text, кудаTextBox.Text, отправлениеDateTimePicker.Text, прибытиеDateTimePicker.Text, double.Parse(стоимость_проездаTextBox.Text), id_busline);
+                индекс_автобусного_паркаTextBox1.Text = busfleet.GetNameBusFleetByID(id_busline);
             } catch(Exception error) {
                 MessageBox.Show("Ошибка обновления!\nТип ошибки:\n\n" + error, "Ошибка!");
             }
         }
-    
 
         private void bindingNavigatorMoveLastItem1_Click(object sender, EventArgs e) {
             id_class.id_busline = int.Parse(индекс_рейсаTextBox.Text);
-
             автобусDataGridView.DataSource = bus.UpdateBusCheckByIDBusline(int.Parse(индекс_рейсаTextBox.Text));
-
+            индекс_автобусного_паркаTextBox1.Text = busfleet.GetNameBusFleetByID(int.Parse(индекс_автобусного_паркаTextBox1.Text));
             // Вызов функции для отображения БД автобуса
             DatdBaseBusGirdView();
         }
 
         private void bindingNavigatorMoveNextItem1_Click(object sender, EventArgs e) {
             id_class.id_busline = int.Parse(индекс_рейсаTextBox.Text);
-
             автобусDataGridView.DataSource = bus.UpdateBusCheckByIDBusline(int.Parse(индекс_рейсаTextBox.Text));
-            
+            индекс_автобусного_паркаTextBox1.Text = busfleet.GetNameBusFleetByID(int.Parse(индекс_автобусного_паркаTextBox1.Text));
             // Вызов функции для отображения БД автобуса
             DatdBaseBusGirdView();
         }
 
         private void bindingNavigatorMovePreviousItem1_Click(object sender, EventArgs e) {
             id_class.id_busline = int.Parse(индекс_рейсаTextBox.Text);
-
             автобусDataGridView.DataSource = bus.UpdateBusCheckByIDBusline(int.Parse(индекс_рейсаTextBox.Text));
-
+            индекс_автобусного_паркаTextBox1.Text = busfleet.GetNameBusFleetByID(int.Parse(индекс_автобусного_паркаTextBox1.Text));
             // Вызов функции для отображения БД автобуса
             DatdBaseBusGirdView();
         }
 
         private void bindingNavigatorMoveFirstItem1_Click(object sender, EventArgs e) {
             id_class.id_busline = int.Parse(индекс_рейсаTextBox.Text);
-
             автобусDataGridView.DataSource = bus.UpdateBusCheckByIDBusline(int.Parse(индекс_рейсаTextBox.Text));
-
+            индекс_автобусного_паркаTextBox1.Text = busfleet.GetNameBusFleetByID(int.Parse(индекс_автобусного_паркаTextBox1.Text));
             // Вызов функции для отображения БД автобуса
             DatdBaseBusGirdView();
         }
         #endregion
 
-
-        // Вкладка АВТОБУС
-        // Обновление БД при нажатии назад и вперед
+        // Обновление БД при нажатии назад и вперед во вкладке АВТОБУС
         #region
+
+        // Реагирования при переключении
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e) {
+            индекс_рейсаTextBox1.Text = busline.GetNumberBusLineByID(int.Parse(comboBox3.SelectedValue.ToString()));
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e) {
+            индекс_автобусного_паркаTextBox2.Text = busfleet.GetNameBusFleetByID(int.Parse(comboBox4.SelectedValue.ToString()));
+        }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e) {
+            индекс_водителяTextBox.Text = driver.GetFIODriverByID(int.Parse(comboBox5.SelectedValue.ToString()));
+        }
+
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e) {
+            индекс_контролераTextBox.Text = controller.GetFIOControllerByID(int.Parse(comboBox6.SelectedValue.ToString()));
+        }
+
         // Кнопка добавление
         private void bindingNavigatorAddNewItem2_Click(object sender, EventArgs e) {
             индекс_автобусаTextBox.Text = (id_class.RegularExpressionTextIntoValue(bindingNavigatorCountItem2.Text)).ToString();
@@ -346,7 +398,16 @@ namespace bus_coursework {
         // Кнопка сохранение
         private void toolStripButton2_Click(object sender, EventArgs e) {
             try {
-                bus.Add(int.Parse(индекс_автобусаTextBox.Text), марка_автобусаTextBox.Text, модель_автобусаTextBox.Text, год_выпуска_автобусаTextBox.Text, int.Parse(индекс_рейсаTextBox1.Text), int.Parse(индекс_автобусного_паркаTextBox2.Text), int.Parse(индекс_водителяTextBox.Text), int.Parse(индекс_контролераTextBox.Text), статус_автобусаTextBox.Text);
+                int id_busline = int.Parse(comboBox3.SelectedValue.ToString());
+                int id_busfleet = int.Parse(comboBox4.SelectedValue.ToString());
+                int id_driver = int.Parse(comboBox5.SelectedValue.ToString());
+                int id_controller = int.Parse(comboBox6.SelectedValue.ToString());
+
+                bus.Add(int.Parse(индекс_автобусаTextBox.Text), марка_автобусаTextBox.Text, модель_автобусаTextBox.Text, год_выпуска_автобусаTextBox.Text, id_busline, id_busfleet, id_driver, id_controller, статус_автобусаTextBox.Text);
+                индекс_рейсаTextBox1.Text = busline.GetNumberBusLineByID(id_busline);
+                индекс_автобусного_паркаTextBox2.Text = busfleet.GetNameBusFleetByID(id_busfleet);
+                индекс_водителяTextBox.Text = driver.GetFIODriverByID(id_driver);
+                индекс_контролераTextBox.Text = controller.GetFIOControllerByID(id_controller);
             } catch (Exception error) {
                 MessageBox.Show("Ошибка заполнения для сохранения!\nТип ошибки:\n\n" + error, "Ошибка!");
             }
@@ -354,7 +415,17 @@ namespace bus_coursework {
         // Кнопка обновление
         private void toolStripButton29_Click(object sender, EventArgs e) {
             try {
-            bus.Update(int.Parse(индекс_автобусаTextBox.Text), марка_автобусаTextBox.Text, модель_автобусаTextBox.Text, год_выпуска_автобусаTextBox.Text, int.Parse(индекс_рейсаTextBox1.Text), int.Parse(индекс_автобусного_паркаTextBox2.Text), int.Parse(индекс_водителяTextBox.Text), int.Parse(индекс_контролераTextBox.Text), статус_автобусаTextBox.Text);
+                int id_busline = int.Parse(comboBox3.SelectedValue.ToString());
+                int id_busfleet = int.Parse(comboBox4.SelectedValue.ToString());
+                int id_driver = int.Parse(comboBox5.SelectedValue.ToString());
+                int id_controller = int.Parse(comboBox6.SelectedValue.ToString());
+
+                bus.Update(int.Parse(индекс_автобусаTextBox.Text), марка_автобусаTextBox.Text, модель_автобусаTextBox.Text, год_выпуска_автобусаTextBox.Text, id_busline, id_busfleet, id_driver, id_controller, статус_автобусаTextBox.Text);
+                
+                индекс_рейсаTextBox1.Text = busline.GetNumberBusLineByID(id_busline);
+                индекс_автобусного_паркаTextBox2.Text = busfleet.GetNameBusFleetByID(id_busfleet);
+                индекс_водителяTextBox.Text = driver.GetFIODriverByID(id_driver);
+                индекс_контролераTextBox.Text = controller.GetFIOControllerByID(id_controller);
             } catch (Exception error) {
                 MessageBox.Show("Ошибка обновления!\nТип ошибки:\n\n" + error, "Ошибка!");
             }
@@ -363,6 +434,11 @@ namespace bus_coursework {
             id_class.id_bus = int.Parse(индекс_автобусаTextBox.Text);
 
             пассажирDataGridView.DataSource = passenger.UpdatePassageCheck(int.Parse(индекс_автобусаTextBox.Text));
+
+            индекс_рейсаTextBox1.Text = busline.GetNumberBusLineByID(int.Parse(индекс_рейсаTextBox1.Text));
+            индекс_автобусного_паркаTextBox2.Text = busfleet.GetNameBusFleetByID(int.Parse(индекс_автобусного_паркаTextBox2.Text));
+            индекс_водителяTextBox.Text = driver.GetFIODriverByID(int.Parse(индекс_водителяTextBox.Text));
+            индекс_контролераTextBox.Text = controller.GetFIOControllerByID(int.Parse(индекс_контролераTextBox.Text));
 
             // Вызов функции для отображения БД пассажира
             DataBasePassengerGirdView();
@@ -373,6 +449,11 @@ namespace bus_coursework {
 
             пассажирDataGridView.DataSource = passenger.UpdatePassageCheck(int.Parse(индекс_автобусаTextBox.Text));
 
+            индекс_рейсаTextBox1.Text = busline.GetNumberBusLineByID(int.Parse(индекс_рейсаTextBox1.Text));
+            индекс_автобусного_паркаTextBox2.Text = busfleet.GetNameBusFleetByID(int.Parse(индекс_автобусного_паркаTextBox2.Text));
+            индекс_водителяTextBox.Text = driver.GetFIODriverByID(int.Parse(индекс_водителяTextBox.Text));
+            индекс_контролераTextBox.Text = controller.GetFIOControllerByID(int.Parse(индекс_контролераTextBox.Text));
+
             // Вызов функции для отображения БД пассажира
             DataBasePassengerGirdView();
         }
@@ -382,6 +463,11 @@ namespace bus_coursework {
 
             пассажирDataGridView.DataSource = passenger.UpdatePassageCheck(int.Parse(индекс_автобусаTextBox.Text));
 
+            индекс_рейсаTextBox1.Text = busline.GetNumberBusLineByID(int.Parse(индекс_рейсаTextBox1.Text));
+            индекс_автобусного_паркаTextBox2.Text = busfleet.GetNameBusFleetByID(int.Parse(индекс_автобусного_паркаTextBox2.Text));
+            индекс_водителяTextBox.Text = driver.GetFIODriverByID(int.Parse(индекс_водителяTextBox.Text));
+            индекс_контролераTextBox.Text = controller.GetFIOControllerByID(int.Parse(индекс_контролераTextBox.Text));
+
             // Вызов функции для отображения БД пассажира
             DataBasePassengerGirdView();
         }
@@ -390,6 +476,11 @@ namespace bus_coursework {
             id_class.id_bus = int.Parse(индекс_автобусаTextBox.Text);
 
             пассажирDataGridView.DataSource = passenger.UpdatePassageCheck(int.Parse(индекс_автобусаTextBox.Text));
+
+            индекс_рейсаTextBox1.Text = busline.GetNumberBusLineByID(int.Parse(индекс_рейсаTextBox1.Text));
+            индекс_автобусного_паркаTextBox2.Text = busfleet.GetNameBusFleetByID(int.Parse(индекс_автобусного_паркаTextBox2.Text));
+            индекс_водителяTextBox.Text = driver.GetFIODriverByID(int.Parse(индекс_водителяTextBox.Text));
+            индекс_контролераTextBox.Text = controller.GetFIOControllerByID(int.Parse(индекс_контролераTextBox.Text));
 
             // Вызов функции для отображения БД пассажира
             DataBasePassengerGirdView();
@@ -673,6 +764,7 @@ namespace bus_coursework {
 
 
         #endregion
+
 
     }
 }
