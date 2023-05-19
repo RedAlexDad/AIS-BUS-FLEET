@@ -14,16 +14,40 @@ namespace bus_coursework.MyClass {
         OleDbConnection connection;
         OleDbCommand command;
         OleDbDataAdapter dataAdapter;
-        DataTable bufferTable;
+        DataTable bufferTable, bufferTableDirector;
 
         public Director(string Conn) {
             connection = new OleDbConnection(Conn);
             bufferTable = new DataTable();
+            bufferTableDirector = new DataTable();
         }
 
-        public DataTable get_fio_director_by_id(int ID) {
+        public string GetFIODirectorByID(int ID) {
             connection.Open();
-            dataAdapter = new OleDbDataAdapter($"SELECT Индекс_руководителя FROM Руководитель WHERE Индекс_руководителя = {ID}", connection);
+            command = new OleDbCommand($"SELECT ФИО_руководителя FROM Руководитель WHERE Индекс_руководителя = {ID}", connection);
+
+            OleDbDataReader reader = command.ExecuteReader();
+
+            if(reader.Read()) {
+                string name = reader.GetString(0);
+                //Console.WriteLine("Name: " + name);
+                connection.Close();
+                return name;
+            } else {
+                //Console.WriteLine($"Запись с ID = {ID} не найдена.");
+                connection.Close();
+                return null;
+            }
+        }
+
+        public void CreateNewTable(DataRow itemrow) {
+            bufferTableDirector.Clear();
+            bufferTableDirector.Rows.InsertAt(itemrow, 0);
+        }
+
+        public DataTable GetFIODirector() {
+            connection.Open();
+            dataAdapter = new OleDbDataAdapter($"SELECT Индекс_руководителя, ФИО_руководителя FROM Руководитель", connection);
             bufferTable.Clear();
             dataAdapter.Fill(bufferTable);
             connection.Close();

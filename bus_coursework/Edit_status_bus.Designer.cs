@@ -58,10 +58,10 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.автобусDataGridView = new System.Windows.Forms.DataGridView();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             индекс_контролераLabel = new System.Windows.Forms.Label();
             индекс_водителяLabel = new System.Windows.Forms.Label();
             индекс_автобусного_паркаLabel2 = new System.Windows.Forms.Label();
@@ -82,7 +82,7 @@
             // индекс_контролераLabel
             // 
             индекс_контролераLabel.AutoSize = true;
-            индекс_контролераLabel.Location = new System.Drawing.Point(520, 251);
+            индекс_контролераLabel.Location = new System.Drawing.Point(527, 250);
             индекс_контролераLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             индекс_контролераLabel.Name = "индекс_контролераLabel";
             индекс_контролераLabel.Size = new System.Drawing.Size(104, 16);
@@ -92,7 +92,7 @@
             // индекс_водителяLabel
             // 
             индекс_водителяLabel.AutoSize = true;
-            индекс_водителяLabel.Location = new System.Drawing.Point(536, 219);
+            индекс_водителяLabel.Location = new System.Drawing.Point(543, 218);
             индекс_водителяLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             индекс_водителяLabel.Name = "индекс_водителяLabel";
             индекс_водителяLabel.Size = new System.Drawing.Size(88, 16);
@@ -102,7 +102,7 @@
             // индекс_автобусного_паркаLabel2
             // 
             индекс_автобусного_паркаLabel2.AutoSize = true;
-            индекс_автобусного_паркаLabel2.Location = new System.Drawing.Point(471, 187);
+            индекс_автобусного_паркаLabel2.Location = new System.Drawing.Point(478, 186);
             индекс_автобусного_паркаLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             индекс_автобусного_паркаLabel2.Name = "индекс_автобусного_паркаLabel2";
             индекс_автобусного_паркаLabel2.Size = new System.Drawing.Size(152, 16);
@@ -112,7 +112,7 @@
             // индекс_рейсаLabel1
             // 
             индекс_рейсаLabel1.AutoSize = true;
-            индекс_рейсаLabel1.Location = new System.Drawing.Point(559, 155);
+            индекс_рейсаLabel1.Location = new System.Drawing.Point(566, 154);
             индекс_рейсаLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             индекс_рейсаLabel1.Name = "индекс_рейсаLabel1";
             индекс_рейсаLabel1.Size = new System.Drawing.Size(65, 16);
@@ -122,7 +122,7 @@
             // год_выпуска_автобусаLabel
             // 
             год_выпуска_автобусаLabel.AutoSize = true;
-            год_выпуска_автобусаLabel.Location = new System.Drawing.Point(532, 123);
+            год_выпуска_автобусаLabel.Location = new System.Drawing.Point(539, 122);
             год_выпуска_автобусаLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             год_выпуска_автобусаLabel.Name = "год_выпуска_автобусаLabel";
             год_выпуска_автобусаLabel.Size = new System.Drawing.Size(91, 16);
@@ -132,7 +132,7 @@
             // модель_автобусаLabel
             // 
             модель_автобусаLabel.AutoSize = true;
-            модель_автобусаLabel.Location = new System.Drawing.Point(94, 187);
+            модель_автобусаLabel.Location = new System.Drawing.Point(99, 186);
             модель_автобусаLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             модель_автобусаLabel.Name = "модель_автобусаLabel";
             модель_автобусаLabel.Size = new System.Drawing.Size(60, 16);
@@ -142,7 +142,7 @@
             // марка_автобусаLabel
             // 
             марка_автобусаLabel.AutoSize = true;
-            марка_автобусаLabel.Location = new System.Drawing.Point(102, 155);
+            марка_автобусаLabel.Location = new System.Drawing.Point(107, 154);
             марка_автобусаLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             марка_автобусаLabel.Name = "марка_автобусаLabel";
             марка_автобусаLabel.Size = new System.Drawing.Size(52, 16);
@@ -152,7 +152,7 @@
             // индекс_автобусаLabel
             // 
             индекс_автобусаLabel.AutoSize = true;
-            индекс_автобусаLabel.Location = new System.Drawing.Point(66, 123);
+            индекс_автобусаLabel.Location = new System.Drawing.Point(71, 122);
             индекс_автобусаLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             индекс_автобусаLabel.Name = "индекс_автобусаLabel";
             индекс_автобусаLabel.Size = new System.Drawing.Size(88, 16);
@@ -311,7 +311,7 @@
             this.автобусBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.автобусBindingNavigator.Name = "автобусBindingNavigator";
             this.автобусBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.автобусBindingNavigator.Size = new System.Drawing.Size(1832, 27);
+            this.автобусBindingNavigator.Size = new System.Drawing.Size(1832, 31);
             this.автобусBindingNavigator.TabIndex = 42;
             this.автобусBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -328,7 +328,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             this.bindingNavigatorMoveFirstItem.Click += new System.EventHandler(this.bindingNavigatorMoveFirstItem_Click);
             // 
@@ -388,6 +388,16 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(130, 24);
+            this.toolStripButton1.Text = "Назад к меню";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // автобусDataGridView
             // 
             this.автобусDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -423,16 +433,6 @@
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             this.radioButton2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.radioButton2_MouseClick);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(130, 24);
-            this.toolStripButton1.Text = "Назад к меню";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // Edit_status_bus
             // 

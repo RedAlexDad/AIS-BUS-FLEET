@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -161,15 +162,36 @@ namespace bus_coursework {
 
             // Развернуть на полный экран
             this.TopMost = true;
-            this.FormBorderStyle = FormBorderStyle.None;
+            //this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
 
+            // Отображение ФИО Директора при запуски
+            comboBox1.DisplayMember = "ФИО_руководителя";
+            comboBox1.ValueMember = "Индекс_руководителя";
+            comboBox1.DataSource = director.GetFIODirector();
 
+            индекс_руководителяTextBox.Text = director.GetFIODirectorByID(int.Parse(comboBox1.SelectedValue.ToString()));
+        }
+
+        // Возврат к меню
+        private void toolStripButton32_Click(object sender, EventArgs e) {
+            this.Hide();
+            var form2 = new Administrator();
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
         }
 
 
         // Обновление БД при нажатии назад и вперед во вкладке АВТОБУСНЫЙ ПАРК
         #region
+        // При переключении происходит изменение и обновлении переключателя ФИО директора
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) {
+            //Console.WriteLine($"SELECTED TEXT: {comboBox1.SelectedText}");
+            //Console.WriteLine($"Selected Value: {comboBox1.SelectedValue}");
+
+            индекс_руководителяTextBox.Text = director.GetFIODirectorByID(int.Parse(comboBox1.SelectedValue.ToString()));
+        }
+
         // Кнопка добавление
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e) {
             индекс_автобусного_паркаTextBox.Text = (id_class.RegularExpressionTextIntoValue(bindingNavigatorCountItem.Text)).ToString();
@@ -181,7 +203,9 @@ namespace bus_coursework {
         // Кнопка сохранение
         private void сохранитьToolStripButton_Click(object sender, EventArgs e) {
             try {
-                busfleet.Add(int.Parse(индекс_автобусного_паркаTextBox.Text), название_автобусного_паркаTextBox.Text, адрес_автобусного_паркаTextBox.Text, int.Parse(индекс_руководителяTextBox.Text));
+                int id_director = int.Parse(comboBox1.SelectedValue.ToString());
+                busfleet.Add(int.Parse(индекс_автобусного_паркаTextBox.Text), название_автобусного_паркаTextBox.Text, адрес_автобусного_паркаTextBox.Text, id_director);
+                индекс_руководителяTextBox.Text = director.GetFIODirectorByID(id_director);
             } catch(Exception error) {
                 MessageBox.Show("Ошибка заполнения для сохранения!\nТип ошибки:\n\n" + error, "Ошибка!");
             }
@@ -189,7 +213,9 @@ namespace bus_coursework {
         // Кнопка обновление
         private void toolStripButton31_Click(object sender, EventArgs e) {
             try {
-                busfleet.Update(int.Parse(индекс_автобусного_паркаTextBox.Text), название_автобусного_паркаTextBox.Text, адрес_автобусного_паркаTextBox.Text, int.Parse(индекс_руководителяTextBox.Text));
+                int id_director = int.Parse(comboBox1.SelectedValue.ToString());
+                busfleet.Update(int.Parse(индекс_автобусного_паркаTextBox.Text), название_автобусного_паркаTextBox.Text, адрес_автобусного_паркаTextBox.Text, id_director);
+                индекс_руководителяTextBox.Text = director.GetFIODirectorByID(id_director);
             } catch(Exception error) {
                 MessageBox.Show("Ошибка обновления!\nТип ошибки:\n\n" + error, "Ошибка!");
             }
@@ -200,6 +226,7 @@ namespace bus_coursework {
             id_class.id_busfleet = int.Parse(индекс_автобусного_паркаTextBox.Text);
 
             рейсDataGridView.DataSource = busline.UpdateLineBusCheck(int.Parse(индекс_автобусного_паркаTextBox.Text));
+            индекс_руководителяTextBox.Text = director.GetFIODirectorByID(int.Parse(индекс_руководителяTextBox.Text));
 
             // Вызов функции для отображения БД рейса
             DatdBaseBusLineGirdView();
@@ -209,6 +236,7 @@ namespace bus_coursework {
             id_class.id_busfleet = int.Parse(индекс_автобусного_паркаTextBox.Text);
 
             рейсDataGridView.DataSource = busline.UpdateLineBusCheck(int.Parse(индекс_автобусного_паркаTextBox.Text));
+            индекс_руководителяTextBox.Text = director.GetFIODirectorByID(int.Parse(индекс_руководителяTextBox.Text));
 
             // Вызов функции для отображения БД рейса
             DatdBaseBusLineGirdView();
@@ -218,6 +246,7 @@ namespace bus_coursework {
             id_class.id_busfleet = int.Parse(индекс_автобусного_паркаTextBox.Text);
 
             рейсDataGridView.DataSource = busline.UpdateLineBusCheck(int.Parse(индекс_автобусного_паркаTextBox.Text));
+            индекс_руководителяTextBox.Text = director.GetFIODirectorByID(int.Parse(индекс_руководителяTextBox.Text));
 
             // Вызов функции для отображения БД рейса
             DatdBaseBusLineGirdView();
@@ -227,19 +256,12 @@ namespace bus_coursework {
             id_class.id_busfleet = int.Parse(индекс_автобусного_паркаTextBox.Text);
 
             рейсDataGridView.DataSource = busline.UpdateLineBusCheck(int.Parse(индекс_автобусного_паркаTextBox.Text));
+            индекс_руководителяTextBox.Text = director.GetFIODirectorByID(int.Parse(индекс_руководителяTextBox.Text));
 
             // Вызов функции для отображения БД рейса
             DatdBaseBusLineGirdView();
         }
         #endregion
-
-        // Возврат к меню
-        private void toolStripButton32_Click(object sender, EventArgs e) {
-            this.Hide();
-            var form2 = new Administrator();
-            form2.Closed += (s, args) => this.Close();
-            form2.Show();
-        }
 
         // Обновление БД при нажатии назад и вперед во вкладке РЕЙС
         #region
@@ -257,6 +279,7 @@ namespace bus_coursework {
         private void toolStripButton1_Click(object sender, EventArgs e) {
             try {
                 busline.Add(int.Parse(индекс_рейсаTextBox.Text), номер_рейсаTextBox.Text, откудаTextBox.Text, кудаTextBox.Text, отправлениеDateTimePicker.Text, прибытиеDateTimePicker.Text, double.Parse(стоимость_проездаTextBox.Text), int.Parse(индекс_автобусного_паркаTextBox1.Text));
+                
             } catch(Exception error) {
                 MessageBox.Show("Ошибка заполнения для сохранения!\nТип ошибки:\n\n" + error, "Ошибка!");
             }
@@ -564,6 +587,27 @@ namespace bus_coursework {
 
         // Прочие (ПУСТЫЕ)
         #region
+        // При наведении мыши на это заполнение ФИО директора отреагируется
+        private void comboBox1_MouseEnter(object sender, EventArgs e) {
+            //Console.WriteLine("INTO MOUSE!!!");
+            //comboBox1.Visible = true;
+        }
+
+        // При наведении мыши вне это заполнение ФИО директора отреагируется
+        private void comboBox1_MouseLeave(object sender, EventArgs e) {
+            //Console.WriteLine("OUT MOUSE!!!");
+            //comboBox1.Visible = false;
+        }
+
+        // При наведении мыши на это заполнение ФИО директора отреагируется
+        private void индекс_руководителяTextBox_MouseEnter(object sender, EventArgs e) {
+            //индекс_руководителяTextBox.Visible = false;
+        }
+
+        // При наведении мыши вне это заполнение ФИО директора отреагируется
+        private void индекс_руководителяTextBox_MouseLeave(object sender, EventArgs e) {
+            //индекс_руководителяTextBox.Visible = true;
+        }
         private void индекс_руководителяTextBox_TextChanged(object sender, EventArgs e) {
 
         }
@@ -623,8 +667,12 @@ namespace bus_coursework {
         private void рейсDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e) {
 
         }
-        #endregion
 
+
+
+
+
+        #endregion
 
     }
 }

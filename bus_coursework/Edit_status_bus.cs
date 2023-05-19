@@ -98,11 +98,11 @@ namespace bus_coursework.MyClass {
             индекс_водителяTextBox.Text = row.Cells[6].Value.ToString();
             индекс_контролераTextBox.Text = row.Cells[7].Value.ToString();
 
-            if(row.Cells[8].Value.ToString() == "В автобусном парке") {
+            if(row.Cells[8].Value.ToString() == "В автобусном парке (Не курсирует)") {
                 radioButton1.Checked = true;
                 radioButton2.Checked = false;
             }
-            if(row.Cells[8].Value.ToString() == "В пути") {
+            if(row.Cells[8].Value.ToString() == "В пути (Курсирует)") {
                 radioButton1.Checked = false;
                 radioButton2.Checked = true;
             }
@@ -160,7 +160,7 @@ namespace bus_coursework.MyClass {
         private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e) {
             bindingNavigatorPositionItem.Enabled = false;
             indexGlobal = RegularExpressionTextIntoValue(bindingNavigatorCountItem.Text) - 1;
-
+            
             bindingNavigatorPositionItem.Text = indexGlobal.ToString();
             //Console.WriteLine($"Position max: {indexGlobal}");
 
@@ -224,6 +224,11 @@ namespace bus_coursework.MyClass {
             try {
                 автобусDataGridView.DataSource = bus.UpdateBusWithStatus();
                 DataBaseBusGirdView();
+
+                автобусDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                автобусDataGridView.Rows[indexRow].Selected = true;
+                автобусDataGridView.CurrentCell = автобусDataGridView[0, indexGlobal];
+
             } catch(Exception error) {
                 MessageBox.Show("Ошибка обновления БД автобуса!\nТип ошибки:\n\n" + error, "Ошибка!");
             }
@@ -237,11 +242,17 @@ namespace bus_coursework.MyClass {
             try {
                 автобусDataGridView.DataSource = bus.UpdateBusWithStatus();
                 DataBaseBusGirdView();
+
+                автобусDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                автобусDataGridView.Rows[indexRow].Selected = true;
+                автобусDataGridView.CurrentCell = автобусDataGridView[0, indexGlobal];
+
             } catch(Exception error) {
                 MessageBox.Show("Ошибка обновления БД автобуса!\nТип ошибки:\n\n" + error, "Ошибка!");
             }
         }
 
+        // Кнопка возврат в меню администратора
         private void toolStripButton1_Click(object sender, EventArgs e) {
             this.Hide();
             var form2 = new Administrator();

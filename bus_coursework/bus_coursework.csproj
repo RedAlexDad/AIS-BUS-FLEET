@@ -48,6 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\OneDrive\Рабочий стол\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -62,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DGVPrinter.cs" />
     <Compile Include="Reserv\Add_info_db.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +192,7 @@
     <None Include="bus_dataset.xss">
       <DependentUpon>bus_dataset.xsd</DependentUpon>
     </None>
+    <None Include="Properties\DataSources\bus_coursework.bus_datasetTableAdapters.АвтобусTableAdapter.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

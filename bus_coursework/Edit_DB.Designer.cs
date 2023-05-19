@@ -68,6 +68,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.индекс_руководителяTextBox = new System.Windows.Forms.TextBox();
             this.автобусный_паркBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bus_dataset = new bus_coursework.bus_dataset();
@@ -265,6 +266,7 @@
             this.контролерTableAdapter = new bus_coursework.bus_datasetTableAdapters.КонтролерTableAdapter();
             this.bindingNavigator8 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton32 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             индекс_автобусаLabel = new System.Windows.Forms.Label();
             марка_автобусаLabel = new System.Windows.Forms.Label();
             модель_автобусаLabel = new System.Windows.Forms.Label();
@@ -678,11 +680,11 @@
             // индекс_руководителяLabel
             // 
             индекс_руководителяLabel.AutoSize = true;
-            индекс_руководителяLabel.Location = new System.Drawing.Point(32, 247);
+            индекс_руководителяLabel.Location = new System.Drawing.Point(67, 247);
             индекс_руководителяLabel.Name = "индекс_руководителяLabel";
-            индекс_руководителяLabel.Size = new System.Drawing.Size(154, 16);
+            индекс_руководителяLabel.Size = new System.Drawing.Size(119, 16);
             индекс_руководителяLabel.TabIndex = 25;
-            индекс_руководителяLabel.Text = "Индекс руководителя:";
+            индекс_руководителяLabel.Text = "ID руководитель:";
             // 
             // contextMenuStrip1
             // 
@@ -709,8 +711,9 @@
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
-            this.tabPage1.Controls.Add(индекс_руководителяLabel);
             this.tabPage1.Controls.Add(this.индекс_руководителяTextBox);
+            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Controls.Add(индекс_руководителяLabel);
             this.tabPage1.Controls.Add(адрес_автобусного_паркаLabel);
             this.tabPage1.Controls.Add(this.адрес_автобусного_паркаTextBox);
             this.tabPage1.Controls.Add(название_автобусного_паркаLabel);
@@ -726,19 +729,33 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1801, 785);
+            this.tabPage1.Size = new System.Drawing.Size(1802, 786);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Автобусный парк";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(192, 244);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(433, 24);
+            this.comboBox1.TabIndex = 27;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.MouseEnter += new System.EventHandler(this.comboBox1_MouseEnter);
+            this.comboBox1.MouseLeave += new System.EventHandler(this.comboBox1_MouseLeave);
+            // 
             // индекс_руководителяTextBox
             // 
             this.индекс_руководителяTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусный_паркBindingSource, "Индекс_руководителя", true));
+            this.индекс_руководителяTextBox.Enabled = false;
             this.индекс_руководителяTextBox.Location = new System.Drawing.Point(192, 244);
             this.индекс_руководителяTextBox.Name = "индекс_руководителяTextBox";
-            this.индекс_руководителяTextBox.Size = new System.Drawing.Size(433, 22);
+            this.индекс_руководителяTextBox.Size = new System.Drawing.Size(412, 22);
             this.индекс_руководителяTextBox.TabIndex = 26;
+            this.индекс_руководителяTextBox.MouseEnter += new System.EventHandler(this.индекс_руководителяTextBox_MouseEnter);
+            this.индекс_руководителяTextBox.MouseLeave += new System.EventHandler(this.индекс_руководителяTextBox_MouseLeave);
             // 
             // автобусный_паркBindingSource
             // 
@@ -769,6 +786,7 @@
             // индекс_автобусного_паркаTextBox
             // 
             this.индекс_автобусного_паркаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусный_паркBindingSource, "Индекс_автобусного_парка", true));
+            this.индекс_автобусного_паркаTextBox.Enabled = false;
             this.индекс_автобусного_паркаTextBox.Location = new System.Drawing.Point(192, 157);
             this.индекс_автобусного_паркаTextBox.Name = "индекс_автобусного_паркаTextBox";
             this.индекс_автобусного_паркаTextBox.Size = new System.Drawing.Size(433, 22);
@@ -892,7 +910,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1795, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1796, 27);
             this.bindingNavigator1.TabIndex = 20;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -1363,7 +1381,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1801, 785);
+            this.tabPage3.Size = new System.Drawing.Size(1802, 786);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Автобус";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1558,7 +1576,7 @@
             this.bindingNavigator3.MovePreviousItem = this.bindingNavigatorMovePreviousItem2;
             this.bindingNavigator3.Name = "bindingNavigator3";
             this.bindingNavigator3.PositionItem = this.bindingNavigatorPositionItem2;
-            this.bindingNavigator3.Size = new System.Drawing.Size(1801, 27);
+            this.bindingNavigator3.Size = new System.Drawing.Size(1802, 27);
             this.bindingNavigator3.TabIndex = 0;
             this.bindingNavigator3.Text = "bindingNavigator3";
             // 
@@ -1689,7 +1707,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1801, 785);
+            this.tabPage4.Size = new System.Drawing.Size(1802, 786);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Руководитель";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1754,7 +1772,7 @@
             this.bindingNavigator4.MovePreviousItem = this.bindingNavigatorMovePreviousItem3;
             this.bindingNavigator4.Name = "bindingNavigator4";
             this.bindingNavigator4.PositionItem = this.bindingNavigatorPositionItem3;
-            this.bindingNavigator4.Size = new System.Drawing.Size(1801, 27);
+            this.bindingNavigator4.Size = new System.Drawing.Size(1802, 27);
             this.bindingNavigator4.TabIndex = 15;
             this.bindingNavigator4.Text = "bindingNavigator4";
             // 
@@ -1908,7 +1926,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1801, 785);
+            this.tabPage5.Size = new System.Drawing.Size(1802, 786);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Водитель";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1982,7 +2000,7 @@
             this.bindingNavigator5.MovePreviousItem = this.toolStripButton6;
             this.bindingNavigator5.Name = "bindingNavigator5";
             this.bindingNavigator5.PositionItem = this.toolStripTextBox1;
-            this.bindingNavigator5.Size = new System.Drawing.Size(1801, 27);
+            this.bindingNavigator5.Size = new System.Drawing.Size(1802, 27);
             this.bindingNavigator5.TabIndex = 18;
             this.bindingNavigator5.Text = "bindingNavigator5";
             // 
@@ -2134,7 +2152,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1801, 785);
+            this.tabPage6.Size = new System.Drawing.Size(1802, 786);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Контролер";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -2199,7 +2217,7 @@
             this.bindingNavigator6.MovePreviousItem = this.toolStripButton12;
             this.bindingNavigator6.Name = "bindingNavigator6";
             this.bindingNavigator6.PositionItem = this.toolStripTextBox2;
-            this.bindingNavigator6.Size = new System.Drawing.Size(1801, 27);
+            this.bindingNavigator6.Size = new System.Drawing.Size(1802, 27);
             this.bindingNavigator6.TabIndex = 18;
             this.bindingNavigator6.Text = "bindingNavigator6";
             // 
@@ -2354,7 +2372,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 25);
             this.tabPage7.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1801, 785);
+            this.tabPage7.Size = new System.Drawing.Size(1802, 786);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Пассажир";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -2435,7 +2453,7 @@
             this.bindingNavigator7.MovePreviousItem = this.toolStripButton18;
             this.bindingNavigator7.Name = "bindingNavigator7";
             this.bindingNavigator7.PositionItem = this.toolStripTextBox3;
-            this.bindingNavigator7.Size = new System.Drawing.Size(1801, 27);
+            this.bindingNavigator7.Size = new System.Drawing.Size(1802, 27);
             this.bindingNavigator7.TabIndex = 18;
             this.bindingNavigator7.Text = "bindingNavigator7";
             // 
@@ -2687,7 +2705,8 @@
             this.bindingNavigator8.DeleteItem = null;
             this.bindingNavigator8.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.bindingNavigator8.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton32});
+            this.toolStripButton32,
+            this.toolStripLabel4});
             this.bindingNavigator8.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator8.MoveFirstItem = null;
             this.bindingNavigator8.MoveLastItem = null;
@@ -2695,7 +2714,7 @@
             this.bindingNavigator8.MovePreviousItem = null;
             this.bindingNavigator8.Name = "bindingNavigator8";
             this.bindingNavigator8.PositionItem = null;
-            this.bindingNavigator8.Size = new System.Drawing.Size(1832, 31);
+            this.bindingNavigator8.Size = new System.Drawing.Size(1832, 27);
             this.bindingNavigator8.TabIndex = 2;
             this.bindingNavigator8.Text = "bindingNavigator8";
             // 
@@ -2708,6 +2727,12 @@
             this.toolStripButton32.Size = new System.Drawing.Size(130, 24);
             this.toolStripButton32.Text = "Назад к меню";
             this.toolStripButton32.Click += new System.EventHandler(this.toolStripButton32_Click);
+            // 
+            // toolStripLabel4
+            // 
+            this.toolStripLabel4.Name = "toolStripLabel4";
+            this.toolStripLabel4.Size = new System.Drawing.Size(218, 24);
+            this.toolStripLabel4.Text = "Редактирование базы данных";
             // 
             // Edit_DB
             // 
@@ -2985,5 +3010,7 @@
         private System.Windows.Forms.BindingNavigator bindingNavigator8;
         private System.Windows.Forms.ToolStripButton toolStripButton32;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel4;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -147,6 +147,9 @@
   <metadata name="автобусBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>154, 17</value>
   </metadata>
+  <metadata name="автобусBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>154, 17</value>
+  </metadata>
   <metadata name="bus_dataset.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -206,9 +209,9 @@
   <data name="toolStripButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAA8AAAAJCAYAAADtj3ZXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABkSURBVChTY6Aq+K+u7vBPTc0fyiUeADVl/ldT+/9PXd0d
-        KkQY/NPUVP2rpnYcpBFI/wPiY39VVE5hw/9VVc8A5e8ALapl+KeiYgHU9AGkkRQMNGAeZTYjA7L8jAzI
-        Dm3SAAMDAKWAa4X+5K/pAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABnSURBVChTY6Aq+K+u7vBPTc0fyiUeADVl/ldT+/9PXd0d
+        KkQY/NPUVP2jpnYcpPG3mto/IPvYHxWVU9jwf1XVM0A1d4AW1TL8U1GxAGr6ANJICv6rpjaPMpuRAVl+
+        RgZkhzZpgIEBAIvga23JIrLiAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

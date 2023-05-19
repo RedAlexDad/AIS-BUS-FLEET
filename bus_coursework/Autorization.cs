@@ -51,5 +51,8 @@ namespace bus_coursework {
             this.WindowState = FormWindowState.Maximized;
         }
 
+        private void textBox_TextChanged(object sender, EventArgs e) {
+            textBox.UseSystemPasswordChar = true;
+        }
     }
 }
