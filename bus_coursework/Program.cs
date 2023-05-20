@@ -19,9 +19,9 @@ namespace bus_coursework
             try {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                //Application.Run(new Autorization());
+                Application.Run(new Autorization());
 
-                Application.Run(new Edit_DB());
+                //Application.Run(new Edit_DB());
                 //Application.Run(new Report_admin());
                 //Application.Run(new Edit_status_bus());
                 //Application.Run(new Search_bus());

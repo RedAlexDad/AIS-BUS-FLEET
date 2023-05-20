@@ -163,7 +163,7 @@ namespace bus_coursework {
 
             // Развернуть на полный экран
             this.TopMost = true;
-            //this.FormBorderStyle = FormBorderStyle.None;
+            this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
 
             LoadInfoInRunFormForComboBox();
