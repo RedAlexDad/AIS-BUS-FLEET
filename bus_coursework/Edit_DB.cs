@@ -1,5 +1,6 @@
 ﻿using bus_coursework.MyClass;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -392,52 +393,75 @@ namespace bus_coursework {
                     $"ID driver: {id_driver}\n" +
                     $"ID controller: {id_controller}\n\n");
             }
+        }
+        // type DB = 0 - Добавить (Add), type DB = 1 - обновить (Update)
+        public void FucntionDB(bool type_DB) {
+            try {
+                // Получение ID со статического класса
+                int id_busline = bus_id_switch_for_combobox.id_busline;
+                int id_busfleet = bus_id_switch_for_combobox.id_busfleet;
+                int id_driver = bus_id_switch_for_combobox.id_driver;
+                int id_controller = bus_id_switch_for_combobox.id_controller;
 
+                if(type_DB)
+                    bus.Update(int.Parse(индекс_автобусаTextBox.Text), марка_автобусаTextBox.Text, модель_автобусаTextBox.Text, год_выпуска_автобусаTextBox.Text, id_busline, id_busfleet, id_driver, id_controller, статус_автобусаTextBox.Text);
+                else
+                    bus.Add(int.Parse(индекс_автобусаTextBox.Text), марка_автобусаTextBox.Text, модель_автобусаTextBox.Text, год_выпуска_автобусаTextBox.Text, id_busline, id_busfleet, id_driver, id_controller, статус_автобусаTextBox.Text);
 
+                индекс_рейсаTextBox1.Text = busline.GetNumberBusLineByID(id_busline);
+                индекс_автобусного_паркаTextBox2.Text = busfleet.GetNameBusFleetByID(id_busfleet);
+                индекс_водителяTextBox.Text = driver.GetFIODriverByID(id_driver);
+                индекс_контролераTextBox.Text = controller.GetFIOControllerByID(id_controller);
+                MessageBox.Show("Перезайдите, чтобы БД обновилась", "Успешно!");
+                } catch (Exception error) {
+                MessageBox.Show("Ошибка заполнения для сохранения!\nТип ошибки:\n\n" + error, "Ошибка!");
+            }
+        }
+        
+        public void Navigation() {
+            try {
+                try {
+                    bus_id_switch_for_combobox.switch_id(int.Parse(индекс_автобусаTextBox.Text), int.Parse(индекс_рейсаTextBox1.Text), int.Parse(индекс_автобусного_паркаTextBox2.Text), int.Parse(индекс_водителяTextBox.Text), int.Parse(индекс_контролераTextBox.Text));
+                } catch(Exception error) { MessageBox.Show("Ошибка присваивания значения! Обновите БД - перезайдите.\nТип ошибки:\n\n" + error, "Ошибка!"); }
+
+                пассажирDataGridView.DataSource = passenger.UpdatePassageCheck(int.Parse(индекс_автобусаTextBox.Text));
+
+                индекс_рейсаTextBox1.Text = busline.GetNumberBusLineByID(int.Parse(индекс_рейсаTextBox1.Text));
+                индекс_автобусного_паркаTextBox2.Text = busfleet.GetNameBusFleetByID(int.Parse(индекс_автобусного_паркаTextBox2.Text));
+                индекс_водителяTextBox.Text = driver.GetFIODriverByID(int.Parse(индекс_водителяTextBox.Text));
+                индекс_контролераTextBox.Text = controller.GetFIOControllerByID(int.Parse(индекс_контролераTextBox.Text));
+
+                // Вызов функции для отображения БД пассажира
+                DataBasePassengerGirdView();
+            } catch(Exception error) { MessageBox.Show("Ошибка переключения!\nТип ошибки:\n\n" + error, "Ошибка!"); }
         }
 
         // Реагирования при переключении
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e) {
-            //Console.WriteLine($"DEFAULT comboBox3: {comboBox3.SelectedValue}");
             if(comboBox3.SelectedValue != null) {
                 индекс_рейсаTextBox1.Text = busline.GetNumberBusLineByID(int.Parse(comboBox3.SelectedValue.ToString()));
                 bus_id_switch_for_combobox.id_busline = int.Parse(comboBox3.SelectedValue.ToString());
-                //Console.WriteLine($"EDIT: {bus_id_switch_for_combobox.id_busline}");
-            } else {
-                //Console.WriteLine($"ELSE: {comboBox3.SelectedValue}");
             }
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e) {
-            //Console.WriteLine($"DEFAULT comboBox4: {comboBox4.SelectedValue}");
             if(comboBox4.SelectedValue != null) { 
                 индекс_автобусного_паркаTextBox2.Text = busfleet.GetNameBusFleetByID(int.Parse(comboBox4.SelectedValue.ToString()));
                 bus_id_switch_for_combobox.id_busfleet = int.Parse(comboBox4.SelectedValue.ToString());
-                //Console.WriteLine($"EDIT: {bus_id_switch_for_combobox.id_busfleet}");
-            } else {
-                //Console.WriteLine($"ELSE: {comboBox4.SelectedValue}");
-            }
+            } 
         }
 
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e) {
-            //Console.WriteLine($"DEFAULT comboBox5: {comboBox5.SelectedValue}");
             if(comboBox5.SelectedValue != null) { 
                 индекс_водителяTextBox.Text = driver.GetFIODriverByID(int.Parse(comboBox5.SelectedValue.ToString()));
                 bus_id_switch_for_combobox.id_driver = int.Parse(comboBox5.SelectedValue.ToString());
-                //Console.WriteLine($"EDIT: {bus_id_switch_for_combobox.id_driver}");
-            } else {
-                //Console.WriteLine($"ELSE: {comboBox5.SelectedValue}");
-            }
+            } 
         }
 
         private void comboBox6_SelectedIndexChanged(object sender, EventArgs e) {
-            //Console.WriteLine($"DEFAULT comboBox6: {comboBox6.SelectedValue}");
             if(comboBox6.SelectedValue != null) { 
                 индекс_контролераTextBox.Text = controller.GetFIOControllerByID(int.Parse(comboBox6.SelectedValue.ToString()));
                 bus_id_switch_for_combobox.id_controller = int.Parse(comboBox6.SelectedValue.ToString());
-                //Console.WriteLine($"EDIT: {bus_id_switch_for_combobox.id_controller}");
-            } else {
-                //Console.WriteLine($"ELSE: {comboBox6.SelectedValue}");
             }
         }
 
@@ -451,126 +475,27 @@ namespace bus_coursework {
         }
         // Кнопка сохранение
         private void toolStripButton2_Click(object sender, EventArgs e) {
-            try {
-                // Получение ID со статического класса
-                int id_busline = bus_id_switch_for_combobox.id_busline;
-                int id_busfleet = bus_id_switch_for_combobox.id_busfleet;
-                int id_driver = bus_id_switch_for_combobox.id_driver;
-                int id_controller = bus_id_switch_for_combobox.id_controller;
-
-                bus.Add(int.Parse(индекс_автобусаTextBox.Text), марка_автобусаTextBox.Text, модель_автобусаTextBox.Text, год_выпуска_автобусаTextBox.Text, id_busline, id_busfleet, id_driver, id_controller, статус_автобусаTextBox.Text);
-                индекс_рейсаTextBox1.Text = busline.GetNumberBusLineByID(id_busline);
-                индекс_автобусного_паркаTextBox2.Text = busfleet.GetNameBusFleetByID(id_busfleet);
-                индекс_водителяTextBox.Text = driver.GetFIODriverByID(id_driver);
-                индекс_контролераTextBox.Text = controller.GetFIOControllerByID(id_controller);
-
-                MessageBox.Show("Перезайдите, чтобы БД обновилась", "Успешно!");
-            } catch (Exception error) {
-                MessageBox.Show("Ошибка заполнения для сохранения!\nТип ошибки:\n\n" + error, "Ошибка!");
-            }
+            FucntionDB(false);
         }
         // Кнопка обновление
         private void toolStripButton29_Click(object sender, EventArgs e) {
-            try {
-                // Получение ID со статического класса
-                int id_busline = bus_id_switch_for_combobox.id_busline;
-                int id_busfleet = bus_id_switch_for_combobox.id_busfleet;
-                int id_driver = bus_id_switch_for_combobox.id_driver;
-                int id_controller = bus_id_switch_for_combobox.id_controller;
-
-                //Console.WriteLine($"First\nID Busline: {id_busline}\n" +
-                //    $"ID busfleet: {id_busfleet}\n" +
-                //    $"ID driver: {id_driver}\n" +
-                //    $"ID controller: {id_controller}");
-
-                bus.Update(int.Parse(индекс_автобусаTextBox.Text), марка_автобусаTextBox.Text, модель_автобусаTextBox.Text, год_выпуска_автобусаTextBox.Text, id_busline, id_busfleet, id_driver, id_controller, статус_автобусаTextBox.Text);
-                
-                индекс_рейсаTextBox1.Text = busline.GetNumberBusLineByID(id_busline);
-                индекс_автобусного_паркаTextBox2.Text = busfleet.GetNameBusFleetByID(id_busfleet);
-                индекс_водителяTextBox.Text = driver.GetFIODriverByID(id_driver);
-                индекс_контролераTextBox.Text = controller.GetFIOControllerByID(id_controller);
-
-                //Console.WriteLine($"Second\n" +
-                //    $"ID Busline: {индекс_рейсаTextBox1.Text}\n" +
-                //    $"ID busfleet: {индекс_автобусного_паркаTextBox2.Text}\n" +
-                //    $"ID driver: {индекс_водителяTextBox.Text}\n" +
-                //    $"ID controller: {индекс_контролераTextBox.Text}");
-
-            } catch (Exception error) {
-                MessageBox.Show("Ошибка обновления!\nТип ошибки:\n\n" + error, "Ошибка!");
-            }
+            FucntionDB(true);
         }
         // Навигационное меню
         private void bindingNavigatorMoveFirstItem2_Click(object sender, EventArgs e) {
-            try {
-                try {
-                    bus_id_switch_for_combobox.switch_id(int.Parse(индекс_автобусаTextBox.Text), int.Parse(индекс_рейсаTextBox1.Text), int.Parse(индекс_автобусного_паркаTextBox2.Text), int.Parse(индекс_водителяTextBox.Text), int.Parse(индекс_контролераTextBox.Text));
-                } catch(Exception error) { MessageBox.Show("Ошибка присваивания значения! Обновите БД - перезайдите.\nТип ошибки:\n\n" + error, "Ошибка!"); }
-                
-                пассажирDataGridView.DataSource = passenger.UpdatePassageCheck(int.Parse(индекс_автобусаTextBox.Text));
-
-                индекс_рейсаTextBox1.Text = busline.GetNumberBusLineByID(int.Parse(индекс_рейсаTextBox1.Text));
-                индекс_автобусного_паркаTextBox2.Text = busfleet.GetNameBusFleetByID(int.Parse(индекс_автобусного_паркаTextBox2.Text));
-                индекс_водителяTextBox.Text = driver.GetFIODriverByID(int.Parse(индекс_водителяTextBox.Text));
-                индекс_контролераTextBox.Text = controller.GetFIOControllerByID(int.Parse(индекс_контролераTextBox.Text));
-
-                // Вызов функции для отображения БД пассажира
-                DataBasePassengerGirdView();
-            } catch(Exception error) { MessageBox.Show("Ошибка переключения!\nТип ошибки:\n\n" + error, "Ошибка!"); }
+            Navigation();
         }
 
         private void bindingNavigatorMovePreviousItem2_Click(object sender, EventArgs e) {
-            try {
-                try {
-                bus_id_switch_for_combobox.switch_id(int.Parse(индекс_автобусаTextBox.Text), int.Parse(индекс_рейсаTextBox1.Text), int.Parse(индекс_автобусного_паркаTextBox2.Text), int.Parse(индекс_водителяTextBox.Text), int.Parse(индекс_контролераTextBox.Text));
-            } catch(Exception error) { MessageBox.Show("Ошибка присваивания значения! Обновите БД - перезайдите.\nТип ошибки:\n\n" + error, "Ошибка!"); }
-
-            пассажирDataGridView.DataSource = passenger.UpdatePassageCheck(int.Parse(индекс_автобусаTextBox.Text));
-
-            индекс_рейсаTextBox1.Text = busline.GetNumberBusLineByID(int.Parse(индекс_рейсаTextBox1.Text));
-            индекс_автобусного_паркаTextBox2.Text = busfleet.GetNameBusFleetByID(int.Parse(индекс_автобусного_паркаTextBox2.Text));
-            индекс_водителяTextBox.Text = driver.GetFIODriverByID(int.Parse(индекс_водителяTextBox.Text));
-            индекс_контролераTextBox.Text = controller.GetFIOControllerByID(int.Parse(индекс_контролераTextBox.Text));
-
-            // Вызов функции для отображения БД пассажира
-            DataBasePassengerGirdView();
-            } catch(Exception error) { MessageBox.Show("Ошибка переключения!\nТип ошибки:\n\n" + error, "Ошибка!"); }
+            Navigation();
         }
 
         private void bindingNavigatorMoveNextItem2_Click(object sender, EventArgs e) {
-        try {
-            try {
-                bus_id_switch_for_combobox.switch_id(int.Parse(индекс_автобусаTextBox.Text), int.Parse(индекс_рейсаTextBox1.Text), int.Parse(индекс_автобусного_паркаTextBox2.Text), int.Parse(индекс_водителяTextBox.Text), int.Parse(индекс_контролераTextBox.Text));
-            } catch(Exception error) { MessageBox.Show("Ошибка присваивания значения! Обновите БД - перезайдите.\nТип ошибки:\n\n" + error, "Ошибка!"); }
-
-            пассажирDataGridView.DataSource = passenger.UpdatePassageCheck(int.Parse(индекс_автобусаTextBox.Text));
-
-            индекс_рейсаTextBox1.Text = busline.GetNumberBusLineByID(int.Parse(индекс_рейсаTextBox1.Text));
-            индекс_автобусного_паркаTextBox2.Text = busfleet.GetNameBusFleetByID(int.Parse(индекс_автобусного_паркаTextBox2.Text));
-            индекс_водителяTextBox.Text = driver.GetFIODriverByID(int.Parse(индекс_водителяTextBox.Text));
-            индекс_контролераTextBox.Text = controller.GetFIOControllerByID(int.Parse(индекс_контролераTextBox.Text));
-
-            // Вызов функции для отображения БД пассажира
-            DataBasePassengerGirdView();
-            } catch(Exception error) { MessageBox.Show("Ошибка переключения!\nТип ошибки:\n\n" + error, "Ошибка!"); }
+            Navigation();
         }
 
         private void bindingNavigatorMoveLastItem2_Click(object sender, EventArgs e) {
-        try { 
-            try {
-                bus_id_switch_for_combobox.switch_id(int.Parse(индекс_автобусаTextBox.Text), int.Parse(индекс_рейсаTextBox1.Text), int.Parse(индекс_автобусного_паркаTextBox2.Text), int.Parse(индекс_водителяTextBox.Text), int.Parse(индекс_контролераTextBox.Text));
-            } catch(Exception error) { MessageBox.Show("Ошибка присваивания значения! Обновите БД - перезайдите.\nТип ошибки:\n\n" + error, "Ошибка!"); }
-
-            пассажирDataGridView.DataSource = passenger.UpdatePassageCheck(int.Parse(индекс_автобусаTextBox.Text));
-
-            индекс_рейсаTextBox1.Text = busline.GetNumberBusLineByID(int.Parse(индекс_рейсаTextBox1.Text));
-            индекс_автобусного_паркаTextBox2.Text = busfleet.GetNameBusFleetByID(int.Parse(индекс_автобусного_паркаTextBox2.Text));
-            индекс_водителяTextBox.Text = driver.GetFIODriverByID(int.Parse(индекс_водителяTextBox.Text));
-            индекс_контролераTextBox.Text = controller.GetFIOControllerByID(int.Parse(индекс_контролераTextBox.Text));
-
-            // Вызов функции для отображения БД пассажира
-            DataBasePassengerGirdView();
-            } catch(Exception error) { MessageBox.Show("Ошибка переключения!\nТип ошибки:\n\n" + error, "Ошибка!"); }
+            Navigation();
         }
         #endregion
 
