@@ -1558,6 +1558,7 @@
             // индекс_автобусаTextBox
             // 
             this.индекс_автобусаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусBindingSource, "Индекс_автобуса", true));
+            this.индекс_автобусаTextBox.Enabled = false;
             this.индекс_автобусаTextBox.Location = new System.Drawing.Point(191, 123);
             this.индекс_автобусаTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.индекс_автобусаTextBox.Name = "индекс_автобусаTextBox";
@@ -2730,7 +2731,7 @@
             this.bindingNavigator8.MovePreviousItem = null;
             this.bindingNavigator8.Name = "bindingNavigator8";
             this.bindingNavigator8.PositionItem = null;
-            this.bindingNavigator8.Size = new System.Drawing.Size(1832, 27);
+            this.bindingNavigator8.Size = new System.Drawing.Size(1832, 31);
             this.bindingNavigator8.TabIndex = 2;
             this.bindingNavigator8.Text = "bindingNavigator8";
             // 
