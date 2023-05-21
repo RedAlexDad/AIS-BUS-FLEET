@@ -68,10 +68,10 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.индекс_руководителяTextBox = new System.Windows.Forms.TextBox();
             this.автобусный_паркBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bus_dataset = new bus_coursework.bus_dataset();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.адрес_автобусного_паркаTextBox = new System.Windows.Forms.TextBox();
             this.название_автобусного_паркаTextBox = new System.Windows.Forms.TextBox();
             this.индекс_автобусного_паркаTextBox = new System.Windows.Forms.TextBox();
@@ -129,6 +129,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -162,6 +163,10 @@
             this.bindingNavigatorSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton29 = new System.Windows.Forms.ToolStripButton();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.номер_телефона_руководителяTextBox = new System.Windows.Forms.TextBox();
             this.руководительBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -267,11 +272,7 @@
             this.bindingNavigator8 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton32 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
             индекс_автобусаLabel = new System.Windows.Forms.Label();
             марка_автобусаLabel = new System.Windows.Forms.Label();
             модель_автобусаLabel = new System.Windows.Forms.Label();
@@ -544,7 +545,7 @@
             // индекс_пассажираLabel
             // 
             индекс_пассажираLabel.AutoSize = true;
-            индекс_пассажираLabel.Location = new System.Drawing.Point(100, 129);
+            индекс_пассажираLabel.Location = new System.Drawing.Point(99, 129);
             индекс_пассажираLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             индекс_пассажираLabel.Name = "индекс_пассажираLabel";
             индекс_пассажираLabel.Size = new System.Drawing.Size(132, 16);
@@ -554,17 +555,17 @@
             // индекс_автобусаLabel1
             // 
             индекс_автобусаLabel1.AutoSize = true;
-            индекс_автобусаLabel1.Location = new System.Drawing.Point(113, 161);
+            индекс_автобусаLabel1.Location = new System.Drawing.Point(90, 161);
             индекс_автобусаLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             индекс_автобусаLabel1.Name = "индекс_автобусаLabel1";
-            индекс_автобусаLabel1.Size = new System.Drawing.Size(123, 16);
+            индекс_автобусаLabel1.Size = new System.Drawing.Size(141, 16);
             индекс_автобусаLabel1.TabIndex = 19;
-            индекс_автобусаLabel1.Text = "Индекс автобуса:";
+            индекс_автобусаLabel1.Text = "Название автобуса:";
             // 
             // фИО_пассажираLabel
             // 
             фИО_пассажираLabel.AutoSize = true;
-            фИО_пассажираLabel.Location = new System.Drawing.Point(115, 193);
+            фИО_пассажираLabel.Location = new System.Drawing.Point(116, 193);
             фИО_пассажираLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             фИО_пассажираLabel.Name = "фИО_пассажираLabel";
             фИО_пассажираLabel.Size = new System.Drawing.Size(115, 16);
@@ -574,7 +575,7 @@
             // категория_пассажираLabel
             // 
             категория_пассажираLabel.AutoSize = true;
-            категория_пассажираLabel.Location = new System.Drawing.Point(80, 225);
+            категория_пассажираLabel.Location = new System.Drawing.Point(79, 225);
             категория_пассажираLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             категория_пассажираLabel.Name = "категория_пассажираLabel";
             категория_пассажираLabel.Size = new System.Drawing.Size(152, 16);
@@ -740,17 +741,6 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(192, 244);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(433, 24);
-            this.comboBox1.TabIndex = 27;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            this.comboBox1.MouseEnter += new System.EventHandler(this.comboBox1_MouseEnter);
-            this.comboBox1.MouseLeave += new System.EventHandler(this.comboBox1_MouseLeave);
-            // 
             // индекс_руководителяTextBox
             // 
             this.индекс_руководителяTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусный_паркBindingSource, "Индекс_руководителя", true));
@@ -771,6 +761,17 @@
             // 
             this.bus_dataset.DataSetName = "bus_dataset";
             this.bus_dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(192, 244);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(433, 24);
+            this.comboBox1.TabIndex = 27;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.MouseEnter += new System.EventHandler(this.comboBox1_MouseEnter);
+            this.comboBox1.MouseLeave += new System.EventHandler(this.comboBox1_MouseLeave);
             // 
             // адрес_автобусного_паркаTextBox
             // 
@@ -1361,6 +1362,15 @@
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(192, 340);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(433, 24);
+            this.comboBox2.TabIndex = 30;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
             // tabPage3
             // 
             this.tabPage3.AutoScroll = true;
@@ -1709,6 +1719,42 @@
             this.toolStripButton29.Text = "toolStripButton27";
             this.toolStripButton29.Click += new System.EventHandler(this.toolStripButton29_Click);
             // 
+            // comboBox6
+            // 
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(191, 333);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(355, 24);
+            this.comboBox6.TabIndex = 27;
+            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(191, 303);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(355, 24);
+            this.comboBox5.TabIndex = 26;
+            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(191, 273);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(355, 24);
+            this.comboBox4.TabIndex = 25;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(191, 241);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(355, 24);
+            this.comboBox3.TabIndex = 24;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            // 
             // tabPage4
             // 
             this.tabPage4.AutoScroll = true;
@@ -1755,6 +1801,7 @@
             // индекс_руководителяTextBox1
             // 
             this.индекс_руководителяTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.руководительBindingSource, "Индекс_руководителя", true));
+            this.индекс_руководителяTextBox1.Enabled = false;
             this.индекс_руководителяTextBox1.Location = new System.Drawing.Point(251, 126);
             this.индекс_руководителяTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.индекс_руководителяTextBox1.Name = "индекс_руководителяTextBox1";
@@ -1983,6 +2030,7 @@
             // индекс_водителяTextBox1
             // 
             this.индекс_водителяTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.водительBindingSource, "Индекс_водителя", true));
+            this.индекс_водителяTextBox1.Enabled = false;
             this.индекс_водителяTextBox1.Location = new System.Drawing.Point(251, 126);
             this.индекс_водителяTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.индекс_водителяTextBox1.Name = "индекс_водителяTextBox1";
@@ -2200,6 +2248,7 @@
             // индекс_контролераTextBox1
             // 
             this.индекс_контролераTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.контролерBindingSource, "Индекс_контролера", true));
+            this.индекс_контролераTextBox1.Enabled = false;
             this.индекс_контролераTextBox1.Location = new System.Drawing.Point(251, 126);
             this.индекс_контролераTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.индекс_контролераTextBox1.Name = "индекс_контролераTextBox1";
@@ -2374,13 +2423,14 @@
             // tabPage7
             // 
             this.tabPage7.AutoScroll = true;
+            this.tabPage7.Controls.Add(this.индекс_автобусаTextBox1);
+            this.tabPage7.Controls.Add(this.comboBox7);
             this.tabPage7.Controls.Add(this.label10);
             this.tabPage7.Controls.Add(категория_пассажираLabel);
             this.tabPage7.Controls.Add(this.категория_пассажираTextBox);
             this.tabPage7.Controls.Add(фИО_пассажираLabel);
             this.tabPage7.Controls.Add(this.ФИО_пассажираTextBox);
             this.tabPage7.Controls.Add(индекс_автобусаLabel1);
-            this.tabPage7.Controls.Add(this.индекс_автобусаTextBox1);
             this.tabPage7.Controls.Add(индекс_пассажираLabel);
             this.tabPage7.Controls.Add(this.индекс_пассажираTextBox);
             this.tabPage7.Controls.Add(this.bindingNavigator7);
@@ -2427,15 +2477,17 @@
             // индекс_автобусаTextBox1
             // 
             this.индекс_автобусаTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пассажирBindingSource, "Индекс_автобуса", true));
+            this.индекс_автобусаTextBox1.Enabled = false;
             this.индекс_автобусаTextBox1.Location = new System.Drawing.Point(251, 158);
             this.индекс_автобусаTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.индекс_автобусаTextBox1.Name = "индекс_автобусаTextBox1";
-            this.индекс_автобусаTextBox1.Size = new System.Drawing.Size(465, 22);
+            this.индекс_автобусаTextBox1.Size = new System.Drawing.Size(439, 22);
             this.индекс_автобусаTextBox1.TabIndex = 20;
             // 
             // индекс_пассажираTextBox
             // 
             this.индекс_пассажираTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пассажирBindingSource, "Индекс_пассажира", true));
+            this.индекс_пассажираTextBox.Enabled = false;
             this.индекс_пассажираTextBox.Location = new System.Drawing.Point(251, 126);
             this.индекс_пассажираTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.индекс_пассажираTextBox.Name = "индекс_пассажираTextBox";
@@ -2751,50 +2803,14 @@
             this.toolStripLabel4.Size = new System.Drawing.Size(218, 24);
             this.toolStripLabel4.Text = "Редактирование базы данных";
             // 
-            // comboBox2
+            // comboBox7
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(192, 340);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(433, 24);
-            this.comboBox2.TabIndex = 30;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(191, 241);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(355, 24);
-            this.comboBox3.TabIndex = 24;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(191, 273);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(355, 24);
-            this.comboBox4.TabIndex = 25;
-            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(191, 303);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(355, 24);
-            this.comboBox5.TabIndex = 26;
-            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(191, 333);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(355, 24);
-            this.comboBox6.TabIndex = 27;
-            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Location = new System.Drawing.Point(251, 158);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(465, 24);
+            this.comboBox7.TabIndex = 24;
+            this.comboBox7.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged);
             // 
             // Edit_DB
             // 
@@ -3079,5 +3095,6 @@
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox7;
     }
 }

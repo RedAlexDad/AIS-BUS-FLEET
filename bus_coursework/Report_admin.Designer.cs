@@ -162,6 +162,7 @@
             this.руководительTableAdapter = new bus_coursework.bus_datasetTableAdapters.РуководительTableAdapter();
             this.bindingNavigator9 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton32 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel8 = new System.Windows.Forms.ToolStripLabel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -1239,7 +1240,7 @@
             this.bindingNavigator8.MovePreviousItem = this.toolStripButton40;
             this.bindingNavigator8.Name = "bindingNavigator8";
             this.bindingNavigator8.PositionItem = this.toolStripTextBox7;
-            this.bindingNavigator8.Size = new System.Drawing.Size(1796, 31);
+            this.bindingNavigator8.Size = new System.Drawing.Size(1796, 27);
             this.bindingNavigator8.TabIndex = 2;
             this.bindingNavigator8.Text = "bindingNavigator8";
             // 
@@ -1479,7 +1480,8 @@
             this.bindingNavigator9.DeleteItem = null;
             this.bindingNavigator9.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.bindingNavigator9.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton32});
+            this.toolStripButton32,
+            this.toolStripLabel8});
             this.bindingNavigator9.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator9.MoveFirstItem = null;
             this.bindingNavigator9.MoveLastItem = null;
@@ -1487,7 +1489,7 @@
             this.bindingNavigator9.MovePreviousItem = null;
             this.bindingNavigator9.Name = "bindingNavigator9";
             this.bindingNavigator9.PositionItem = null;
-            this.bindingNavigator9.Size = new System.Drawing.Size(1832, 27);
+            this.bindingNavigator9.Size = new System.Drawing.Size(1832, 31);
             this.bindingNavigator9.TabIndex = 1;
             this.bindingNavigator9.Text = "bindingNavigator9";
             // 
@@ -1501,6 +1503,12 @@
             this.toolStripButton32.Text = "Назад к меню";
             this.toolStripButton32.Click += new System.EventHandler(this.toolStripButton32_Click);
             // 
+            // toolStripLabel8
+            // 
+            this.toolStripLabel8.Name = "toolStripLabel8";
+            this.toolStripLabel8.Size = new System.Drawing.Size(198, 28);
+            this.toolStripLabel8.Text = "Отчет для Администратора";
+            // 
             // Report_admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1508,6 +1516,7 @@
             this.ClientSize = new System.Drawing.Size(1832, 853);
             this.Controls.Add(this.bindingNavigator9);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Report_admin";
             this.Text = "Отчеты";
             this.Load += new System.EventHandler(this.Report_admin_Load);
@@ -1721,5 +1730,6 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.BindingNavigator bindingNavigator9;
         private System.Windows.Forms.ToolStripButton toolStripButton32;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel8;
     }
 }

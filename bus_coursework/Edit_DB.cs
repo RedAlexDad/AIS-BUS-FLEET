@@ -100,6 +100,7 @@ namespace bus_coursework {
             рейсDataGridView.Columns[0].HeaderText = "ID";
             рейсDataGridView.Columns[0].Width = 30;
             // Номер рейса
+            рейсDataGridView.Columns[1].HeaderText = "Номер";
             рейсDataGridView.Columns[1].Width = 50;
             // Откуда
             рейсDataGridView.Columns[2].Width = 200;
@@ -194,7 +195,7 @@ namespace bus_coursework {
                 индекс_автобусного_паркаTextBox1.Text = busfleet.GetNameBusFleetByID(int.Parse(comboBox2.SelectedValue.ToString()));
 
             // Вкладка Автобус
-                // Отображение название рейса
+                // Отображение номера рейса
                 comboBox3.DisplayMember = "Номер_рейса";
                 comboBox3.ValueMember = "Индекс_рейса";
                 comboBox3.DataSource = busline.GetIDAndNumberBusLine();
@@ -217,6 +218,13 @@ namespace bus_coursework {
                 comboBox6.ValueMember = "Индекс_контролера";
                 comboBox6.DataSource = controller.GetIDAndFIOController();
                 индекс_контролераTextBox.Text = controller.GetFIOControllerByID(int.Parse(comboBox6.SelectedValue.ToString()));
+
+            // Вкладка Пассажир
+                // Отображение номера рейса
+                comboBox7.DisplayMember = "Модель_автобуса";
+                comboBox7.ValueMember = "Индекс_автобуса";
+                comboBox7.DataSource = bus.GetModelBus();
+                индекс_автобусаTextBox1.Text = bus.GetModelBusByID(int.Parse(comboBox7.SelectedValue.ToString()));
         }
 
         // Обновление БД при нажатии назад и вперед во вкладке АВТОБУСНЫЙ ПАРК
@@ -502,46 +510,55 @@ namespace bus_coursework {
         // ВКЛАДКА ПАССАЖИР
         // При переключении назад, вперед сохраняет ID
         #region
+        private void comboBox7_SelectedIndexChanged(object sender, EventArgs e) {
+            if(comboBox7.SelectedValue != null) {
+                индекс_автобусаTextBox1.Text = bus.GetModelBusByID(int.Parse(comboBox7.SelectedValue.ToString()));
+            }
+        }
         // Сохранение данные ПАССАЖИР
         private void toolStripButton24_Click(object sender, EventArgs e) {
             try {
-            passenger.Add(int.Parse(индекс_пассажираTextBox.Text), int.Parse(индекс_автобусаTextBox1.Text), ФИО_пассажираTextBox.Text, категория_пассажираTextBox.Text);
+                int id_bus = int.Parse(comboBox7.SelectedValue.ToString());
+                passenger.Add(int.Parse(индекс_пассажираTextBox.Text), id_bus, ФИО_пассажираTextBox.Text, категория_пассажираTextBox.Text);
+                индекс_автобусаTextBox1.Text = bus.GetModelBusByID(id_bus);
             } catch (Exception error) {
                 MessageBox.Show("Ошибка заполнения для сохранения!\nТип ошибки:\n\n" + error, "Ошибка!");
             }
         }
-
         // Кнопка удаления
         private void toolStripButton16_Click(object sender, EventArgs e) {
             passenger.Delete(id_class.id_passenger);
         }
-
         // Кнопка добавления
         private void toolStripButton15_Click(object sender, EventArgs e) {
             индекс_пассажираTextBox.Text = (id_class.RegularExpressionTextIntoValue(toolStripLabel3.Text)).ToString();
         }
         // Кнопка обновления данных
         private void toolStripButton26_Click(object sender, EventArgs e) {
-            try { 
-            passenger.Update(int.Parse(индекс_пассажираTextBox.Text), int.Parse(индекс_автобусаTextBox1.Text), ФИО_пассажираTextBox.Text, категория_пассажираTextBox.Text);
+            try {
+                int id_bus = int.Parse(comboBox7.SelectedValue.ToString());
+                passenger.Update(int.Parse(индекс_пассажираTextBox.Text), id_bus, ФИО_пассажираTextBox.Text, категория_пассажираTextBox.Text);
+                индекс_автобусаTextBox1.Text = bus.GetModelBusByID(id_bus);
             } catch(Exception error) {
                 MessageBox.Show("Ошибка обновления!\nТип ошибки:\n\n" + error, "Ошибка!");
             }
         }
+        // Навигационное меню
         private void toolStripButton20_Click(object sender, EventArgs e) {
             id_class.id_passenger = int.Parse(индекс_пассажираTextBox.Text);
+            индекс_автобусаTextBox1.Text = bus.GetModelBusByID(int.Parse(индекс_автобусаTextBox1.Text));
         }
-
         private void toolStripButton19_Click(object sender, EventArgs e) {
             id_class.id_passenger = int.Parse(индекс_пассажираTextBox.Text);
+            индекс_автобусаTextBox1.Text = bus.GetModelBusByID(int.Parse(индекс_автобусаTextBox1.Text));
         }
-
         private void toolStripButton18_Click(object sender, EventArgs e) {
             id_class.id_passenger = int.Parse(индекс_пассажираTextBox.Text);
+            индекс_автобусаTextBox1.Text = bus.GetModelBusByID(int.Parse(индекс_автобусаTextBox1.Text));
         }
-
         private void toolStripButton17_Click(object sender, EventArgs e) {
             id_class.id_passenger = int.Parse(индекс_пассажираTextBox.Text);
+            индекс_автобусаTextBox1.Text = bus.GetModelBusByID(int.Parse(индекс_автобусаTextBox1.Text));
         }
 
         #endregion
@@ -746,9 +763,6 @@ namespace bus_coursework {
         private void фИО_пассажираTextBox_TextChanged(object sender, EventArgs e) {
 
         }
-
-
-
         private void label1_Click(object sender, EventArgs e) {
 
         }
@@ -771,12 +785,8 @@ namespace bus_coursework {
 
         }
 
-
-
-
-
         #endregion
 
-
+      
     }
 }

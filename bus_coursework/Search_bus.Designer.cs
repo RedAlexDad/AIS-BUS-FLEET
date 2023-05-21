@@ -53,6 +53,7 @@
             this.индекс_контролераTextBox = new System.Windows.Forms.TextBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             label1 = new System.Windows.Forms.Label();
             индекс_автобусаLabel = new System.Windows.Forms.Label();
             статус_автобусаLabel = new System.Windows.Forms.Label();
@@ -98,6 +99,60 @@
             статус_автобусаLabel.Size = new System.Drawing.Size(121, 16);
             статус_автобусаLabel.TabIndex = 70;
             статус_автобусаLabel.Text = "Статус автобуса:";
+            // 
+            // модель_автобусаLabel
+            // 
+            модель_автобусаLabel.AutoSize = true;
+            модель_автобусаLabel.Location = new System.Drawing.Point(101, 157);
+            модель_автобусаLabel.Name = "модель_автобусаLabel";
+            модель_автобусаLabel.Size = new System.Drawing.Size(60, 16);
+            модель_автобусаLabel.TabIndex = 72;
+            модель_автобусаLabel.Text = "Модель:";
+            // 
+            // год_выпуска_автобусаLabel
+            // 
+            год_выпуска_автобусаLabel.AutoSize = true;
+            год_выпуска_автобусаLabel.Location = new System.Drawing.Point(70, 185);
+            год_выпуска_автобусаLabel.Name = "год_выпуска_автобусаLabel";
+            год_выпуска_автобусаLabel.Size = new System.Drawing.Size(91, 16);
+            год_выпуска_автобусаLabel.TabIndex = 73;
+            год_выпуска_автобусаLabel.Text = "Год выпуска:";
+            // 
+            // индекс_рейсаLabel
+            // 
+            индекс_рейсаLabel.AutoSize = true;
+            индекс_рейсаLabel.Location = new System.Drawing.Point(61, 213);
+            индекс_рейсаLabel.Name = "индекс_рейсаLabel";
+            индекс_рейсаLabel.Size = new System.Drawing.Size(100, 16);
+            индекс_рейсаLabel.TabIndex = 74;
+            индекс_рейсаLabel.Text = "Индекс рейса:";
+            // 
+            // индекс_автобусного_паркаLabel
+            // 
+            индекс_автобусного_паркаLabel.AutoSize = true;
+            индекс_автобусного_паркаLabel.Location = new System.Drawing.Point(471, 128);
+            индекс_автобусного_паркаLabel.Name = "индекс_автобусного_паркаLabel";
+            индекс_автобусного_паркаLabel.Size = new System.Drawing.Size(152, 16);
+            индекс_автобусного_паркаLabel.TabIndex = 75;
+            индекс_автобусного_паркаLabel.Text = "ID автобусного парка:";
+            // 
+            // индекс_водителяLabel
+            // 
+            индекс_водителяLabel.AutoSize = true;
+            индекс_водителяLabel.Location = new System.Drawing.Point(517, 157);
+            индекс_водителяLabel.Name = "индекс_водителяLabel";
+            индекс_водителяLabel.Size = new System.Drawing.Size(106, 16);
+            индекс_водителяLabel.TabIndex = 76;
+            индекс_водителяLabel.Text = "ФИО водителя:";
+            // 
+            // индекс_контролераLabel
+            // 
+            индекс_контролераLabel.AutoSize = true;
+            индекс_контролераLabel.Location = new System.Drawing.Point(501, 185);
+            индекс_контролераLabel.Name = "индекс_контролераLabel";
+            индекс_контролераLabel.Size = new System.Drawing.Size(122, 16);
+            индекс_контролераLabel.TabIndex = 77;
+            индекс_контролераLabel.Text = "ФИО контролера:";
             // 
             // bus_dataset
             // 
@@ -199,15 +254,6 @@
             this.статус_автобусаTextBox.Size = new System.Drawing.Size(276, 22);
             this.статус_автобусаTextBox.TabIndex = 71;
             // 
-            // модель_автобусаLabel
-            // 
-            модель_автобусаLabel.AutoSize = true;
-            модель_автобусаLabel.Location = new System.Drawing.Point(101, 157);
-            модель_автобусаLabel.Name = "модель_автобусаLabel";
-            модель_автобусаLabel.Size = new System.Drawing.Size(60, 16);
-            модель_автобусаLabel.TabIndex = 72;
-            модель_автобусаLabel.Text = "Модель:";
-            // 
             // модель_автобусаTextBox
             // 
             this.модель_автобусаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусBindingSource, "Модель_автобуса", true));
@@ -215,15 +261,6 @@
             this.модель_автобусаTextBox.Name = "модель_автобусаTextBox";
             this.модель_автобусаTextBox.Size = new System.Drawing.Size(276, 22);
             this.модель_автобусаTextBox.TabIndex = 73;
-            // 
-            // год_выпуска_автобусаLabel
-            // 
-            год_выпуска_автобусаLabel.AutoSize = true;
-            год_выпуска_автобусаLabel.Location = new System.Drawing.Point(70, 185);
-            год_выпуска_автобусаLabel.Name = "год_выпуска_автобусаLabel";
-            год_выпуска_автобусаLabel.Size = new System.Drawing.Size(91, 16);
-            год_выпуска_автобусаLabel.TabIndex = 73;
-            год_выпуска_автобусаLabel.Text = "Год выпуска:";
             // 
             // год_выпуска_автобусаTextBox
             // 
@@ -233,15 +270,6 @@
             this.год_выпуска_автобусаTextBox.Size = new System.Drawing.Size(276, 22);
             this.год_выпуска_автобусаTextBox.TabIndex = 74;
             // 
-            // индекс_рейсаLabel
-            // 
-            индекс_рейсаLabel.AutoSize = true;
-            индекс_рейсаLabel.Location = new System.Drawing.Point(61, 213);
-            индекс_рейсаLabel.Name = "индекс_рейсаLabel";
-            индекс_рейсаLabel.Size = new System.Drawing.Size(100, 16);
-            индекс_рейсаLabel.TabIndex = 74;
-            индекс_рейсаLabel.Text = "Индекс рейса:";
-            // 
             // индекс_рейсаTextBox
             // 
             this.индекс_рейсаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусBindingSource, "Индекс_рейса", true));
@@ -249,15 +277,6 @@
             this.индекс_рейсаTextBox.Name = "индекс_рейсаTextBox";
             this.индекс_рейсаTextBox.Size = new System.Drawing.Size(276, 22);
             this.индекс_рейсаTextBox.TabIndex = 75;
-            // 
-            // индекс_автобусного_паркаLabel
-            // 
-            индекс_автобусного_паркаLabel.AutoSize = true;
-            индекс_автобусного_паркаLabel.Location = new System.Drawing.Point(471, 128);
-            индекс_автобусного_паркаLabel.Name = "индекс_автобусного_паркаLabel";
-            индекс_автобусного_паркаLabel.Size = new System.Drawing.Size(152, 16);
-            индекс_автобусного_паркаLabel.TabIndex = 75;
-            индекс_автобусного_паркаLabel.Text = "ID автобусного парка:";
             // 
             // индекс_автобусного_паркаTextBox
             // 
@@ -267,15 +286,6 @@
             this.индекс_автобусного_паркаTextBox.Size = new System.Drawing.Size(276, 22);
             this.индекс_автобусного_паркаTextBox.TabIndex = 76;
             // 
-            // индекс_водителяLabel
-            // 
-            индекс_водителяLabel.AutoSize = true;
-            индекс_водителяLabel.Location = new System.Drawing.Point(517, 157);
-            индекс_водителяLabel.Name = "индекс_водителяLabel";
-            индекс_водителяLabel.Size = new System.Drawing.Size(106, 16);
-            индекс_водителяLabel.TabIndex = 76;
-            индекс_водителяLabel.Text = "ФИО водителя:";
-            // 
             // индекс_водителяTextBox
             // 
             this.индекс_водителяTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автобусBindingSource, "Индекс_водителя", true));
@@ -283,15 +293,6 @@
             this.индекс_водителяTextBox.Name = "индекс_водителяTextBox";
             this.индекс_водителяTextBox.Size = new System.Drawing.Size(276, 22);
             this.индекс_водителяTextBox.TabIndex = 77;
-            // 
-            // индекс_контролераLabel
-            // 
-            индекс_контролераLabel.AutoSize = true;
-            индекс_контролераLabel.Location = new System.Drawing.Point(501, 185);
-            индекс_контролераLabel.Name = "индекс_контролераLabel";
-            индекс_контролераLabel.Size = new System.Drawing.Size(122, 16);
-            индекс_контролераLabel.TabIndex = 77;
-            индекс_контролераLabel.Text = "ФИО контролера:";
             // 
             // индекс_контролераTextBox
             // 
@@ -308,7 +309,8 @@
             this.bindingNavigator1.DeleteItem = null;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1});
+            this.toolStripButton1,
+            this.toolStripLabel1});
             this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator1.MoveFirstItem = null;
             this.bindingNavigator1.MoveLastItem = null;
@@ -316,7 +318,7 @@
             this.bindingNavigator1.MovePreviousItem = null;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1832, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1832, 31);
             this.bindingNavigator1.TabIndex = 79;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -326,9 +328,15 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(130, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(130, 28);
             this.toolStripButton1.Text = "Назад к меню";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(262, 28);
+            this.toolStripLabel1.Text = "Поиск автобуса по названию марки";
             // 
             // Search_bus
             // 
@@ -395,5 +403,6 @@
         private System.Windows.Forms.TextBox индекс_контролераTextBox;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }

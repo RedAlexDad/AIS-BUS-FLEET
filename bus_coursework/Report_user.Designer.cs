@@ -138,6 +138,7 @@
             this.toolStripButton35 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton36 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel7 = new System.Windows.Forms.ToolStripLabel();
             ((System.ComponentModel.ISupportInitialize)(this.пассажирBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bus_dataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.контролерBindingSource)).BeginInit();
@@ -201,7 +202,8 @@
             this.bindingNavigator9.DeleteItem = null;
             this.bindingNavigator9.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.bindingNavigator9.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton32});
+            this.toolStripButton32,
+            this.toolStripLabel7});
             this.bindingNavigator9.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator9.MoveFirstItem = null;
             this.bindingNavigator9.MoveLastItem = null;
@@ -1160,7 +1162,7 @@
             this.bindingNavigator7.MovePreviousItem = this.toolStripButton34;
             this.bindingNavigator7.Name = "bindingNavigator7";
             this.bindingNavigator7.PositionItem = this.toolStripTextBox6;
-            this.bindingNavigator7.Size = new System.Drawing.Size(1796, 31);
+            this.bindingNavigator7.Size = new System.Drawing.Size(1796, 27);
             this.bindingNavigator7.TabIndex = 2;
             this.bindingNavigator7.Text = "bindingNavigator7";
             // 
@@ -1232,6 +1234,12 @@
             this.toolStripSeparator18.Name = "toolStripSeparator18";
             this.toolStripSeparator18.Size = new System.Drawing.Size(6, 27);
             // 
+            // toolStripLabel7
+            // 
+            this.toolStripLabel7.Name = "toolStripLabel7";
+            this.toolStripLabel7.Size = new System.Drawing.Size(178, 28);
+            this.toolStripLabel7.Text = "Отчет для Пользователя";
+            // 
             // Report_user
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1239,6 +1247,7 @@
             this.ClientSize = new System.Drawing.Size(1832, 853);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.bindingNavigator9);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Report_user";
             this.Text = "Report_user";
             this.Load += new System.EventHandler(this.Report_user_Load);
@@ -1416,5 +1425,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton35;
         private System.Windows.Forms.ToolStripButton toolStripButton36;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator18;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel7;
     }
 }

@@ -30,6 +30,7 @@ namespace bus_coursework.MyClass {
             return bufferTable;
         }
 
+        // Вывод азвание автобусного парка по ID
         public string GetNameBusFleetByID(int ID) {
             connection.Open();
             command = new OleDbCommand($"SELECT Название_автобусного_парка FROM Автобусный_парк WHERE Индекс_автобусного_парка = {ID}", connection);

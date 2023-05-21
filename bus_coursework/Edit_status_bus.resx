@@ -209,9 +209,9 @@
   <data name="toolStripButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAA8AAAAJCAYAAADtj3ZXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABnSURBVChTY6Aq+K+u7vBPTc0fyiUeADVl/ldT+/9PXd0d
-        KkQY/NPUVP2jpnYcpPG3mto/IPvYHxWVU9jwf1XVM0A1d4AW1TL8U1GxAGr6ANJICv6rpjaPMpuRAVl+
-        RgZkhzZpgIEBAIvga23JIrLiAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABoSURBVChTY6Aq+K+u7vBPTc0fyiUeADVl/ldT+/9PXd0d
+        KkQY/NPUVP2jpnYcpPGXmto/IPvYHxWVU9jwf1XVM7/V1O4ALapl+KeiYgHU9AGkkRT8V01tHmU2IwOy
+        /IwMyA5t0gADAwCJoGtrgCT67QAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

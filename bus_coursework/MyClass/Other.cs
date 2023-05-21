@@ -90,7 +90,7 @@ namespace bus_coursework.MyClass {
         //}
         #endregion
 
-        // Обновление рейса по ID автобусного парка
+        // Состояние автобуса 
         public DataTable TransportStatus() {
             connection.Open();
             try {

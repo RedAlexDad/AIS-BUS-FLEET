@@ -21,6 +21,35 @@ namespace bus_coursework.MyClass {
             bufferTable = new DataTable();
         }
 
+        // Выводит модели автобуса
+        public DataTable GetModelBus() {
+            connection.Open();
+            dataAdapter = new OleDbDataAdapter($"SELECT Индекс_автобуса, Модель_автобуса FROM Автобус", connection);
+            bufferTable.Clear();
+            dataAdapter.Fill(bufferTable);
+            connection.Close();
+            return bufferTable;
+        }
+
+        // Вывод название модели автобуса по ID
+        public string GetModelBusByID(int ID) {
+            connection.Open();
+            command = new OleDbCommand($"SELECT Модель_автобуса FROM Автобус WHERE Индекс_автобуса = {ID} ", connection);
+
+            OleDbDataReader reader = command.ExecuteReader();
+
+            if(reader.Read()) {
+                string name = reader.GetString(0);
+                //Console.WriteLine("Name: " + name);
+                connection.Close();
+                return name;
+            } else {
+                //Console.WriteLine($"Запись с ID = {ID} не найдена.");
+                connection.Close();
+                return null;
+            }
+        }
+
         // Обновление рейса по ID автобусного парка
         public DataTable UpdateBusCheckByIDBusline(int ID) {
             connection.Open();

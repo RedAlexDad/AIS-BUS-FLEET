@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Autorization));
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -112,6 +113,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Autorization";
             this.Text = "Autorization";
             this.Load += new System.EventHandler(this.Autorization_Load);
